@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const qualityJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Calidad y Certificaciones",
+  "url": "https://drychillis.com/es/quality/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué certificaciones tiene Tenda Peppers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers está certificada con ISO 9001:2015 (gestión de calidad) y HACCP (seguridad alimentaria). La producción se realiza bajo una política de seguridad alimentaria de cero defectos y tolerancia cero con vigilancia las 24 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo eliminan los objetos extraños del chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada lote pasa por despepitado, filtración magnética (metales ferrosos), inspección por rayos X (objetos densos) y clasificación por color (clasificación óptica de defectos). Este cribado en varias etapas se realiza junto con el control de humedad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo obtener certificados y documentación de lote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Los certificados y la documentación de lote están disponibles a solicitud, y cada envío es trazable hasta su base de cultivo bajo el sistema ISO 9001 / HACCP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se garantiza la consistencia entre lotes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La consistencia proviene del control de variedad y grado en origen, la trazabilidad de la materia prima desde 12 bases de cultivo controladas y la reverificación en laboratorio antes de la producción — para que el picor, el color y el sabor se mantengan estables entre lotes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Calidad y Certificaciones | Tenda Peppers"
+  description="Control de calidad de Tenda Peppers — certificado ISO 9001 y HACCP, con inspección por rayos X, clasificación por color, detección de metales y un proceso de producción de 8 pasos para pimentón y chiles secos."
+  jsonLd={[qualityJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <h1>Calidad y Certificaciones</h1>
+    <p class="lead">
+      La calidad del pimentón y el chile se controla en origen y se verifica en cada paso — bajo
+      un sistema ISO 9001 y HACCP con una política de seguridad alimentaria de cero defectos y
+      tolerancia cero.
+    </p>
+
+    <h2 style="margin-top:32px;">Certificaciones</h2>
+    <table>
+      <thead>
+        <tr><th>Certificación</th><th>Alcance</th><th>Estado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ISO 9001:2015</td><td>Sistema de gestión de calidad</td><td>✅ Certificado</td></tr>
+        <tr><td>HACCP</td><td>Gestión de seguridad alimentaria</td><td>✅ Certificado</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Certificados disponibles a solicitud. Pruebas de terceros disponibles a solicitud del comprador.
+    </p>
+
+    <h2 style="margin-top:32px;">Proceso de Producción de 8 Pasos</h2>
+    <table>
+      <thead>
+        <tr><th>Paso</th><th>Etapa</th><th>Control</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Abastecimiento de materia prima</td><td>Auditoría de proveedores aprobados, reverificación en laboratorio</td></tr>
+        <tr><td>2</td><td>Preprocesamiento</td><td>Despepitado, limpieza</td></tr>
+        <tr><td>3</td><td>Clasificación</td><td>Clasificación por tamaño, color y humedad</td></tr>
+        <tr><td>4</td><td>Almacenamiento</td><td>Almacén de baja temperatura</td></tr>
+        <tr><td>5</td><td>Procesamiento</td><td>Filtración magnética, detección de metales</td></tr>
+        <tr><td>6</td><td>Clasificación por color y rayos X</td><td>Eliminación de objetos extraños, clasificación por color</td></tr>
+        <tr><td>7</td><td>Embalaje</td><td>Sellado, etiquetado según especificación</td></tr>
+        <tr><td>8</td><td>Producto terminado</td><td>Inspección final antes del despacho</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Control de Objetos Extraños</h2>
+    <ul>
+      <li><strong>Filtración magnética</strong> — elimina fragmentos de metal ferroso</li>
+      <li><strong>Inspección por rayos X</strong> — detecta objetos densos que la filtración magnética no detecta</li>
+      <li><strong>Clasificación por color</strong> — la clasificación óptica elimina piezas descoloridas y defectuosas</li>
+      <li><strong>Despepitado</strong> — elimina semillas y materia vegetal adherida</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Puntos de Control de Calidad</h2>
+    <ul>
+      <li>Vigilancia completa las 24 horas en fábrica y taller</li>
+      <li>Procedimientos operativos revisados en cada puesto, estrictamente aplicados</li>
+      <li>Inspectores de calidad dedicados en cada etapa</li>
+      <li>Equipos industriales y flujo de proceso avanzados</li>
+      <li>Control de humedad y cribado de objetos extraños en todo el proceso</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Notas de Estabilidad del Color</h2>
+    <p>
+      Documentamos cómo se comporta el color con el tiempo para nuestros compradores: el chile en
+      polvo se aclara gradualmente a temperatura ambiente (más rápido tras la esterilización a alta
+      temperatura), mientras que el pimentón dulce puede oscurecerse tras la esterilización. Es
+      química de color normal — y asesoramos sobre el almacenamiento para preservar el color en su aplicación.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué certificaciones tiene Tenda Peppers?</h3>
+      <p>Tenda Peppers está certificada con ISO 9001:2015 (gestión de calidad) y HACCP (seguridad alimentaria). La producción se realiza bajo una política de seguridad alimentaria de cero defectos y tolerancia cero con vigilancia las 24 horas.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo eliminan los objetos extraños del chile?</h3>
+      <p>Cada lote pasa por despepitado, filtración magnética (metales ferrosos), inspección por rayos X (objetos densos) y clasificación por color (clasificación óptica de defectos). Este cribado en varias etapas se realiza junto con el control de humedad.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puedo obtener certificados y documentación de lote?</h3>
+      <p>Sí. Los certificados y la documentación de lote están disponibles a solicitud, y cada envío es trazable hasta su base de cultivo bajo el sistema ISO 9001 / HACCP.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo se garantiza la consistencia entre lotes?</h3>
+      <p>La consistencia proviene del control de variedad y grado en origen, la trazabilidad de la materia prima desde 12 bases de cultivo controladas y la reverificación en laboratorio antes de la producción — para que el picor, el color y el sabor se mantengan estables entre lotes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Certificados</a>
+    </div>
+  </div>
+</BaseLayout>

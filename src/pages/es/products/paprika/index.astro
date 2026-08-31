@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Pimentón en Polvo (Dulce y de Bajo Picor)",
+  "description": "Pimentón en polvo de bajo picor y alto color elaborado con variedades de pimiento dulce chino — pimentón dulce y pimentón de bajo picor para colorante rojo natural, mezclas de especias y adobos.",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Para qué se utiliza el pimentón en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón en polvo se utiliza principalmente para dar color rojo natural y sabor suave en mezclas de especias, adobos, embutidos, condimentos para snacks y la extracción de oleorresina de pimentón (colorante rojo natural)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre pimentón dulce y pimentón de bajo picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón dulce (por debajo de 500 SHU) se elabora con variedades de pimiento dulce de alto color como el pimiento dulce de Xinjiang y Red Dragon 23, con un valor de color ASTA de 8–18. El pimentón de bajo picor (por debajo de 10,000 SHU) proviene de variedades como Yidu red y Wangdu, aportando picor suave y aroma claro a chile además del color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué valor de color ASTA pueden suministrar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suministramos pimentón en polvo en un rango de valor de color ASTA de aproximadamente 60 a 240, según la variedad y el grado. Confirme su valor de color objetivo y nivel de picor al consultar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la especificación de humedad y malla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón en polvo típico se suministra con menos del 13% de humedad y malla 60–80, con especificaciones ajustables a su requerimiento. La inspección por rayos X y la detección de metales son estándar en cada lote."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Fabricante de Pimentón en Polvo — Dulce y de Bajo Picor | Tenda Peppers"
+  description="Fabricante chino de pimentón en polvo. Pimentón dulce y pimentón de bajo picor de pimiento dulce de Xinjiang y Yidu red — colorante rojo natural para mezclas de especias, adobos y condimentos. ISO 9001 y HACCP."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; Pimentón en Polvo
+    </nav>
+    <h1>Pimentón en Polvo</h1>
+    <p class="lead">
+      Pimentón de bajo picor y alto color molido de variedades de pimiento dulce chino — para
+      colorante rojo natural, mezclas de especias y adobos en Europa, Oriente Medio y Norteamérica.
+    </p>
+
+    <h2 style="margin-top:32px;">Nuestra Gama de Pimentón</h2>
+    <table>
+      <thead>
+        <tr><th>Producto</th><th>Variedad</th><th>Picor (SHU)</th><th>Color (ASTA)</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Pimentón Dulce en Polvo</strong></td>
+          <td>Pimiento dulce de Xinjiang, Red Dragon 23</td>
+          <td>&lt;500</td>
+          <td>8–18</td>
+          <td>Colorante alimentario, extracción de oleorresina de pimentón</td>
+        </tr>
+        <tr>
+          <td><strong>Pimentón de Bajo Picor en Polvo</strong></td>
+          <td>Yidu red, Wangdu</td>
+          <td>&lt;10,000</td>
+          <td>Alto (pulpa gruesa)</td>
+          <td>Colorante con aroma claro a chile, adobos</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Los valores de color y niveles de picor son rangos representativos de cada variedad — la
+      especificación final se ajusta a su valor ASTA y SHU objetivo al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Especificaciones</h2>
+    <table>
+      <thead>
+        <tr><th>Parámetro</th><th>Rango típico</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Valor de color ASTA</td><td>60–240 (según variedad)</td></tr>
+        <tr><td>Nivel de picor (SHU)</td><td>&lt;500 – 10,000</td></tr>
+        <tr><td>Humedad</td><td>&lt;13%</td></tr>
+        <tr><td>Malla</td><td>60–80 mesh (ajustable)</td></tr>
+        <tr><td>Procesamiento</td><td>Despepitado, filtrado magnético, inspección por rayos X, clasificación por color</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Aplicaciones</h2>
+    <ul>
+      <li>Mezclas de especias y condimentos</li>
+      <li>Adobos y aliños para carne</li>
+      <li>Condimentos para snacks y fideos instantáneos</li>
+      <li>Coloración de embutidos y carnes procesadas</li>
+      <li>Extracción de oleorresina de pimentón (colorante rojo natural)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Para qué se utiliza el pimentón en polvo?</h3>
+      <p>El pimentón en polvo se utiliza principalmente para dar color rojo natural y sabor suave en mezclas de especias, adobos, embutidos, condimentos para snacks y la extracción de oleorresina de pimentón (colorante rojo natural).</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre pimentón dulce y pimentón de bajo picor?</h3>
+      <p>El pimentón dulce (por debajo de 500 SHU) se elabora con variedades de pimiento dulce de alto color como el pimiento dulce de Xinjiang y Red Dragon 23, con un valor de color ASTA de 8–18. El pimentón de bajo picor (por debajo de 10,000 SHU) proviene de variedades como Yidu red y Wangdu, aportando picor suave y aroma claro a chile además del color.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué valor de color ASTA pueden suministrar?</h3>
+      <p>Suministramos pimentón en polvo en un rango de valor de color ASTA de aproximadamente 60 a 240, según la variedad y el grado. Confirme su valor de color objetivo y nivel de picor al consultar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es la especificación de humedad y malla?</h3>
+      <p>El pimentón en polvo típico se suministra con menos del 13% de humedad y malla 60–80, con especificaciones ajustables a su requerimiento. La inspección por rayos X y la detección de metales son estándar en cada lote.</p>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#faf5f2;border-radius:8px;">
+      <h2 style="margin-top:0;">Documentación Técnica Relacionada</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="https://docs.drychillis.com/buying-guide/" target="_blank" rel="noopener">Guía de compra de pimentón y chile</a></li>
+        <li><a href="https://docs.drychillis.com/asta-shu-explained/" target="_blank" rel="noopener">Color ASTA y SHU explicados</a></li>
+        <li><a href="https://docs.drychillis.com/colour-storage/" target="_blank" rel="noopener">Cambio de color y almacenamiento</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Pimentón</a>
+    </div>
+  </div>
+</BaseLayout>

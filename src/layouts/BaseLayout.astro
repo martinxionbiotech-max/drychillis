@@ -31,9 +31,19 @@ const {
   lang = "en",
 } = Astro.props;
 
+const dir = lang === "ar" ? "rtl" : "ltr";
+
 const SITE = "https://drychillis.com";
 const BRAND = "Tenda Peppers";
 const BRAND_FULL = "Tenda Peppers — Paprika & Dried Chillies Manufacturer";
+
+// 语言 → locale 元数据
+const LOCALES: Record<string, { code: string; og: string }> = {
+  en: { code: "en", og: "en_US" },
+  es: { code: "es", og: "es_ES" },
+  ar: { code: "ar", og: "ar_AE" },
+};
+const locale = LOCALES[lang] ?? LOCALES.en;
 
 const cleanTitle = title.replace(/\u200b/gi, "").trim();
 const hasBrand = cleanTitle.toUpperCase().includes("TENDA") || cleanTitle.toUpperCase().includes("DRYCHILLIS");
@@ -43,6 +53,14 @@ const fullTitle = hasBrand ? baseTitle : `${baseTitle} | ${BRAND}`;
 const canonicalUrl = canonical
   ? (canonical.startsWith("http") ? canonical : SITE + canonical)
   : SITE + Astro.url.pathname;
+
+// hreflang 备选 URL：当前路径去掉语言前缀，得到「路径骨架」，再拼各语言
+const currentPath = Astro.url.pathname;
+const pathSkeleton = currentPath.replace(/^\/(es|ar)(?=\/|$)/, "");
+const hreflangUrl = (l: string) => {
+  const base = l === "en" ? "" : "/" + l;
+  return SITE + base + pathSkeleton;
+};
 
 const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
@@ -60,7 +78,8 @@ const articleJsonLd =
         publisher: { "@id": SITE + "/#organization" },
         datePublished: datePublished,
         dateModified: dateModified || datePublished,
-        mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl }
+        mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+        inLanguage: locale.code,
       }
     : null;
 
@@ -87,7 +106,7 @@ const orgJsonLd = {
     "email": "tdlajiao@126.com",
     "telephone": "+86-18162067392",
     "areaServed": ["Europe", "Middle East", "North America"],
-    "availableLanguage": ["English", "Chinese"]
+    "availableLanguage": ["English", "Spanish", "Arabic", "Chinese"]
   },
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "name": "ISO 9001" },
@@ -112,6 +131,7 @@ const webSiteJsonLd = {
   "@id": SITE + "/#website",
   "url": SITE,
   "name": BRAND_FULL,
+  "inLanguage": [locale.code, "en", "es", "ar"],
   "publisher": { "@id": SITE + "/#organization" }
 };
 
@@ -123,7 +143,7 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": SITE + "/"
+      "item": SITE + (lang === "en" ? "/" : "/" + lang + "/")
     },
     ...(canonicalUrl !== SITE + "/"
       ? [
@@ -140,7 +160,7 @@ const breadcrumbJsonLd = {
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -150,13 +170,24 @@ const breadcrumbJsonLd = {
     <meta name="robots" content={noindex ? "noindex" : "max-image-preview:large"} />
     {author && <meta name="author" content={author} />}
 
+    <link rel="alternate" hreflang="en" href={hreflangUrl("en")} />
+    <link rel="alternate" hreflang="es" href={hreflangUrl("es")} />
+    <link rel="alternate" hreflang="ar" href={hreflangUrl("ar")} />
+    <link rel="alternate" hreflang="x-default" href={hreflangUrl("en")} />
+
     <meta property="og:site_name" content={BRAND_FULL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage.startsWith("http") ? ogImage : SITE + ogImage} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={locale.og} />
+    {lang === "es" && <meta property="og:locale:alternate" content="en_US" />}
+    {lang === "es" && <meta property="og:locale:alternate" content="ar_AE" />}
+    {lang === "en" && <meta property="og:locale:alternate" content="es_ES" />}
+    {lang === "en" && <meta property="og:locale:alternate" content="ar_AE" />}
+    {lang === "ar" && <meta property="og:locale:alternate" content="en_US" />}
+    {lang === "ar" && <meta property="og:locale:alternate" content="es_ES" />}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
@@ -178,10 +209,10 @@ const breadcrumbJsonLd = {
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
+    <Header lang={lang} />
     <main id="main">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

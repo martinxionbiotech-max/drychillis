@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Acerca de Tenda Peppers",
+  "url": "https://drychillis.com/es/about/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Acerca de Tenda Peppers — Fabricante de Pimentón y Chile Seco"
+  description="Tenda Peppers es la marca de pimentón y chile seco de Leling Tenda Chili Products Co., Ltd., un fabricante chino fundado en 2010 con 12 bases de cultivo y una capacidad anual de más de 10,000 toneladas."
+  jsonLd={[aboutJsonLd]}
+>
+  <div class="container section">
+    <h1>Acerca de Tenda Peppers</h1>
+    <p class="lead">
+      Tenda Peppers es la marca de pimentón y chile seco de Leling Tenda Chili Products Co.,
+      Ltd., un fabricante fundado en 2010 en Leling, Shandong — una región conocida como la
+      "capital del sabor" de China.
+    </p>
+
+    <h2 style="margin-top:32px;">Quiénes Somos</h2>
+    <p>
+      Somos un fabricante privado centrado en un único cultivo: el pimiento. Desde 12 bases de
+      cultivo controladas, abastecemos variedades de chile en Shandong, Xinjiang y Henan, para
+      luego secar, moler y clasificar en pimentón en polvo y productos de chile seco para la
+      industria alimentaria.
+    </p>
+    <table>
+      <tbody>
+        <tr><td><strong>Empresa</strong></td><td>Leling Tenda Chili Products Co., Ltd.</td></tr>
+        <tr><td><strong>Marca</strong></td><td>Tenda Peppers</td></tr>
+        <tr><td><strong>Fundada</strong></td><td>2010</td></tr>
+        <tr><td><strong>Ubicación</strong></td><td>Yang'an Town, Leling, Shandong, China</td></tr>
+        <tr><td><strong>Instalaciones</strong></td><td>30,000 m² de terreno, 16,000 m² de edificios, almacén frigorífico</td></tr>
+        <tr><td><strong>Producción</strong></td><td>3 líneas de alto estándar + 1 línea convencional</td></tr>
+        <tr><td><strong>Capacidad anual</strong></td><td>Más de 10,000 toneladas</td></tr>
+        <tr><td><strong>Equipo</strong></td><td>126 empleados, 37 especialistas técnicos</td></tr>
+        <tr><td><strong>Certificaciones</strong></td><td>ISO 9001, HACCP</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Nuestro Enfoque</h2>
+    <p>
+      En lugar de abarcar todas las categorías de especias, nos concentramos en el segmento del
+      pimiento. Ese enfoque nos permite profundizar en lo que importa a los compradores de
+      pimentón y chile: selección de variedades, valor de color (ASTA), nivel de picor (SHU),
+      malla, humedad y consistencia de lote.
+    </p>
+
+    <h2 style="margin-top:32px;">Del Campo a la Molienda</h2>
+    <p>
+      Nuestra materia prima proviene de 12 bases de cultivo controladas en Shandong, Xinjiang y
+      Henan — las principales regiones productoras de chile de China. Controlar la base significa
+      controlar la variedad, la exposición climática del periodo de maduración y, en última
+      instancia, el picor, el color y el sabor de cada lote. Esta integración vertical — del campo
+      al polvo final — es la principal razón por la que nuestro producto se mantiene consistente
+      envío tras envío.
+    </p>
+
+    <h2 style="margin-top:32px;">Certificaciones y Reconocimientos</h2>
+    <ul>
+      <li>Certificación de gestión de calidad ISO 9001:2015</li>
+      <li>Certificación de seguridad alimentaria HACCP</li>
+      <li>Designación de "Seguridad Alimentaria" de Shandong (2017, primera tanda)</li>
+      <li>Título municipal de "Empresa Líder"</li>
+      <li>Empresa "Más Influyente Internacionalmente" de la Asociación China de Condimentos</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Seguridad Alimentaria</h2>
+    <p>
+      La producción se realiza bajo un sistema de seguridad alimentaria de cero defectos y
+      tolerancia cero. Cada lote pasa por despepitado, filtración magnética, inspección por rayos
+      X y clasificación por color, con aceptación de materia prima controlada desde proveedores
+      aprobados y reverificada en nuestro laboratorio antes de entrar en producción.
+    </p>
+
+    <h2 style="margin-top:32px;">Mercados</h2>
+    <p>
+      Suministramos a fabricantes de alimentos, importadores y distribuidores de Europa, Oriente
+      Medio y Norteamérica, con especificación personalizada integral — valor de color, nivel de
+      picor, malla y embalaje ajustados a su requerimiento.
+    </p>
+  </div>
+</BaseLayout>

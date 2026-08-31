@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto Tenda Peppers",
+  "url": "https://drychillis.com/es/contact/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué información debo incluir en mi consulta de pimentón o chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluya la forma del producto (pimentón en polvo, hojuelas de chile, polvo, chiles enteros o trozos), su nivel de picor objetivo (SHU) y valor de color ASTA, los requisitos de malla y humedad, la cantidad objetivo y el puerto de destino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Suministran especificaciones personalizadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Ajustamos el pimentón y el chile a su valor de color, nivel de picor, malla y embalaje objetivo, con personalización integral y documentación de lote en cada envío."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la cantidad mínima de pedido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La cantidad mínima depende del producto y la especificación. Contáctenos con su cantidad objetivo y destino para confirmar la cantidad mínima, el plazo de entrega y las condiciones de envío."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Contacto Tenda Peppers — Consulta de Pimentón y Chile"
+  description="Contacte a Tenda Peppers para cotizaciones de pimentón en polvo y chile seco, especificaciones personalizadas y consultas de exportación. Email tdlajiao@126.com o WhatsApp +86 18162067392."
+  jsonLd={[contactJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <h1>Contacto y Consulta</h1>
+    <p class="lead">
+      Para cotizaciones de pimentón y chile seco, especificaciones personalizadas y consultas de
+      exportación, contáctenos directamente. Incluya la forma del producto, el nivel de picor y el
+      valor de color objetivo para una respuesta más rápida.
+    </p>
+
+    <div class="grid grid-2" style="margin-top:24px;">
+      <div class="card">
+        <h3>Contacto Directo</h3>
+        <p>
+          <strong>Email:</strong> <a href="mailto:tdlajiao@126.com">tdlajiao@126.com</a><br />
+          <strong>Teléfono / WhatsApp:</strong> <a href="tel:+8618162067392">+86 18162067392</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Fábrica</h3>
+        <p>
+          Leling Tenda Chili Products Co., Ltd.<br />
+          Yang'an Town Outer Ring Road,<br />
+          Leling, Shandong, China
+        </p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:32px;">Qué Incluir en su Consulta</h2>
+    <ul>
+      <li>Forma del producto — pimentón en polvo, hojuelas de chile, chile en polvo, chiles enteros o trozos</li>
+      <li>Nivel de picor objetivo (SHU) y valor de color ASTA</li>
+      <li>Requisitos de malla y humedad (si están especificados)</li>
+      <li>Cantidad objetivo y puerto de destino</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Mercados que Servimos</h2>
+    <p>
+      Suministramos a fabricantes de alimentos, importadores y distribuidores de Europa, Oriente
+      Medio y Norteamérica. El pimentón y el chile se exportan con documentación de lote completa,
+      conforme a los sistemas de calidad ISO 9001 y HACCP.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué información debo incluir en mi consulta de pimentón o chile?</h3>
+      <p>Incluya la forma del producto (pimentón en polvo, hojuelas de chile, polvo, chiles enteros o trozos), su nivel de picor objetivo (SHU) y valor de color ASTA, los requisitos de malla y humedad, la cantidad objetivo y el puerto de destino.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Suministran especificaciones personalizadas?</h3>
+      <p>Sí. Ajustamos el pimentón y el chile a su valor de color, nivel de picor, malla y embalaje objetivo, con personalización integral y documentación de lote en cada envío.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es la cantidad mínima de pedido?</h3>
+      <p>La cantidad mínima depende del producto y la especificación. Contáctenos con su cantidad objetivo y destino para confirmar la cantidad mínima, el plazo de entrega y las condiciones de envío.</p>
+    </div>
+  </div>
+</BaseLayout>

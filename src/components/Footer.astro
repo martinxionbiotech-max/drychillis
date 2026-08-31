@@ -1,11 +1,20 @@
 ---
+import { t, type Lang } from "../i18n/ui";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "en" } = Astro.props;
+const L = lang as Lang;
 const year = new Date().getFullYear();
+const base = lang === "en" ? "" : "/" + lang;
 ---
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-col">
-      <h2>Company</h2>
+      <h2>{t(L, "footer.company")}</h2>
       <address>
         <p><strong>Tenda Peppers</strong> — Leling Tenda Chili Products Co., Ltd.</p>
         <p>Yang'an Town Outer Ring Road, Leling, Shandong, China</p>
@@ -14,26 +23,26 @@ const year = new Date().getFullYear();
       </address>
     </div>
     <div class="footer-col">
-      <h2>Products</h2>
+      <h2>{t(L, "footer.products")}</h2>
       <nav aria-label="Product links">
-        <a href="/products/paprika/">Paprika Powder (Sweet &amp; Low-Heat)</a>
-        <a href="/products/dried-chillies/">Dried Chillies (Whole / Flakes / Powder / Segments)</a>
+        <a href={base + "/products/paprika/"}>Paprika Powder (Sweet &amp; Low-Heat)</a>
+        <a href={base + "/products/dried-chillies/"}>Dried Chillies (Whole / Flakes / Powder / Segments)</a>
       </nav>
     </div>
     <div class="footer-col">
-      <h2>Resources</h2>
+      <h2>{t(L, "footer.resources")}</h2>
       <nav aria-label="Resource links">
-        <a href="/quality/">Quality &amp; Certifications</a>
-        <a href="/about/">About Tenda Peppers</a>
-        <a href="/contact/">Contact &amp; Inquiry</a>
-        <a href="https://docs.drychillis.com/" target="_blank" rel="noopener">📚 Knowledge Hub</a>
+        <a href={base + "/quality/"}>{t(L, "nav.quality")}</a>
+        <a href={base + "/about/"}>{t(L, "nav.about")}</a>
+        <a href={base + "/contact/"}>{t(L, "nav.contact")}</a>
+        <a href="https://docs.drychillis.com/" target="_blank" rel="noopener">📚 {t(L, "footer.knowledgeHub")}</a>
       </nav>
     </div>
     <div class="footer-col">
-      <h2>Legal</h2>
+      <h2>{t(L, "footer.legal")}</h2>
       <nav aria-label="Legal links">
-        <a href="/privacy-policy/">Privacy Policy</a>
-        <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
+        <a href={base + "/privacy-policy/"}>{t(L, "footer.privacy")}</a>
+        <a href={base + "/terms-and-conditions/"}>{t(L, "footer.terms")}</a>
       </nav>
     </div>
   </div>

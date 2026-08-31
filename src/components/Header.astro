@@ -1,23 +1,39 @@
 ---
+import { t, type Lang } from "../i18n/ui";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "en" } = Astro.props;
+const L = lang as Lang;
+
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/products/paprika/", label: "Paprika" },
-  { href: "/products/dried-chillies/", label: "Dried Chillies" },
-  { href: "/quality/", label: "Quality" },
-  { href: "https://docs.drychillis.com/", label: "Guides", external: true },
-  { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/", label: t(L, "nav.home") },
+  { href: "/products/paprika/", label: t(L, "nav.paprika") },
+  { href: "/products/dried-chillies/", label: t(L, "nav.chillies") },
+  { href: "/quality/", label: t(L, "nav.quality") },
+  { href: "https://docs.drychillis.com/", label: t(L, "nav.guides"), external: true },
+  { href: "/about/", label: t(L, "nav.about") },
+  { href: "/contact/", label: t(L, "nav.contact") },
 ];
 
 const pathname = Astro.url.pathname;
+const pathSkeleton = pathname.replace(/^\/(es|ar)(?=\/|$)/, "");
 const isActive = (href: string) =>
-  href === "/" ? pathname === "/" : pathname.startsWith(href);
+  href === "/" ? pathSkeleton === "/" : pathSkeleton.startsWith(href);
+
+const langLabel: Record<string, string> = { en: "English", es: "Español", ar: "العربية" };
+const switchUrl = (target: string) => {
+  const base = target === "en" ? "" : "/" + target;
+  return base + pathSkeleton;
+};
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="brand" aria-label="Tenda Peppers — Home">
-      <span class="brand-text">Tenda Peppers<small>Paprika &amp; Dried Chillies</small></span>
+    <a href={switchUrl(lang)} class="brand" aria-label="Tenda Peppers — Home">
+      <span class="brand-text">{t(L, "brand")}<small>{t(L, "brandTag")}</small></span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       {
@@ -34,5 +50,19 @@ const isActive = (href: string) =>
         ))
       }
     </nav>
+    <div class="lang-switch" aria-label="Language">
+      {
+        ["en", "es", "ar"].map((code) => (
+          <a
+            href={switchUrl(code)}
+            class={code === lang ? "lang-active" : undefined}
+            hreflang={code}
+            lang={code}
+          >
+            {langLabel[code]}
+          </a>
+        ))
+      }
+    </div>
   </div>
 </header>

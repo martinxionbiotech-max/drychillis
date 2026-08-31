@@ -1,0 +1,182 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué productos de pimentón y chile fabrica Tenda Peppers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers fabrica dos familias de productos: pimentón en polvo (pimentón dulce y pimentón de bajo picor) y chiles secos (chiles secos enteros, hojuelas de chile, chile en polvo y trozos de chile), cubriendo niveles de picor desde pimentón dulce de <500 SHU hasta chiles picantes de más de 50,000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre el pimentón y el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón se elabora con pimientos dulces de alto color y bajo picor (normalmente por debajo de 10,000 SHU) y se utiliza sobre todo para dar color rojo natural y sabor suave. El chile en polvo se elabora con variedades más picantes (20,000–50,000+ SHU) y se utiliza para aportar picor. Cumplen funciones distintas en la fabricación de alimentos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué certificaciones tiene Tenda Peppers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers cuenta con las certificaciones ISO 9001 (gestión de calidad) y HACCP (seguridad alimentaria). La producción se realiza bajo un sistema de seguridad alimentaria de cero defectos y tolerancia cero, con inspección por rayos X, clasificación por color y detección de metales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden suministrar especificaciones personalizadas de pimentón y chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El pimentón y el chile pueden suministrarse según su valor de color ASTA, nivel de picor (SHU), tamaño de malla y especificación de humedad. Contáctenos con su especificación objetivo para una cotización a medida."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Tenda Peppers | Fabricante de Pimentón y Chiles Secos"
+  description="Tenda Peppers es un fabricante chino de pimentón en polvo y chiles secos — pimentón dulce, hojuelas de chile, chile en polvo y chiles secos enteros. Certificado ISO 9001 y HACCP, suministrando a Europa, Oriente Medio y Norteamérica."
+  jsonLd={[faqJsonLd]}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Pimentón y Chiles Secos,<br />Cultivados y Molidos en China.</h1>
+      <p>
+        Tenda Peppers fabrica pimentón en polvo y chiles secos a partir de 12 bases de cultivo en
+        Shandong, Xinjiang y Henan — molidos bajo ISO 9001 y HACCP con inspección por rayos X y
+        clasificación por color. Suministramos a fabricantes de alimentos de Europa, Oriente Medio y Norteamérica.
+      </p>
+      <div class="hero-actions">
+        <a class="cta" href="/es/products/paprika/">Pimentón en Polvo</a>
+        <a class="cta cta-outline" href="/es/products/dried-chillies/">Chiles Secos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Dos Familias de Productos</h2>
+      <p class="lead">
+        Nos centramos en un único cultivo — el pimiento — y lo molemos en dos familias de productos
+        para la industria alimentaria: pimentón enfocado al color y chiles secos enfocados al picor.
+      </p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Pimentón en Polvo</h3>
+          <p>
+            Pimentón de bajo picor y alto color elaborado con variedades de pimiento dulce (pimiento
+            dulce de Xinjiang, Yidu red). Para colorante rojo natural, mezclas de especias y adobos.
+          </p>
+          <a href="/es/products/paprika/">Ver Pimentón →</a>
+        </div>
+        <div class="card">
+          <h3>Chiles Secos</h3>
+          <p>
+            Chiles enteros, hojuelas, polvo y trozos en niveles de picor de 10,000 a 50,000+ SHU —
+            para salsas, snacks, condimentos y food service.
+          </p>
+          <a href="/es/products/dried-chillies/">Ver Chiles Secos →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Por qué Tenda Peppers</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>12 Bases de Cultivo</h3>
+          <p>Materia prima trazable procedente de bases de cultivo controladas en Shandong, Xinjiang y Henan.</p>
+        </div>
+        <div class="card">
+          <h3>ISO 9001 y HACCP</h3>
+          <p>Sistemas certificados de calidad y seguridad alimentaria, con inspección por rayos X, clasificación por color y detección de metales.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidad de 10,000+ Toneladas</h3>
+          <p>Tres líneas de producción de alto estándar con 30,000 m² de fábrica y almacenamiento en frío.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Niveles de Picor que Suministramos</h2>
+      <table>
+        <thead>
+          <tr><th>Nivel de picor</th><th>Rango SHU</th><th>Variedades representativas</th><th>Forma del producto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Dulce / bajo picor</td><td>&lt;500 – 10,000</td><td>Pimiento dulce de Xinjiang, Yidu red, Wangdu</td><td>Pimentón en polvo</td></tr>
+          <tr><td>Picor medio</td><td>10,000 – 20,000</td><td>Pimiento Xian, Jinta, Erjingtiao</td><td>Hojuelas de chile, polvo medio</td></tr>
+          <tr><td>Picor alto</td><td>20,000 – 50,000</td><td>Pimiento Sanying, Zidantou, New Generation</td><td>Chile en polvo, hojuelas</td></tr>
+          <tr><td>Extra picante</td><td>&gt;50,000</td><td>Pimiento Jixin, pimiento Xiaomi, Chilli King</td><td>Trozos de chile, polvo</td></tr>
+        </tbody>
+      </table>
+      <p class="data-note" style="margin-top:12px;">
+        Los niveles de picor son representativos de las variedades de chile chinas. Confirme su
+        SHU objetivo y su valor de color ASTA al realizar su consulta.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Guías Técnicas</h2>
+      <p class="lead" style="margin-bottom:24px;">
+        Orientación detallada del Centro de Conocimiento de Tenda Peppers — especificaciones,
+        normas y conocimientos de abastecimiento para compradores de pimentón y chile seco.
+      </p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Guía de Compra de Pimentón y Chile</h3>
+          <p>Cómo especificar el valor de color, el nivel de picor, la malla y la humedad para su aplicación.</p>
+          <a href="https://docs.drychillis.com/buying-guide/">Leer la guía →</a>
+        </div>
+        <div class="card">
+          <h3>Color ASTA y SHU Explicados</h3>
+          <p>Qué significan el valor de color ASTA y las Unidades Scoville, y cómo interpretarlos.</p>
+          <a href="https://docs.drychillis.com/asta-shu-explained/">Leer la guía →</a>
+        </div>
+        <div class="card">
+          <h3>Variedades y Grados de Chile</h3>
+          <p>Las principales variedades de chile chinas, sus regiones, niveles de picor y mejores usos.</p>
+          <a href="https://docs.drychillis.com/chilli-varieties/">Leer la guía →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Qué productos de pimentón y chile fabrica Tenda Peppers?</h3>
+        <p>Tenda Peppers fabrica dos familias de productos: pimentón en polvo (pimentón dulce y pimentón de bajo picor) y chiles secos (chiles secos enteros, hojuelas de chile, chile en polvo y trozos de chile), cubriendo niveles de picor desde pimentón dulce de &lt;500 SHU hasta chiles picantes de más de 50,000 SHU.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuál es la diferencia entre el pimentón y el chile en polvo?</h3>
+        <p>El pimentón se elabora con pimientos dulces de alto color y bajo picor (normalmente por debajo de 10,000 SHU) y se utiliza sobre todo para dar color rojo natural y sabor suave. El chile en polvo se elabora con variedades más picantes (20,000–50,000+ SHU) y se utiliza para aportar picor. Cumplen funciones distintas en la fabricación de alimentos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué certificaciones tiene Tenda Peppers?</h3>
+        <p>Tenda Peppers cuenta con las certificaciones ISO 9001 (gestión de calidad) y HACCP (seguridad alimentaria). La producción se realiza bajo un sistema de seguridad alimentaria de cero defectos y tolerancia cero, con inspección por rayos X, clasificación por color y detección de metales.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Pueden suministrar especificaciones personalizadas de pimentón y chile?</h3>
+        <p>Sí. El pimentón y el chile pueden suministrarse según su valor de color ASTA, nivel de picor (SHU), tamaño de malla y especificación de humedad. Contáctenos con su especificación objetivo para una cotización a medida.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

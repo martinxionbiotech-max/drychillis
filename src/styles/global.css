@@ -130,6 +130,38 @@ tbody tr:nth-child(even) td { background: var(--bg-soft); }
 
 .data-note { font-size: 0.85rem; color: var(--text-soft); font-style: italic; }
 
+/* Language switcher */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lang-switch a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 5px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.lang-switch a:hover { background: rgba(255,255,255,0.14); color: #fff; }
+.lang-switch a.lang-active {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-weight: 700;
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* RTL (Arabic) support */
+[dir="rtl"] .header-inner { flex-direction: row-reverse; }
+[dir="rtl"] .site-nav { flex-direction: row-reverse; }
+[dir="rtl"] .footer-inner { direction: rtl; }
+[dir="rtl"] .footer-col { text-align: right; }
+[dir="rtl"] .testimonial { border-left: none; border-right: 4px solid var(--amber); }
+[dir="rtl"] .faq-item h3, [dir="rtl"] .card h3, [dir="rtl"] h1, [dir="rtl"] h2 { text-align: right; }
+[dir="rtl"] table th, [dir="rtl"] table td { text-align: right; }
+
 /* Responsive */
 @media (max-width: 800px) {
   .grid-3, .grid-2 { grid-template-columns: 1fr; }

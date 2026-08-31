@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Chiles Secos (Enteros, Hojuelas, Polvo, Trozos)",
+  "description": "Fabricante chino de chiles secos — chiles secos enteros, hojuelas de chile, chile en polvo y trozos de chile en niveles de picor de 10,000 a 50,000+ SHU.",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué productos de chile seco suministran?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suministramos chiles secos enteros, hojuelas de chile (chile triturado), chile en polvo y trozos de chile, cubriendo niveles de picor de 10,000 a 50,000+ SHU en variedades de chile chinas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué nivel de picor necesito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El picor medio (10,000–20,000 SHU) sirve para condimentos generales; el picor alto (20,000–50,000 SHU) para salsas picantes y condimentos de snacks; el extra picante (más de 50,000 SHU) para aplicaciones de calor extremo. Indíquenos su SHU objetivo y ajustamos la variedad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden suministrar chiles secos enteros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Suministramos chiles secos enteros en variedades como pimiento farol, pimiento Jinta, pimiento mirando al cielo y pimiento Xiaomi, con tamaño y humedad clasificados según especificación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se controla el color y el picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El picor y el color se controlan en origen mediante selección de variedad y control de grado, y se verifican internamente. Cada lote pasa por despepitado, filtración magnética, inspección por rayos X y clasificación por color."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  lang="es"
+  title="Fabricante de Chiles Secos — Enteros, Hojuelas, Polvo, Trozos | Tenda Peppers"
+  description="Fabricante chino de chiles secos — chiles secos enteros, hojuelas de chile, chile en polvo y trozos de chile de 10,000 a 50,000+ SHU. ISO 9001 y HACCP, suministrando a Europa, Oriente Medio y Norteamérica."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; Chiles Secos
+    </nav>
+    <h1>Chiles Secos</h1>
+    <p class="lead">
+      Chiles secos enteros, hojuelas, polvo y trozos — productos de chile enfocados al picor,
+      molidos de variedades chinas en todo el espectro de picor, para salsas, snacks y condimentos.
+    </p>
+
+    <h2 style="margin-top:32px;">Nuestra Gama de Chiles Secos</h2>
+    <table>
+      <thead>
+        <tr><th>Forma del producto</th><th>Picor (SHU)</th><th>Variedades</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Chiles Secos Enteros</strong></td>
+          <td>10,000 – 50,000+</td>
+          <td>Farol, Jinta, mirando al cielo, Xiaomi, Zidantou</td>
+          <td>Food service, hot-pot, chile visible</td>
+        </tr>
+        <tr>
+          <td><strong>Hojuelas de Chile (Triturado)</strong></td>
+          <td>10,000 – 20,000</td>
+          <td>Pimiento Xian, Jinta, Erjingtiao</td>
+          <td>Topping de pizza, mezclas de condimentos, snacks</td>
+        </tr>
+        <tr>
+          <td><strong>Chile en Polvo</strong></td>
+          <td>20,000 – 50,000</td>
+          <td>Sanying, Zidantou, New Generation, Seven-Star</td>
+          <td>Salsas picantes, condimentos, alimentos industriales</td>
+        </tr>
+        <tr>
+          <td><strong>Trozos de Chile</strong></td>
+          <td>&gt;50,000</td>
+          <td>Jixin, Xiaomi, Chilli King, Shuan Shuan</td>
+          <td>Calor extremo, platos estilo Sichuan</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Los niveles de picor son representativos de las variedades de chile chinas. Confirme su SHU
+      objetivo y aplicación al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Especificaciones</h2>
+    <table>
+      <thead>
+        <tr><th>Parámetro</th><th>Rango típico</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nivel de picor (SHU)</td><td>10,000 – 50,000+</td></tr>
+        <tr><td>Humedad</td><td>&lt;13%</td></tr>
+        <tr><td>Malla (polvo)</td><td>Ajustable según requerimiento</td></tr>
+        <tr><td>Procesamiento</td><td>Despepitado, filtrado magnético, inspección por rayos X, clasificación por color</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Aplicaciones</h2>
+    <ul>
+      <li>Salsas picantes y aceite de chile</li>
+      <li>Condimentos para snacks y fideos instantáneos</li>
+      <li>Mezclas de condimentos y especias</li>
+      <li>Food service y hot-pot</li>
+      <li>Carnes procesadas y adobos</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué productos de chile seco suministran?</h3>
+      <p>Suministramos chiles secos enteros, hojuelas de chile (chile triturado), chile en polvo y trozos de chile, cubriendo niveles de picor de 10,000 a 50,000+ SHU en variedades de chile chinas.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué nivel de picor necesito?</h3>
+      <p>El picor medio (10,000–20,000 SHU) sirve para condimentos generales; el picor alto (20,000–50,000 SHU) para salsas picantes y condimentos de snacks; el extra picante (más de 50,000 SHU) para aplicaciones de calor extremo. Indíquenos su SHU objetivo y ajustamos la variedad.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Pueden suministrar chiles secos enteros?</h3>
+      <p>Sí. Suministramos chiles secos enteros en variedades como pimiento farol, pimiento Jinta, pimiento mirando al cielo y pimiento Xiaomi, con tamaño y humedad clasificados según especificación.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo se controla el color y el picor?</h3>
+      <p>El picor y el color se controlan en origen mediante selección de variedad y control de grado, y se verifican internamente. Cada lote pasa por despepitado, filtración magnética, inspección por rayos X y clasificación por color.</p>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#faf5f2;border-radius:8px;">
+      <h2 style="margin-top:0;">Documentación Técnica Relacionada</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="https://docs.drychillis.com/buying-guide/" target="_blank" rel="noopener">Guía de compra de pimentón y chile</a></li>
+        <li><a href="https://docs.drychillis.com/chilli-varieties/" target="_blank" rel="noopener">Variedades y grados de chile</a></li>
+        <li><a href="https://docs.drychillis.com/heat-perception/" target="_blank" rel="noopener">Percepción del picor y paladar</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Chile</a>
+    </div>
+  </div>
+</BaseLayout>
