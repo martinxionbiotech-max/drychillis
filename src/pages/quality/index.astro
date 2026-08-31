@@ -1,10 +1,58 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const qualityJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Quality & Certifications",
+  "url": "https://drychillis.com/quality/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What certifications does Tenda Peppers hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers is certified to ISO 9001:2015 (quality management) and HACCP (food safety). Production runs under a zero-defect, zero-tolerance food safety policy with 24-hour surveillance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you remove foreign objects from chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every batch passes de-seeding, magnet filtration (ferrous metal), X-ray inspection (dense objects) and colour sorting (optical grading of defects). This multi-stage screening runs alongside moisture control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get certificates and batch documentation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Certificates and batch documentation are available on request, and every shipment is traceable to its growing base under the ISO 9001 / HACCP system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is batch-to-batch consistency ensured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consistency comes from variety and grade control at source, raw-material traceability from 12 controlled growing bases, and laboratory re-verification before production — so heat, colour and flavour stay stable between batches."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
   title="Quality & Certifications | Tenda Peppers"
   description="Tenda Peppers quality control — ISO 9001 and HACCP certified, with X-ray inspection, colour sorting, metal detection and an 8-step production process for paprika and dried chillies."
+  jsonLd={[qualityJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <h1>Quality &amp; Certifications</h1>
@@ -23,8 +71,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <tr><td>HACCP</td><td>Food safety management</td><td>✅ Certified</td></tr>
       </tbody>
     </table>
+    <p class="data-note">
+      Certificates available on request. Third-party testing available at buyer's request.
+    </p>
 
     <h2 style="margin-top:32px;">The 8-Step Production Process</h2>
+    <p>
+      Every batch moves through eight gated stages, each with a defined control point. This
+      traceable flow — from raw material to finished goods — is what turns a written specification
+      into a consistent product.
+    </p>
     <table>
       <thead>
         <tr><th>Step</th><th>Stage</th><th>Control</th></tr>
@@ -40,6 +96,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <tr><td>8</td><td>Finished goods</td><td>Final inspection before release</td></tr>
       </tbody>
     </table>
+
+    <h2 style="margin-top:32px;">Foreign-Object Control</h2>
+    <p>
+      Foreign-object removal is a multi-stage, overlapping process — no single machine is trusted
+      alone:
+    </p>
+    <ul>
+      <li><strong>Magnet filtration</strong> — removes ferrous metal fragments</li>
+      <li><strong>X-ray inspection</strong> — detects dense foreign objects magnet filtration misses</li>
+      <li><strong>Colour sorting</strong> — optical grading removes off-colour and defective pieces</li>
+      <li><strong>De-seeding</strong> — removes seeds and attached plant matter</li>
+    </ul>
 
     <h2 style="margin-top:32px;">Quality Control Points</h2>
     <ul>
@@ -57,6 +125,30 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       may darken after sterilisation. This is normal colour chemistry — and we advise on storage to
       preserve colour in your application.
     </p>
+    <p>
+      For the full technical explanation, see
+      <a href="https://docs.drychillis.com/colour-storage/" target="_blank" rel="noopener">colour change &amp; storage</a>
+      and <a href="https://docs.drychillis.com/quality-control/" target="_blank" rel="noopener">quality control</a>
+      in the Knowledge Hub.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What certifications does Tenda Peppers hold?</h3>
+      <p>Tenda Peppers is certified to ISO 9001:2015 (quality management) and HACCP (food safety). Production runs under a zero-defect, zero-tolerance food safety policy with 24-hour surveillance.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do you remove foreign objects from chilli?</h3>
+      <p>Every batch passes de-seeding, magnet filtration (ferrous metal), X-ray inspection (dense objects) and colour sorting (optical grading of defects). This multi-stage screening runs alongside moisture control.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I get certificates and batch documentation?</h3>
+      <p>Yes. Certificates and batch documentation are available on request, and every shipment is traceable to its growing base under the ISO 9001 / HACCP system.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is batch-to-batch consistency ensured?</h3>
+      <p>Consistency comes from variety and grade control at source, raw-material traceability from 12 controlled growing bases, and laboratory re-verification before production — so heat, colour and flavour stay stable between batches.</p>
+    </div>
 
     <div style="margin-top:32px;">
       <a class="cta" href="/contact/">Request Certificates</a>
