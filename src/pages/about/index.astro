@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Tenda Peppers",
+  "url": "https://drychillis.com/about/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+---
+
+<BaseLayout
+  title="About Tenda Peppers — Paprika & Dried Chilli Manufacturer"
+  description="Tenda Peppers is the paprika and dried chilli brand of Leling Tenda Chili Products Co., Ltd., a China manufacturer founded in 2010 with 12 growing bases and 10,000+ tonne annual capacity."
+  jsonLd={[aboutJsonLd]}
+>
+  <div class="container section">
+    <h1>About Tenda Peppers</h1>
+    <p class="lead">
+      Tenda Peppers is the paprika and dried chilli brand of Leling Tenda Chili Products Co.,
+      Ltd., a manufacturer founded in 2010 in Leling, Shandong — a region known as China's
+      "flavour capital".
+    </p>
+
+    <h2 style="margin-top:32px;">Who We Are</h2>
+    <p>
+      We are a privately held manufacturer focused on one crop: chilli peppers. From 12 controlled
+      growing bases we source chilli varieties across Shandong, Xinjiang and Henan, then dry, mill
+      and grade them into paprika powder and dried chilli products for the food industry.
+    </p>
+    <table>
+      <tbody>
+        <tr><td><strong>Company</strong></td><td>Leling Tenda Chili Products Co., Ltd.</td></tr>
+        <tr><td><strong>Brand</strong></td><td>Tenda Peppers</td></tr>
+        <tr><td><strong>Founded</strong></td><td>2010</td></tr>
+        <tr><td><strong>Location</strong></td><td>Yang'an Town, Leling, Shandong, China</td></tr>
+        <tr><td><strong>Facility</strong></td><td>30,000 m² site, 16,000 m² buildings, cold storage</td></tr>
+        <tr><td><strong>Production</strong></td><td>3 high-standard lines + 1 conventional line</td></tr>
+        <tr><td><strong>Annual capacity</strong></td><td>10,000+ tonnes</td></tr>
+        <tr><td><strong>Team</strong></td><td>126 staff, 37 technical specialists</td></tr>
+        <tr><td><strong>Certifications</strong></td><td>ISO 9001, HACCP</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Our Focus</h2>
+    <p>
+      Rather than spread across every spice category, we concentrate on the chilli pepper
+      vertical. That focus lets us go deep on what matters to paprika and chilli buyers: variety
+      selection, colour value (ASTA), heat level (SHU), mesh, moisture and batch consistency.
+    </p>
+
+    <h2 style="margin-top:32px;">Certifications &amp; Recognition</h2>
+    <ul>
+      <li>ISO 9001:2015 quality management certification</li>
+      <li>HACCP food safety certification</li>
+      <li>Shandong "Food Safety" designation (2017, first batch)</li>
+      <li>Municipal "Leading Enterprise" title</li>
+      <li>China Condiment Association "Most Internationally Influential" enterprise</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Food Safety</h2>
+    <p>
+      Production runs under a zero-defect, zero-tolerance food safety system. Every batch passes
+      de-seeding, magnet filtration, X-ray inspection and colour sorting, with raw-material
+      acceptance controlled from approved suppliers and re-verified in our laboratory before
+      entering production.
+    </p>
+
+    <h2 style="margin-top:32px;">Markets</h2>
+    <p>
+      We supply food manufacturers, importers and distributors across Europe, the Middle East and
+      North America, with one-stop custom specification — colour value, heat level, mesh and
+      packaging matched to your requirement.
+    </p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Paprika Powder (Sweet & Low-Heat)",
+  "description": "Low-heat, high-colour paprika powder made from Chinese sweet pepper varieties — sweet paprika and low-heat paprika for natural red colouring, spice blends and marinades.",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is paprika powder used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika powder is used mainly for natural red colouring and mild flavour in spice blends, marinades, sausages, snack seasoning and the extraction of paprika oleoresin (natural red food colour)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between sweet paprika and low-heat paprika?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 8–18. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ASTA colour value can you supply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We supply paprika powder across an ASTA colour value range of roughly 60 to 240, depending on the variety and grade. Confirm your target colour value and heat level when you inquire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the moisture and mesh specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical paprika powder is supplied at under 13% moisture and 60–80 mesh, with specifications adjustable to your requirement. X-ray inspection and metal detection are standard on every batch."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Paprika Powder Manufacturer — Sweet & Low-Heat | Tenda Peppers"
+  description="China paprika powder manufacturer. Sweet paprika and low-heat paprika from Xinjiang sweet pepper and Yidu red — natural red colouring for spice blends, marinades and seasoning. ISO 9001 & HACCP."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; Paprika Powder
+    </nav>
+    <h1>Paprika Powder</h1>
+    <p class="lead">
+      Low-heat, high-colour paprika milled from Chinese sweet pepper varieties — for natural red
+      colouring, spice blends and marinades across Europe, the Middle East and North America.
+    </p>
+
+    <h2 style="margin-top:32px;">Our Paprika Range</h2>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Variety</th><th>Heat (SHU)</th><th>Colour (ASTA)</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sweet Paprika Powder</strong></td>
+          <td>Xinjiang sweet pepper, Red Dragon 23</td>
+          <td>&lt;500</td>
+          <td>8–18</td>
+          <td>Food colouring, paprika oleoresin extraction</td>
+        </tr>
+        <tr>
+          <td><strong>Low-Heat Paprika Powder</strong></td>
+          <td>Yidu red, Wangdu</td>
+          <td>&lt;10,000</td>
+          <td>High (thick flesh)</td>
+          <td>Colouring with clear chilli aroma, marinades</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Colour values and heat levels are representative ranges for each variety — final specification
+      is matched to your target ASTA value and SHU on inquiry.
+    </p>
+
+    <h2 style="margin-top:32px;">Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Typical range</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ASTA colour value</td><td>60–240 (variety-dependent)</td></tr>
+        <tr><td>Heat level (SHU)</td><td>&lt;500 – 10,000</td></tr>
+        <tr><td>Moisture</td><td>&lt;13%</td></tr>
+        <tr><td>Mesh</td><td>60–80 mesh (adjustable)</td></tr>
+        <tr><td>Processing</td><td>De-seeded, magnet-filtered, X-ray inspected, colour-sorted</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges. Exact colour, heat, mesh and moisture are confirmed
+      against your target specification and documented in the quotation.
+    </p>
+
+    <h2 style="margin-top:32px;">Applications</h2>
+    <ul>
+      <li>Spice blends and seasoning mixes</li>
+      <li>Marinades and meat rubs</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Sausage and processed-meat colouring</li>
+      <li>Paprika oleoresin (natural red food colour) extraction</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is paprika powder used for?</h3>
+      <p>Paprika powder is used mainly for natural red colouring and mild flavour in spice blends, marinades, sausages, snack seasoning and the extraction of paprika oleoresin (natural red food colour).</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between sweet paprika and low-heat paprika?</h3>
+      <p>Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 8–18. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What ASTA colour value can you supply?</h3>
+      <p>We supply paprika powder across an ASTA colour value range of roughly 60 to 240, depending on the variety and grade. Confirm your target colour value and heat level when you inquire.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the moisture and mesh specification?</h3>
+      <p>Typical paprika powder is supplied at under 13% moisture and 60–80 mesh, with specifications adjustable to your requirement. X-ray inspection and metal detection are standard on every batch.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Paprika Quotation</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Dried Chillies (Whole, Flakes, Powder, Segments)",
+  "description": "China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments across heat levels from 10,000 to 50,000+ SHU.",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What dried chilli products do you supply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We supply whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments, covering heat levels from 10,000 to 50,000+ SHU across Chinese chilli varieties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What heat level do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medium heat (10,000–20,000 SHU) suits general seasoning; high heat (20,000–50,000 SHU) suits hot sauces and snack seasoning; extra hot (over 50,000 SHU) is for extreme-heat applications. Tell us your target SHU and we match the variety."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you supply whole dried chillies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We supply whole dried chillies in varieties including lantern pepper, Jinta pepper, facing-heaven pepper and Xiaomi pepper, with size and moisture graded to specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the colour and heat controlled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat and colour are controlled at source through variety selection and grade control, then verified in-house. Every batch passes de-seeding, magnet filtration, X-ray inspection and colour sorting."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Dried Chillies Manufacturer — Whole, Flakes, Powder, Segments | Tenda Peppers"
+  description="China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments from 10,000 to 50,000+ SHU. ISO 9001 & HACCP, supplying Europe, Middle East and North America."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; Dried Chillies
+    </nav>
+    <h1>Dried Chillies</h1>
+    <p class="lead">
+      Whole dried chillies, flakes, powder and segments — heat-focused chilli products milled from
+      Chinese chilli varieties across the full heat spectrum, for sauces, snacks and seasonings.
+    </p>
+
+    <h2 style="margin-top:32px;">Our Dried Chilli Range</h2>
+    <table>
+      <thead>
+        <tr><th>Product form</th><th>Heat (SHU)</th><th>Varieties</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Whole Dried Chillies</strong></td>
+          <td>10,000 – 50,000+</td>
+          <td>Lantern, Jinta, facing-heaven, Xiaomi, Zidantou</td>
+          <td>Food service, hot-pot, visible chilli</td>
+        </tr>
+        <tr>
+          <td><strong>Chilli Flakes (Crushed)</strong></td>
+          <td>10,000 – 20,000</td>
+          <td>Xian pepper, Jinta, Erjingtiao</td>
+          <td>Pizza topping, seasoning blends, snacks</td>
+        </tr>
+        <tr>
+          <td><strong>Chilli Powder</strong></td>
+          <td>20,000 – 50,000</td>
+          <td>Sanying, Zidantou, New Generation, Seven-Star</td>
+          <td>Hot sauces, seasoning, industrial food</td>
+        </tr>
+        <tr>
+          <td><strong>Chilli Segments</strong></td>
+          <td>&gt;50,000</td>
+          <td>Jixin, Xiaomi, Chilli King, Shuan Shuan</td>
+          <td>Extreme heat, Sichuan-style dishes</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Heat levels are representative of Chinese chilli varieties. Confirm your target SHU and
+      application when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Typical range</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Heat level (SHU)</td><td>10,000 – 50,000+</td></tr>
+        <tr><td>Moisture</td><td>&lt;13%</td></tr>
+        <tr><td>Mesh (powder)</td><td>Adjustable to requirement</td></tr>
+        <tr><td>Processing</td><td>De-seeded, magnet-filtered, X-ray inspected, colour-sorted</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges. Exact heat, mesh and moisture are confirmed against
+      your target specification and documented in the quotation.
+    </p>
+
+    <h2 style="margin-top:32px;">Applications</h2>
+    <ul>
+      <li>Hot sauces and chilli oil</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Seasoning blends and spice mixes</li>
+      <li>Food service and hot-pot</li>
+      <li>Processed meat and marinades</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What dried chilli products do you supply?</h3>
+      <p>We supply whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments, covering heat levels from 10,000 to 50,000+ SHU across Chinese chilli varieties.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What heat level do I need?</h3>
+      <p>Medium heat (10,000–20,000 SHU) suits general seasoning; high heat (20,000–50,000 SHU) suits hot sauces and snack seasoning; extra hot (over 50,000 SHU) is for extreme-heat applications. Tell us your target SHU and we match the variety.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you supply whole dried chillies?</h3>
+      <p>Yes. We supply whole dried chillies in varieties including lantern pepper, Jinta pepper, facing-heaven pepper and Xiaomi pepper, with size and moisture graded to specification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is the colour and heat controlled?</h3>
+      <p>Heat and colour are controlled at source through variety selection and grade control, then verified in-house. Every batch passes de-seeding, magnet filtration, X-ray inspection and colour sorting.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Chilli Quotation</a>
+    </div>
+  </div>
+</BaseLayout>

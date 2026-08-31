@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What paprika and chilli products does Tenda Peppers manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers manufactures two product families: paprika powder (sweet paprika and low-heat paprika) and dried chillies (whole dried chillies, chilli flakes, chilli powder and chilli segments), covering heat levels from <500 SHU sweet paprika to 50,000+ SHU hot chillies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between paprika and chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika is made from low-heat, high-colour sweet peppers (typically under 10,000 SHU) and is used mainly for natural red colouring and mild flavour. Chilli powder is made from hotter chilli varieties (20,000–50,000+ SHU) and is used to add heat. They serve different purposes in food manufacturing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications does Tenda Peppers hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenda Peppers is certified to ISO 9001 (quality management) and HACCP (food safety). Production runs under a zero-defect, zero-tolerance food safety system with X-ray inspection, colour sorting and metal detection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you supply custom specifications for paprika and chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Paprika and chilli can be supplied to your target ASTA colour value, heat level (SHU), mesh size and moisture specification. Contact us with your target spec for a matched quotation."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Tenda Peppers | Paprika & Dried Chillies Manufacturer"
+  description="Tenda Peppers is a China manufacturer of paprika powder and dried chillies — sweet paprika, chilli flakes, chilli powder and whole dried chillies. ISO 9001 & HACCP certified, supplying Europe, the Middle East and North America."
+  jsonLd={[faqJsonLd]}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Paprika &amp; Dried Chillies,<br />Grown and Milled in China.</h1>
+      <p>
+        Tenda Peppers manufactures paprika powder and dried chillies from 12 growing bases in
+        Shandong, Xinjiang and Henan — milled under ISO 9001 &amp; HACCP with X-ray inspection and
+        colour sorting. Supplying food manufacturers across Europe, the Middle East and North America.
+      </p>
+      <div class="hero-actions">
+        <a class="cta" href="/products/paprika/">Paprika Powder</a>
+        <a class="cta cta-outline" href="/products/dried-chillies/">Dried Chillies</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Two Product Families</h2>
+      <p class="lead">
+        We focus on one crop — chilli peppers — and mill it into two product families for the
+        food industry: colour-focused paprika and heat-focused dried chillies.
+      </p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Paprika Powder</h3>
+          <p>
+            Low-heat, high-colour paprika made from sweet pepper varieties (Xinjiang sweet pepper,
+            Yidu red). Used for natural red colouring, spice blends and marinades.
+          </p>
+          <a href="/products/paprika/">View Paprika →</a>
+        </div>
+        <div class="card">
+          <h3>Dried Chillies</h3>
+          <p>
+            Whole chillies, flakes, powder and segments across heat levels from 10,000 to
+            50,000+ SHU — for sauces, snacks, seasonings and food service.
+          </p>
+          <a href="/products/dried-chillies/">View Dried Chillies →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Why Tenda Peppers</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>12 Growing Bases</h3>
+          <p>Traceable raw material from controlled chilli growing bases across Shandong, Xinjiang and Henan.</p>
+        </div>
+        <div class="card">
+          <h3>ISO 9001 &amp; HACCP</h3>
+          <p>Certified quality and food-safety systems, with X-ray inspection, colour sorting and metal detection.</p>
+        </div>
+        <div class="card">
+          <h3>10,000+ Tonne Capacity</h3>
+          <p>Three high-standard production lines with 30,000 m² of factory space and cold storage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Heat Levels We Supply</h2>
+      <table>
+        <thead>
+          <tr><th>Heat level</th><th>SHU range</th><th>Representative varieties</th><th>Product form</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sweet / low heat</td><td>&lt;500 – 10,000</td><td>Xinjiang sweet pepper, Yidu red, Wangdu</td><td>Paprika powder</td></tr>
+          <tr><td>Medium heat</td><td>10,000 – 20,000</td><td>Xian pepper, Jinta, Erjingtiao</td><td>Chilli flakes, medium powder</td></tr>
+          <tr><td>High heat</td><td>20,000 – 50,000</td><td>Sanying pepper, Zidantou, New Generation</td><td>Chilli powder, flakes</td></tr>
+          <tr><td>Extra hot</td><td>&gt;50,000</td><td>Jixin pepper, Xiaomi pepper, Chilli King</td><td>Chilli segments, powder</td></tr>
+        </tbody>
+      </table>
+      <p class="data-note" style="margin-top:12px;">
+        Heat levels are representative of Chinese chilli varieties. Confirm your target SHU and
+        ASTA colour value when you inquire.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Technical Guides</h2>
+      <p class="lead" style="margin-bottom:24px;">
+        In-depth guidance from the Tenda Peppers Knowledge Hub — specifications, standards and
+        sourcing knowledge for paprika and dried chilli buyers.
+      </p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Paprika &amp; Chilli Buying Guide</h3>
+          <p>How to specify colour value, heat level, mesh and moisture for your application.</p>
+          <a href="https://docs.drychillis.com/buying-guide/">Read the guide →</a>
+        </div>
+        <div class="card">
+          <h3>ASTA Colour &amp; SHU Explained</h3>
+          <p>What ASTA colour value and Scoville Heat Units mean, and how to read them.</p>
+          <a href="https://docs.drychillis.com/asta-shu-explained/">Read the guide →</a>
+        </div>
+        <div class="card">
+          <h3>Chilli Varieties &amp; Grades</h3>
+          <p>The major Chinese chilli varieties, their regions, heat levels and best uses.</p>
+          <a href="https://docs.drychillis.com/chilli-varieties/">Read the guide →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What paprika and chilli products does Tenda Peppers manufacture?</h3>
+        <p>Tenda Peppers manufactures two product families: paprika powder (sweet paprika and low-heat paprika) and dried chillies (whole dried chillies, chilli flakes, chilli powder and chilli segments), covering heat levels from &lt;500 SHU sweet paprika to 50,000+ SHU hot chillies.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between paprika and chilli powder?</h3>
+        <p>Paprika is made from low-heat, high-colour sweet peppers (typically under 10,000 SHU) and is used mainly for natural red colouring and mild flavour. Chilli powder is made from hotter chilli varieties (20,000–50,000+ SHU) and is used to add heat. They serve different purposes in food manufacturing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What certifications does Tenda Peppers hold?</h3>
+        <p>Tenda Peppers is certified to ISO 9001 (quality management) and HACCP (food safety). Production runs under a zero-defect, zero-tolerance food safety system with X-ray inspection, colour sorting and metal detection.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you supply custom specifications for paprika and chilli?</h3>
+        <p>Yes. Paprika and chilli can be supplied to your target ASTA colour value, heat level (SHU), mesh size and moisture specification. Contact us with your target spec for a matched quotation.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

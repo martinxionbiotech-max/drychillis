@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Tenda Peppers",
+  "url": "https://drychillis.com/contact/",
+  "mainEntity": { "@id": "https://drychillis.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What information should I include in my paprika or chilli inquiry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Include the product form (paprika powder, chilli flakes, powder, whole chillies or segments), your target heat level (SHU) and ASTA colour value, mesh and moisture requirements, target quantity and destination port."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you supply custom specifications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We match paprika and chilli to your target colour value, heat level, mesh and packaging, with one-stop customisation and batch documentation on every shipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MOQ depends on the product and specification. Contact us with your target quantity and destination to confirm MOQ, lead time and shipping terms."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Contact Tenda Peppers — Paprika & Chilli Inquiry"
+  description="Contact Tenda Peppers for paprika powder and dried chilli quotes, custom specifications and export inquiries. Email tdlajiao@126.com or WhatsApp +86 18162067392."
+  jsonLd={[contactJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <h1>Contact &amp; Inquiry</h1>
+    <p class="lead">
+      For paprika and dried chilli quotes, custom specifications and export inquiries, reach us
+      directly. Include your product form, target heat level and colour value for a faster response.
+    </p>
+
+    <div class="grid grid-2" style="margin-top:24px;">
+      <div class="card">
+        <h3>Direct Contact</h3>
+        <p>
+          <strong>Email:</strong> <a href="mailto:tdlajiao@126.com">tdlajiao@126.com</a><br />
+          <strong>Phone / WhatsApp:</strong> <a href="tel:+8618162067392">+86 18162067392</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Factory</h3>
+        <p>
+          Leling Tenda Chili Products Co., Ltd.<br />
+          Yang'an Town Outer Ring Road,<br />
+          Leling, Shandong, China
+        </p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:32px;">What to Include in Your Inquiry</h2>
+    <ul>
+      <li>Product form — paprika powder, chilli flakes, chilli powder, whole chillies or segments</li>
+      <li>Target heat level (SHU) and ASTA colour value</li>
+      <li>Mesh and moisture requirements (if specified)</li>
+      <li>Target quantity and destination port</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Markets We Serve</h2>
+    <p>
+      We supply food manufacturers, importers and distributors across Europe, the Middle East and
+      North America. Paprika and chilli are exported with full batch documentation, in line with
+      ISO 9001 and HACCP quality systems.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What information should I include in my paprika or chilli inquiry?</h3>
+      <p>Include the product form (paprika powder, chilli flakes, powder, whole chillies or segments), your target heat level (SHU) and ASTA colour value, mesh and moisture requirements, target quantity and destination port.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you supply custom specifications?</h3>
+      <p>Yes. We match paprika and chilli to your target colour value, heat level, mesh and packaging, with one-stop customisation and batch documentation on every shipment.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the minimum order quantity?</h3>
+      <p>MOQ depends on the product and specification. Contact us with your target quantity and destination to confirm MOQ, lead time and shipping terms.</p>
+    </div>
+  </div>
+</BaseLayout>
