@@ -6,7 +6,11 @@ const productJsonLd = {
   "@type": "Product",
   "name": "Paprika Powder (Sweet & Low-Heat)",
   "description": "Low-heat, high-colour paprika powder made from Chinese sweet pepper varieties — sweet paprika and low-heat paprika for natural red colouring, spice blends and marinades.",
-  "image": "https://drychillis.com/images/og-default.jpg",
+  "image": [
+    "https://drychillis.com/images/products/paprika-powder.jpg",
+    "https://drychillis.com/images/products/paprika-sweet.jpg",
+    "https://drychillis.com/images/products/paprika-low-heat.jpg",
+  ],
   "url": "https://drychillis.com/products/paprika/",
   "sku": "TENDA-PAPRIKA-POWDER",
   "category": "Spices and Seasonings",
@@ -63,6 +67,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Sweet & Low-Heat Paprika Powder Manufacturer | Tenda Peppers"
   description="China paprika powder manufacturer. Sweet paprika and low-heat paprika from Xinjiang sweet pepper and Yidu red — natural red colouring for spice blends, marinades and seasoning. ISO 9001 & HACCP."
+  ogImage="/images/og-paprika.jpg"
   jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
@@ -75,7 +80,11 @@ const faqJsonLd = {
       colouring, spice blends and marinades across Europe, the Middle East and North America.
     </p>
 
-    <h2 style="margin-top:32px;">Our Paprika Range</h2>
+        <div class="product-media">
+      <img src="/images/products/paprika-powder.jpg" alt="Paprika powder" width="1360" height="1400" loading="eager" />
+    </div>
+
+<h2 style="margin-top:32px;">Our Paprika Range</h2>
     <table>
       <thead>
         <tr><th>Product</th><th>Variety</th><th>Heat (SHU)</th><th>Colour (ASTA)</th><th>Best for</th></tr>
@@ -97,6 +106,14 @@ const faqJsonLd = {
         </tr>
       </tbody>
     </table>
+
+    <div class="product-gallery">
+      <figure><img src="/images/products/paprika-powder.jpg" alt="Paprika powder" loading="lazy" /><figcaption>Paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-sweet.jpg" alt="Sweet paprika powder" loading="lazy" /><figcaption>Sweet paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-low-heat.jpg" alt="Low-heat paprika powder" loading="lazy" /><figcaption>Low-heat paprika powder</figcaption></figure>
+    </div>
+
+
     <p class="data-note">
       Colour values and heat levels are representative ranges for each variety — final specification
       is matched to your target ASTA value and SHU on inquiry.

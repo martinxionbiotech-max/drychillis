@@ -6,7 +6,11 @@ const productJsonLd = {
   "@type": "Product",
   "name": "Pimentón en Polvo (Dulce y de Bajo Picor)",
   "description": "Pimentón en polvo de bajo picor y alto color elaborado con variedades de pimiento dulce chino — pimentón dulce y pimentón de bajo picor para colorante rojo natural, mezclas de especias y adobos.",
-  "image": "https://drychillis.com/images/og-default.jpg",
+  "image": [
+    "https://drychillis.com/images/products/paprika-powder.jpg",
+    "https://drychillis.com/images/products/paprika-sweet.jpg",
+    "https://drychillis.com/images/products/paprika-low-heat.jpg",
+  ],
   "url": "https://drychillis.com/es/products/paprika/",
   "sku": "TENDA-PAPRIKA-POWDER",
   "category": "Spices and Seasonings",
@@ -64,6 +68,7 @@ const faqJsonLd = {
   lang="es"
   title="Fabricante de Pimentón en Polvo Dulce y de Bajo Picor | Tenda Peppers"
   description="Fabricante chino de pimentón en polvo. Pimentón dulce y pimentón de bajo picor de pimiento dulce de Xinjiang y Yidu red — colorante rojo natural para mezclas de especias, adobos y condimentos. ISO 9001 y HACCP."
+  ogImage="/images/og-paprika.jpg"
   jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
@@ -76,7 +81,11 @@ const faqJsonLd = {
       colorante rojo natural, mezclas de especias y adobos en Europa, Oriente Medio y Norteamérica.
     </p>
 
-    <h2 style="margin-top:32px;">Nuestra Gama de Pimentón</h2>
+        <div class="product-media">
+      <img src="/images/products/paprika-powder.jpg" alt="Paprika powder" width="1360" height="1400" loading="eager" />
+    </div>
+
+<h2 style="margin-top:32px;">Nuestra Gama de Pimentón</h2>
     <table>
       <thead>
         <tr><th>Producto</th><th>Variedad</th><th>Picor (SHU)</th><th>Color (ASTA)</th><th>Ideal para</th></tr>
@@ -98,6 +107,14 @@ const faqJsonLd = {
         </tr>
       </tbody>
     </table>
+
+    <div class="product-gallery">
+      <figure><img src="/images/products/paprika-powder.jpg" alt="Paprika powder" loading="lazy" /><figcaption>Paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-sweet.jpg" alt="Sweet paprika powder" loading="lazy" /><figcaption>Sweet paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-low-heat.jpg" alt="Low-heat paprika powder" loading="lazy" /><figcaption>Low-heat paprika powder</figcaption></figure>
+    </div>
+
+
     <p class="data-note">
       Los valores de color y niveles de picor son rangos representativos de cada variedad — la
       especificación final se ajusta a su valor ASTA y SHU objetivo al consultar.

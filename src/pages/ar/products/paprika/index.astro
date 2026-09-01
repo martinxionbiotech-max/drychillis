@@ -6,7 +6,11 @@ const productJsonLd = {
   "@type": "Product",
   "name": "مسحوق الفلفل الحلو (حلو ومنخفض الحرارة)",
   "description": "مسحوق فلفل حلو منخفض الحرارة وعالي اللون مصنوع من أصناف الفلفل الحلو الصينية — فلفل حلو وفلفل حلو منخفض الحرارة للتلوين الأحمر الطبيعي وخلطات التوابل والتتبيلات.",
-  "image": "https://drychillis.com/images/og-default.jpg",
+  "image": [
+    "https://drychillis.com/images/products/paprika-powder.jpg",
+    "https://drychillis.com/images/products/paprika-sweet.jpg",
+    "https://drychillis.com/images/products/paprika-low-heat.jpg",
+  ],
   "url": "https://drychillis.com/ar/products/paprika/",
   "sku": "TENDA-PAPRIKA-POWDER",
   "category": "Spices and Seasonings",
@@ -64,6 +68,7 @@ const faqJsonLd = {
   lang="ar"
   title="مصنّع مسحوق الفلفل الحلو — حلو ومنخفض الحرارة | Tenda Peppers"
   description="مصنّع صيني لمسحوق الفلفل الحلو. فلفل حلو وفلفل حلو منخفض الحرارة من فلفل شينجيانغ الحلو وييدو الأحمر — تلوين أحمر طبيعي لخلطات التوابل والتتبيلات. ISO 9001 وHACCP."
+  ogImage="/images/og-paprika.jpg"
   jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
@@ -76,7 +81,11 @@ const faqJsonLd = {
       الطبيعي وخلطات التوابل والتتبيلات في أوروبا والشرق الأوسط وأمريكا الشمالية.
     </p>
 
-    <h2 style="margin-top:32px;">مجموعة الفلفل الحلو لدينا</h2>
+        <div class="product-media">
+      <img src="/images/products/paprika-powder.jpg" alt="Paprika powder" width="1360" height="1400" loading="eager" />
+    </div>
+
+<h2 style="margin-top:32px;">مجموعة الفلفل الحلو لدينا</h2>
     <table>
       <thead>
         <tr><th>المنتج</th><th>الصنف</th><th>الحرارة (SHU)</th><th>اللون (ASTA)</th><th>الأنسب لـ</th></tr>
@@ -98,6 +107,14 @@ const faqJsonLd = {
         </tr>
       </tbody>
     </table>
+
+    <div class="product-gallery">
+      <figure><img src="/images/products/paprika-powder.jpg" alt="Paprika powder" loading="lazy" /><figcaption>Paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-sweet.jpg" alt="Sweet paprika powder" loading="lazy" /><figcaption>Sweet paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-low-heat.jpg" alt="Low-heat paprika powder" loading="lazy" /><figcaption>Low-heat paprika powder</figcaption></figure>
+    </div>
+
+
     <p class="data-note">
       قيم اللون ومستويات الحرارة نطاقات تمثيلية لكل صنف — تُضبط المواصفات النهائية وفقًا لقيمة
       ASTA وSHU المستهدفة عند الاستفسار.
