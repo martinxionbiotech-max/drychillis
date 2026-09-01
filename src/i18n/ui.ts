@@ -25,6 +25,7 @@ export const ui = {
     },
     common: {
       requestQuote: 'Request Quotation',
+      contactNow: 'Contact Now',
       readGuide: 'Read the guide →',
       viewAll: 'Browse all guides →',
       fromHub: 'From the Tenda Peppers Knowledge Hub.',
@@ -56,6 +57,7 @@ export const ui = {
     },
     common: {
       requestQuote: 'Solicitar Cotización',
+      contactNow: 'Contactar ahora',
       readGuide: 'Leer la guía →',
       viewAll: 'Ver todas las guías →',
       fromHub: 'Del Centro de Conocimiento de Tenda Peppers.',
@@ -87,6 +89,7 @@ export const ui = {
     },
     common: {
       requestQuote: 'اطلب عرض سعر',
+      contactNow: 'اتصل الآن',
       readGuide: 'اقرأ الدليل ←',
       viewAll: 'تصفح جميع الأدلة ←',
       fromHub: 'من مركز المعرفة الخاص بـ Tenda Peppers.',

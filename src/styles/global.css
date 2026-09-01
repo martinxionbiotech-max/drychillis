@@ -85,6 +85,16 @@ h3 { font-size: 1.15rem; }
 .cta-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.6); }
 .cta-outline:hover { background: rgba(255,255,255,0.12); color: #fff; }
 
+/* WhatsApp contact button */
+.whatsapp-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #25D366; color: #fff; font-weight: 700;
+  padding: 9px 16px; border-radius: 8px; text-decoration: none;
+  font-size: 0.95rem; box-shadow: var(--shadow-sm); white-space: nowrap;
+}
+.whatsapp-btn:hover { background: #1ebe5b; color: #fff; }
+.whatsapp-btn svg { flex: none; }
+
 /* Cards */
 .grid { display: grid; gap: 20px; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
