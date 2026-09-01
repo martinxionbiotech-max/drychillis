@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as medium heat chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medium heat chilli is 10,000–20,000 Scoville Heat Units (SHU) — noticeably warm without the intense burn of high-heat varieties. Representative Chinese varieties are Xian pepper, Jinta and Erjingtiao."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is medium heat chilli used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medium heat chilli is the workhorse for general seasoning, chilli paste, pizza and snack topping, and everyday spice blends where heat should be present but not dominant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which varieties should I specify for 10,000–20,000 SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xian pepper, Jinta and Erjingtiao are the main 10,000–20,000 SHU varieties. Jinta suits flakes and powder; Erjingtiao adds aroma and is used for chilli paste. Name the variety and SHU window in your specification."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Medium Heat Chilli (10,000–20,000 SHU) | Tenda Peppers"
+  description="Medium heat chilli (10,000–20,000 SHU) — Xian pepper, Jinta and Erjingtiao for seasoning, chilli paste and pizza topping. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Medium Heat
+    </nav>
+    <h1>Medium Heat Chilli (10,000–20,000 SHU)</h1>
+    <p class="lead">
+      Noticeably warm, not overwhelming — the 10,000–20,000 SHU band is the workhorse of everyday
+      chilli seasoning, made from varieties like Xian pepper, Jinta and Erjingtiao.
+    </p>
+
+    <h2 style="margin-top:32px;">What counts as medium heat chilli?</h2>
+    <p>
+      Medium heat sits between low-heat (under 10,000 SHU) and high-heat (20,000–50,000 SHU). It
+      delivers clear warmth and aroma, but stays mild enough for products aimed at a broad audience —
+      the reason it is the default choice for pizza, snack seasoning and general spice blends.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Xian pepper</strong></td><td>10,000 – 20,000</td><td>Inner Mongolia, Xinjiang</td><td>Medium powder, flakes</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Gansu, Inner Mongolia</td><td>Flakes, powder (glossy red)</td></tr>
+        <tr><td><strong>Erjingtiao</strong></td><td>10,000 – 20,000</td><td>Sichuan, Guizhou</td><td>Chilli paste, aroma</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is medium heat chilli used for?</h2>
+    <ul>
+      <li>Pizza and pasta chilli flakes</li>
+      <li>Everyday seasoning blends and spice mixes</li>
+      <li>Chilli paste and table sauces</li>
+      <li>Snack and crisp seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify medium heat chilli</h2>
+    <p>
+      Name the variety and the SHU window, then the product form. For flakes choose Jinta or Xian;
+      for an aromatic paste choose Erjingtiao. Confirm moisture (under 13%) and, for powder, mesh
+      (60–80 mesh standard).
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form, mesh and
+      moisture when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What counts as medium heat chilli?</h3>
+      <p>Medium heat chilli is 10,000–20,000 Scoville Heat Units (SHU) — noticeably warm without the intense burn of high-heat varieties. Representative Chinese varieties are Xian pepper, Jinta and Erjingtiao.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is medium heat chilli used for?</h3>
+      <p>Medium heat chilli is the workhorse for general seasoning, chilli paste, pizza and snack topping, and everyday spice blends where heat should be present but not dominant.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which varieties should I specify for 10,000–20,000 SHU?</h3>
+      <p>Xian pepper, Jinta and Erjingtiao are the main 10,000–20,000 SHU varieties. Jinta suits flakes and powder; Erjingtiao adds aroma and is used for chilli paste. Name the variety and SHU window in your specification.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Medium Heat Quotation</a>
+      <a class="cta cta-outline" href="/heat-levels/high-heat/" style="margin-left:8px;">High Heat →</a>
+    </div>
+  </div>
+</BaseLayout>

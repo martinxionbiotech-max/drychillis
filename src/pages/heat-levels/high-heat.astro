@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as high heat chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High heat chilli is 20,000–50,000 Scoville Heat Units (SHU) — strong, lingering heat for hot sauces, snack seasoning and industrial food. Representative varieties are Sanying (Tianying), Zidantou, Seven-Star and New Generation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is high heat chilli used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High heat chilli is the backbone of hot sauces, chilli oil, snack and instant-noodle seasoning, and industrial food applications that need real, consistent heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which variety should I choose for hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying) and Zidantou are the classic hot-sauce varieties at 20,000–50,000 SHU; Seven-Star is common in snack seasoning and hot-pot bases. Specify the variety and a precise SHU window for batch-to-batch consistency."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="High Heat Chilli (20,000–50,000 SHU) | Tenda Peppers"
+  description="High heat chilli (20,000–50,000 SHU) — Sanying, Zidantou and Seven-Star for hot sauce, chilli oil and snack seasoning. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; High Heat
+    </nav>
+    <h1>High Heat Chilli (20,000–50,000 SHU)</h1>
+    <p class="lead">
+      Strong, lingering heat — the 20,000–50,000 SHU band powers hot sauces, chilli oil and snack
+      seasoning, built on varieties like Sanying (Tianying), Zidantou and Seven-Star.
+    </p>
+
+    <h2 style="margin-top:32px;">What counts as high heat chilli?</h2>
+    <p>
+      High heat is the band where chilli stops being a background note and becomes the point of the
+      product. It spans 20,000–50,000 SHU — hot enough for dedicated hot-sauce and snack applications,
+      but still controllable in a blend when dosed by weight.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying / Tianying</strong></td><td>20,000 – 50,000</td><td>Henan, Hebei</td><td>Hot sauce, chilli oil</td></tr>
+        <tr><td><strong>Zidantou (bullet pepper)</strong></td><td>20,000 – 50,000</td><td>Shandong, Anhui</td><td>Hot sauce, industrial food</td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Shandong, Shanxi</td><td>Snack seasoning, hot-pot</td></tr>
+        <tr><td><strong>New Generation</strong></td><td>20,000 – 50,000</td><td>Shandong</td><td>Seasoning, powder</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is high heat chilli used for?</h2>
+    <ul>
+      <li>Hot sauces and chilli oil</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Hot-pot and Sichuan-style bases</li>
+      <li>Industrial food and processed seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify high heat chilli</h2>
+    <p>
+      Start from your target SHU window, then name the variety. Sanying and Zidantou are the classic
+      hot-sauce pair; Seven-Star suits snack and hot-pot bases. Confirm form (powder, flakes or
+      segments), moisture and mesh — heat is non-linear, so a precise window is what keeps your sauce
+      consistent batch to batch.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What counts as high heat chilli?</h3>
+      <p>High heat chilli is 20,000–50,000 Scoville Heat Units (SHU) — strong, lingering heat for hot sauces, snack seasoning and industrial food. Representative varieties are Sanying (Tianying), Zidantou, Seven-Star and New Generation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is high heat chilli used for?</h3>
+      <p>High heat chilli is the backbone of hot sauces, chilli oil, snack and instant-noodle seasoning, and industrial food applications that need real, consistent heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which variety should I choose for hot sauce?</h3>
+      <p>Sanying (Tianying) and Zidantou are the classic hot-sauce varieties at 20,000–50,000 SHU; Seven-Star is common in snack seasoning and hot-pot bases. Specify the variety and a precise SHU window for batch-to-batch consistency.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request High Heat Quotation</a>
+      <a class="cta cta-outline" href="/heat-levels/extra-hot/" style="margin-left:8px;">Extra Hot →</a>
+    </div>
+  </div>
+</BaseLayout>

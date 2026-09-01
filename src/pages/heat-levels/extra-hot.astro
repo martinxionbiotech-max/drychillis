@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as extra hot chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extra hot chilli is over 50,000 Scoville Heat Units (SHU) — intense, whole-mouth heat for extreme-heat products, chilli oil and Sichuan-style dishes. Representative varieties are Jixin (50,000–70,000 SHU), Xiaomi, Chilli King and Shuan Shuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is extra hot chilli used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extra hot chilli is used where heat is the headline: extreme-heat sauces, chilli oil, Sichuan and Hunan cuisine, and products marketed on their Scoville rating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which variety gives the most heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin (chicken-heart) pepper is among the hottest common Chinese chillies at 50,000–70,000 SHU, alongside Xiaomi and Chilli King. These are the standard for extreme-heat products and chilli oil."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Extra Hot Chilli (50,000+ SHU) | Tenda Peppers"
+  description="Extra hot chilli (50,000+ SHU) — Jixin, Xiaomi and Chilli King for extreme heat, chilli oil and Sichuan dishes. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Extra Hot
+    </nav>
+    <h1>Extra Hot Chilli (50,000+ SHU)</h1>
+    <p class="lead">
+      Intense, whole-mouth heat — the 50,000+ SHU band is for products where heat is the headline,
+      built on varieties like Jixin (chicken-heart), Xiaomi and Chilli King.
+    </p>
+
+    <h2 style="margin-top:32px;">What counts as extra hot chilli?</h2>
+    <p>
+      Extra hot is the top of the common Chinese chilli range: over 50,000 SHU. Because heat is
+      non-linear, a small dose of extra-hot chilli moves a blend's heat far more than the same weight
+      of a high-heat variety — which is why it is specified carefully and usually used as an
+      accent, not a base.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jixin (chicken-heart)</strong></td><td>50,000 – 70,000</td><td>Yunnan, Guizhou</td><td>Extreme heat, Sichuan dishes</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>30,000 – 50,000</td><td>Yunnan</td><td>Chilli oil, extreme heat</td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>&gt;50,000</td><td>Fujian, Hainan</td><td>Extreme-heat products</td></tr>
+        <tr><td><strong>Shuan Shuan</strong></td><td>&gt;50,000</td><td>South China</td><td>Extreme-heat seasoning</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is extra hot chilli used for?</h2>
+    <ul>
+      <li>Extreme-heat sauces and chilli oil</li>
+      <li>Sichuan and Hunan cuisine</li>
+      <li>Products marketed on Scoville rating</li>
+      <li>Heat-dosed industrial seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify extra hot chilli</h2>
+    <p>
+      Name the variety and a precise SHU window — Jixin (50,000–70,000 SHU) is the reference for
+      extreme heat. Confirm the form (segments and powder are most common at this heat level) and
+      dose carefully: extra-hot varieties are usually blended, not used neat.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What counts as extra hot chilli?</h3>
+      <p>Extra hot chilli is over 50,000 Scoville Heat Units (SHU) — intense, whole-mouth heat for extreme-heat products, chilli oil and Sichuan-style dishes. Representative varieties are Jixin (50,000–70,000 SHU), Xiaomi, Chilli King and Shuan Shuan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is extra hot chilli used for?</h3>
+      <p>Extra hot chilli is used where heat is the headline: extreme-heat sauces, chilli oil, Sichuan and Hunan cuisine, and products marketed on their Scoville rating.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which variety gives the most heat?</h3>
+      <p>Jixin (chicken-heart) pepper is among the hottest common Chinese chillies at 50,000–70,000 SHU, alongside Xiaomi and Chilli King. These are the standard for extreme-heat products and chilli oil.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Extra Hot Quotation</a>
+      <a class="cta cta-outline" href="/heat-levels/high-heat/" style="margin-left:8px;">← High Heat</a>
+    </div>
+  </div>
+</BaseLayout>

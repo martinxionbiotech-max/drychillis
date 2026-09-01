@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What packaging options do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We supply bulk (25 kg multi-wall bags), food-service (10–25 kg), retail (consumer-size pouches) and OEM/private-label packaging, with sealed, specification-labelled output on every format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you do OEM or private-label packaging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We support OEM and private-label packaging matched to your brand — bag size, material and label artwork to your specification, with batch traceability retained on every unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is bulk chilli shipped?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bulk chilli is packed in multi-wall kraft or woven bags (typically 25 kg), often palletised and container-loaded, and can be exported by sea with the full document set: COA, batch traceability and phytosanitary certificate."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bulk & OEM Packaging for Chilli & Paprika | Tenda Peppers"
+  description="Bulk 25kg bags, food-service and OEM private-label packaging for dried chillies and paprika. China manufacturer, ISO 9001 & HACCP, export to Europe, Middle East and North America."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; Packaging
+    </nav>
+    <h1>Bulk &amp; OEM Packaging</h1>
+    <p class="lead">
+      From 25 kg bulk bags to retail and private-label pouches — dried chillies and paprika packed to
+      your specification, with sealed, labelled output and full batch traceability.
+    </p>
+
+    <h2 style="margin-top:32px;">Packaging formats</h2>
+    <table>
+      <thead>
+        <tr><th>Format</th><th>Size</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Bulk (multi-wall)</strong></td><td>25 kg</td><td>Industrial food, re-packing, export</td></tr>
+        <tr><td><strong>Food service</strong></td><td>10–25 kg</td><td>Restaurants, processors, hot-pot</td></tr>
+        <tr><td><strong>Retail</strong></td><td>Consumer pouches</td><td>Branded retail, e-commerce</td></tr>
+        <tr><td><strong>OEM / private label</strong></td><td>To specification</td><td>Your brand, your artwork</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What every format includes</h2>
+    <ul>
+      <li>Sealed, specification-labelled output</li>
+      <li>Batch number and traceability to growing base</li>
+      <li>COA on request, with phytosanitary certificate for export</li>
+      <li>Moisture-controlled packing to preserve colour and shelf life</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">OEM &amp; private label</h2>
+    <p>
+      We support OEM and private-label packaging matched to your brand — bag size, material and label
+      artwork to your specification. The product inside is the same ISO 9001 / HACCP-controlled
+      specification; only the packaging carries your name.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What packaging options do you offer?</h3>
+      <p>We supply bulk (25 kg multi-wall bags), food-service (10–25 kg), retail (consumer-size pouches) and OEM/private-label packaging, with sealed, specification-labelled output on every format.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you do OEM or private-label packaging?</h3>
+      <p>Yes. We support OEM and private-label packaging matched to your brand — bag size, material and label artwork to your specification, with batch traceability retained on every unit.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is bulk chilli shipped?</h3>
+      <p>Bulk chilli is packed in multi-wall kraft or woven bags (typically 25 kg), often palletised and container-loaded, and can be exported by sea with the full document set: COA, batch traceability and phytosanitary certificate.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Packaging Quote</a>
+      <a class="cta cta-outline" href="/products/paprika/" style="margin-left:8px;">Paprika →</a>
+    </div>
+  </div>
+</BaseLayout>

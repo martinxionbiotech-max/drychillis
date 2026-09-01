@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What mesh size is standard for chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh is the standard for chilli and paprika powder — fine enough for even colour and heat distribution in seasoning blends. Coarser (20–40 mesh) is used for flakes and crushed chilli; finer (100+ mesh) for smooth sauces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does mesh size affect a chilli product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mesh sets particle size, which controls how evenly heat and colour disperse, how the powder feels on the palate, and whether it suspends smoothly in a sauce. Finer powder disperses faster and clumps less; coarser grind gives visible texture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you grind to a custom mesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mesh is adjustable to your requirement — name the mesh (or the target particle size) and we match it, documented in the quotation with the moisture and SHU specification."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Powder Mesh Size Guide (20–100 Mesh) | Tenda Peppers"
+  description="Chilli powder mesh size explained — 60–80 mesh standard, coarser for flakes, finer for smooth sauces. Custom grind to requirement. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Mesh Size
+    </nav>
+    <h1>Chilli Powder Mesh Size Guide</h1>
+    <p class="lead">
+      Mesh sets the particle size of chilli and paprika powder — how evenly heat and colour disperse,
+      how it feels on the palate, and how it performs in a sauce or blend.
+    </p>
+
+    <h2 style="margin-top:32px;">What mesh size is standard?</h2>
+    <p>
+      For chilli powder and paprika, 60–80 mesh is the default: fine enough for uniform colour and
+      heat in seasoning blends. The right mesh depends on the application:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Mesh</th><th>Particle character</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>20–40 mesh</td><td>Coarse, visible</td><td>Crushed chilli, flakes</td></tr>
+        <tr><td>60–80 mesh</td><td>Fine, standard</td><td>Seasoning blends, general powder</td></tr>
+        <tr><td>100+ mesh</td><td>Very fine</td><td>Smooth sauces, instant-mix</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How mesh affects the product</h2>
+    <ul>
+      <li><strong>Dispersion</strong> — finer powder disperses faster and more evenly</li>
+      <li><strong>Mouthfeel</strong> — coarser grind gives visible texture, finer is smooth</li>
+      <li><strong>Clumping</strong> — finer powder clumps less and suspends better in liquid</li>
+      <li><strong>Colour release</strong> — finer powder releases colour (ASTA) more readily</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify mesh</h2>
+    <p>
+      Name the mesh (or the target particle size) alongside your SHU window, moisture and form. Mesh
+      is adjustable to requirement and documented in the quotation — for powder, 60–80 mesh is the
+      sensible default unless your application says otherwise.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What mesh size is standard for chilli powder?</h3>
+      <p>60–80 mesh is the standard for chilli and paprika powder — fine enough for even colour and heat distribution in seasoning blends. Coarser (20–40 mesh) is used for flakes and crushed chilli; finer (100+ mesh) for smooth sauces.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does mesh size affect a chilli product?</h3>
+      <p>Mesh sets particle size, which controls how evenly heat and colour disperse, how the powder feels on the palate, and whether it suspends smoothly in a sauce. Finer powder disperses faster and clumps less; coarser grind gives visible texture.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you grind to a custom mesh?</h3>
+      <p>Yes. Mesh is adjustable to your requirement — name the mesh (or the target particle size) and we match it, documented in the quotation with the moisture and SHU specification.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request a Specification</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>

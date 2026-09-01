@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the main Chinese chilli varieties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main Chinese chilli varieties span sweet to extra-hot: Xinjiang sweet pepper (under 500 SHU), Yidu red and Wangdu (under 10,000), Xian, Jinta and Erjingtiao (10,000–20,000), Sanying, Zidantou and Seven-Star (20,000–50,000), and Jixin, Xiaomi and Chilli King (over 50,000 SHU)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is chilli grown in China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "China grows chilli in five regions: the North China Plain (Henan, Hebei, Shandong), the high-heat belt (Hunan, Guizhou, Sichuan, Chongqing), the Northwest colour-pepper belt (Xinjiang, Gansu), local speciality regions (Shaanxi, Yunnan), and cool-climate regions (Inner Mongolia, Shanxi, Liaoning, Jilin)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does variety matter when buying chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variety sets heat (SHU), colour (ASTA) and flavour, and they vary independently. Naming the variety — rather than asking for generic 'chilli powder' — is the difference between a consistent product and a batch that shifts every order."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chinese Chilli Varieties: A Heat & Region Guide | Tenda Peppers"
+  description="Chinese chilli varieties guide — from Xinjiang sweet pepper to Jixin, with SHU heat bands, growing regions and best uses. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/blog/">Guides</a> &rsaquo; Chilli Varieties
+    </nav>
+    <h1>Chinese Chilli Varieties: A Heat &amp; Region Guide</h1>
+    <p class="lead">
+      Chinese chillies span almost the entire heat spectrum — from sweet Xinjiang pepper under 500 SHU
+      to extra-hot Jixin over 70,000 SHU. The variety is the first decision in any specification.
+    </p>
+
+    <h2 style="margin-top:32px;">The heat spectrum at a glance</h2>
+    <table>
+      <thead>
+        <tr><th>Heat band</th><th>SHU</th><th>Representative varieties</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sweet</td><td>&lt;500</td><td>Xinjiang sweet pepper, Red Dragon 23</td></tr>
+        <tr><td>Low heat</td><td>&lt;10,000</td><td>Yidu red, Wangdu</td></tr>
+        <tr><td>Medium heat</td><td>10,000–20,000</td><td>Xian, Jinta, Erjingtiao</td></tr>
+        <tr><td>High heat</td><td>20,000–50,000</td><td>Sanying, Zidantou, Seven-Star</td></tr>
+        <tr><td>Extra hot</td><td>&gt;50,000</td><td>Jixin, Xiaomi, Chilli King</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">The five growing regions</h2>
+    <p>
+      Region sets the climate that sets the heat and colour. The North China Plain (Henan, Hebei,
+      Shandong) grows cluster-type facing-heaven chillies; the Northwest (Xinjiang, Gansu) is the
+      colour-pepper belt; the high-heat belt (Hunan, Guizhou, Sichuan, Chongqing) grows the hot
+      varieties; local speciality regions (Shaanxi, Yunnan) add distinctive types like Shaanxi 8819.
+    </p>
+
+    <h2 style="margin-top:32px;">Why variety is the first decision</h2>
+    <p>
+      Heat, colour and flavour are set by the variety and the ripening climate — and they vary
+      independently. Naming the variety (or a precise SHU window) is what turns "chilli powder" into a
+      reproducible product. For the full variety-to-SHU mapping, see our
+      <a href="/heat-levels/medium-heat/">heat level pages</a> or the
+      <a href="https://docs.drychillis.com/chilli-varieties/" target="_blank" rel="noopener">full variety guide</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What are the main Chinese chilli varieties?</h3>
+      <p>The main Chinese chilli varieties span sweet to extra-hot: Xinjiang sweet pepper (under 500 SHU), Yidu red and Wangdu (under 10,000), Xian, Jinta and Erjingtiao (10,000–20,000), Sanying, Zidantou and Seven-Star (20,000–50,000), and Jixin, Xiaomi and Chilli King (over 50,000 SHU).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Where is chilli grown in China?</h3>
+      <p>China grows chilli in five regions: the North China Plain (Henan, Hebei, Shandong), the high-heat belt (Hunan, Guizhou, Sichuan, Chongqing), the Northwest colour-pepper belt (Xinjiang, Gansu), local speciality regions (Shaanxi, Yunnan), and cool-climate regions (Inner Mongolia, Shanxi, Liaoning, Jilin).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does variety matter when buying chilli?</h3>
+      <p>Variety sets heat (SHU), colour (ASTA) and flavour, and they vary independently. Naming the variety — rather than asking for generic 'chilli powder' — is the difference between a consistent product and a batch that shifts every order.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

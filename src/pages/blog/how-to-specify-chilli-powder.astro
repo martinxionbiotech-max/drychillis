@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I specify chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name five things: the variety (or SHU window), heat level in SHU, mesh size, moisture, and colour (ASTA) if relevant. A complete specification names all five — heat, colour and flavour vary independently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 60–80 mesh mean for chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mesh is particle size. 60–80 mesh is the standard fine grind for chilli and paprika powder — even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does batch consistency matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because heat is non-linear and variety-dependent. A named variety plus a precise SHU window — not a generic 'chilli powder' — is what keeps a sauce or seasoning consistent from one production run to the next."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="How to Specify Chilli Powder: SHU, Mesh & Moisture | Tenda Peppers"
+  description="How to specify chilli powder — SHU heat level, mesh size, moisture and colour (ASTA). A buyer's guide to writing a complete specification. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/blog/">Guides</a> &rsaquo; Specify Chilli Powder
+    </nav>
+    <h1>How to Specify Chilli Powder: SHU, Mesh &amp; Moisture</h1>
+    <p class="lead">
+      A chilli powder specification is five numbers — variety, heat (SHU), mesh, moisture and colour.
+      Miss one and you risk a batch that looks right but performs wrong.
+    </p>
+
+    <h2 style="margin-top:32px;">The five things to specify</h2>
+    <ol>
+      <li><strong>Variety (or SHU window)</strong> — "Sanying, 20,000–50,000 SHU", not "hot chilli"</li>
+      <li><strong>Heat level (SHU)</strong> — the precise window, because heat is non-linear</li>
+      <li><strong>Mesh size</strong> — 60–80 mesh standard, adjust for flakes or smooth sauces</li>
+      <li><strong>Moisture</strong> — under 13% for shelf stability</li>
+      <li><strong>Colour (ASTA)</strong> — if colour matters in your application</li>
+    </ol>
+
+    <h2 style="margin-top:32px;">Why "chilli powder" is not a specification</h2>
+    <p>
+      Heat, colour and flavour vary independently between varieties. Two powders can both be "chilli
+      powder" yet sit 40,000 SHU apart — one a mild seasoning, the other an extreme-heat product. The
+      variety and the SHU window are what pin the product down.
+    </p>
+    <p>
+      See our <a href="/heat-levels/high-heat/">high heat</a> and
+      <a href="/heat-levels/extra-hot/">extra hot</a> pages for the variety-to-SHU mapping, or the
+      full <a href="https://docs.drychillis.com/heat-level-reference/" target="_blank" rel="noopener">heat level reference</a> in the Knowledge Hub.
+    </p>
+
+    <h2 style="margin-top:32px;">Mesh and moisture: the two people forget</h2>
+    <p>
+      Mesh controls particle size — how evenly heat and colour disperse, and how the powder feels in
+      a sauce. Moisture (under 13%) controls shelf life and clumping. Both are cheap to get right and
+      expensive to get wrong.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How do I specify chilli powder?</h3>
+      <p>Name five things: the variety (or SHU window), heat level in SHU, mesh size, moisture, and colour (ASTA) if relevant. A complete specification names all five — heat, colour and flavour vary independently.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does 60–80 mesh mean for chilli powder?</h3>
+      <p>Mesh is particle size. 60–80 mesh is the standard fine grind for chilli and paprika powder — even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does batch consistency matter?</h3>
+      <p>Because heat is non-linear and variety-dependent. A named variety plus a precise SHU window — not a generic 'chilli powder' — is what keeps a sauce or seasoning consistent from one production run to the next.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
