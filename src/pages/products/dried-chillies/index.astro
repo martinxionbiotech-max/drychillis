@@ -5,7 +5,7 @@ const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Dried Chillies (Whole, Flakes, Powder, Segments)",
-  "description": "China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments across heat levels from 10,000 to 50,000+ SHU.",
+  "description": "China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments across heat levels from 10,000 to 70,000+ SHU. ISO 9001 & HACCP certified, supplying Europe, the Middle East and North America.",
   "image": [
     "https://drychillis.com/images/products/chilli-whole.jpg",
     "https://drychillis.com/images/products/chilli-flakes.jpg",
@@ -18,10 +18,11 @@ const productJsonLd = {
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
-    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 50,000+" },
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 70,000+" },
     { "@type": "PropertyValue", "name": "Product Forms", "value": "Whole, flakes, powder, segments" },
     { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
-    { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh (powder)" }
+    { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh (powder)" },
+    { "@type": "PropertyValue", "name": "Processing", "value": "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" }
   ]
 };
 
@@ -31,18 +32,18 @@ const faqJsonLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What dried chilli products do you supply?",
+      "name": "What dried chilli products does Tenda Peppers supply?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We supply whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments, covering heat levels from 10,000 to 50,000+ SHU across Chinese chilli varieties."
+        "text": "We supply four product forms — whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments — covering heat levels from about 10,000 to 70,000+ SHU across Chinese chilli varieties."
       }
     },
     {
       "@type": "Question",
-      "name": "What heat level do I need?",
+      "name": "What heat level (SHU) do I need?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Medium heat (10,000–20,000 SHU) suits general seasoning; high heat (20,000–50,000 SHU) suits hot sauces and snack seasoning; extra hot (over 50,000 SHU) is for extreme-heat applications. Tell us your target SHU and we match the variety."
+        "text": "Medium heat (10,000–20,000 SHU) suits general seasoning and snacks; high heat (20,000–50,000 SHU) suits hot sauces and industrial food; extra hot (over 50,000 SHU) is for extreme-heat products and Sichuan-style dishes. Tell us your target SHU and we match the variety."
       }
     },
     {
@@ -55,10 +56,34 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      "name": "How is the colour and heat controlled?",
+      "name": "How is colour and heat controlled?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Heat and colour are controlled at source through variety selection and grade control, then verified in-house. Every batch passes de-seeding, magnet filtration, X-ray inspection and colour sorting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the moisture and mesh specifications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dried chillies are typically supplied at under 13% moisture, with chilli powder ground to 60–80 mesh, adjustable to your requirement. Exact mesh and moisture are confirmed against your target specification and documented in the quotation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which varieties are best for hot sauce or extreme heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-heat varieties such as Sanying (Tianying), Zidantou and Seven-Star (20,000–50,000 SHU) are the workhorses for hot sauce and snack seasoning. For extreme heat, Jixin (50,000–70,000 SHU), Xiaomi and Chilli King exceed 50,000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep heat consistent between batches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consistency comes from naming a specific variety (or a precise SHU window) rather than ordering generic 'chilli powder'. Heat, colour and flavour vary independently, so a complete specification names all three — and every batch is traceable to its growing base."
       }
     }
   ]
@@ -67,7 +92,7 @@ const faqJsonLd = {
 
 <BaseLayout
   title="China Dried Chillies Manufacturer | Tenda Peppers"
-  description="China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments from 10,000 to 50,000+ SHU. ISO 9001 & HACCP, supplying Europe, Middle East and North America."
+  description="China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments from 10,000 to 70,000+ SHU. ISO 9001 & HACCP, supplying Europe, Middle East and North America."
   ogImage="/images/og-chillies.jpg"
   jsonLd={[productJsonLd, faqJsonLd]}
 >
@@ -78,14 +103,21 @@ const faqJsonLd = {
     <h1>Dried Chillies</h1>
     <p class="lead">
       Whole dried chillies, flakes, powder and segments — heat-focused chilli products milled from
-      Chinese chilli varieties across the full heat spectrum, for sauces, snacks and seasonings.
+      Chinese chilli varieties across the full heat spectrum (about 10,000 to 70,000+ SHU). We grow,
+      dry, grade and mill under ISO 9001 &amp; HACCP, and supply food manufacturers across Europe, the
+      Middle East and North America.
     </p>
 
-        <div class="product-media">
+    <div class="product-media">
       <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />
     </div>
 
-<h2 style="margin-top:32px;">Our Dried Chilli Range</h2>
+    <h2 style="margin-top:32px;">What dried chilli products does Tenda Peppers supply?</h2>
+    <p>
+      We supply the same crop in four processed forms, each matched to a different part of the food
+      industry. The form you choose is driven by how the chilli must read in your finished product —
+      visible pieces, texture, or a uniform heat release.
+    </p>
     <table>
       <thead>
         <tr><th>Product form</th><th>Heat (SHU)</th><th>Varieties</th><th>Best for</th></tr>
@@ -125,10 +157,43 @@ const faqJsonLd = {
       <figure><img src="/images/products/chilli-segments.jpg" alt="Chilli segments" loading="lazy" /><figcaption>Chilli segments</figcaption></figure>
     </div>
 
-
+    <h2 style="margin-top:32px;">How hot are Chinese dried chillies?</h2>
+    <p>
+      Chinese chillies span almost the entire usable heat range — from sweet colour peppers under
+      500 SHU up to extra-hot varieties over 70,000 SHU. Dried chillies for heat sit in four bands:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Heat band</th><th>SHU range</th><th>Representative varieties</th><th>Typical use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Low heat</td><td>&lt;10,000</td><td>Yidu red, Wangdu</td><td>Marinades, mild flakes</td></tr>
+        <tr><td>Medium heat</td><td>10,000 – 20,000</td><td>Xian pepper, Jinta, Erjingtiao</td><td>Seasoning, chilli paste</td></tr>
+        <tr><td>High heat</td><td>20,000 – 50,000</td><td>Sanying, Zidantou, Seven-Star</td><td>Hot sauce, snack seasoning</td></tr>
+        <tr><td>Extra hot</td><td>&gt;50,000</td><td>Jixin, Xiaomi, Chilli King</td><td>Extreme heat, chilli oil</td></tr>
+      </tbody>
+    </table>
     <p class="data-note">
-      Heat levels are representative of Chinese chilli varieties. Confirm your target SHU and
-      application when you inquire.
+      Heat is non-linear: a small amount of extra-hot chilli (50,000+ SHU) moves a blend's heat far
+      more than the same weight of medium chilli. That is why specifying a precise SHU window — not
+      just "hot" or "medium" — is what keeps a sauce or seasoning consistent batch to batch.
+    </p>
+
+    <h2 style="margin-top:32px;">Which chilli variety should I specify?</h2>
+    <p>
+      Variety is the first decision, because heat, colour and aroma are set by the variety and the
+      ripening climate — and they vary independently. A complete specification names the variety
+      (or a precise SHU window), not just "chilli powder".
+    </p>
+    <ul>
+      <li><strong>For hot sauce and snack seasoning</strong> — Sanying (Tianying), Zidantou, Seven-Star (20,000–50,000 SHU)</li>
+      <li><strong>For extreme heat and chilli oil</strong> — Jixin (50,000–70,000 SHU), Xiaomi, Chilli King</li>
+      <li><strong>For flakes and pizza topping</strong> — Xian pepper, Jinta, Erjingtiao (10,000–20,000 SHU)</li>
+      <li><strong>For visible whole chilli</strong> — Lantern, facing-heaven, Jinta</li>
+    </ul>
+    <p>
+      The full variety map — region, fruit shape and harvest timing — is in our
+      <a href="https://docs.drychillis.com/chilli-varieties/" target="_blank" rel="noopener">chilli varieties guide</a>.
     </p>
 
     <h2 style="margin-top:32px;">Specifications</h2>
@@ -137,16 +202,42 @@ const faqJsonLd = {
         <tr><th>Parameter</th><th>Typical range</th></tr>
       </thead>
       <tbody>
-        <tr><td>Heat level (SHU)</td><td>10,000 – 50,000+</td></tr>
+        <tr><td>Heat level (SHU)</td><td>10,000 – 70,000+ (variety-dependent)</td></tr>
         <tr><td>Moisture</td><td>&lt;13%</td></tr>
-        <tr><td>Mesh (powder)</td><td>Adjustable to requirement</td></tr>
+        <tr><td>Mesh (powder)</td><td>60–80 mesh, adjustable to requirement</td></tr>
         <tr><td>Processing</td><td>De-seeded, magnet-filtered, X-ray inspected, colour-sorted</td></tr>
       </tbody>
     </table>
     <p class="data-note">
-      Specifications are representative ranges. Exact heat, mesh and moisture are confirmed against
-      your target specification and documented in the quotation.
+      Values are representative ranges. Exact heat, mesh and moisture are confirmed against your
+      target specification and documented in the quotation — always confirm before a final order.
     </p>
+
+    <h2 style="margin-top:32px;">Where do China's dried chillies come from?</h2>
+    <p>
+      China is the world's largest pepper producer overall, and the second-largest exporter of dried
+      chillies behind India. According to the EU market-intelligence body CBI, China produces roughly
+      320,000 tonnes of dried chillies a year and exports about 70% of it — in 2023, exports of dried
+      chillies and dried sweet peppers reached 243,000 tonnes, with Europe taking about a quarter and
+      Spain absorbing roughly 65% of the European volume.
+    </p>
+    <p>
+      Production concentrates in three core regions: the North China Plain (Shandong, Henan, Hebei),
+      the Northwest (Xinjiang, Gansu) and the high-heat belt (Hunan, Guizhou, Sichuan, Chongqing).
+      Tenda Peppers sources from 12 controlled growing bases across Shandong, Xinjiang and Henan,
+      which is why we can match heat, colour and aroma profiles from a single supply base.
+    </p>
+
+    <h2 style="margin-top:32px;">What should buyers ask before ordering?</h2>
+    <ul>
+      <li><strong>Target SHU window</strong> — name the band and variety (e.g. "Sanying, 20,000–50,000 SHU")</li>
+      <li><strong>Product form</strong> — whole, flakes, powder or segments</li>
+      <li><strong>Mesh size</strong> — for powder (60–80 mesh is standard, adjustable)</li>
+      <li><strong>Moisture</strong> — confirm under 13% for shelf stability</li>
+      <li><strong>Colour value</strong> — ASTA, if colour matters in your application</li>
+      <li><strong>Certifications</strong> — ISO 9001 and HACCP are standard; confirm if you need BRC, Halal or Kosher</li>
+      <li><strong>Packaging &amp; destination</strong> — bulk, retail or OEM, plus the document set (COA, batch traceability, phytosanitary)</li>
+    </ul>
 
     <h2 style="margin-top:32px;">Applications</h2>
     <ul>
@@ -159,20 +250,32 @@ const faqJsonLd = {
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">
-      <h3>What dried chilli products do you supply?</h3>
-      <p>We supply whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments, covering heat levels from 10,000 to 50,000+ SHU across Chinese chilli varieties.</p>
+      <h3>What dried chilli products does Tenda Peppers supply?</h3>
+      <p>We supply four product forms — whole dried chillies, chilli flakes (crushed chilli), chilli powder and chilli segments — covering heat levels from about 10,000 to 70,000+ SHU across Chinese chilli varieties.</p>
     </div>
     <div class="faq-item">
-      <h3>What heat level do I need?</h3>
-      <p>Medium heat (10,000–20,000 SHU) suits general seasoning; high heat (20,000–50,000 SHU) suits hot sauces and snack seasoning; extra hot (over 50,000 SHU) is for extreme-heat applications. Tell us your target SHU and we match the variety.</p>
+      <h3>What heat level (SHU) do I need?</h3>
+      <p>Medium heat (10,000–20,000 SHU) suits general seasoning and snacks; high heat (20,000–50,000 SHU) suits hot sauces and industrial food; extra hot (over 50,000 SHU) is for extreme-heat products and Sichuan-style dishes. Tell us your target SHU and we match the variety.</p>
     </div>
     <div class="faq-item">
       <h3>Can you supply whole dried chillies?</h3>
       <p>Yes. We supply whole dried chillies in varieties including lantern pepper, Jinta pepper, facing-heaven pepper and Xiaomi pepper, with size and moisture graded to specification.</p>
     </div>
     <div class="faq-item">
-      <h3>How is the colour and heat controlled?</h3>
+      <h3>How is colour and heat controlled?</h3>
       <p>Heat and colour are controlled at source through variety selection and grade control, then verified in-house. Every batch passes de-seeding, magnet filtration, X-ray inspection and colour sorting.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the moisture and mesh specifications?</h3>
+      <p>Dried chillies are typically supplied at under 13% moisture, with chilli powder ground to 60–80 mesh, adjustable to your requirement. Exact mesh and moisture are confirmed against your target specification and documented in the quotation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which varieties are best for hot sauce or extreme heat?</h3>
+      <p>High-heat varieties such as Sanying (Tianying), Zidantou and Seven-Star (20,000–50,000 SHU) are the workhorses for hot sauce and snack seasoning. For extreme heat, Jixin (50,000–70,000 SHU), Xiaomi and Chilli King exceed 50,000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I keep heat consistent between batches?</h3>
+      <p>Consistency comes from naming a specific variety (or a precise SHU window) rather than ordering generic "chilli powder". Heat, colour and flavour vary independently, so a complete specification names all three — and every batch is traceable to its growing base.</p>
     </div>
 
     <div style="margin-top:32px;">
@@ -184,6 +287,7 @@ const faqJsonLd = {
       <ul style="margin-bottom:0;">
         <li><a href="https://docs.drychillis.com/buying-guide/" target="_blank" rel="noopener">Paprika &amp; chilli buying guide</a></li>
         <li><a href="https://docs.drychillis.com/chilli-varieties/" target="_blank" rel="noopener">Chilli varieties &amp; grades</a></li>
+        <li><a href="https://docs.drychillis.com/heat-level-reference/" target="_blank" rel="noopener">Chilli heat level reference</a></li>
         <li><a href="https://docs.drychillis.com/heat-perception/" target="_blank" rel="noopener">Heat perception &amp; palate</a></li>
       </ul>
       <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.drychillis.com/" target="_blank" rel="noopener">Tenda Peppers Knowledge Hub</a>.</p>
