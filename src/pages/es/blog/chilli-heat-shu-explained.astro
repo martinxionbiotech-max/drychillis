@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el SHU y cómo se mide el picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El SHU (Unidades Scoville) mide el picor como concentración de capsaicina — el compuesto que dispara la sensación de calor. A mayor SHU, más picante: el pimiento dulce está por debajo de 500 SHU, y las variedades extra-picantes superan 50.000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es lineal el picor del chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El picor es no lineal: una pequeña cantidad de una variedad de 50.000+ SHU mueve el picor de una mezcla mucho más que el mismo peso de una de 10.000 SHU. Por eso importan los rangos SHU precisos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre picor y sabor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El picor (capsaicina, medido en SHU) y el sabor (compuestos aromáticos) son distintos y varían de forma independiente. Dos chiles pueden compartir SHU y saber totalmente distinto — otra razón para nombrar la variedad, no solo el picor."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="El Picor del Chile Explicado: SHU vs Capsaicina | Tenda Peppers"
+  description="Cómo funciona el picor del chile — SHU (Unidades Scoville), capsaicina y por qué el picor es no lineal. Guía para compradores. Centro de Conocimiento Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Guías</a> &rsaquo; Picor del Chile
+    </nav>
+    <h1>El Picor del Chile Explicado: SHU vs Capsaicina</h1>
+    <p class="lead">
+      El picor se mide en Unidades Scoville (SHU) — un indicador de la concentración de capsaicina.
+      Pero el picor no es sabor, y no es lineal. Entender ambos es lo que hace fiable una
+      especificación.
+    </p>
+
+    <h2 style="margin-top:32px;">Qué mide realmente el SHU</h2>
+    <p>
+      El SHU cuantifica la concentración de capsaicina, el compuesto que dispara la sensación de
+      calor en el paladar. El pimiento dulce registra menos de 500 SHU; las variedades chinas más
+      picantes — Jixin, Chilli King — superan 50.000 SHU. El número es una concentración, no una
+      "intensidad de sabor", por eso dos chiles pueden compartir SHU y sentirse muy distinto.
+    </p>
+
+    <h2 style="margin-top:32px;">El picor es no lineal — dosifica en consecuencia</h2>
+    <p>
+      Una pequeña cantidad de una variedad de 50.000+ SHU mueve el picor de una mezcla mucho más que
+      el mismo peso de una de 10.000 SHU. En la práctica, los chiles extra-picantes se mezclan como
+      acento, y los rangos SHU precisos — no "picante" o "medio" — son lo que mantiene un producto
+      constante lote a lote.
+    </p>
+
+    <h2 style="margin-top:32px;">Picor vs color vs sabor</h2>
+    <p>
+      Tres propiedades separadas, controladas de forma independiente. El picor (capsaicina, SHU) es lo
+      que arde; el color (carotenoides, ASTA) lo que tiñe de rojo; el sabor (compuestos aromáticos) lo
+      que se degusta. Una especificación completa nombra las tres. Vea <a href="/es/heat-levels/high-heat/">picor alto</a> y
+      <a href="/es/specs/mesh-size/">tamaño de malla</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el SHU y cómo se mide el picor?</h3>
+      <p>El SHU (Unidades Scoville) mide el picor como concentración de capsaicina — el compuesto que dispara la sensación de calor. A mayor SHU, más picante: el pimiento dulce está por debajo de 500 SHU, y las variedades extra-picantes superan 50.000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Es lineal el picor del chile?</h3>
+      <p>No. El picor es no lineal: una pequeña cantidad de una variedad de 50.000+ SHU mueve el picor de una mezcla mucho más que el mismo peso de una de 10.000 SHU. Por eso importan los rangos SHU precisos.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre picor y sabor?</h3>
+      <p>El picor (capsaicina, medido en SHU) y el sabor (compuestos aromáticos) son distintos y varían de forma independiente. Dos chiles pueden compartir SHU y saber totalmente distinto — otra razón para nombrar la variedad, no solo el picor.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

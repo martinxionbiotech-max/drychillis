@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué tamaño de malla es estándar para el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh es el estándar para el chile y el pimentón en polvo — lo bastante fino para una distribución uniforme de color y picor. Más grueso (20–40 mesh) para escamas; más fino (100+ mesh) para salsas suaves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo afecta la malla al producto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La malla define el tamaño de partícula, que controla cómo se dispersan el picor y el color, la sensación en boca y si el polvo se suspende suavemente en una salsa. El polvo más fino dispersa más rápido; el más grueso da textura visible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden moler a una malla personalizada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La malla es ajustable a su requerimiento — nombre la malla (o el tamaño de partícula objetivo) y la igualamos, documentada en la cotización con la especificación de humedad y SHU."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Guía de Tamaño de Malla para Chile en Polvo (20–100 Mesh) | Tenda Peppers"
+  description="Tamaño de malla para chile en polvo explicado — 60–80 mesh estándar, más grueso para escamas, más fino para salsas suaves. Molienda a medida. Fabricante en China, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Tamaño de Malla
+    </nav>
+    <h1>Guía de Tamaño de Malla para Chile en Polvo</h1>
+    <p class="lead">
+      La malla define el tamaño de partícula del chile y pimentón en polvo — cómo se dispersan el
+      picor y el color, la sensación en boca y el rendimiento en una salsa o mezcla.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué tamaño de malla es estándar?</h2>
+    <p>
+      Para chile en polvo y pimentón, 60–80 mesh es lo habitual: fino para color y picor uniformes en
+      mezclas. La malla correcta depende de la aplicación:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Malla</th><th>Carácter de partícula</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>20–40 mesh</td><td>Grueso, visible</td><td>Chile triturado, escamas</td></tr>
+        <tr><td>60–80 mesh</td><td>Fino, estándar</td><td>Mezclas de condimentos, polvo general</td></tr>
+        <tr><td>100+ mesh</td><td>Muy fino</td><td>Salsas suaves, mezcla instantánea</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo afecta la malla al producto</h2>
+    <ul>
+      <li><strong>Dispersión</strong> — el polvo más fino se dispersa más rápido y uniforme</li>
+      <li><strong>Sensación en boca</strong> — el más grueso da textura, el fino es suave</li>
+      <li><strong>Apelmazamiento</strong> — el fino apelmaza menos y suspende mejor en líquido</li>
+      <li><strong>Liberación de color</strong> — el fino libera el color (ASTA) con más facilidad</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar la malla</h2>
+    <p>
+      Nombre la malla (o el tamaño de partícula objetivo) junto a su rango SHU, humedad y forma. La
+      malla es ajustable y se documenta en la cotización — para polvo, 60–80 mesh es el valor
+      razonable por defecto salvo que su aplicación diga lo contrario.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué tamaño de malla es estándar para el chile en polvo?</h3>
+      <p>60–80 mesh es el estándar para el chile y el pimentón en polvo — lo bastante fino para una distribución uniforme de color y picor. Más grueso (20–40 mesh) para escamas; más fino (100+ mesh) para salsas suaves.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo afecta la malla al producto?</h3>
+      <p>La malla define el tamaño de partícula, que controla cómo se dispersan el picor y el color, la sensación en boca y si el polvo se suspende suavemente en una salsa. El polvo más fino dispersa más rápido; el más grueso da textura visible.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Pueden moler a una malla personalizada?</h3>
+      <p>Sí. La malla es ajustable a su requerimiento — nombre la malla (o el tamaño de partícula objetivo) y la igualamos, documentada en la cotización con la especificación de humedad y SHU.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar una Especificación</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué se considera chile de picor extra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile de picor extra supera las 50.000 Unidades Scoville (SHU) — calor intenso en toda la boca para productos de picor extremo, aceite de chile y platos estilo Sichuan. Variedades representativas: Jixin (50.000–70.000 SHU), Xiaomi, Chilli King y Shuan Shuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el chile de picor extra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se usa donde el picor es el protagonista: salsas de picor extremo, aceite de chile, cocina de Sichuan y Hunan, y productos comercializados por su nivel Scoville."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué variedad da el máximo picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Jixin (corazón de pollo) está entre los chiles chinos más picantes, con 50.000–70.000 SHU, junto a Xiaomi y Chilli King. Son el estándar para productos de picor extremo y aceite de chile."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile de Picor Extra (50.000+ SHU) | Tenda Peppers"
+  description="Chile de picor extra (50.000+ SHU) — Jixin, Xiaomi y Chilli King para picor extremo, aceite de chile y platos de Sichuan. Fabricante en China, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Picor Extra
+    </nav>
+    <h1>Chile de Picor Extra (50.000+ SHU)</h1>
+    <p class="lead">
+      Calor intenso en toda la boca — la banda de 50.000+ SHU es para productos donde el picor es el
+      protagonista, sobre variedades como Jixin (corazón de pollo), Xiaomi y Chilli King.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué se considera chile de picor extra?</h2>
+    <p>
+      El picor extra es la cima del rango común de chile chino: más de 50.000 SHU. Como el picor es
+      no lineal, una dosis pequeña de chile extra mueve el picor de una mezcla mucho más que el mismo
+      peso de una variedad de picor alto — por eso se especifica con cuidado y suele usarse como
+      acento, no como base.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jixin (corazón de pollo)</strong></td><td>50.000 – 70.000</td><td>Yunnan, Guizhou</td><td>Picor extremo, Sichuan</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>30.000 – 50.000</td><td>Yunnan</td><td>Aceite de chile, picor extremo</td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>&gt;50.000</td><td>Fujian, Hainan</td><td>Productos de picor extremo</td></tr>
+        <tr><td><strong>Shuan Shuan</strong></td><td>&gt;50.000</td><td>Sur de China</td><td>Condimentos de picor extremo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el chile de picor extra?</h2>
+    <ul>
+      <li>Salsas de picor extremo y aceite de chile</li>
+      <li>Cocina de Sichuan y Hunan</li>
+      <li>Productos comercializados por su nivel Scoville</li>
+      <li>Condimentos industriales con picor dosificado</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile de picor extra</h2>
+    <p>
+      Nombre la variedad y un rango SHU preciso — Jixin (50.000–70.000 SHU) es la referencia de picor
+      extremo. Confirme la forma (segmentos y polvo son lo más común a este nivel) y dosifique con
+      cuidado: las variedades extra suelen mezclarse, no usarse puras.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU exacto y forma al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué se considera chile de picor extra?</h3>
+      <p>El chile de picor extra supera las 50.000 Unidades Scoville (SHU) — calor intenso en toda la boca para productos de picor extremo, aceite de chile y platos estilo Sichuan. Variedades representativas: Jixin (50.000–70.000 SHU), Xiaomi, Chilli King y Shuan Shuan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el chile de picor extra?</h3>
+      <p>Se usa donde el picor es el protagonista: salsas de picor extremo, aceite de chile, cocina de Sichuan y Hunan, y productos comercializados por su nivel Scoville.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué variedad da el máximo picor?</h3>
+      <p>El Jixin (corazón de pollo) está entre los chiles chinos más picantes, con 50.000–70.000 SHU, junto a Xiaomi y Chilli King. Son el estándar para productos de picor extremo y aceite de chile.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Picor Extra</a>
+      <a class="cta cta-outline" href="/es/heat-levels/high-heat/" style="margin-left:8px;">← Picor Alto</a>
+    </div>
+  </div>
+</BaseLayout>

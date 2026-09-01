@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué se considera chile de picor alto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile de picor alto es de 20.000–50.000 Unidades Scoville (SHU) — calor fuerte y persistente para salsas picantes, condimentos de snacks y alimentación industrial. Variedades representativas: Sanying (Tianying), Zidantou, Seven-Star y New Generation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el chile de picor alto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la base de las salsas picantes, el aceite de chile, los condimentos de snacks y fideos instantáneos, y las aplicaciones industriales que necesitan picor real y constante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué variedad elegir para salsa picante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying) y Zidantou son las variedades clásicas de salsa picante (20.000–50.000 SHU); Seven-Star es común en snacks y bases de hot-pot. Especifique la variedad y un rango SHU preciso para constancia entre lotes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile de Picor Alto (20.000–50.000 SHU) | Tenda Peppers"
+  description="Chile de picor alto (20.000–50.000 SHU) — Sanying, Zidantou y Seven-Star para salsa picante, aceite de chile y snacks. Fabricante en China, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Picor Alto
+    </nav>
+    <h1>Chile de Picor Alto (20.000–50.000 SHU)</h1>
+    <p class="lead">
+      Calor fuerte y persistente — la banda de 20.000–50.000 SHU impulsa salsas picantes, aceite de
+      chile y condimentos de snacks, sobre variedades como Sanying (Tianying), Zidantou y Seven-Star.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué se considera chile de picor alto?</h2>
+    <p>
+      El picor alto es la banda donde el chile deja de ser una nota de fondo y se convierte en el
+      punto del producto. Abarca 20.000–50.000 SHU — lo bastante picante para aplicaciones dedicadas,
+      pero aún controlable en una mezcla cuando se dosifica por peso.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying / Tianying</strong></td><td>20.000 – 50.000</td><td>Henan, Hebei</td><td>Salsa picante, aceite de chile</td></tr>
+        <tr><td><strong>Zidantou (bala)</strong></td><td>20.000 – 50.000</td><td>Shandong, Anhui</td><td>Salsa picante, industria</td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20.000 – 50.000</td><td>Shandong, Shanxi</td><td>Snacks, hot-pot</td></tr>
+        <tr><td><strong>New Generation</strong></td><td>20.000 – 50.000</td><td>Shandong</td><td>Condimento, polvo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el chile de picor alto?</h2>
+    <ul>
+      <li>Salsas picantes y aceite de chile</li>
+      <li>Condimentos de snacks y fideos instantáneos</li>
+      <li>Bases de hot-pot y estilo Sichuan</li>
+      <li>Alimentación industrial y condimentos procesados</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile de picor alto</h2>
+    <p>
+      Parta de su rango SHU objetivo y nombre la variedad. Sanying y Zidantou son el par clásico de
+      salsa picante; Seven-Star para snacks y hot-pot. Confirme forma, humedad y malla — el picor es
+      no lineal, por lo que un rango preciso es lo que mantiene su salsa constante lote a lote.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU exacto y forma al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué se considera chile de picor alto?</h3>
+      <p>El chile de picor alto es de 20.000–50.000 Unidades Scoville (SHU) — calor fuerte y persistente para salsas picantes, condimentos de snacks y alimentación industrial. Variedades representativas: Sanying (Tianying), Zidantou, Seven-Star y New Generation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el chile de picor alto?</h3>
+      <p>Es la base de las salsas picantes, el aceite de chile, los condimentos de snacks y fideos instantáneos, y las aplicaciones industriales que necesitan picor real y constante.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué variedad elegir para salsa picante?</h3>
+      <p>Sanying (Tianying) y Zidantou son las variedades clásicas de salsa picante (20.000–50.000 SHU); Seven-Star es común en snacks y bases de hot-pot. Especifique la variedad y un rango SHU preciso para constancia entre lotes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Picor Alto</a>
+      <a class="cta cta-outline" href="/es/heat-levels/extra-hot/" style="margin-left:8px;">Picor Extra →</a>
+    </div>
+  </div>
+</BaseLayout>

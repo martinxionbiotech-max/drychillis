@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo especifico el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nombre cinco cosas: la variedad (o rango SHU), el nivel de picor en SHU, la malla, la humedad y el color (ASTA) si es relevante. Una especificación completa nombra las cinco — picor, color y sabor varían de forma independiente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué significa 60–80 mesh para el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La malla es el tamaño de partícula. 60–80 mesh es la molienda fina estándar para chile y pimentón en polvo — dispersión uniforme y boca suave. Más grueso (20–40) para escamas; más fino (100+) para salsas suaves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué importa la consistencia entre lotes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque el picor es no lineal y depende de la variedad. Una variedad nombrada más un rango SHU preciso — no un 'chile en polvo' genérico — es lo que mantiene una salsa constante entre tiradas."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Cómo Especificar Chile en Polvo: SHU, Malla y Humedad | Tenda Peppers"
+  description="Cómo especificar chile en polvo — nivel de picor SHU, malla, humedad y color (ASTA). Guía del comprador para escribir una especificación completa. Centro de Conocimiento Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Guías</a> &rsaquo; Especificar Chile en Polvo
+    </nav>
+    <h1>Cómo Especificar Chile en Polvo: SHU, Malla y Humedad</h1>
+    <p class="lead">
+      Una especificación de chile en polvo son cinco números — variedad, picor (SHU), malla, humedad y
+      color. Si falta uno, arriesgas un lote que se ve bien pero rinde mal.
+    </p>
+
+    <h2 style="margin-top:32px;">Las cinco cosas a especificar</h2>
+    <ol>
+      <li><strong>Variedad (o rango SHU)</strong> — "Sanying, 20.000–50.000 SHU", no "chile picante"</li>
+      <li><strong>Nivel de picor (SHU)</strong> — el rango preciso, porque el picor es no lineal</li>
+      <li><strong>Malla</strong> — 60–80 mesh estándar, ajustar para escamas o salsas suaves</li>
+      <li><strong>Humedad</strong> — menos del 13% para estabilidad</li>
+      <li><strong>Color (ASTA)</strong> — si el color importa en tu aplicación</li>
+    </ol>
+
+    <h2 style="margin-top:32px;">Por qué "chile en polvo" no es una especificación</h2>
+    <p>
+      El picor, el color y el sabor varían de forma independiente entre variedades. Dos polvos pueden
+      ser "chile en polvo" y estar a 40.000 SHU de distancia — uno un condimento suave, otro un
+      producto de picor extremo. La variedad y el rango SHU son lo que fija el producto.
+    </p>
+    <p>
+      Vea <a href="/es/heat-levels/high-heat/">picor alto</a> y
+      <a href="/es/heat-levels/extra-hot/">picor extra</a> para el mapa variedad-SHU, o la
+      <a href="https://docs.drychillis.com/es/heat-level-reference/" target="_blank" rel="noopener">referencia de nivel de picor</a> completa.
+    </p>
+
+    <h2 style="margin-top:32px;">Malla y humedad: las dos que se olvidan</h2>
+    <p>
+      La malla controla el tamaño de partícula; la humedad (menos del 13%) la vida útil y el
+      apelmazamiento. Ambas son baratas de acertar y caras de equivocar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cómo especifico el chile en polvo?</h3>
+      <p>Nombre cinco cosas: la variedad (o rango SHU), el nivel de picor en SHU, la malla, la humedad y el color (ASTA) si es relevante. Una especificación completa nombra las cinco — picor, color y sabor varían de forma independiente.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué significa 60–80 mesh para el chile en polvo?</h3>
+      <p>La malla es el tamaño de partícula. 60–80 mesh es la molienda fina estándar para chile y pimentón en polvo — dispersión uniforme y boca suave. Más grueso (20–40) para escamas; más fino (100+) para salsas suaves.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Por qué importa la consistencia entre lotes?</h3>
+      <p>Porque el picor es no lineal y depende de la variedad. Una variedad nombrada más un rango SHU preciso — no un 'chile en polvo' genérico — es lo que mantiene una salsa constante entre tiradas.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

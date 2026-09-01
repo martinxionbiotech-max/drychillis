@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué opciones de empaque ofrecen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suministramos a granel (sacos multicapa de 25 kg), food service (10–25 kg), retail (bolsas de consumo) y empaque OEM/marca propia, con salida sellada y etiquetada por especificación en cada formato."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden hacer empaque OEM o marca propia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Soportamos empaque OEM y marca propia a su marca — tamaño de bolsa, material y arte de etiqueta a su especificación, manteniendo la trazabilidad del lote en cada unidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se envía el chile a granel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile a granel se empaca en sacos multicapa kraft o tejidos (normalmente 25 kg), a menudo paletizado y en contenedor, y puede exportarse por mar con el juego de documentos completo: COA, trazabilidad y certificado fitosanitario."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Empaque a Granel y OEM para Chile y Pimentón | Tenda Peppers"
+  description="Sacos a granel de 25kg, food service y empaque OEM de marca propia para chiles secos y pimentón. Fabricante en China, ISO 9001 y HACCP, exportación a Europa, Oriente Medio y Norteamérica."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; Empaque
+    </nav>
+    <h1>Empaque a Granel y OEM</h1>
+    <p class="lead">
+      De sacos a granel de 25 kg a bolsas retail y de marca propia — chiles secos y pimentón
+      empacados a su especificación, con salida sellada, etiquetada y trazabilidad completa del lote.
+    </p>
+
+    <h2 style="margin-top:32px;">Formatos de empaque</h2>
+    <table>
+      <thead>
+        <tr><th>Formato</th><th>Tamaño</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Granel (multicapa)</strong></td><td>25 kg</td><td>Industria, re-empacado, exportación</td></tr>
+        <tr><td><strong>Food service</strong></td><td>10–25 kg</td><td>Restaurantes, procesadores, hot-pot</td></tr>
+        <tr><td><strong>Retail</strong></td><td>Bolsas de consumo</td><td>Retail de marca, e-commerce</td></tr>
+        <tr><td><strong>OEM / marca propia</strong></td><td>A especificación</td><td>Su marca, su arte</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Qué incluye cada formato</h2>
+    <ul>
+      <li>Salida sellada y etiquetada por especificación</li>
+      <li>Número de lote y trazabilidad a la base de cultivo</li>
+      <li>COA a petición, con certificado fitosanitario para exportación</li>
+      <li>Empaque con control de humedad para preservar color y vida útil</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">OEM y marca propia</h2>
+    <p>
+      Soportamos empaque OEM y marca propia a su marca — tamaño de bolsa, material y arte de etiqueta
+      a su especificación. El producto interior es la misma especificación controlada ISO 9001 / HACCP;
+      solo el empaque lleva su nombre.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué opciones de empaque ofrecen?</h3>
+      <p>Suministramos a granel (sacos multicapa de 25 kg), food service (10–25 kg), retail (bolsas de consumo) y empaque OEM/marca propia, con salida sellada y etiquetada por especificación en cada formato.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Pueden hacer empaque OEM o marca propia?</h3>
+      <p>Sí. Soportamos empaque OEM y marca propia a su marca — tamaño de bolsa, material y arte de etiqueta a su especificación, manteniendo la trazabilidad del lote en cada unidad.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo se envía el chile a granel?</h3>
+      <p>El chile a granel se empaca en sacos multicapa kraft o tejidos (normalmente 25 kg), a menudo paletizado y en contenedor, y puede exportarse por mar con el juego de documentos completo: COA, trazabilidad y certificado fitosanitario.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Empaque</a>
+      <a class="cta cta-outline" href="/es/products/paprika/" style="margin-left:8px;">Pimentón →</a>
+    </div>
+  </div>
+</BaseLayout>

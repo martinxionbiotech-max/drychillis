@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las principales variedades de chile chino?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Van de dulce a extra-picante: pimiento dulce de Xinjiang (menos de 500 SHU), Yidu red y Wangdu (menos de 10.000), Xian, Jinta y Erjingtiao (10.000–20.000), Sanying, Zidantou y Seven-Star (20.000–50.000), y Jixin, Xiaomi y Chilli King (más de 50.000 SHU)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde se cultiva el chile en China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "China cultiva chile en cinco regiones: la llanura del norte (Henan, Hebei, Shandong), el cinturón de alto picor (Hunan, Guizhou, Sichuan, Chongqing), el cinturón de color del noroeste (Xinjiang, Gansu), las regiones de especialidad (Shaanxi, Yunnan) y las de clima frío (Mongolia Interior, Shanxi, Liaoning, Jilin)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué importa la variedad al comprar chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La variedad fija el picor (SHU), el color (ASTA) y el sabor, y varían de forma independiente. Nombrar la variedad — no pedir 'chile en polvo' genérico — es la diferencia entre un producto consistente y un lote que cambia en cada pedido."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Variedades de Chile Chino: Guía de Picor y Región | Tenda Peppers"
+  description="Guía de variedades de chile chino — del pimiento dulce de Xinjiang al Jixin, con bandas de picor SHU, regiones de cultivo y mejores usos. Centro de Conocimiento Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Guías</a> &rsaquo; Variedades de Chile
+    </nav>
+    <h1>Variedades de Chile Chino: Guía de Picor y Región</h1>
+    <p class="lead">
+      Los chiles chinos cubren casi todo el espectro de picor — del pimiento dulce de Xinjiang (menos
+      de 500 SHU) al Jixin extra-picante (más de 70.000 SHU). La variedad es la primera decisión.
+    </p>
+
+    <h2 style="margin-top:32px;">El espectro de picor de un vistazo</h2>
+    <table>
+      <thead>
+        <tr><th>Banda</th><th>SHU</th><th>Variedades representativas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dulce</td><td>&lt;500</td><td>Pimiento dulce de Xinjiang, Red Dragon 23</td></tr>
+        <tr><td>Picor bajo</td><td>&lt;10.000</td><td>Yidu red, Wangdu</td></tr>
+        <tr><td>Picor medio</td><td>10.000–20.000</td><td>Xian, Jinta, Erjingtiao</td></tr>
+        <tr><td>Picor alto</td><td>20.000–50.000</td><td>Sanying, Zidantou, Seven-Star</td></tr>
+        <tr><td>Picor extra</td><td>&gt;50.000</td><td>Jixin, Xiaomi, Chilli King</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Las cinco regiones de cultivo</h2>
+    <p>
+      La región fija el clima que fija el picor y el color. La llanura del norte cultiva chiles de
+      tipo racimo mirando al cielo; el noroeste es el cinturón de color; el cinturón de alto picor
+      cultiva las variedades calientes; las regiones de especialidad añaden tipos como Shaanxi 8819.
+    </p>
+
+    <h2 style="margin-top:32px;">Por qué la variedad es la primera decisión</h2>
+    <p>
+      Picor, color y sabor los fija la variedad y el clima de maduración — y varían de forma
+      independiente. Nombrar la variedad (o un rango SHU preciso) es lo que convierte "chile en polvo"
+      en un producto reproducible. Vea nuestras <a href="/es/heat-levels/medium-heat/">páginas de nivel de picor</a> o la
+      <a href="https://docs.drychillis.com/es/chilli-varieties/" target="_blank" rel="noopener">guía completa de variedades</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuáles son las principales variedades de chile chino?</h3>
+      <p>Van de dulce a extra-picante: pimiento dulce de Xinjiang (menos de 500 SHU), Yidu red y Wangdu (menos de 10.000), Xian, Jinta y Erjingtiao (10.000–20.000), Sanying, Zidantou y Seven-Star (20.000–50.000), y Jixin, Xiaomi y Chilli King (más de 50.000 SHU).</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Dónde se cultiva el chile en China?</h3>
+      <p>China cultiva chile en cinco regiones: la llanura del norte (Henan, Hebei, Shandong), el cinturón de alto picor (Hunan, Guizhou, Sichuan, Chongqing), el cinturón de color del noroeste (Xinjiang, Gansu), las regiones de especialidad (Shaanxi, Yunnan) y las de clima frío (Mongolia Interior, Shanxi, Liaoning, Jilin).</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Por qué importa la variedad al comprar chile?</h3>
+      <p>La variedad fija el picor (SHU), el color (ASTA) y el sabor, y varían de forma independiente. Nombrar la variedad — no pedir 'chile en polvo' genérico — es la diferencia entre un producto consistente y un lote que cambia en cada pedido.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

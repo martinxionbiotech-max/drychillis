@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué se considera chile de picor medio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile de picor medio es de 10.000–20.000 Unidades Scoville (SHU) — notablemente cálido sin el ardor intenso de las variedades de picor alto. Variedades chinas representativas: Xian, Jinta y Erjingtiao."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el chile de picor medio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la base del condimento general, la pasta de chile, el topping de pizza y snacks, y las mezclas de especias de uso diario donde el picor debe estar presente sin dominar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué variedades debo especificar para 10.000–20.000 SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xian, Jinta y Erjingtiao son las principales variedades de 10.000–20.000 SHU. Jinta es ideal para escamas y polvo; Erjingtiao aporta aroma y se usa en pasta de chile. Nombre la variedad y el rango SHU en su especificación."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile de Picor Medio (10.000–20.000 SHU) | Tenda Peppers"
+  description="Chile de picor medio (10.000–20.000 SHU) — Xian, Jinta y Erjingtiao para condimentos, pasta de chile y topping de pizza. Fabricante en China, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Picor Medio
+    </nav>
+    <h1>Chile de Picor Medio (10.000–20.000 SHU)</h1>
+    <p class="lead">
+      Notablemente cálido, no abrumador — la banda de 10.000–20.000 SHU es la base del condimento
+      diario, hecha de variedades como Xian, Jinta y Erjingtiao.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué se considera chile de picor medio?</h2>
+    <p>
+      El picor medio se sitúa entre el bajo (menos de 10.000 SHU) y el alto (20.000–50.000 SHU).
+      Aporta calor y aroma claros, pero se mantiene lo bastante suave para productos de público amplio
+      — por eso es la opción por defecto para pizza, snacks y mezclas de especias.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Xian</strong></td><td>10.000 – 20.000</td><td>Mongolia Interior, Xinjiang</td><td>Polvo medio, escamas</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10.000 – 20.000</td><td>Gansu, Mongolia Interior</td><td>Escamas, polvo (rojo brillante)</td></tr>
+        <tr><td><strong>Erjingtiao</strong></td><td>10.000 – 20.000</td><td>Sichuan, Guizhou</td><td>Pasta de chile, aroma</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el chile de picor medio?</h2>
+    <ul>
+      <li>Escamas de chile para pizza y pasta</li>
+      <li>Mezclas de especias y condimentos de uso diario</li>
+      <li>Pasta de chile y salsas de mesa</li>
+      <li>Condimentos para snacks y frituras</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile de picor medio</h2>
+    <p>
+      Nombre la variedad y el rango SHU, y luego la forma. Para escamas elija Jinta o Xian; para una
+      pasta aromática, Erjingtiao. Confirme humedad (menos del 13%) y, para polvo, malla (60–80 mesh
+      estándar).
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU exacto, forma,
+      malla y humedad al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué se considera chile de picor medio?</h3>
+      <p>El chile de picor medio es de 10.000–20.000 Unidades Scoville (SHU) — notablemente cálido sin el ardor intenso de las variedades de picor alto. Variedades chinas representativas: Xian, Jinta y Erjingtiao.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el chile de picor medio?</h3>
+      <p>Es la base del condimento general, la pasta de chile, el topping de pizza y snacks, y las mezclas de especias de uso diario donde el picor debe estar presente sin dominar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué variedades debo especificar para 10.000–20.000 SHU?</h3>
+      <p>Xian, Jinta y Erjingtiao son las principales variedades de 10.000–20.000 SHU. Jinta es ideal para escamas y polvo; Erjingtiao aporta aroma y se usa en pasta de chile. Nombre la variedad y el rango SHU en su especificación.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Picor Medio</a>
+      <a class="cta cta-outline" href="/es/heat-levels/high-heat/" style="margin-left:8px;">Picor Alto →</a>
+    </div>
+  </div>
+</BaseLayout>
