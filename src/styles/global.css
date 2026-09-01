@@ -68,13 +68,13 @@ h3 { font-size: 1.15rem; }
 .hero {
   background:
     radial-gradient(900px 480px at 85% -10%, rgba(232, 163, 61, 0.25), transparent 55%),
-    linear-gradient(135deg, rgba(122, 20, 15, 0.92) 0%, rgba(166, 31, 22, 0.90) 55%, rgba(139, 20, 14, 0.92) 100%),
+    linear-gradient(135deg, rgba(122, 20, 15, 0.40) 0%, rgba(166, 31, 22, 0.36) 55%, rgba(139, 20, 14, 0.46) 100%),
     url('/images/hero-chillies.jpg') center/cover no-repeat;
   color: #fff; padding: 72px 0;
 }
 .hero .container { position: relative; z-index: 1; }
-.hero h1 { color: #fff; margin: 0 0 18px; }
-.hero p { color: #f2deda; font-size: 1.18rem; max-width: 680px; margin: 0; }
+.hero h1 { color: #fff; margin: 0 0 18px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45); }
+.hero p { color: #f2deda; font-size: 1.18rem; max-width: 680px; margin: 0; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .cta {
   display: inline-block; background: var(--amber); color: #3a1c08;
