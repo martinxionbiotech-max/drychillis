@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta es un chile de picor medio de Gansu y Xinjiang, de 10.000–20.000 SHU. Sus vainas son largas (11–14 cm), de rojo azufaifo intenso y piel gruesa y brillante, lo que lo hace un estándar para escamas visibles y color brillante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta es de picor medio, 10.000–20.000 SHU — suave para condimentos generales y escamas, con el picor de Xian y Erjingtiao. Se elige más por el color y la apariencia que por el picor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta se usa para escamas de chile visibles, cobertura de pizza, mezclas de condimentos y pasta de chile. Su color rojo intenso y piel gruesa y brillante lo hacen la variedad preferida para escamas."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Jinta — 10.000–20.000 SHU | Tenda Peppers"
+  description="Pimiento Jinta — chile de picor medio de Gansu y Xinjiang, de 10.000–20.000 SHU, con vainas largas rojo intenso para escamas visibles y color brillante. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Jinta
+    </nav>
+    <h1>Chile Jinta</h1>
+    <p class="lead">
+      Un chile de picor medio de 10.000–20.000 SHU de Gansu y Xinjiang, con vainas largas de rojo
+      azufaifo intenso y piel gruesa y brillante — el estándar para escamas visibles y color brillante.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Jinta?</h2>
+    <p>
+      Jinta es un chile de picor medio elegido más por su apariencia que por su picor. Las vainas miden
+      11–14 cm de largo, unos 2–2,4 cm de ancho y cerca de 17 g cada una, con un color rojo azufaifo
+      intenso y piel gruesa, lisa y brillante. Esa combinación lo convierte en la variedad preferida
+      para escamas donde el chile debe leerse con claridad en el producto final. Vea
+      <a href="/es/heat-levels/medium-heat/">picor medio</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>10.000 – 20.000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Gansu, Xinjiang</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina larga (11–14 cm), piel gruesa brillante</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Escamas visibles, color, condimentos</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Jinta?</h2>
+    <ul>
+      <li>Escamas de chile visibles</li>
+      <li>Cobertura de pizza y mezclas de condimentos</li>
+      <li>Pasta de chile</li>
+      <li>Chile seco entero (picor medio)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile Jinta</h2>
+    <p>
+      Nombre la variedad, luego la forma y la malla. Para escamas, 20–40 mesh mantiene la piel roja
+      visible; para polvo, 60–80 mesh. Confirme la humedad (menos del 13%) y si necesita escama
+      despepitada. El color de Jinta es su punto de venta, así que indique su expectativa de color
+      (ASTA) si importa.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU, forma y malla
+      exactos al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Jinta?</h3>
+      <p>Jinta es un chile de picor medio de Gansu y Xinjiang, de 10.000–20.000 SHU. Sus vainas son largas (11–14 cm), de rojo azufaifo intenso y piel gruesa y brillante, lo que lo hace un estándar para escamas visibles y color brillante.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Jinta?</h3>
+      <p>Jinta es de picor medio, 10.000–20.000 SHU — suave para condimentos generales y escamas, con el picor de Xian y Erjingtiao. Se elige más por el color y la apariencia que por el picor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Jinta?</h3>
+      <p>Jinta se usa para escamas de chile visibles, cobertura de pizza, mezclas de condimentos y pasta de chile. Su color rojo intenso y piel gruesa y brillante lo hacen la variedad preferida para escamas.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Jinta</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/chilli-flakes/" style="margin-left:8px;">Escamas de Chile →</a>
+    </div>
+  </div>
+</BaseLayout>

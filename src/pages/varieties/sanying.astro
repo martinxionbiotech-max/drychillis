@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Sanying chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying, also called Tianying, is a cluster-type facing-heaven chilli from Henan and Hebei at 20,000–50,000 SHU. It is the classic high-heat dry-chilli shape and a workhorse for hot sauce, chilli oil and snack seasoning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Sanying pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying sits in the high-heat band, 20,000–50,000 SHU — strong, lingering heat for hot sauces and industrial food, well above medium varieties and below the extra-hot Jixin and Xiaomi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Sanying pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying is a standard for hot sauces, chilli oil, snack and instant-noodle seasoning, and industrial food. Specify it by variety and a precise SHU window for batch-to-batch consistency."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Sanying (Tianying) Chilli — 20,000–50,000 SHU | Tenda Peppers"
+  description="Sanying (Tianying) pepper — cluster-type facing-heaven chilli from Henan & Hebei at 20,000–50,000 SHU for hot sauce, chilli oil and snack seasoning. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Sanying
+    </nav>
+    <h1>Sanying (Tianying) Chilli</h1>
+    <p class="lead">
+      The classic high-heat dry chilli — a cluster-type facing-heaven pepper at 20,000–50,000 SHU,
+      grown in Henan and Hebei. The workhorse for hot sauce, chilli oil and snack seasoning.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Sanying chilli?</h2>
+    <p>
+      Sanying — also sold as Tianying — is a cluster-type facing-heaven chilli and the defining shape
+      of the Chinese high-heat dry-chilli market. Its heat sits in the 20,000–50,000 SHU band: strong
+      and lingering, but still controllable in a blend when dosed by weight. See the
+      <a href="/heat-levels/high-heat/">high heat</a> page for how it fits the band.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>20,000 – 50,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Henan, Hebei</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Cluster-type facing-heaven</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Hot sauce, chilli oil, snack seasoning</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Sanying pepper used for?</h2>
+    <ul>
+      <li>Hot sauces and chilli oil</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Industrial food and processed seasoning</li>
+      <li>Chilli powder and flakes (high-heat)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify Sanying chilli</h2>
+    <p>
+      Name the variety, then the form (whole, powder, flakes or segments), SHU window, moisture and
+      mesh. Heat is non-linear and variety-dependent, so "Sanying, 20,000–50,000 SHU, 60–80 mesh" is a
+      far more reliable order than "hot chilli powder".
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Sanying chilli?</h3>
+      <p>Sanying, also called Tianying, is a cluster-type facing-heaven chilli from Henan and Hebei at 20,000–50,000 SHU. It is the classic high-heat dry-chilli shape and a workhorse for hot sauce, chilli oil and snack seasoning.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Sanying pepper?</h3>
+      <p>Sanying sits in the high-heat band, 20,000–50,000 SHU — strong, lingering heat for hot sauces and industrial food, well above medium varieties and below the extra-hot Jixin and Xiaomi.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Sanying pepper used for?</h3>
+      <p>Sanying is a standard for hot sauces, chilli oil, snack and instant-noodle seasoning, and industrial food. Specify it by variety and a precise SHU window for batch-to-batch consistency.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Sanying Quotation</a>
+      <a class="cta cta-outline" href="/varieties/jixin/" style="margin-left:8px;">Jixin (Extra Hot) →</a>
+    </div>
+  </div>
+</BaseLayout>

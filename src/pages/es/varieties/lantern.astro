@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el pimiento linterna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento linterna (denglongjiao) es un chile de picor medio con color, aroma y sabor equilibrados, usado a menudo entero en platos dry-pot y hot-pot. Se valora por su presencia visual y sabor redondo, no por el picor extremo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento linterna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento linterna es de picor medio — en el rango de 10.000–20.000 SHU típico de las variedades de chile entero como Jinta y mirando-al-cielo. Se elige por equilibrio y apariencia, no por picor fuerte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento linterna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento linterna se usa entero en platos dry-pot y hot-pot, food service y envases retail donde el chile debe quedar visible. Su color, aroma y sabor equilibrados lo hacen una elección versátil de chile entero."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Pimiento Linterna (Denglongjiao) | Tenda Peppers"
+  description="Pimiento linterna (denglongjiao) — chile entero de picor medio con color, aroma y sabor equilibrados para dry-pot, hot-pot y food service. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Pimiento Linterna
+    </nav>
+    <h1>Pimiento Linterna (Denglongjiao)</h1>
+    <p class="lead">
+      Un chile entero de picor medio con color, aroma y sabor equilibrados — el estándar para dry-pot,
+      hot-pot y food service donde el chile debe quedar visible.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el pimiento linterna?</h2>
+    <p>
+      El pimiento linterna (denglongjiao) es un chile de picor medio cultivado en una planta compacta de
+      aproximadamente 1–1,2 m de alto. Su nombre viene de la vaina con forma de linterna. El atractivo
+      de la variedad es el equilibrio — color, aroma y sabor en proporción — por lo que es un caballo de
+      batalla para platos donde el chile entero es un ingrediente visible. Vea
+      <a href="/es/products/dried-chillies/whole-dried-chillies/">chiles secos enteros</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>10.000 – 20.000 (medio)</td></tr>
+        <tr><td><strong>Región</strong></td><td>Shandong, Hebei</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina en forma de linterna, planta 1–1,2 m</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Dry-pot, hot-pot, chile entero visible</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento linterna?</h2>
+    <ul>
+      <li>Platos dry-pot y hot-pot</li>
+      <li>Food service (chile entero visible)</li>
+      <li>Envases retail y supermercado</li>
+      <li>Guisos y estofados</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el pimiento linterna</h2>
+    <p>
+      Nombre la variedad, luego el grado de tamaño y la humedad. El pimiento linterna se suministra casi
+      siempre entero, así que el grado — tamaño de la vaina, sin tallo o con tallo — importa más que la
+      malla. Confirme menos del 13% de humedad y su tolerancia de tamaño, ya que la presentación es el
+      motivo de elegirlo.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su grado y humedad exactos al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el pimiento linterna?</h3>
+      <p>El pimiento linterna (denglongjiao) es un chile de picor medio con color, aroma y sabor equilibrados, usado a menudo entero en platos dry-pot y hot-pot. Se valora por su presencia visual y sabor redondo, no por el picor extremo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento linterna?</h3>
+      <p>El pimiento linterna es de picor medio — en el rango de 10.000–20.000 SHU típico de las variedades de chile entero como Jinta y mirando-al-cielo. Se elige por equilibrio y apariencia, no por picor fuerte.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento linterna?</h3>
+      <p>El pimiento linterna se usa entero en platos dry-pot y hot-pot, food service y envases retail donde el chile debe quedar visible. Su color, aroma y sabor equilibrados lo hacen una elección versátil de chile entero.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Pimiento Linterna</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/whole-dried-chillies/" style="margin-left:8px;">Chiles Secos Enteros →</a>
+    </div>
+  </div>
+</BaseLayout>

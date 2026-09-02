@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Jinta chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta is a medium-heat chilli from Gansu and Xinjiang at 10,000–20,000 SHU. Its pods are long (11–14 cm) with a deep jujube-red, thick glossy skin, making it a standard for visible flakes and bright colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Jinta pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta is medium heat, 10,000–20,000 SHU — mild enough for general seasoning and flakes, with the heat of Xian and Erjingtiao. It is chosen more for colour and appearance than for heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Jinta pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta is used for visible chilli flakes, pizza topping, seasoning blends and chilli paste. Its deep red colour and thick glossy skin make it a preferred flake variety."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Jinta Chilli — 10,000–20,000 SHU | Tenda Peppers"
+  description="Jinta pepper — medium-heat chilli from Gansu & Xinjiang at 10,000–20,000 SHU, with long deep-red pods for visible flakes and bright colour. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Jinta
+    </nav>
+    <h1>Jinta Chilli</h1>
+    <p class="lead">
+      A medium-heat chilli at 10,000–20,000 SHU from Gansu and Xinjiang, with long deep-jujube-red
+      pods and a thick glossy skin — the standard for visible flakes and bright colour.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Jinta chilli?</h2>
+    <p>
+      Jinta is a medium-heat chilli chosen more for its appearance than its heat. The pods run
+      11–14 cm long, about 2–2.4 cm across and roughly 17 g each, with a deep jujube-red colour and a
+      thick, smooth, glossy skin. That combination makes it a preferred variety for flakes where the
+      chilli must read clearly in the finished product. See the
+      <a href="/heat-levels/medium-heat/">medium heat</a> page for the band.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>10,000 – 20,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Gansu, Xinjiang</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Long pod (11–14 cm), thick glossy skin</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Visible flakes, colour, seasoning</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Jinta pepper used for?</h2>
+    <ul>
+      <li>Visible chilli flakes</li>
+      <li>Pizza topping and seasoning blends</li>
+      <li>Chilli paste</li>
+      <li>Whole dried chilli (medium heat)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify Jinta chilli</h2>
+    <p>
+      Name the variety, then the form and mesh. For flakes, 20–40 mesh keeps the red skin visible; for
+      powder, 60–80 mesh. Confirm moisture (under 13%) and whether you need de-seeded flake. Jinta's
+      colour is its selling point, so state your colour expectation (ASTA) if it matters.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Jinta chilli?</h3>
+      <p>Jinta is a medium-heat chilli from Gansu and Xinjiang at 10,000–20,000 SHU. Its pods are long (11–14 cm) with a deep jujube-red, thick glossy skin, making it a standard for visible flakes and bright colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Jinta pepper?</h3>
+      <p>Jinta is medium heat, 10,000–20,000 SHU — mild enough for general seasoning and flakes, with the heat of Xian and Erjingtiao. It is chosen more for colour and appearance than for heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Jinta pepper used for?</h3>
+      <p>Jinta is used for visible chilli flakes, pizza topping, seasoning blends and chilli paste. Its deep red colour and thick glossy skin make it a preferred flake variety.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Jinta Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/chilli-flakes/" style="margin-left:8px;">Chilli Flakes →</a>
+    </div>
+  </div>
+</BaseLayout>

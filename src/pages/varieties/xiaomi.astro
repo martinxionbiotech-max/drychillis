@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Xiaomi chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi is a small, slender extra-hot chilli from Yunnan and Guizhou at 50,000–70,000 SHU. It is used for high-heat whole chillies, pieces and chilli oil, delivering strong heat in a compact pod."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Xiaomi pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi is extra-hot at 50,000–70,000 SHU, in the same band as Jixin and Chilli King — above high-heat varieties and used where a small pod must deliver strong heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Xiaomi pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi is used for high-heat whole chillies, chilli segments, chilli oil and Sichuan-style seasoning. Its compact pod stays visible in dishes while delivering extra heat."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Xiaomi Chilli — 50,000–70,000 SHU | Tenda Peppers"
+  description="Xiaomi pepper — small slender extra-hot chilli from Yunnan & Guizhou at 50,000–70,000 SHU for whole chillies, segments and chilli oil. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Xiaomi
+    </nav>
+    <h1>Xiaomi Chilli</h1>
+    <p class="lead">
+      A small, slender extra-hot chilli at 50,000–70,000 SHU from Yunnan and Guizhou — used for
+      high-heat whole chillies, segments and chilli oil where a compact pod delivers strong heat.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Xiaomi chilli?</h2>
+    <p>
+      Xiaomi ("little rice") is named for its small, slender pod. It sits in the extra-hot band at
+      50,000–70,000 SHU, alongside Jixin and Chilli King, and its compact size makes it ideal for
+      applications where the chilli must stay visible while still delivering extra heat. See the
+      <a href="/heat-levels/extra-hot/">extra hot</a> page for the full band.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>50,000 – 70,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Yunnan, Guizhou</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Small, slender pod</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Whole chilli, segments, chilli oil</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Xiaomi pepper used for?</h2>
+    <ul>
+      <li>High-heat whole dried chillies</li>
+      <li>Chilli segments and chilli oil</li>
+      <li>Sichuan-style and hot-pot dishes</li>
+      <li>Extreme-heat seasoning blends</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify Xiaomi chilli</h2>
+    <p>
+      Name the variety and target SHU window, then the form — Xiaomi is commonly supplied whole or as
+      segments. Its small pod stays visible in a finished dish, which is often the point of choosing it
+      over a powder. Confirm size grade, moisture and whether you need de-stemmed pods.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Xiaomi chilli?</h3>
+      <p>Xiaomi is a small, slender extra-hot chilli from Yunnan and Guizhou at 50,000–70,000 SHU. It is used for high-heat whole chillies, pieces and chilli oil, delivering strong heat in a compact pod.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Xiaomi pepper?</h3>
+      <p>Xiaomi is extra-hot at 50,000–70,000 SHU, in the same band as Jixin and Chilli King — above high-heat varieties and used where a small pod must deliver strong heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Xiaomi pepper used for?</h3>
+      <p>Xiaomi is used for high-heat whole chillies, chilli segments, chilli oil and Sichuan-style seasoning. Its compact pod stays visible in dishes while delivering extra heat.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Xiaomi Quotation</a>
+      <a class="cta cta-outline" href="/varieties/jinta/" style="margin-left:8px;">Jinta (Medium) →</a>
+    </div>
+  </div>
+</BaseLayout>

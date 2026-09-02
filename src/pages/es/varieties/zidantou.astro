@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou, el pimiento bala, es un chile cónico de alto picor de Shandong y Anhui, de 20.000–50.000 SHU. Es un estándar para salsa picante y alimentación industrial, a menudo procesado en polvo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou se sitúa en la banda de picor alto, 20.000–50.000 SHU — la misma banda de trabajo que Sanying, adecuada para salsas picantes y condimentos industriales en lugar de productos de picor extremo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou se usa para salsa picante, alimentación industrial y chile en polvo. Su forma cónica y picor consistente lo hacen una base de alto picor fiable para mezclas y procesado."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Zidantou (Bala) — 20.000–50.000 SHU | Tenda Peppers"
+  description="Zidantou (pimiento bala) — chile cónico de alto picor de Shandong y Anhui, de 20.000–50.000 SHU para salsa picante, alimentación industrial y chile en polvo. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Zidantou
+    </nav>
+    <h1>Chile Zidantou (Bala)</h1>
+    <p class="lead">
+      El pimiento bala — un chile cónico de alto picor de 20.000–50.000 SHU de Shandong y Anhui. Una
+      base de alto picor fiable para salsa picante, alimentación industrial y chile en polvo.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Zidantou?</h2>
+    <p>
+      Zidantou, que significa "cabeza de bala", es un chile cónico llamado así por su vaina compacta en
+      forma de bala. Se sitúa en la banda de 20.000–50.000 SHU — el mismo rango de trabajo de alto
+      picor que Sanying — y su picor consistente y controlable lo hace un básico para procesadores que
+      necesitan una base de alto picor fiable. Vea <a href="/es/heat-levels/high-heat/">picor alto</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>20.000 – 50.000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Shandong, Anhui</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Cónico (bala)</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Salsa picante, industria, polvo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Zidantou?</h2>
+    <ul>
+      <li>Salsas picantes y aceite de chile</li>
+      <li>Alimentación industrial y condimentos procesados</li>
+      <li>Chile en polvo (alto picor)</li>
+      <li>Mezclas de condimentos y snacks</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile Zidantou</h2>
+    <p>
+      Nombre la variedad, luego la forma, el rango SHU, la humedad y la malla. La forma cónica de
+      Zidantou seca y muele de forma consistente, lo que favorece la producción de polvo. Confirme si
+      necesita vainas enteras, escamas, polvo o segmentos — la forma determina el procesado y el precio.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU y forma exactos al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Zidantou?</h3>
+      <p>Zidantou, el pimiento bala, es un chile cónico de alto picor de Shandong y Anhui, de 20.000–50.000 SHU. Es un estándar para salsa picante y alimentación industrial, a menudo procesado en polvo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Zidantou?</h3>
+      <p>Zidantou se sitúa en la banda de picor alto, 20.000–50.000 SHU — la misma banda de trabajo que Sanying, adecuada para salsas picantes y condimentos industriales en lugar de productos de picor extremo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Zidantou?</h3>
+      <p>Zidantou se usa para salsa picante, alimentación industrial y chile en polvo. Su forma cónica y picor consistente lo hacen una base de alto picor fiable para mezclas y procesado.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Zidantou</a>
+      <a class="cta cta-outline" href="/es/varieties/sanying/" style="margin-left:8px;">Sanying (Tianying) →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Jixin chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin, the chicken-heart chilli, is a small heart-shaped extra-hot pod at 50,000–70,000 SHU from Guizhou and Hunan. It is a standard for extreme-heat products and Sichuan-style dishes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Jixin pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin is extra-hot at 50,000–70,000 SHU — among the hottest common Chinese chillies, above the high-heat Sanying and Zidantou band and used where extreme heat is the point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Jixin pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin is used for extreme-heat products: chilli oil, Sichuan-style dishes, hot-pot bases and seasoning where a small dose must deliver strong heat. Dose it by weight because heat is non-linear."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Jixin (Chicken-Heart) Chilli — 50,000–70,000 SHU | Tenda Peppers"
+  description="Jixin (chicken-heart) pepper — small heart-shaped extra-hot chilli from Guizhou & Hunan at 50,000–70,000 SHU for chilli oil and Sichuan dishes. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Jixin
+    </nav>
+    <h1>Jixin (Chicken-Heart) Chilli</h1>
+    <p class="lead">
+      The chicken-heart chilli — a small, heart-shaped extra-hot pod at 50,000–70,000 SHU from Guizhou
+      and Hunan. The standard for extreme-heat products and Sichuan-style dishes.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Jixin chilli?</h2>
+    <p>
+      Jixin, meaning "chicken heart", is named for its small heart-shaped pod. It sits at the top of
+      the common Chinese chilli heat scale at 50,000–70,000 SHU, above the high-heat band — which is
+      why it is dosed as an accent rather than a base. See the
+      <a href="/heat-levels/extra-hot/">extra hot</a> page for how it fits the 50,000+ band.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>50,000 – 70,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Guizhou, Hunan</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Small, heart-shaped pod</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Extreme heat, chilli oil, Sichuan dishes</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Jixin pepper used for?</h2>
+    <ul>
+      <li>Chilli oil and infused oil</li>
+      <li>Sichuan-style and hot-pot dishes</li>
+      <li>Extreme-heat seasoning blends</li>
+      <li>Snack and instant-noodle heat packs</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify Jixin chilli</h2>
+    <p>
+      Name the variety and your target SHU window, then the form — Jixin is commonly supplied as
+      segments or powder. Because heat is non-linear, a small dose of Jixin moves a blend's heat far
+      more than the same weight of a medium chilli, so dose by weight and confirm the window precisely.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Jixin chilli?</h3>
+      <p>Jixin, the chicken-heart chilli, is a small heart-shaped extra-hot pod at 50,000–70,000 SHU from Guizhou and Hunan. It is a standard for extreme-heat products and Sichuan-style dishes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Jixin pepper?</h3>
+      <p>Jixin is extra-hot at 50,000–70,000 SHU — among the hottest common Chinese chillies, above the high-heat Sanying and Zidantou band and used where extreme heat is the point.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Jixin pepper used for?</h3>
+      <p>Jixin is used for extreme-heat products: chilli oil, Sichuan-style dishes, hot-pot bases and seasoning where a small dose must deliver strong heat. Dose it by weight because heat is non-linear.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Jixin Quotation</a>
+      <a class="cta cta-outline" href="/varieties/xiaomi/" style="margin-left:8px;">Xiaomi →</a>
+    </div>
+  </div>
+</BaseLayout>

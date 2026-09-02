@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Jixin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin, el chile corazón-de-gallina, es una vaina pequeña en forma de corazón, extra-picante, de 50.000–70.000 SHU, de Guizhou y Hunan. Es un estándar para productos de picor extremo y platos estilo Sichuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Jixin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin es extra-picante, de 50.000–70.000 SHU — entre los chiles chinos comunes más picantes, por encima de la banda de alto picor de Sanying y Zidantou, y usado donde el picor extremo es el punto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Jixin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jixin se usa para productos de picor extremo: aceite de chile, platos estilo Sichuan, bases de hot-pot y condimentos donde una dosis pequeña debe aportar picor fuerte. Dosifíquelo por peso porque el picor es no lineal."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Jixin (Corazón de Gallina) — 50.000–70.000 SHU | Tenda Peppers"
+  description="Pimiento Jixin (corazón de gallina) — vaina pequeña extra-picante de Guizhou y Hunan, de 50.000–70.000 SHU para aceite de chile y platos Sichuan. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Jixin
+    </nav>
+    <h1>Chile Jixin (Corazón de Gallina)</h1>
+    <p class="lead">
+      El chile corazón-de-gallina — una vaina pequeña en forma de corazón, extra-picante, de
+      50.000–70.000 SHU de Guizhou y Hunan. El estándar para picor extremo y platos estilo Sichuan.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Jixin?</h2>
+    <p>
+      Jixin, que significa "corazón de gallina", recibe su nombre por su pequeña vaina en forma de
+      corazón. Se sitúa en lo alto de la escala de picor del chile chino común, a 50.000–70.000 SHU,
+      por encima de la banda de picor alto — por eso se dosifica como acento y no como base. Vea la
+      página de <a href="/es/heat-levels/extra-hot/">picor extra</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>50.000 – 70.000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Guizhou, Hunan</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina pequeña en forma de corazón</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Picor extremo, aceite de chile, Sichuan</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Jixin?</h2>
+    <ul>
+      <li>Aceite de chile e infusiones</li>
+      <li>Platos estilo Sichuan y hot-pot</li>
+      <li>Mezclas de condimentos de picor extremo</li>
+      <li>Packs de picor para snacks y fideos instantáneos</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile Jixin</h2>
+    <p>
+      Nombre la variedad y su rango SHU objetivo, luego la forma — Jixin suele suministrarse en
+      segmentos o polvo. Como el picor es no lineal, una dosis pequeña de Jixin mueve el picor de una
+      mezcla mucho más que el mismo peso de un chile medio, así que dosifique por peso y confirme el
+      rango con precisión.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU y forma exactos al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Jixin?</h3>
+      <p>Jixin, el chile corazón-de-gallina, es una vaina pequeña en forma de corazón, extra-picante, de 50.000–70.000 SHU, de Guizhou y Hunan. Es un estándar para productos de picor extremo y platos estilo Sichuan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Jixin?</h3>
+      <p>Jixin es extra-picante, de 50.000–70.000 SHU — entre los chiles chinos comunes más picantes, por encima de la banda de alto picor de Sanying y Zidantou, y usado donde el picor extremo es el punto.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Jixin?</h3>
+      <p>Jixin se usa para productos de picor extremo: aceite de chile, platos estilo Sichuan, bases de hot-pot y condimentos donde una dosis pequeña debe aportar picor fuerte. Dosifíquelo por peso porque el picor es no lineal.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Jixin</a>
+      <a class="cta cta-outline" href="/es/varieties/xiaomi/" style="margin-left:8px;">Xiaomi →</a>
+    </div>
+  </div>
+</BaseLayout>

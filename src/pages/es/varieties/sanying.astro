@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Sanying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying, también llamado Tianying, es un chile mirando-al-cielo de tipo racimo de Henan y Hebei, de 20.000–50.000 SHU. Es la forma clásica del chile seco de alto picor y un caballo de batalla para salsa picante, aceite de chile y condimentos de snacks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Sanying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying se sitúa en la banda de picor alto, 20.000–50.000 SHU — picor fuerte y persistente para salsas picantes y alimentación industrial, muy por encima de las variedades medias y por debajo de los extra-picantes Jixin y Xiaomi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Sanying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying es estándar para salsas picantes, aceite de chile, condimentos de snacks y fideos instantáneos, y alimentación industrial. Especifíquelo por variedad y un rango SHU preciso para consistencia entre lotes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Sanying (Tianying) — 20.000–50.000 SHU | Tenda Peppers"
+  description="Pimiento Sanying (Tianying) — chile mirando-al-cielo de tipo racimo de Henan y Hebei, de 20.000–50.000 SHU para salsa picante, aceite de chile y snacks. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Sanying
+    </nav>
+    <h1>Chile Sanying (Tianying)</h1>
+    <p class="lead">
+      El chile seco clásico de alto picor — un mirando-al-cielo de tipo racimo de 20.000–50.000 SHU,
+      cultivado en Henan y Hebei. El caballo de batalla para salsa picante, aceite de chile y snacks.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Sanying?</h2>
+    <p>
+      Sanying — también comercializado como Tianying — es un chile mirando-al-cielo de tipo racimo y la
+      forma que define el mercado chino del chile seco de alto picor. Su picor está en la banda de
+      20.000–50.000 SHU: fuerte y persistente, pero aún controlable en una mezcla dosificado por peso.
+      Vea la página de <a href="/es/heat-levels/high-heat/">picor alto</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>20.000 – 50.000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Henan, Hebei</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Mirando-al-cielo de tipo racimo</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Salsa picante, aceite de chile, snacks</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Sanying?</h2>
+    <ul>
+      <li>Salsas picantes y aceite de chile</li>
+      <li>Condimentos de snacks y fideos instantáneos</li>
+      <li>Alimentación industrial y condimentos procesados</li>
+      <li>Chile en polvo y escamas (alto picor)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile Sanying</h2>
+    <p>
+      Nombre la variedad, luego la forma (entero, polvo, escamas o segmentos), el rango SHU, la humedad
+      y la malla. El picor es no lineal y depende de la variedad, así que "Sanying, 20.000–50.000 SHU,
+      60–80 mesh" es un pedido mucho más fiable que "chile en polvo picante".
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU y forma exactos al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Sanying?</h3>
+      <p>Sanying, también llamado Tianying, es un chile mirando-al-cielo de tipo racimo de Henan y Hebei, de 20.000–50.000 SHU. Es la forma clásica del chile seco de alto picor y un caballo de batalla para salsa picante, aceite de chile y condimentos de snacks.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Sanying?</h3>
+      <p>Sanying se sitúa en la banda de picor alto, 20.000–50.000 SHU — picor fuerte y persistente para salsas picantes y alimentación industrial, muy por encima de las variedades medias y por debajo de los extra-picantes Jixin y Xiaomi.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Sanying?</h3>
+      <p>Sanying es estándar para salsas picantes, aceite de chile, condimentos de snacks y fideos instantáneos, y alimentación industrial. Especifíquelo por variedad y un rango SHU preciso para consistencia entre lotes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Sanying</a>
+      <a class="cta cta-outline" href="/es/varieties/jixin/" style="margin-left:8px;">Jixin (Extra) →</a>
+    </div>
+  </div>
+</BaseLayout>

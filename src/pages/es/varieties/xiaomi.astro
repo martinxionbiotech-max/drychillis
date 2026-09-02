@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi es un chile pequeño y delgado, extra-picante, de Yunnan y Guizhou, de 50.000–70.000 SHU. Se usa para chiles enteros de alto picor, trozos y aceite de chile, aportando picor fuerte en una vaina compacta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi es extra-picante, de 50.000–70.000 SHU, en la misma banda que Jixin y Chilli King — por encima de las variedades de alto picor y usado donde una vaina pequeña debe aportar picor fuerte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiaomi se usa para chiles enteros de alto picor, segmentos de chile, aceite de chile y condimentos estilo Sichuan. Su vaina compacta queda visible en los platos mientras aporta picor extra."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Xiaomi — 50.000–70.000 SHU | Tenda Peppers"
+  description="Pimiento Xiaomi — chile pequeño y delgado extra-picante de Yunnan y Guizhou, de 50.000–70.000 SHU para chiles enteros, segmentos y aceite de chile. Fabricante chino."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Xiaomi
+    </nav>
+    <h1>Chile Xiaomi</h1>
+    <p class="lead">
+      Un chile pequeño y delgado, extra-picante, de 50.000–70.000 SHU de Yunnan y Guizhou — usado para
+      chiles enteros de alto picor, segmentos y aceite de chile donde una vaina compacta aporta picor
+      fuerte.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Xiaomi?</h2>
+    <p>
+      Xiaomi ("arrocito") recibe su nombre por su vaina pequeña y delgada. Se sitúa en la banda
+      extra-picante, a 50.000–70.000 SHU, junto a Jixin y Chilli King, y su tamaño compacto lo hace
+      ideal para aplicaciones donde el chile debe quedar visible mientras aporta picor extra. Vea la
+      página de <a href="/es/heat-levels/extra-hot/">picor extra</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>50.000 – 70.000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Yunnan, Guizhou</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina pequeña y delgada</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Chile entero, segmentos, aceite de chile</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Xiaomi?</h2>
+    <ul>
+      <li>Chiles secos enteros de alto picor</li>
+      <li>Segmentos de chile y aceite de chile</li>
+      <li>Platos estilo Sichuan y hot-pot</li>
+      <li>Mezclas de condimentos de picor extremo</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile Xiaomi</h2>
+    <p>
+      Nombre la variedad y el rango SHU objetivo, luego la forma — Xiaomi suele suministrarse entero o
+      en segmentos. Su vaina pequeña queda visible en el plato final, que suele ser el motivo de
+      elegirlo frente al polvo. Confirme el grado de tamaño, la humedad y si necesita vainas sin tallo.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU y forma exactos al
+      consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Xiaomi?</h3>
+      <p>Xiaomi es un chile pequeño y delgado, extra-picante, de Yunnan y Guizhou, de 50.000–70.000 SHU. Se usa para chiles enteros de alto picor, trozos y aceite de chile, aportando picor fuerte en una vaina compacta.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Xiaomi?</h3>
+      <p>Xiaomi es extra-picante, de 50.000–70.000 SHU, en la misma banda que Jixin y Chilli King — por encima de las variedades de alto picor y usado donde una vaina pequeña debe aportar picor fuerte.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Xiaomi?</h3>
+      <p>Xiaomi se usa para chiles enteros de alto picor, segmentos de chile, aceite de chile y condimentos estilo Sichuan. Su vaina compacta queda visible en los platos mientras aporta picor extra.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Xiaomi</a>
+      <a class="cta cta-outline" href="/es/varieties/jinta/" style="margin-left:8px;">Jinta (Medio) →</a>
+    </div>
+  </div>
+</BaseLayout>

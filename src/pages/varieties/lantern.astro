@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is lantern pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lantern pepper (denglongjiao) is a medium heat chilli with balanced colour, aroma and flavour, often used whole in dry-pot and hot-pot dishes. It is prized for its visual presence and rounded flavour rather than extreme heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is lantern pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lantern pepper is medium heat — in the 10,000–20,000 SHU range typical of whole-chilli varieties like Jinta and facing-heaven. It is chosen for balance and appearance, not for strong heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is lantern pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lantern pepper is used whole in dry-pot and hot-pot dishes, food service and retail packs where the chilli must stay visible. Its balanced colour, aroma and flavour make it a versatile whole-chilli choice."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Lantern Pepper (Denglongjiao) | Tenda Peppers"
+  description="Lantern pepper (denglongjiao) — medium-heat whole chilli with balanced colour, aroma and flavour for dry-pot, hot-pot and food service. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Lantern Pepper
+    </nav>
+    <h1>Lantern Pepper (Denglongjiao)</h1>
+    <p class="lead">
+      A medium-heat whole chilli with balanced colour, aroma and flavour — the standard for dry-pot,
+      hot-pot and food service where the chilli must stay visible.
+    </p>
+
+    <h2 style="margin-top:32px;">What is lantern pepper?</h2>
+    <p>
+      Lantern pepper (denglongjiao) is a medium-heat chilli grown on a compact plant roughly 1–1.2 m
+      tall. Its name comes from the lantern-like pod. The variety's appeal is balance — colour, aroma
+      and flavour in proportion — which is why it is a workhorse for dishes where the whole chilli is
+      a visible ingredient. See our
+      <a href="/products/dried-chillies/whole-dried-chillies/">whole dried chillies</a> page for form
+      options.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>10,000 – 20,000 (medium)</td></tr>
+        <tr><td><strong>Region</strong></td><td>Shandong, Hebei</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Lantern-shaped pod, 1–1.2 m plant</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Dry-pot, hot-pot, visible whole chilli</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is lantern pepper used for?</h2>
+    <ul>
+      <li>Dry-pot and hot-pot dishes</li>
+      <li>Food service (visible whole chilli)</li>
+      <li>Retail and grocery packs</li>
+      <li>Braised and stewed dishes</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify lantern pepper</h2>
+    <p>
+      Name the variety, then the size grade and moisture. Lantern pepper is almost always supplied
+      whole, so the grade — pod size, de-stemmed or stem-on — matters more than mesh. Confirm under
+      13% moisture and your size tolerance, since presentation is the point of choosing it.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact grade and moisture when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is lantern pepper?</h3>
+      <p>Lantern pepper (denglongjiao) is a medium heat chilli with balanced colour, aroma and flavour, often used whole in dry-pot and hot-pot dishes. It is prized for its visual presence and rounded flavour rather than extreme heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is lantern pepper?</h3>
+      <p>Lantern pepper is medium heat — in the 10,000–20,000 SHU range typical of whole-chilli varieties like Jinta and facing-heaven. It is chosen for balance and appearance, not for strong heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is lantern pepper used for?</h3>
+      <p>Lantern pepper is used whole in dry-pot and hot-pot dishes, food service and retail packs where the chilli must stay visible. Its balanced colour, aroma and flavour make it a versatile whole-chilli choice.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Lantern Pepper Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/whole-dried-chillies/" style="margin-left:8px;">Whole Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>

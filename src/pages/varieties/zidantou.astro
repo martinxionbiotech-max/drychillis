@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Zidantou chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou, the bullet pepper, is a conical high-heat chilli from Shandong and Anhui at 20,000–50,000 SHU. It is a standard for hot sauce and industrial food, often processed into powder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Zidantou pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou sits in the high-heat band, 20,000–50,000 SHU — the same working band as Sanying, suited to hot sauces and industrial seasoning rather than extreme-heat products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Zidantou pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zidantou is used for hot sauce, industrial food and chilli powder. Its conical shape and consistent heat make it a dependable high-heat base for blends and processing."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Zidantou (Bullet) Chilli — 20,000–50,000 SHU | Tenda Peppers"
+  description="Zidantou (bullet pepper) — conical high-heat chilli from Shandong & Anhui at 20,000–50,000 SHU for hot sauce, industrial food and chilli powder. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Zidantou
+    </nav>
+    <h1>Zidantou (Bullet) Chilli</h1>
+    <p class="lead">
+      The bullet pepper — a conical high-heat chilli at 20,000–50,000 SHU from Shandong and Anhui.
+      A dependable high-heat base for hot sauce, industrial food and chilli powder.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Zidantou chilli?</h2>
+    <p>
+      Zidantou, meaning "bullet head", is a conical chilli named for its compact bullet-like pod. It
+      sits in the 20,000–50,000 SHU band — the same high-heat working range as Sanying — and its
+      consistent, controllable heat makes it a staple for processors who need a reliable high-heat
+      base. See <a href="/heat-levels/high-heat/">high heat</a> for the full band.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>20,000 – 50,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Shandong, Anhui</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Conical (bullet)</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Hot sauce, industrial food, powder</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Zidantou pepper used for?</h2>
+    <ul>
+      <li>Hot sauces and chilli oil</li>
+      <li>Industrial food and processed seasoning</li>
+      <li>Chilli powder (high-heat)</li>
+      <li>Seasoning blends and snack seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify Zidantou chilli</h2>
+    <p>
+      Name the variety, then form, SHU window, moisture and mesh. Zidantou's conical shape dries and
+      mills consistently, which suits powder production. Confirm whether you need whole pods, flakes,
+      powder or segments — the form drives processing and price.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window and form when you
+      inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Zidantou chilli?</h3>
+      <p>Zidantou, the bullet pepper, is a conical high-heat chilli from Shandong and Anhui at 20,000–50,000 SHU. It is a standard for hot sauce and industrial food, often processed into powder.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Zidantou pepper?</h3>
+      <p>Zidantou sits in the high-heat band, 20,000–50,000 SHU — the same working band as Sanying, suited to hot sauces and industrial seasoning rather than extreme-heat products.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Zidantou pepper used for?</h3>
+      <p>Zidantou is used for hot sauce, industrial food and chilli powder. Its conical shape and consistent heat make it a dependable high-heat base for blends and processing.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Zidantou Quotation</a>
+      <a class="cta cta-outline" href="/varieties/sanying/" style="margin-left:8px;">Sanying (Tianying) →</a>
+    </div>
+  </div>
+</BaseLayout>
