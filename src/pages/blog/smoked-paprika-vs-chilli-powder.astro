@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between smoked paprika and chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smoked paprika is a low-heat sweet pepper (under 1,000 SHU) that is smoke-dried for a smoky, sweet, deep-red profile and used mainly for colour and barbecue flavour. Chilli powder is a ground hot pepper whose heat — 10,000 to 50,000+ SHU — is the point. One is a colour and smoke ingredient; the other is a heat ingredient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is smoked paprika hot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, not in chilli terms. Sweet smoked paprika is under 500 SHU and even the 'picante' hot version sits around 500–1,000 SHU — mild sweet-pepper territory, far below chilli powder. Its character is smoke and colour, not heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I substitute chilli powder for smoked paprika?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not one-for-one. They sit at opposite ends of the heat scale. A 20,000–50,000 SHU chilli powder added at smoked-paprika quantities will overwhelm a dish with heat, and it carries no smoke note. Use chilli powder for heat and smoked paprika for smoke and colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which one should I use for heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli powder. Smoked paprika tops out around 1,000 SHU — it cannot deliver meaningful heat. If heat is the goal, specify the chilli variety and its SHU window, not a generic 'chilli powder'."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Smoked Paprika vs Chilli Powder: Heat, Colour & When to Use Which | Tenda Peppers"
+  description="Smoked paprika vs chilli powder — one is a low-heat sweet pepper for smoke and colour, the other a ground hot pepper for heat. How to choose, and why heat needs a SHU spec. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-02"
+  dateModified="2026-09-02"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/blog/">Guides</a> &rsaquo; Smoked Paprika vs Chilli Powder
+    </nav>
+    <h1>Smoked Paprika vs Chilli Powder: Heat, Colour &amp; When to Use Which</h1>
+    <p class="lead">
+      They share a deep red colour, but they do opposite jobs. Smoked paprika is a low-heat sweet
+      pepper for smoke and colour; chilli powder is a ground hot pepper for heat. Know which you
+      actually need before you specify.
+    </p>
+
+    <h2 style="margin-top:32px;">The two-minute answer</h2>
+    <p>
+      Smoked paprika is a <strong>sweet pepper</strong> (under 1,000 SHU) that has been smoke-dried,
+      giving it a smoky, sweet, deep-red profile. Chilli powder is a <strong>ground hot pepper</strong>
+      whose heat — 10,000 to 50,000+ SHU — is the whole point. One is a colour-and-smoke ingredient;
+      the other is a heat ingredient. They are not interchangeable.
+    </p>
+
+    <h2 style="margin-top:32px;">What smoked paprika actually is</h2>
+    <p>
+      Smoked paprika (in Spain, <em>pimentón</em>) is made from mild red peppers that are dried over
+      smoke — traditionally oak — before grinding. The result is a sweet, earthy powder with a
+      distinctive smoky note and strong red colour. Its heat is negligible: sweet smoked paprika sits
+      under 500 SHU, and even the "picante" hot version stays around 500–1,000 SHU. Its value is
+      <strong>smoke flavour and red colour (ASTA)</strong>, not heat.
+    </p>
+    <p>
+      For sourcing, note that authentic oak-smoked <em>Pimentón de la Vera</em> is a protected Spanish
+      origin product. Most industrial volume is a "smoke-dried style" made outside Spain — a
+      cost-effective alternative, but not the same PDO product. If colour and sweetness are your
+      targets, the sweet-pepper specialists at
+      <a href="https://paprikabulk.com/china-paprika-powder/" target="_blank" rel="noopener">paprikabulk.com</a>
+      cover that range.
+    </p>
+
+    <h2 style="margin-top:32px;">What chilli powder actually is</h2>
+    <p>
+      Chilli powder is ground dried <em>hot</em> pepper. Its defining property is heat, measured in
+      Scoville Heat Units (SHU): medium blends run 10,000–20,000 SHU, high heat 20,000–50,000 SHU,
+      and extra-hot varieties exceed 50,000 SHU. Heat is non-linear and variety-dependent, which is
+      why a real specification names the variety and its SHU window — see our
+      <a href="/heat-levels/high-heat/">high heat</a> and
+      <a href="/heat-levels/extra-hot/">extra hot</a> reference pages.
+    </p>
+
+    <h2 style="margin-top:32px;">Heat is the deciding difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Property</th>
+          <th style="padding:8px;">Smoked paprika</th>
+          <th style="padding:8px;">Chilli powder</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Base pepper</strong></td>
+          <td style="padding:8px;">Mild sweet pepper</td>
+          <td style="padding:8px;">Hot chilli (variety-named)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">Under 1,000</td>
+          <td style="padding:8px;">10,000 – 50,000+</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Job</strong></td>
+          <td style="padding:8px;">Smoke + red colour</td>
+          <td style="padding:8px;">Heat + chilli flavour</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Typical use</strong></td>
+          <td style="padding:8px;">BBQ rubs, plant-based meats, dips</td>
+          <td style="padding:8px;">Hot sauces, seasonings, snacks</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">When to use which</h2>
+    <ul>
+      <li><strong>You want heat</strong> → chilli powder, specified by variety and SHU window. Smoked paprika cannot deliver meaningful heat.</li>
+      <li><strong>You want smoke and a deep red colour</strong> → smoked paprika. Chilli powder carries no smoke note.</li>
+      <li><strong>You want both</strong> → use them together: smoked paprika for colour and smoke, a small dose of a high-SHU chilli for heat.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between smoked paprika and chilli powder?</h3>
+      <p>Smoked paprika is a low-heat sweet pepper (under 1,000 SHU) that is smoke-dried for a smoky, sweet, deep-red profile and used mainly for colour and barbecue flavour. Chilli powder is a ground hot pepper whose heat — 10,000 to 50,000+ SHU — is the point. One is a colour and smoke ingredient; the other is a heat ingredient.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is smoked paprika hot?</h3>
+      <p>No, not in chilli terms. Sweet smoked paprika is under 500 SHU and even the 'picante' hot version sits around 500–1,000 SHU — mild sweet-pepper territory, far below chilli powder. Its character is smoke and colour, not heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I substitute chilli powder for smoked paprika?</h3>
+      <p>Not one-for-one. They sit at opposite ends of the heat scale. A 20,000–50,000 SHU chilli powder added at smoked-paprika quantities will overwhelm a dish with heat, and it carries no smoke note. Use chilli powder for heat and smoked paprika for smoke and colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which one should I use for heat?</h3>
+      <p>Chilli powder. Smoked paprika tops out around 1,000 SHU — it cannot deliver meaningful heat. If heat is the goal, specify the chilli variety and its SHU window, not a generic 'chilli powder'.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
