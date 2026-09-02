@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué son las escamas de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las escamas de chile (chile triturado) son chiles secos triturados en trozos gruesos — típicamente 20–40 mesh — con semillas y piel visibles. Se sitúan en la banda de 10.000–20.000 SHU y se usan para pizza, mezclas de condimentos y snacks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué nivel de picor tienen las escamas de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La mayoría de las escamas son de picor medio, 10.000–20.000 SHU, de variedades como Xian, Jinta y Erjingtiao. Hay escamas más picantes especificando una variedad más fuerte, pero la escama comercial estándar es media."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tamaño de malla tienen las escamas de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las escamas de chile son un corte grueso de 20–40 mesh — mayor que el polvo (60–80 mesh) pero menor que el chile entero. El corte grueso mantiene visibles las semillas y la piel y da la textura característica."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Escamas de Chile (Chile Triturado) | Tenda Peppers"
+  description="Fabricante chino de escamas de chile — chile triturado a 10.000–20.000 SHU, 20–40 mesh, de Xian, Jinta y Erjingtiao. ISO 9001 y HACCP. Tenda Peppers."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Escamas de Chile
+    </nav>
+    <h1>Escamas de Chile (Chile Triturado)</h1>
+    <p class="lead">
+      Chiles secos triturados en grueso — 20–40 mesh, 10.000–20.000 SHU — la forma estándar para
+      pizza, mezclas de condimentos y snacks, molidos de Xian, Jinta y Erjingtiao.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué son las escamas de chile?</h2>
+    <p>
+      Las escamas de chile, también llamadas chile triturado, son chiles secos triturados en trozos
+      gruesos con semillas y piel visibles. Tienen un picor medio (10.000–20.000 SHU) y aportan a la
+      vez picor y una textura visible. El corte grueso es lo que las separa del polvo — vea nuestra
+      <a href="/es/specs/mesh-size/">guía de tamaño de malla</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Chile Xian</strong></td><td>10.000 – 20.000</td><td>Henan</td><td>Mezclas de condimentos, pizza</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10.000 – 20.000</td><td>Gansu, Xinjiang</td><td>Escama visible, color</td></tr>
+        <tr><td><strong>Erjingtiao</strong></td><td>10.000 – 20.000</td><td>Sichuan</td><td>Escama aromática, aceite de chile</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usan las escamas de chile?</h2>
+    <ul>
+      <li>Pizza y pasta</li>
+      <li>Mezclas de condimentos y especias</li>
+      <li>Condimentos para snacks y fideos instantáneos</li>
+      <li>Aceite de chile y escamas infusionadas</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar escamas de chile</h2>
+    <p>
+      Indique la malla (20–40 es estándar), el rango SHU y la variedad. Si necesita color visible,
+      Jinta da un rojo más brillante; Erjingtiao aporta aroma sin picor extremo. Confirme la humedad
+      (menos del 13%) y si necesita escama despepitada — la mayoría conserva las semillas por textura.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU, malla y humedad
+      exactos al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué son las escamas de chile?</h3>
+      <p>Las escamas de chile (chile triturado) son chiles secos triturados en trozos gruesos — típicamente 20–40 mesh — con semillas y piel visibles. Se sitúan en la banda de 10.000–20.000 SHU y se usan para pizza, mezclas de condimentos y snacks.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué nivel de picor tienen las escamas de chile?</h3>
+      <p>La mayoría de las escamas son de picor medio, 10.000–20.000 SHU, de variedades como Xian, Jinta y Erjingtiao. Hay escamas más picantes especificando una variedad más fuerte, pero la escama comercial estándar es media.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tamaño de malla tienen las escamas de chile?</h3>
+      <p>Las escamas de chile son un corte grueso de 20–40 mesh — mayor que el polvo (60–80 mesh) pero menor que el chile entero. El corte grueso mantiene visibles las semillas y la piel y da la textura característica.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Escamas</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/chilli-powder/" style="margin-left:8px;">Chile en Polvo →</a>
+    </div>
+  </div>
+</BaseLayout>

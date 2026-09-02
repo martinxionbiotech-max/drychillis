@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are chilli flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli flakes (crushed red pepper) are dried chillies crushed into coarse pieces — typically 20–40 mesh — with visible seeds and skin. They sit in the 10,000–20,000 SHU band and are used for pizza topping, seasoning blends and snacks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What heat level are chilli flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most chilli flakes are medium heat, 10,000–20,000 SHU, from varieties like Xian pepper, Jinta and Erjingtiao. Higher-heat flakes are available by specifying a hotter variety, but the standard commercial flake is medium."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What mesh size are chilli flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli flakes are a coarse 20–40 mesh — larger than powder (60–80 mesh) but smaller than whole chillies. The coarser cut keeps the seeds and skin visible and gives the flake its characteristic texture."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Flakes (Crushed Red Pepper) | Tenda Peppers"
+  description="China chilli flakes manufacturer — crushed red pepper flakes at 10,000–20,000 SHU, 20–40 mesh, from Xian, Jinta and Erjingtiao. ISO 9001 & HACCP. Tenda Peppers."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Chilli Flakes
+    </nav>
+    <h1>Chilli Flakes (Crushed Red Pepper)</h1>
+    <p class="lead">
+      Coarse-crushed dried chillies — 20–40 mesh, 10,000–20,000 SHU — the standard form for pizza
+      topping, seasoning blends and snack seasoning, milled from Xian, Jinta and Erjingtiao.
+    </p>
+
+    <h2 style="margin-top:32px;">What are chilli flakes?</h2>
+    <p>
+      Chilli flakes, also called crushed red pepper, are dried chillies crushed into coarse pieces with
+      visible seeds and skin. They sit at a medium heat (10,000–20,000 SHU) and give dishes both heat
+      and a visible, textured finish. The coarser cut is what separates them from powder — see our
+      <a href="/specs/mesh-size/">mesh size guide</a> for the full comparison.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Xian pepper</strong></td><td>10,000 – 20,000</td><td>Henan</td><td>Seasoning blends, pizza</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Gansu, Xinjiang</td><td>Visible flake, colour</td></tr>
+        <tr><td><strong>Erjingtiao</strong></td><td>10,000 – 20,000</td><td>Sichuan</td><td>Aromatic flake, chilli oil</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What are chilli flakes used for?</h2>
+    <ul>
+      <li>Pizza and pasta topping</li>
+      <li>Seasoning and spice blends</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Chilli oil and infused flakes</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify chilli flakes</h2>
+    <p>
+      Name the mesh (20–40 is standard), the SHU window and the variety. If you need visible colour,
+      Jinta gives a brighter red; Erjingtiao adds aroma without extreme heat. Confirm moisture (under
+      13%) and whether you need de-seeded flake — most flake keeps its seeds for texture.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, mesh and moisture
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What are chilli flakes?</h3>
+      <p>Chilli flakes (crushed red pepper) are dried chillies crushed into coarse pieces — typically 20–40 mesh — with visible seeds and skin. They sit in the 10,000–20,000 SHU band and are used for pizza topping, seasoning blends and snacks.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What heat level are chilli flakes?</h3>
+      <p>Most chilli flakes are medium heat, 10,000–20,000 SHU, from varieties like Xian pepper, Jinta and Erjingtiao. Higher-heat flakes are available by specifying a hotter variety, but the standard commercial flake is medium.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What mesh size are chilli flakes?</h3>
+      <p>Chilli flakes are a coarse 20–40 mesh — larger than powder (60–80 mesh) but smaller than whole chillies. The coarser cut keeps the seeds and skin visible and gives the flake its characteristic texture.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Flakes Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/chilli-powder/" style="margin-left:8px;">Chilli Powder →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué son los segmentos de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los segmentos de chile son chiles secos cortados en trozos — mayores que las escamas — para aplicaciones de picor extremo. Normalmente superan los 50.000 SHU, de variedades como Jixin, Xiaomi y Chilli King, y se usan en platos estilo Sichuan y aceite de chile donde el picor visible importa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picantes son los segmentos de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los segmentos de chile son la forma más picante — más de 50.000 SHU. Jixin (50.000–70.000 SHU), Xiaomi y Chilli King superan los 50.000 SHU, aportando el picor extremo que exigen la cocina de Sichuan y el aceite de chile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usan los segmentos de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los segmentos de chile se usan para productos de picor extremo: platos estilo Sichuan, aceite de chile, bases de hot-pot y condimentos donde se quiere un trozo visible de alto picor en lugar de un polvo fino."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Segmentos de Chile (50.000+ SHU) | Tenda Peppers"
+  description="Fabricante chino de segmentos de chile — trozos extra-picantes de más de 50.000 SHU de Jixin, Xiaomi y Chilli King para platos Sichuan y aceite de chile. ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Segmentos de Chile
+    </nav>
+    <h1>Segmentos de Chile (50.000+ SHU)</h1>
+    <p class="lead">
+      Trozos de chile seco extra-picante — más de 50.000 SHU — cortados de Jixin, Xiaomi y Chilli
+      King, para platos estilo Sichuan, aceite de chile y bases de hot-pot donde el picor visible es
+      el punto.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué son los segmentos de chile?</h2>
+    <p>
+      Los segmentos de chile son chiles secos cortados en trozos — mayores que las escamas — para
+      aplicaciones que necesitan un chile visible de alto picor en lugar de un polvo fino. Se sitúan
+      en lo más alto de la escala de picor (más de 50.000 SHU), lo que los convierte en la forma para
+      el picor extremo y la cocina estilo Sichuan.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jixin</strong></td><td>50.000 – 70.000</td><td>Guizhou, Hunan</td><td>Picor extremo, aceite de chile</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>50.000 – 70.000</td><td>Yunnan, Guizhou</td><td>Trozos de alto picor</td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>&gt;50.000</td><td>—</td><td>Condimento de picor extremo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usan los segmentos de chile?</h2>
+    <ul>
+      <li>Platos estilo Sichuan y hot-pot</li>
+      <li>Aceite de chile e infusiones</li>
+      <li>Mezclas de condimentos de picor extremo</li>
+      <li>Packs de picor para snacks y fideos instantáneos</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar segmentos de chile</h2>
+    <p>
+      Parta de su rango SHU objetivo y luego nombre la variedad. Jixin y Xiaomi son la pareja estándar
+      de picor extra, a 50.000–70.000 SHU. Confirme el tamaño de corte, la humedad (menos del 13%) y
+      si necesita trozos despepitados. El picor es no lineal, así que un rango preciso es lo que
+      mantiene constante un producto de picor extremo lote a lote.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU, tamaño de corte y
+      humedad exactos al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué son los segmentos de chile?</h3>
+      <p>Los segmentos de chile son chiles secos cortados en trozos — mayores que las escamas — para aplicaciones de picor extremo. Normalmente superan los 50.000 SHU, de variedades como Jixin, Xiaomi y Chilli King, y se usan en platos estilo Sichuan y aceite de chile donde el picor visible importa.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picantes son los segmentos de chile?</h3>
+      <p>Los segmentos de chile son la forma más picante — más de 50.000 SHU. Jixin (50.000–70.000 SHU), Xiaomi y Chilli King superan los 50.000 SHU, aportando el picor extremo que exigen la cocina de Sichuan y el aceite de chile.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usan los segmentos de chile?</h3>
+      <p>Los segmentos de chile se usan para productos de picor extremo: platos estilo Sichuan, aceite de chile, bases de hot-pot y condimentos donde se quiere un trozo visible de alto picor en lugar de un polvo fino.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Segmentos</a>
+      <a class="cta cta-outline" href="/es/heat-levels/extra-hot/" style="margin-left:8px;">Picor Extra →</a>
+    </div>
+  </div>
+</BaseLayout>

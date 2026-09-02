@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué son los chiles secos enteros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los chiles secos enteros son vainas de chile secas completas, clasificadas por tamaño y humedad. Abarcan 10.000–50.000+ SHU en variedades como linterna, Jinta, mirando al cielo y Xiaomi, y se usan donde el chile debe quedar visible — food service, hot-pot y envases retail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué variedades son mejores para chiles secos enteros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento linterna y el mirando al cielo dan fuerte presencia visual y aroma; Jinta aporta color brillante y picor medio; Xiaomi y Zidantou aportan más picor. La variedad define tamaño, color y SHU, así que nómbrela al especificar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué humedad se suministran los chiles secos enteros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los chiles secos enteros se suministran típicamente con menos del 13% de humedad para estabilidad en almacén, con tamaño y humedad clasificados según su especificación. Confirme el grado exacto al pedir."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chiles Secos Enteros | Tenda Peppers"
+  description="Fabricante chino de chiles secos enteros — linterna, Jinta, mirando al cielo y Xiaomi a 10.000–50.000+ SHU, clasificados por tamaño y humedad. ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Chiles Secos Enteros
+    </nav>
+    <h1>Chiles Secos Enteros</h1>
+    <p class="lead">
+      Vainas de chile secas completas — 10.000–50.000+ SHU — clasificadas por tamaño y humedad, para
+      food service, hot-pot y envases retail donde el chile debe quedar visible. Linterna, Jinta,
+      mirando al cielo y Xiaomi.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué son los chiles secos enteros?</h2>
+    <p>
+      Los chiles secos enteros son la vaina seca completa, mantenida intacta en lugar de triturada o
+      molida. Son la forma para aplicaciones donde el chile es un ingrediente visible — hot-pot,
+      guisos, food service y envases retail. Tamaño, color y picor dependen de la variedad, por eso la
+      variedad es lo primero que hay que especificar.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Pimiento linterna</strong></td><td>10.000 – 50.000</td><td>Shandong, Hebei</td><td>Chile entero visible</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10.000 – 20.000</td><td>Gansu, Xinjiang</td><td>Color brillante, picor medio</td></tr>
+        <tr><td><strong>Mirando al cielo</strong></td><td>20.000 – 50.000</td><td>Sichuan, Guizhou</td><td>Chile entero aromático</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>50.000 – 70.000</td><td>Yunnan, Guizhou</td><td>Chile entero de alto picor</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usan los chiles secos enteros?</h2>
+    <ul>
+      <li>Food service y hot-pot</li>
+      <li>Guisos y estofados</li>
+      <li>Envases retail y supermercado</li>
+      <li>Aceite de chile (infusión de fruto entero)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar chiles secos enteros</h2>
+    <p>
+      Nombre la variedad, luego el grado de tamaño y la humedad. Linterna y mirando al cielo dan
+      presencia visual y aroma; Jinta añade color brillante; Xiaomi y Zidantou aportan picor. Confirme
+      menos del 13% de humedad y si necesita vainas sin tallo, despepitadas o con tallo — el grado
+      afecta al rendimiento y a la presentación final.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su variedad, grado de tamaño y
+      humedad exactos al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué son los chiles secos enteros?</h3>
+      <p>Los chiles secos enteros son vainas de chile secas completas, clasificadas por tamaño y humedad. Abarcan 10.000–50.000+ SHU en variedades como linterna, Jinta, mirando al cielo y Xiaomi, y se usan donde el chile debe quedar visible — food service, hot-pot y envases retail.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué variedades son mejores para chiles secos enteros?</h3>
+      <p>El pimiento linterna y el mirando al cielo dan fuerte presencia visual y aroma; Jinta aporta color brillante y picor medio; Xiaomi y Zidantou aportan más picor. La variedad define tamaño, color y SHU, así que nómbrela al especificar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Con qué humedad se suministran los chiles secos enteros?</h3>
+      <p>Los chiles secos enteros se suministran típicamente con menos del 13% de humedad para estabilidad en almacén, con tamaño y humedad clasificados según su especificación. Confirme el grado exacto al pedir.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Chiles Enteros</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/chilli-flakes/" style="margin-left:8px;">Escamas de Chile →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile en polvo es chile seco molido a un fino 60–80 mesh. Aporta picor uniforme y mezclable — típicamente 20.000–50.000 SHU — para salsas picantes, condimentos y alimentación industrial. El picor, el color y el sabor varían de forma independiente, así que una especificación nombra la variedad y el rango SHU, no un 'chile en polvo' genérico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tamaño de malla tiene el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile en polvo estándar es de 60–80 mesh — lo bastante fino para dispersión uniforme y textura suave. Más grueso (20–40) es para escamas; más fino (100+) para salsas lisas. La malla es ajustable a su requerimiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué variedad debo usar para el chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying), Zidantou y Seven-Star (20.000–50.000 SHU) son las habituales para salsa picante y condimentos. Para picor extra, Jixin y Xiaomi superan los 50.000 SHU. Nombre la variedad y un rango SHU preciso para consistencia entre lotes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile en Polvo (60–80 Mesh) | Tenda Peppers"
+  description="Fabricante chino de chile en polvo — 60–80 mesh, 20.000–50.000 SHU, de Sanying, Zidantou y Seven-Star para salsa picante, condimentos y alimentación industrial. ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Chile en Polvo
+    </nav>
+    <h1>Chile en Polvo (60–80 Mesh)</h1>
+    <p class="lead">
+      Chile seco molido fino — 60–80 mesh, 20.000–50.000 SHU — el caballo de batalla para salsas
+      picantes, condimentos y alimentación industrial, molido de Sanying, Zidantou y Seven-Star.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile en polvo?</h2>
+    <p>
+      El chile en polvo es chile seco molido a un fino 60–80 mesh para un picor uniforme y mezclable.
+      A diferencia de las escamas o el chile entero, se dispersa uniformemente por una salsa o
+      condimento, por eso es la forma por defecto para salsas picantes, snacks y alimentación
+      industrial. Vea nuestra guía de
+      <a href="/es/blog/how-to-specify-chilli-powder/">cómo especificar chile en polvo</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Picor (SHU)</th><th>Región</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying / Tianying</strong></td><td>20.000 – 50.000</td><td>Henan, Hebei</td><td>Salsa picante, aceite de chile</td></tr>
+        <tr><td><strong>Zidantou (bala)</strong></td><td>20.000 – 50.000</td><td>Shandong, Anhui</td><td>Salsa picante, industria</td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20.000 – 50.000</td><td>Shandong, Shanxi</td><td>Condimento de snacks, hot-pot</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el chile en polvo?</h2>
+    <ul>
+      <li>Salsas picantes y aceite de chile</li>
+      <li>Condimentos para snacks y fideos instantáneos</li>
+      <li>Mezclas de condimentos y especias</li>
+      <li>Alimentación industrial y condimentos procesados</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cómo especificar el chile en polvo</h2>
+    <p>
+      Nombre cinco cosas: la variedad (o el rango SHU), el picor en SHU, la malla, la humedad y el
+      color (ASTA) si procede. Para salsa picante, Sanying y Zidantou son la pareja clásica; Seven-Star
+      va bien para snacks. El picor es no lineal, así que un rango preciso — no "picante" o "medio" —
+      es lo que mantiene el producto constante lote a lote.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su rango SHU, malla y humedad
+      exactos al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile en polvo?</h3>
+      <p>El chile en polvo es chile seco molido a un fino 60–80 mesh. Aporta picor uniforme y mezclable — típicamente 20.000–50.000 SHU — para salsas picantes, condimentos y alimentación industrial. El picor, el color y el sabor varían de forma independiente, así que una especificación nombra la variedad y el rango SHU, no un 'chile en polvo' genérico.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tamaño de malla tiene el chile en polvo?</h3>
+      <p>El chile en polvo estándar es de 60–80 mesh — lo bastante fino para dispersión uniforme y textura suave. Más grueso (20–40) es para escamas; más fino (100+) para salsas lisas. La malla es ajustable a su requerimiento.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué variedad debo usar para el chile en polvo?</h3>
+      <p>Sanying (Tianying), Zidantou y Seven-Star (20.000–50.000 SHU) son las habituales para salsa picante y condimentos. Para picor extra, Jixin y Xiaomi superan los 50.000 SHU. Nombre la variedad y un rango SHU preciso para consistencia entre lotes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización de Polvo</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/chilli-segments/" style="margin-left:8px;">Segmentos de Chile →</a>
+    </div>
+  </div>
+</BaseLayout>

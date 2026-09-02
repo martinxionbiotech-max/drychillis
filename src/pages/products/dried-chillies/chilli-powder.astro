@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli powder is dried chilli ground to a fine 60–80 mesh. It delivers uniform, blendable heat — typically 20,000–50,000 SHU — for hot sauces, seasoning and industrial food. Heat, colour and flavour vary independently, so a specification names the variety and SHU window, not a generic 'chilli powder'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What mesh size is chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard chilli powder is 60–80 mesh — fine enough for even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces. Mesh is adjustable to your requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which variety should I use for chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying), Zidantou and Seven-Star (20,000–50,000 SHU) are the workhorses for hot sauce and seasoning. For extra heat, Jixin and Xiaomi exceed 50,000 SHU. Name the variety and a precise SHU window for batch-to-batch consistency."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Powder (60–80 Mesh) | Tenda Peppers"
+  description="China chilli powder manufacturer — 60–80 mesh, 20,000–50,000 SHU, from Sanying, Zidantou and Seven-Star for hot sauce, seasoning and industrial food. ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Chilli Powder
+    </nav>
+    <h1>Chilli Powder (60–80 Mesh)</h1>
+    <p class="lead">
+      Finely ground dried chilli — 60–80 mesh, 20,000–50,000 SHU — the workhorse for hot sauces,
+      seasoning and industrial food, milled from Sanying, Zidantou and Seven-Star.
+    </p>
+
+    <h2 style="margin-top:32px;">What is chilli powder?</h2>
+    <p>
+      Chilli powder is dried chilli ground to a fine 60–80 mesh for uniform, blendable heat. Unlike
+      flakes or whole chillies, it disperses evenly through a sauce or seasoning, which is why it is
+      the default form for hot sauces, snack seasoning and industrial food. Heat, colour and flavour
+      vary independently, so the right way to order is by variety and SHU window — see our
+      <a href="/blog/how-to-specify-chilli-powder/">how to specify chilli powder</a> guide.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying / Tianying</strong></td><td>20,000 – 50,000</td><td>Henan, Hebei</td><td>Hot sauce, chilli oil</td></tr>
+        <tr><td><strong>Zidantou (bullet)</strong></td><td>20,000 – 50,000</td><td>Shandong, Anhui</td><td>Hot sauce, industrial</td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Shandong, Shanxi</td><td>Snack seasoning, hot-pot</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is chilli powder used for?</h2>
+    <ul>
+      <li>Hot sauces and chilli oil</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Seasoning blends and spice mixes</li>
+      <li>Industrial food and processed seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify chilli powder</h2>
+    <p>
+      Name five things: the variety (or SHU window), heat in SHU, mesh, moisture and colour (ASTA) if
+      relevant. For hot sauce, Sanying and Zidantou are the classic pair; Seven-Star suits snack
+      seasoning. Heat is non-linear, so a precise window — not "hot" or "medium" — is what keeps your
+      product consistent batch to batch.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, mesh and moisture
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is chilli powder?</h3>
+      <p>Chilli powder is dried chilli ground to a fine 60–80 mesh. It delivers uniform, blendable heat — typically 20,000–50,000 SHU — for hot sauces, seasoning and industrial food. Heat, colour and flavour vary independently, so a specification names the variety and SHU window, not a generic 'chilli powder'.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What mesh size is chilli powder?</h3>
+      <p>Standard chilli powder is 60–80 mesh — fine enough for even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces. Mesh is adjustable to your requirement.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which variety should I use for chilli powder?</h3>
+      <p>Sanying (Tianying), Zidantou and Seven-Star (20,000–50,000 SHU) are the workhorses for hot sauce and seasoning. For extra heat, Jixin and Xiaomi exceed 50,000 SHU. Name the variety and a precise SHU window for batch-to-batch consistency.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Powder Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/chilli-segments/" style="margin-left:8px;">Chilli Segments →</a>
+    </div>
+  </div>
+</BaseLayout>

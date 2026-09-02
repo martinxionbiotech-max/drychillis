@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are whole dried chillies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whole dried chillies are entire dried chilli pods, graded by size and moisture. They span 10,000–50,000+ SHU across varieties like lantern, Jinta, facing-heaven and Xiaomi, and are used where the chilli must stay visible — food service, hot-pot and retail packs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which varieties are best for whole dried chillies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lantern pepper and facing-heaven give a strong visual and aroma; Jinta offers bright colour and medium heat; Xiaomi and Zidantou bring higher heat. The variety drives size, colour and SHU, so name it when you specify."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What moisture are whole dried chillies supplied at?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whole dried chillies are typically supplied at under 13% moisture for shelf stability, with size and moisture graded to your specification. Confirm the exact grade when you order."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Whole Dried Chillies | Tenda Peppers"
+  description="China whole dried chillies manufacturer — lantern, Jinta, facing-heaven and Xiaomi at 10,000–50,000+ SHU, graded by size and moisture. ISO 9001 & HACCP. Tenda Peppers."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Whole Dried Chillies
+    </nav>
+    <h1>Whole Dried Chillies</h1>
+    <p class="lead">
+      Entire dried chilli pods — 10,000–50,000+ SHU — graded by size and moisture, for food service,
+      hot-pot and retail packs where the chilli must stay visible. Lantern, Jinta, facing-heaven and
+      Xiaomi.
+    </p>
+
+    <h2 style="margin-top:32px;">What are whole dried chillies?</h2>
+    <p>
+      Whole dried chillies are the entire dried pod, kept intact rather than crushed or ground. They
+      are the form for applications where the chilli is a visible ingredient — hot-pot, braised
+      dishes, food service and retail packs. Size, colour and heat are all variety-driven, which is
+      why the variety is the first thing to specify.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Lantern pepper</strong></td><td>10,000 – 50,000</td><td>Shandong, Hebei</td><td>Visible whole chilli</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Gansu, Xinjiang</td><td>Bright colour, medium heat</td></tr>
+        <tr><td><strong>Facing-heaven</strong></td><td>20,000 – 50,000</td><td>Sichuan, Guizhou</td><td>Aromatic whole chilli</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>50,000 – 70,000</td><td>Yunnan, Guizhou</td><td>High-heat whole chilli</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What are whole dried chillies used for?</h2>
+    <ul>
+      <li>Food service and hot-pot</li>
+      <li>Braised and stewed dishes</li>
+      <li>Retail and grocery packs</li>
+      <li>Chilli oil (whole-fruit infusion)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify whole dried chillies</h2>
+    <p>
+      Name the variety, then the size grade and moisture. Lantern and facing-heaven give visual
+      presence and aroma; Jinta adds bright colour; Xiaomi and Zidantou bring heat. Confirm under 13%
+      moisture and whether you need de-stemmed, de-seeded or stem-on pods — the grade affects yield
+      and final presentation.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact variety, size grade and moisture
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What are whole dried chillies?</h3>
+      <p>Whole dried chillies are entire dried chilli pods, graded by size and moisture. They span 10,000–50,000+ SHU across varieties like lantern, Jinta, facing-heaven and Xiaomi, and are used where the chilli must stay visible — food service, hot-pot and retail packs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which varieties are best for whole dried chillies?</h3>
+      <p>Lantern pepper and facing-heaven give a strong visual and aroma; Jinta offers bright colour and medium heat; Xiaomi and Zidantou bring higher heat. The variety drives size, colour and SHU, so name it when you specify.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What moisture are whole dried chillies supplied at?</h3>
+      <p>Whole dried chillies are typically supplied at under 13% moisture for shelf stability, with size and moisture graded to your specification. Confirm the exact grade when you order.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Whole Chilli Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/chilli-flakes/" style="margin-left:8px;">Chilli Flakes →</a>
+    </div>
+  </div>
+</BaseLayout>

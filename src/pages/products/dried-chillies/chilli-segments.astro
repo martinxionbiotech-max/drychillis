@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are chilli segments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli segments are dried chillies cut into pieces — larger than flakes — for extra-hot applications. They typically exceed 50,000 SHU from varieties like Jixin, Xiaomi and Chilli King, and are used in Sichuan-style dishes and chilli oil where visible heat matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot are chilli segments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli segments are the hottest form — over 50,000 SHU. Jixin (50,000–70,000 SHU), Xiaomi and Chilli King all exceed 50,000 SHU, delivering the extreme heat needed for Sichuan cuisine and chilli oil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are chilli segments used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli segments are used for extreme-heat products: Sichuan-style dishes, chilli oil, hot-pot bases and seasoning where a visible, high-heat piece is wanted rather than a fine powder."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Segments (50,000+ SHU) | Tenda Peppers"
+  description="China chilli segments manufacturer — extra-hot chilli pieces over 50,000 SHU from Jixin, Xiaomi and Chilli King for Sichuan dishes and chilli oil. ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Chilli Segments
+    </nav>
+    <h1>Chilli Segments (50,000+ SHU)</h1>
+    <p class="lead">
+      Extra-hot dried chilli pieces — over 50,000 SHU — cut from Jixin, Xiaomi and Chilli King, for
+      Sichuan-style dishes, chilli oil and hot-pot bases where visible heat is the point.
+    </p>
+
+    <h2 style="margin-top:32px;">What are chilli segments?</h2>
+    <p>
+      Chilli segments are dried chillies cut into pieces — larger than flakes — for applications that
+      need a visible, high-heat chilli rather than a fine powder. They sit at the top of the heat
+      scale (over 50,000 SHU), which makes them the form for extreme heat and Sichuan-style cooking.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>Heat (SHU)</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jixin</strong></td><td>50,000 – 70,000</td><td>Guizhou, Hunan</td><td>Extreme heat, chilli oil</td></tr>
+        <tr><td><strong>Xiaomi</strong></td><td>50,000 – 70,000</td><td>Yunnan, Guizhou</td><td>High-heat pieces</td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>&gt;50,000</td><td>—</td><td>Extreme-heat seasoning</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What are chilli segments used for?</h2>
+    <ul>
+      <li>Sichuan-style and hot-pot dishes</li>
+      <li>Chilli oil and infused oil</li>
+      <li>Extreme-heat seasoning blends</li>
+      <li>Snack and instant-noodle heat packs</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">How to specify chilli segments</h2>
+    <p>
+      Start from your target SHU window, then name the variety. Jixin and Xiaomi are the standard
+      extra-hot pair at 50,000–70,000 SHU. Confirm the cut size, moisture (under 13%) and whether you
+      need de-seeded pieces. Heat is non-linear, so a precise window is what keeps an extreme-heat
+      product consistent batch to batch.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, cut size and moisture
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What are chilli segments?</h3>
+      <p>Chilli segments are dried chillies cut into pieces — larger than flakes — for extra-hot applications. They typically exceed 50,000 SHU from varieties like Jixin, Xiaomi and Chilli King, and are used in Sichuan-style dishes and chilli oil where visible heat matters.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot are chilli segments?</h3>
+      <p>Chilli segments are the hottest form — over 50,000 SHU. Jixin (50,000–70,000 SHU), Xiaomi and Chilli King all exceed 50,000 SHU, delivering the extreme heat needed for Sichuan cuisine and chilli oil.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are chilli segments used for?</h3>
+      <p>Chilli segments are used for extreme-heat products: Sichuan-style dishes, chilli oil, hot-pot bases and seasoning where a visible, high-heat piece is wanted rather than a fine powder.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Segments Quotation</a>
+      <a class="cta cta-outline" href="/heat-levels/extra-hot/" style="margin-left:8px;">Extra Hot SHU →</a>
+    </div>
+  </div>
+</BaseLayout>
