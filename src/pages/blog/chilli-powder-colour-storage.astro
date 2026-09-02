@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does chilli powder lose colour over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli powder lightens gradually at room temperature as its red carotenoid pigments degrade, and the change is faster after high-temperature sterilisation. Cool, dry, dark, sealed storage slows this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does colour change mean the chilli has spoiled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Gradual lightening in chilli powder and darkening in sweet paprika are normal pigment behaviour. Check moisture and odour to tell normal colour shift from actual spoilage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep chilli powder colour stable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Store cool, dry, dark and sealed — keep moisture under 13%, avoid light and oxygen, and avoid high-temperature sterilisation unless required. If sterilisation is required, specify a higher starting ASTA to compensate for the fade."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Powder Colour Change & Storage | Tenda Peppers"
+  description="Why chilli powder fades, why sweet paprika darkens, and a storage checklist (cool, dry, dark, sealed) to keep colour stable. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-02"
+  dateModified="2026-09-02"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/blog/">Guides</a> &rsaquo; Colour Change &amp; Storage
+    </nav>
+    <h1>Chilli Powder Colour Change &amp; Storage</h1>
+    <p class="lead">
+      Colour is not permanent. Chilli powder fades over time — faster after sterilisation — and
+      sweet paprika can darken. Both are normal pigment chemistry, and four storage conditions keep
+      colour stable longest.
+    </p>
+
+    <h2 style="margin-top:32px;">Why chilli powder changes colour</h2>
+    <p>
+      Chilli and paprika get their red colour from carotenoid pigments, which are sensitive to light,
+      heat and oxygen. Two changes matter in practice: chilli powder <strong>lightens</strong> as the
+      red carotenoids oxidise, and sweet paprika can <strong>darken</strong> when its higher sugar
+      content browns under heat. Neither means the product is spoiled — but the colour it ships with
+      is not the colour it will show after months on a shelf.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Change</th><th>Trigger</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Chilli powder</strong></td><td>Lightens (fades)</td><td>Time; accelerates after high-temperature sterilisation</td></tr>
+        <tr><td><strong>Sweet paprika</strong></td><td>Darkens</td><td>High-temperature sterilisation, then time</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">The storage checklist</h2>
+    <p>Four conditions, in order of importance:</p>
+    <ul>
+      <li><strong>Cool</strong> — heat accelerates colour loss</li>
+      <li><strong>Dry</strong> — keep moisture under 13%</li>
+      <li><strong>Dark</strong> — light breaks down carotenoids</li>
+      <li><strong>Sealed</strong> — limit oxygen, which drives oxidation</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">When sterilisation is required</h2>
+    <p>
+      Some buyers require high-temperature sterilisation for microbial control. If so, expect the
+      colour to shift — fading for chilli, darkening for sweet paprika — and build it into your
+      specification by setting a higher starting ASTA. See the full
+      <a href="https://docs.drychillis.com/colour-storage/" target="_blank" rel="noopener">colour &amp; storage reference</a> in the Knowledge Hub.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Why does chilli powder lose colour over time?</h3>
+      <p>Chilli powder lightens gradually at room temperature as its red carotenoid pigments degrade, and the change is faster after high-temperature sterilisation. Cool, dry, dark, sealed storage slows this.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does colour change mean the chilli has spoiled?</h3>
+      <p>Not necessarily. Gradual lightening in chilli powder and darkening in sweet paprika are normal pigment behaviour. Check moisture and odour to tell normal colour shift from actual spoilage.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I keep chilli powder colour stable?</h3>
+      <p>Store cool, dry, dark and sealed — keep moisture under 13%, avoid light and oxygen, and avoid high-temperature sterilisation unless required. If sterilisation is required, specify a higher starting ASTA to compensate for the fade.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

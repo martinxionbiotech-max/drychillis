@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I ship chilli and paprika by sea or air?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sea freight is the standard for bulk orders — far lower cost per kilogram but slower (weeks). Air freight is faster (days) and suits samples, small orders or urgent restocks, at a higher cost. Match the method to order size and urgency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents do I need to clear chilli through customs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The typical set is the commercial invoice, packing list, bill of lading, certificate of origin, health certificate, phytosanitary certificate, certificate of analysis and specification sheet. Confirm the exact set for your destination country."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Incoterm should I use for chilli imports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FOB (seller loads on board) and CIF (seller covers freight and insurance to the destination port) are the most common for chilli imports. EXW puts the most responsibility on the buyer; DAP/DDP on the seller."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Sea vs Air Freight for Chilli Imports | Tenda Peppers"
+  description="Sea vs air freight for chilli and paprika imports — cost, transit time, the customs document checklist and Incoterms (FOB, CIF) explained. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-02"
+  dateModified="2026-09-02"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/blog/">Guides</a> &rsaquo; Sea vs Air Freight
+    </nav>
+    <h1>Sea vs Air Freight for Chilli Imports</h1>
+    <p class="lead">
+      Ship bulk orders by sea, small or urgent orders by air. Prepare the customs document set before
+      the goods arrive, and pick an Incoterm that matches how much shipping control you want.
+    </p>
+
+    <h2 style="margin-top:32px;">Sea freight vs air freight</h2>
+    <p>The first logistics decision comes down to cost versus speed:</p>
+    <table>
+      <thead>
+        <tr><th>Factor</th><th>Sea freight</th><th>Air freight</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Cost per kg</strong></td><td>Low — standard for bulk</td><td>High — premium for speed</td></tr>
+        <tr><td><strong>Transit time</strong></td><td>Weeks</td><td>Days</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Full-container bulk, regular supply</td><td>Samples, small orders, urgent restock</td></tr>
+      </tbody>
+    </table>
+    <p>
+      For most food manufacturers the pattern is clear: sea freight for production supply, air freight
+      for samples and urgent gaps. Dried chilli is dense and shelf-stable, so it stores well in a
+      container — sea is the default for regular orders.
+    </p>
+
+    <h2 style="margin-top:32px;">The customs document checklist</h2>
+    <p>A complete import document set keeps clearance smooth:</p>
+    <ul>
+      <li><strong>Commercial invoice</strong> — value and terms of sale</li>
+      <li><strong>Packing list</strong> — quantities, weights, package breakdown</li>
+      <li><strong>Bill of lading</strong> — proof of shipment and carrier</li>
+      <li><strong>Certificate of origin</strong> — for tariff treatment</li>
+      <li><strong>Health certificate</strong> — food-safety attestation</li>
+      <li><strong>Phytosanitary certificate</strong> — chilli is a plant product</li>
+      <li><strong>Certificate of analysis (COA)</strong> — batch colour, heat, moisture</li>
+      <li><strong>Specification sheet</strong> — agreed variety, SHU, ASTA, mesh, moisture</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Incoterms, in one line each</h2>
+    <ul>
+      <li><strong>EXW</strong> — buyer arranges everything from the factory gate</li>
+      <li><strong>FOB</strong> — seller loads on board; buyer arranges freight and insurance</li>
+      <li><strong>CIF</strong> — seller covers freight and insurance to the destination port</li>
+      <li><strong>DAP / DDP</strong> — seller delivers to destination (DDP includes duty)</li>
+    </ul>
+    <p>
+      FOB and CIF are the workhorses for chilli imports. Choose FOB if you have a preferred forwarder;
+      CIF if you want the seller to manage the ocean leg. See the full
+      <a href="https://docs.drychillis.com/shipping-and-customs/" target="_blank" rel="noopener">shipping &amp; customs reference</a> in the Knowledge Hub.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Should I ship chilli and paprika by sea or air?</h3>
+      <p>Sea freight is the standard for bulk orders — far lower cost per kilogram but slower (weeks). Air freight is faster (days) and suits samples, small orders or urgent restocks, at a higher cost. Match the method to order size and urgency.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What documents do I need to clear chilli through customs?</h3>
+      <p>The typical set is the commercial invoice, packing list, bill of lading, certificate of origin, health certificate, phytosanitary certificate, certificate of analysis and specification sheet. Confirm the exact set for your destination country.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What Incoterm should I use for chilli imports?</h3>
+      <p>FOB (seller loads on board) and CIF (seller covers freight and insurance to the destination port) are the most common for chilli imports. EXW puts the most responsibility on the buyer; DAP/DDP on the seller.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Ask About Shipping &amp; Documents</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Browse Dried Chillies</a>
+    </div>
+  </div>
+</BaseLayout>

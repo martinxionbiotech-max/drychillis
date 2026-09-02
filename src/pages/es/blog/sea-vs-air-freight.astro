@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Debo enviar el chile y el pimentón por mar o por aire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El flete marítimo es el estándar para pedidos a granel — coste por kilo mucho menor pero más lento (semanas). El aéreo es más rápido (días) y sirve para muestras, pedidos pequeños o reposiciones urgentes, a mayor coste. Ajuste el método al tamaño del pedido y la urgencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentos necesito para despachar chile en aduanas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El conjunto típico es factura comercial, lista de empaque, conocimiento de embarque, certificado de origen, certificado sanitario, certificado fitosanitario, certificado de análisis y hoja de especificación. Confirme el conjunto exacto para su país de destino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Incoterm debo usar para importar chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FOB (el vendedor carga a bordo) y CIF (el vendedor cubre flete y seguro hasta el puerto de destino) son los más comunes para importar chile. EXW pone la mayor responsabilidad en el comprador; DAP/DDP en el vendedor."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Flete Marítimo vs Aéreo para Importar Chile | Tenda Peppers"
+  description="Flete marítimo vs aéreo para importar chile y pimentón — coste, tiempo de tránsito, lista de documentos de aduana e Incoterms (FOB, CIF) explicados. Centro de Conocimiento Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-02"
+  dateModified="2026-09-02"
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Guías</a> &rsaquo; Flete Marítimo vs Aéreo
+    </nav>
+    <h1>Flete Marítimo vs Aéreo para Importar Chile</h1>
+    <p class="lead">
+      Envíe pedidos a granel por mar, y pedidos pequeños o urgentes por aire. Prepare el conjunto de
+      documentos de aduana antes de que llegue la mercancía, y elija un Incoterm acorde al control de
+      envío que quiera.
+    </p>
+
+    <h2 style="margin-top:32px;">Flete marítimo vs aéreo</h2>
+    <p>La primera decisión logística se reduce a coste frente a velocidad:</p>
+    <table>
+      <thead>
+        <tr><th>Factor</th><th>Flete marítimo</th><th>Flete aéreo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Coste por kg</strong></td><td>Bajo — estándar para granel</td><td>Alto — prima por velocidad</td></tr>
+        <tr><td><strong>Tiempo de tránsito</strong></td><td>Semanas</td><td>Días</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Granel en contenedor, suministro regular</td><td>Muestras, pedidos pequeños, reposición urgente</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Para la mayoría de fabricantes el patrón es claro: marítimo para suministro de producción y aéreo
+      para muestras y huecos urgentes. El chile seco es denso y estable en estante, por lo que se
+      conserva bien en contenedor — el mar es la opción por defecto para pedidos regulares.
+    </p>
+
+    <h2 style="margin-top:32px;">Lista de documentos de aduana</h2>
+    <p>Un conjunto de documentos completo mantiene el despacho fluido:</p>
+    <ul>
+      <li><strong>Factura comercial</strong> — valor y condiciones de venta</li>
+      <li><strong>Lista de empaque</strong> — cantidades, pesos, desglose de paquetes</li>
+      <li><strong>Conocimiento de embarque</strong> — prueba del envío y transportista</li>
+      <li><strong>Certificado de origen</strong> — para tratamiento arancelario</li>
+      <li><strong>Certificado sanitario</strong> — atestación de seguridad alimentaria</li>
+      <li><strong>Certificado fitosanitario</strong> — el chile es producto vegetal</li>
+      <li><strong>Certificado de análisis (COA)</strong> — color, picor y humedad del lote</li>
+      <li><strong>Hoja de especificación</strong> — variedad, SHU, ASTA, malla y humedad acordados</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Incoterms, en una línea cada uno</h2>
+    <ul>
+      <li><strong>EXW</strong> — el comprador gestiona todo desde la fábrica</li>
+      <li><strong>FOB</strong> — el vendedor carga a bordo; el comprador gestiona flete y seguro</li>
+      <li><strong>CIF</strong> — el vendedor cubre flete y seguro hasta el puerto de destino</li>
+      <li><strong>DAP / DDP</strong> — el vendedor entrega en destino (DDP incluye aranceles)</li>
+    </ul>
+    <p>
+      FOB y CIF son los habituales para importar chile. Elija FOB si tiene un agente preferido; CIF si
+      quiere que el vendedor gestione el tramo marítimo. Vea la referencia completa de
+      <a href="https://docs.drychillis.com/es/shipping-and-customs/" target="_blank" rel="noopener">envío y aduanas</a> en el Centro de Conocimiento.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Debo enviar el chile y el pimentón por mar o por aire?</h3>
+      <p>El flete marítimo es el estándar para pedidos a granel — coste por kilo mucho menor pero más lento (semanas). El aéreo es más rápido (días) y sirve para muestras, pedidos pequeños o reposiciones urgentes, a mayor coste. Ajuste el método al tamaño del pedido y la urgencia.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué documentos necesito para despachar chile en aduanas?</h3>
+      <p>El conjunto típico es factura comercial, lista de empaque, conocimiento de embarque, certificado de origen, certificado sanitario, certificado fitosanitario, certificado de análisis y hoja de especificación. Confirme el conjunto exacto para su país de destino.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué Incoterm debo usar para importar chile?</h3>
+      <p>FOB (el vendedor carga a bordo) y CIF (el vendedor cubre flete y seguro hasta el puerto de destino) son los más comunes para importar chile. EXW pone la mayor responsabilidad en el comprador; DAP/DDP en el vendedor.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Pregunte por Envío y Documentos</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Ver Chiles Secos</a>
+    </div>
+  </div>
+</BaseLayout>

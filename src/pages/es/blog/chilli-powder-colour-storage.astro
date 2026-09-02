@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué el chile en polvo pierde color con el tiempo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El chile en polvo se aclara gradualmente a temperatura ambiente al degradarse sus pigmentos carotenoides rojos, y el cambio es más rápido tras la esterilización a alta temperatura. El almacenamiento fresco, seco, oscuro y sellado lo ralentiza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El cambio de color significa que el chile se ha estropeado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. El aclarado gradual del chile en polvo y el oscurecimiento del pimentón dulce son comportamiento normal de los pigmentos. Compruebe la humedad y el olor para distinguir el cambio de color normal del deterioro real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo mantengo estable el color del chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almacene fresco, seco, oscuro y sellado — humedad bajo el 13%, evite la luz y el oxígeno, y evite la esterilización a alta temperatura salvo que sea necesaria. Si es necesaria, especifique un ASTA inicial más alto para compensar el desvanecimiento."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Cambio de Color y Almacenamiento del Chile en Polvo | Tenda Peppers"
+  description="Por qué se desvanece el chile en polvo, por qué se oscurece el pimentón dulce, y una lista de almacenamiento (fresco, seco, oscuro, sellado) para mantener el color. Centro de Conocimiento Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-02"
+  dateModified="2026-09-02"
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Guías</a> &rsaquo; Cambio de Color y Almacenamiento
+    </nav>
+    <h1>Cambio de Color y Almacenamiento del Chile en Polvo</h1>
+    <p class="lead">
+      El color no es permanente. El chile en polvo se desvanece con el tiempo — más rápido tras la
+      esterilización — y el pimentón dulce puede oscurecerse. Ambos son química normal de pigmentos,
+      y cuatro condiciones de almacenamiento mantienen el color estable por más tiempo.
+    </p>
+
+    <h2 style="margin-top:32px;">Por qué cambia de color el chile en polvo</h2>
+    <p>
+      El chile y el pimentón obtienen su color rojo de los pigmentos carotenoides, sensibles a la luz,
+      el calor y el oxígeno. Dos cambios importan en la práctica: el chile en polvo
+      <strong>se aclara</strong> al oxidarse los carotenoides rojos, y el pimentón dulce puede
+      <strong>oscurecerse</strong> cuando su mayor contenido de azúcar se dora con el calor. Ninguno
+      significa que el producto esté estropeado — pero el color con que se envía no es el que mostrará
+      tras meses en el estante.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Producto</th><th>Cambio</th><th>Desencadenante</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Chile en polvo</strong></td><td>Se aclara (desvanece)</td><td>Tiempo; acelera tras esterilización a alta temperatura</td></tr>
+        <tr><td><strong>Pimentón dulce</strong></td><td>Se oscurece</td><td>Esterilización a alta temperatura, luego tiempo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">La lista de almacenamiento</h2>
+    <p>Cuatro condiciones, en orden de importancia:</p>
+    <ul>
+      <li><strong>Fresco</strong> — el calor acelera la pérdida de color</li>
+      <li><strong>Seco</strong> — humedad bajo el 13%</li>
+      <li><strong>Oscuro</strong> — la luz degrada los carotenoides</li>
+      <li><strong>Sellado</strong> — limita el oxígeno, que impulsa la oxidación</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Cuando se requiere esterilización</h2>
+    <p>
+      Algunos compradores exigen esterilización a alta temperatura para control microbiano. Si es así,
+      espere el cambio de color — desvanecimiento en chile, oscurecimiento en pimentón dulce — e
+      incorpórelo a su especificación fijando un ASTA inicial más alto. Vea la referencia completa de
+      <a href="https://docs.drychillis.com/es/colour-storage/" target="_blank" rel="noopener">color y almacenamiento</a> en el Centro de Conocimiento.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Por qué el chile en polvo pierde color con el tiempo?</h3>
+      <p>El chile en polvo se aclara gradualmente a temperatura ambiente al degradarse sus pigmentos carotenoides rojos, y el cambio es más rápido tras la esterilización a alta temperatura. El almacenamiento fresco, seco, oscuro y sellado lo ralentiza.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿El cambio de color significa que el chile se ha estropeado?</h3>
+      <p>No necesariamente. El aclarado gradual del chile en polvo y el oscurecimiento del pimentón dulce son comportamiento normal de los pigmentos. Compruebe la humedad y el olor para distinguir el cambio de color normal del deterioro real.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo mantengo estable el color del chile en polvo?</h3>
+      <p>Almacene fresco, seco, oscuro y sellado — humedad bajo el 13%, evite la luz y el oxígeno, y evite la esterilización a alta temperatura salvo que sea necesaria. Si es necesaria, especifique un ASTA inicial más alto para compensar el desvanecimiento.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>
