@@ -25,8 +25,8 @@ const base = lang === "en" ? "" : "/" + lang;
     <div class="footer-col">
       <h2>{t(L, "footer.products")}</h2>
       <nav aria-label="Product links">
-        <a href={base + "/products/paprika/"}>Paprika Powder (Sweet &amp; Low-Heat)</a>
-        <a href={base + "/products/dried-chillies/"}>Dried Chillies (Whole / Flakes / Powder / Segments)</a>
+        <a href={base + "/products/paprika/"}>{t(L, "footer.productPaprika")}</a>
+        <a href={base + "/products/dried-chillies/"}>{t(L, "footer.productChillies")}</a>
       </nav>
     </div>
     <div class="footer-col">
@@ -35,8 +35,8 @@ const base = lang === "en" ? "" : "/" + lang;
         <a href={base + "/quality/"}>{t(L, "nav.quality")}</a>
         <a href={base + "/about/"}>{t(L, "nav.about")}</a>
         <a href={base + "/contact/"}>{t(L, "nav.contact")}</a>
-        <a href={base + "/heat-levels/medium-heat/"}>Heat Levels (SHU)</a>
-        <a href={base + "/blog/"}>Guides</a>
+        <a href={base + "/heat-levels/medium-heat/"}>{t(L, "footer.heatLevels")}</a>
+        <a href={base + "/blog/"}>{t(L, "footer.guides")}</a>
         <a href="https://docs.drychillis.com/" target="_blank" rel="noopener">📚 {t(L, "footer.knowledgeHub")}</a>
       </nav>
     </div>
@@ -49,6 +49,6 @@ const base = lang === "en" ? "" : "/" + lang;
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; {year} Tenda Peppers — Leling Tenda Chili Products Co., Ltd. All rights reserved.</p>
+    <p>&copy; {year} Tenda Peppers — Leling Tenda Chili Products Co., Ltd. {t(L, "footer.rights")}</p>
   </div>
 </footer>
