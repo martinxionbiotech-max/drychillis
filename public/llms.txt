@@ -12,14 +12,56 @@
 - **Certifications**: ISO 9001, HACCP
 - **Annual capacity**: 10,000+ tonnes
 - **Markets**: Europe, Middle East, North America
-- **Domain**: https://drychillis.com
+- **Contact**: joanna@paprikabulk.com · WhatsApp +86 15153588090
+- **Languages**: English (en), Español (es), العربية (ar)
 - **Knowledge Hub**: https://docs.drychillis.com
 
 ## Pages
 
+### Home & Company
 - [Home](https://drychillis.com/)
-- [Paprika Powder](https://drychillis.com/products/paprika/)
-- [Dried Chillies](https://drychillis.com/products/dried-chillies/)
+- [About Tenda Peppers](https://drychillis.com/about/)
+- [Contact & Inquiry](https://drychillis.com/contact/)
 - [Quality & Certifications](https://drychillis.com/quality/)
-- [About](https://drychillis.com/about/)
-- [Contact](https://drychillis.com/contact/)
+
+### Products
+- [Paprika Powder (Sweet & Low-Heat)](https://drychillis.com/products/paprika/)
+- [Dried Chillies (Overview)](https://drychillis.com/products/dried-chillies/)
+- [Whole Dried Chillies](https://drychillis.com/products/dried-chillies/whole-dried-chillies/)
+- [Chilli Flakes (Crushed Red Pepper)](https://drychillis.com/products/dried-chillies/chilli-flakes/)
+- [Chilli Powder (60–80 Mesh)](https://drychillis.com/products/dried-chillies/chilli-powder/)
+- [Chilli Segments](https://drychillis.com/products/dried-chillies/chilli-segments/)
+
+### Heat Levels & Varieties
+- [Medium Heat (10,000–20,000 SHU)](https://drychillis.com/heat-levels/medium-heat/)
+- [High Heat (20,000–50,000 SHU)](https://drychillis.com/heat-levels/high-heat/)
+- [Extra Hot (50,000+ SHU)](https://drychillis.com/heat-levels/extra-hot/)
+- [Jinta Chilli](https://drychillis.com/varieties/jinta/)
+- [Lantern Pepper (Denglongjiao)](https://drychillis.com/varieties/lantern/)
+- [Sanying (Tianying) Chilli](https://drychillis.com/varieties/sanying/)
+- [Zidantou (Bullet) Chilli](https://drychillis.com/varieties/zidantou/)
+- [Jixin (Chicken-Heart) Chilli](https://drychillis.com/varieties/jixin/)
+- [Xiaomi Chilli](https://drychillis.com/varieties/xiaomi/)
+
+### Specs & Packaging
+- [Chilli Powder Mesh Size Guide](https://drychillis.com/specs/mesh-size/)
+- [Bulk & OEM Packaging](https://drychillis.com/packaging/)
+
+### Guides (Blog)
+- [Guides & Technical Resources](https://drychillis.com/blog/)
+- [Chilli Heat Explained: SHU vs Capsaicin](https://drychillis.com/blog/chilli-heat-shu-explained/)
+- [How to Specify Chilli Powder: SHU, Mesh & Moisture](https://drychillis.com/blog/how-to-specify-chilli-powder/)
+- [Chinese Chilli Varieties: A Heat & Region Guide](https://drychillis.com/blog/chinese-chilli-varieties-guide/)
+- [Chilli Powder Colour Change & Storage](https://drychillis.com/blog/chilli-powder-colour-storage/)
+- [Smoked Paprika vs Chilli Powder](https://drychillis.com/blog/smoked-paprika-vs-chilli-powder/)
+- [Sea vs Air Freight for Chilli Imports](https://drychillis.com/blog/sea-vs-air-freight/)
+
+### Legal
+- [Privacy Policy](https://drychillis.com/privacy-policy/)
+- [Terms & Conditions](https://drychillis.com/terms-and-conditions/)
+
+## Knowledge Hub
+
+Deep technical documentation lives at [docs.drychillis.com](https://docs.drychillis.com):
+ASTA colour value, Scoville Heat Units (SHU), Chinese chilli varieties and grades,
+paprika origins, heat perception, quality control, applications, and import/supply-chain guidance.
