@@ -135,6 +135,10 @@ tbody tr:nth-child(even) td { background: var(--bg-soft); }
 .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
 .faq-item h3 { margin: 0 0 6px; }
 
+/* Direct answer / takeaway block (AIO anchor) */
+.takeaways { background: var(--bg-soft); border: 1px solid var(--border); border-left: 4px solid var(--red); border-radius: 8px; padding: 16px 18px; margin: 16px 0 24px; font-size: 0.97rem; }
+.takeaways strong { color: var(--red-deep); }
+
 /* Testimonials */
 .testimonial { margin-bottom: 20px; padding: 18px 22px; background: #fff; border-left: 4px solid var(--amber); border-radius: 8px; box-shadow: var(--shadow-sm); }
 .testimonial blockquote { margin: 0 0 8px; font-style: italic; color: var(--ink); }
