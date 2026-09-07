@@ -28,6 +28,14 @@ const faqJsonLd = {
         "@type": "Answer",
         "text": "Yes. Mesh is adjustable to your requirement — name the mesh (or the target particle size) and we match it, documented in the quotation with the moisture and SHU specification."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What does mesh actually measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mesh is the number of openings per linear inch of a sieve — 80 mesh means 80 wires per inch and an opening of about 180 µm. Higher mesh means finer particles; it measures the grind, not the heat or colour of the chilli."
+      }
     }
   ]
 };
@@ -83,6 +91,29 @@ const faqJsonLd = {
       sensible default unless your application says otherwise.
     </p>
 
+    <h2 style="margin-top:32px;">Mesh to micron: the numbers behind the grind</h2>
+    <p>
+      A mesh number converts to a physical particle size in microns (µm) — roughly, higher mesh
+      means a smaller opening. Standard sieve values for the grinds we supply:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Mesh</th><th>Approx. opening (µm)</th><th>Character</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>20 mesh</td><td>850 µm</td><td>Very coarse — flakes, crushed</td></tr>
+        <tr><td>40 mesh</td><td>425 µm</td><td>Coarse — visible flake</td></tr>
+        <tr><td>60 mesh</td><td>250 µm</td><td>Fine — standard powder</td></tr>
+        <tr><td>80 mesh</td><td>180 µm</td><td>Fine — smooth powder</td></tr>
+        <tr><td>100 mesh</td><td>150 µm</td><td>Very fine — smooth sauces</td></tr>
+      </tbody>
+    </table>
+    <p>
+      The practical rule: going from 40 mesh to 80 mesh halves the particle size (425 µm → 180 µm),
+      which roughly <strong>doubles the exposed surface area</strong> per gram — that is why finer
+      powder disperses and releases colour faster, and why it also loses aroma faster.
+    </p>
+
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>What mesh size is standard for chilli powder?</h3>
@@ -95,6 +126,11 @@ const faqJsonLd = {
     <div class="faq-item">
       <h3>Can you grind to a custom mesh?</h3>
       <p>Yes. Mesh is adjustable to your requirement — name the mesh (or the target particle size) and we match it, documented in the quotation with the moisture and SHU specification.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does mesh actually measure?</h3>
+      <p>Mesh is the number of openings per linear inch of a sieve — 80 mesh means 80 wires per inch and an opening of about 180 µm. Higher mesh means finer particles; it measures the grind, not the heat or colour of the chilli.</p>
     </div>
 
     <div style="margin-top:32px;">
