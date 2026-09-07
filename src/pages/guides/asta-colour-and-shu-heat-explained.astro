@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SHU and how is chilli heat measured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SHU (Scoville Heat Units) measures chilli heat as the concentration of capsaicin — the compound that triggers the heat sensation. The higher the SHU, the hotter the chilli: sweet pepper is under 500 SHU, while extra-hot varieties exceed 50,000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is chilli heat linear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Heat is non-linear: a small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a 10,000 SHU variety. That is why precise SHU windows matter in a specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between heat and flavour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat (capsaicin, measured in SHU) and flavour (aroma compounds) are separate and vary independently. Two chillies can share the same SHU but taste completely different — another reason to name the variety, not just the heat."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli Heat Explained: SHU vs Capsaicin | Tenda Peppers"
+  description="How chilli heat works — SHU (Scoville Heat Units), capsaicin, and why heat is non-linear. A guide for chilli and paprika buyers. Tenda Peppers Knowledge Hub."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Chilli Heat Explained
+    </nav>
+    <h1>Chilli Heat Explained: SHU vs Capsaicin</h1>
+    <p class="lead">
+      Chilli heat is measured in Scoville Heat Units (SHU) — a proxy for capsaicin concentration. But
+      heat is not flavour, and it is not linear. Understanding both is what makes a specification
+      reliable.
+    </p>
+
+    <h2 style="margin-top:32px;">What SHU actually measures</h2>
+    <p>
+      SHU quantifies the concentration of capsaicin, the compound that triggers the heat sensation on
+      the palate. Sweet pepper registers under 500 SHU; the hottest common Chinese varieties — Jixin,
+      Chilli King — exceed 50,000 SHU. The number is a concentration, not a "taste strength", which is
+      why two chillies can share an SHU rating yet feel very different.
+    </p>
+
+    <h2 style="margin-top:32px;">Heat is non-linear — dose accordingly</h2>
+    <p>
+      A small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a
+      10,000 SHU variety. In practice this means extra-hot chillies are usually blended as an accent,
+      and precise SHU windows — not "hot" or "medium" — are what keep a product consistent batch to
+      batch.
+    </p>
+
+    <h2 style="margin-top:32px;">Heat vs colour vs flavour</h2>
+    <p>
+      Three separate properties, controlled independently. Heat (capsaicin, SHU) is what burns; colour
+      (carotenoids, ASTA) is what tints red; flavour (aroma compounds) is what you taste. A complete
+      specification names all three — which is why a variety name beats a generic "chilli powder".
+      See <a href="/heat-levels/high-heat/">high heat</a> and
+      <a href="/specs/mesh-size/">mesh size</a> for the practical next steps.
+    </p>
+
+    <h2 style="margin-top:32px;">How SHU is measured today</h2>
+    <p>
+      The scale dates to 1912, when Wilbur Scoville diluted chilli extract in sugar water until a
+      tasting panel could no longer detect heat — one "Scoville Heat Unit" per dilution step. Today
+      the number is measured instrumentally: a laboratory extracts the chilli and quantifies its
+      capsaicinoids by high-performance liquid chromatography (HPLC), then converts the concentration
+      into SHU. Roughly 1 part per million of capsaicin corresponds to about 16 SHU, which is why pure
+      capsaicin registers around 16 million SHU.
+    </p>
+
+    <h2 style="margin-top:32px;">The capsaicinoids behind the number</h2>
+    <p>
+      "Capsaicin" is actually a small family of related compounds — the capsaicinoids. Capsaicin and
+      dihydrocapsaicin together account for the great majority of heat in most chillies, with smaller
+      amounts of nordihydrocapsaicin, homocapsaicin and homodihydrocapsaicin rounding out the mix. The
+      exact ratio varies by variety, which is part of why two chillies at the same SHU can still feel
+      different — the burn arrives at a different speed and lingers for a different time. This is
+      another reason to specify by <em>variety and SHU window</em>, not by a single generic number.
+    </p>
+
+    <h2 style="margin-top:32px;">A practical heat guide</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Band</th>
+          <th style="padding:8px;">SHU</th>
+          <th style="padding:8px;">Typical use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Sweet</strong></td>
+          <td style="padding:8px;">&lt;500</td>
+          <td style="padding:8px;">Colour and mild flavour — paprika</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Low heat</strong></td>
+          <td style="padding:8px;">&lt;10,000</td>
+          <td style="padding:8px;">General seasoning, everyday blends</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Medium heat</strong></td>
+          <td style="padding:8px;">10,000–20,000</td>
+          <td style="padding:8px;">Seasoning, chilli paste, snacks</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>High heat</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">Hot sauce, chilli oil, industrial food</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Extra hot</strong></td>
+          <td style="padding:8px;">&gt;50,000</td>
+          <td style="padding:8px;">Extreme-heat products, Sichuan-style dishes</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:8px;">
+      See our <a href="/heat-levels/medium-heat/">heat level pages</a> for the variety-to-SHU mapping
+      behind each band.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is SHU and how is chilli heat measured?</h3>
+      <p>SHU (Scoville Heat Units) measures chilli heat as the concentration of capsaicin — the compound that triggers the heat sensation. The higher the SHU, the hotter the chilli: sweet pepper is under 500 SHU, while extra-hot varieties exceed 50,000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is chilli heat linear?</h3>
+      <p>No. Heat is non-linear: a small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a 10,000 SHU variety. That is why precise SHU windows matter in a specification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between heat and flavour?</h3>
+      <p>Heat (capsaicin, measured in SHU) and flavour (aroma compounds) are separate and vary independently. Two chillies can share the same SHU but taste completely different — another reason to name the variety, not just the heat.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

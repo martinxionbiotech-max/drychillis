@@ -1,0 +1,246 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Paprika Powder (Sweet & Low-Heat)",
+  "description": "China paprika powder manufacturer — sweet paprika and low-heat paprika from Xinjiang sweet pepper and Yidu red, for natural red colouring, spice blends and marinades. ISO 9001 & HACCP.",
+  "image": [
+    "https://drychillis.com/images/products/paprika-powder.jpg",
+    "https://drychillis.com/images/products/paprika-sweet.jpg",
+    "https://drychillis.com/images/products/paprika-low-heat.jpg",
+  ],
+  "url": "https://drychillis.com/products/paprika-powder/",
+  "sku": "TENDA-PAPRIKA-POWDER",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "ASTA Colour Value", "value": "60–240 (variety-dependent)" },
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "<500 – 10,000" },
+    { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+    { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh" },
+    { "@type": "PropertyValue", "name": "Processing", "value": "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is paprika powder used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika powder is used mainly for natural red colouring and mild flavour in spice blends, marinades, sausages, snack seasoning and the extraction of paprika oleoresin (natural red food colour E160c)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between sweet paprika and low-heat paprika?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 8–18. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ASTA colour value can you supply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We supply paprika powder across an ASTA colour value range of roughly 60 to 240, depending on the variety and grade. Confirm your target colour value and heat level when you inquire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the moisture and mesh specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical paprika powder is supplied at under 13% moisture and 60–80 mesh, with specifications adjustable to your requirement. X-ray inspection and metal detection are standard on every batch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between paprika and chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika is made from low-heat, high-colour sweet peppers (under 10,000 SHU) and is used for colouring and mild flavour. Chilli powder is made from hotter varieties (20,000–70,000+ SHU) to add heat. They are not interchangeable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which paprika variety gives the strongest colour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-colour sweet pepper varieties from Xinjiang — such as Red Dragon 23 and US Red — give the strongest colour per unit, and are the standard for paprika oleoresin extraction and food colouring."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Sweet & Low-Heat Paprika Powder Manufacturer | Tenda Peppers"
+  description="China paprika powder manufacturer — sweet and low-heat paprika from Xinjiang sweet pepper and Yidu red for natural red colouring and seasoning."
+  ogImage="/images/og-paprika.jpg"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; Paprika Powder
+    </nav>
+    <h1>Paprika Powder</h1>
+    <p class="lead">
+      Low-heat, high-colour paprika milled from Chinese sweet pepper varieties — for natural red
+      colouring, spice blends and marinades. We supply two grades: sweet paprika (under 500 SHU) for
+      pure colour, and low-heat paprika (under 10,000 SHU) for colour with a clear chilli aroma.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Paprika is about <em>colour</em>, not heat. Milled from low-heat sweet peppers, it is specified by ASTA colour value — not SHU — and comes in two grades: sweet paprika (under 500 SHU) for pure colour, and low-heat paprika (under 10,000 SHU) for colour plus a clear chilli aroma.
+    </div>
+
+    <div class="product-media">
+      <img src="/images/products/paprika-powder.jpg" alt="Paprika powder" width="1360" height="1400" loading="eager" />
+    </div>
+
+    <h2 style="margin-top:32px;">What paprika does Tenda Peppers supply?</h2>
+    <p>
+      We mill one crop — sweet pepper — into two paprika grades, chosen by how much colour and how
+      much heat your application needs.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Variety</th><th>Heat (SHU)</th><th>Colour (ASTA)</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sweet Paprika Powder</strong></td>
+          <td>Xinjiang sweet pepper, Red Dragon 23</td>
+          <td>&lt;500</td>
+          <td>8–18 (high colour)</td>
+          <td>Food colouring, paprika oleoresin extraction</td>
+        </tr>
+        <tr>
+          <td><strong>Low-Heat Paprika Powder</strong></td>
+          <td>Yidu red, Wangdu</td>
+          <td>&lt;10,000</td>
+          <td>High (thick flesh)</td>
+          <td>Colouring with clear chilli aroma, marinades</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="product-gallery">
+      <figure><img src="/images/products/paprika-powder.jpg" alt="Paprika powder" loading="lazy" /><figcaption>Paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-sweet.jpg" alt="Sweet paprika powder" loading="lazy" /><figcaption>Sweet paprika powder</figcaption></figure>
+      <figure><img src="/images/products/paprika-low-heat.jpg" alt="Low-heat paprika powder" loading="lazy" /><figcaption>Low-heat paprika powder</figcaption></figure>
+    </div>
+
+    <h2 style="margin-top:32px;">What is ASTA colour value, and why does it matter?</h2>
+    <p>
+      Paprika is bought on colour. The ASTA colour value is the industry standard for measuring the
+      extractable red colour of paprika — the higher the number, the more colouring power per unit.
+      Commercial paprika powder typically spans roughly 60 to 240 ASTA depending on variety and
+      grade; the number drives both price and how far a given weight will colour a product.
+    </p>
+    <p>
+      Sweet pepper from Xinjiang's colour-pepper belt — varieties such as Red Dragon 23 and US Red —
+      is the benchmark for high colour at low heat, and is the standard raw material for paprika
+      oleoresin (natural red colour E160c).
+    </p>
+
+    <h2 style="margin-top:32px;">Sweet paprika vs low-heat paprika</h2>
+    <p>
+      The two grades serve different jobs, and the difference is heat:
+    </p>
+    <ul>
+      <li><strong>Sweet paprika</strong> (under 500 SHU) — pure colour, no perceptible heat. For food colouring, sausage and processed-meat colouring, and oleoresin extraction.</li>
+      <li><strong>Low-heat paprika</strong> (under 10,000 SHU) — colour plus a clear chilli aroma and gentle warmth. For spice blends, marinades and snack seasoning where colour alone is not enough.</li>
+    </ul>
+    <p class="data-note">
+      Paprika and chilli powder are not interchangeable: paprika is colour-first (under 10,000 SHU),
+      chilli powder is heat-first (20,000–70,000+ SHU). See our
+      <a href="/products/dried-chillies/">dried chillies &amp; chilli powder</a> range for heat.
+    </p>
+
+    <h2 style="margin-top:32px;">Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Typical range</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ASTA colour value</td><td>60–240 (variety-dependent)</td></tr>
+        <tr><td>Heat level (SHU)</td><td>&lt;500 – 10,000</td></tr>
+        <tr><td>Moisture</td><td>&lt;13%</td></tr>
+        <tr><td>Mesh</td><td>60–80 mesh (adjustable)</td></tr>
+        <tr><td>Processing</td><td>De-seeded, magnet-filtered, X-ray inspected, colour-sorted</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Values are representative ranges for each variety. Exact colour, heat, mesh and moisture are
+      confirmed against your target specification and documented in the quotation.
+    </p>
+
+    <h2 style="margin-top:32px;">Applications</h2>
+    <ul>
+      <li>Spice blends and seasoning mixes</li>
+      <li>Marinades and meat rubs</li>
+      <li>Snack and instant-noodle seasoning</li>
+      <li>Sausage and processed-meat colouring</li>
+      <li>Paprika oleoresin (natural red food colour E160c) extraction</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">What should buyers ask before ordering?</h2>
+    <ul>
+      <li><strong>Target ASTA colour value</strong> — confirm the colouring power you need (60–240 range)</li>
+      <li><strong>Heat level</strong> — sweet (under 500 SHU) or low-heat (under 10,000 SHU)</li>
+      <li><strong>Mesh size</strong> — 60–80 mesh is standard, adjustable</li>
+      <li><strong>Moisture</strong> — confirm under 13% for shelf stability</li>
+      <li><strong>Certifications</strong> — ISO 9001 and HACCP are standard; confirm if you need BRC, Halal or Kosher</li>
+      <li><strong>Packaging &amp; destination</strong> — bulk, retail or OEM, plus the document set (COA, batch traceability, phytosanitary)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is paprika powder used for?</h3>
+      <p>Paprika powder is used mainly for natural red colouring and mild flavour in spice blends, marinades, sausages, snack seasoning and the extraction of paprika oleoresin (natural red food colour E160c).</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between sweet paprika and low-heat paprika?</h3>
+      <p>Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 8–18. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What ASTA colour value can you supply?</h3>
+      <p>We supply paprika powder across an ASTA colour value range of roughly 60 to 240, depending on the variety and grade. Confirm your target colour value and heat level when you inquire.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the moisture and mesh specification?</h3>
+      <p>Typical paprika powder is supplied at under 13% moisture and 60–80 mesh, with specifications adjustable to your requirement. X-ray inspection and metal detection are standard on every batch.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between paprika and chilli powder?</h3>
+      <p>Paprika is made from low-heat, high-colour sweet peppers (under 10,000 SHU) and is used for colouring and mild flavour. Chilli powder is made from hotter varieties (20,000–70,000+ SHU) to add heat. They are not interchangeable.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which paprika variety gives the strongest colour?</h3>
+      <p>High-colour sweet pepper varieties from Xinjiang — such as Red Dragon 23 and US Red — give the strongest colour per unit, and are the standard for paprika oleoresin extraction and food colouring.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Paprika Quotation</a>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#faf5f2;border-radius:8px;">
+      <h2 style="margin-top:0;">Related Technical Documentation</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="https://docs.drychillis.com/buying-guide/" target="_blank" rel="noopener">Paprika &amp; chilli buying guide</a></li>
+        <li><a href="https://docs.drychillis.com/asta-shu-explained/" target="_blank" rel="noopener">ASTA colour &amp; SHU explained</a></li>
+        <li><a href="https://docs.drychillis.com/colour-storage/" target="_blank" rel="noopener">Colour change &amp; storage</a></li>
+      </ul>
+      <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.drychillis.com/" target="_blank" rel="noopener">Tenda Peppers Knowledge Hub</a>.</p>
+    </div>
+  </div>
+</BaseLayout>
