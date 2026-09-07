@@ -1,6 +1,22 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Chilli Segments (50,000+ SHU)",
+  "description": "China chilli segments manufacturer — extra-hot pieces over 50,000 SHU from Jixin, Xiaomi and Chilli King for Sichuan dishes and chilli oil. ISO 9001 & HACCP.",
+  "url": "https://drychillis.com/products/dried-chillies/chilli-segments/",
+  "sku": "TENDA-CHILLI-SEGMENTS",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": ">50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Varieties", "value": "Jixin, Xiaomi, Chilli King" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +60,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Chilli Segments (50,000+ SHU) | Tenda Peppers"
   description="China chilli segments manufacturer — extra-hot pieces over 50,000 SHU from Jixin, Xiaomi and Chilli King for Sichuan dishes and chilli oil."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

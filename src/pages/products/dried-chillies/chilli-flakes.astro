@@ -1,6 +1,23 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Chilli Flakes (Crushed Red Pepper)",
+  "description": "China chilli flakes manufacturer — crushed red pepper flakes at 10,000–20,000 SHU, 20–40 mesh, from Xian, Jinta and Erjingtiao. ISO 9001 & HACCP.",
+  "url": "https://drychillis.com/products/dried-chillies/chilli-flakes/",
+  "sku": "TENDA-CHILLI-FLAKES",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Mesh Size", "value": "20–40", "unitText": "mesh" },
+    { "@type": "PropertyValue", "name": "Varieties", "value": "Xian, Jinta, Erjingtiao" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +61,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Chilli Flakes (Crushed Red Pepper) | Tenda Peppers"
   description="China chilli flakes manufacturer — crushed red pepper flakes at 10,000–20,000 SHU, 20–40 mesh, from Xian, Jinta and Erjingtiao. ISO 9001 & HACCP. Tenda Peppers."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

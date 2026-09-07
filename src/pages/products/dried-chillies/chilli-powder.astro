@@ -1,6 +1,23 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Chilli Powder (60–80 Mesh)",
+  "description": "China chilli powder manufacturer — 60–80 mesh, 20,000–50,000 SHU, from Sanying, Zidantou and Seven-Star for hot sauce and seasoning. ISO 9001 & HACCP.",
+  "url": "https://drychillis.com/products/dried-chillies/chilli-powder/",
+  "sku": "TENDA-CHILLI-POWDER",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Mesh Size", "value": "60–80", "unitText": "mesh" },
+    { "@type": "PropertyValue", "name": "Varieties", "value": "Sanying, Zidantou, Seven-Star" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +61,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Chilli Powder (60–80 Mesh) | Tenda Peppers"
   description="China chilli powder manufacturer — 60–80 mesh, 20,000–50,000 SHU, from Sanying, Zidantou and Seven-Star for hot sauce and seasoning."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

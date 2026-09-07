@@ -1,6 +1,22 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Sanying Chilli (Tianying Pepper)",
+  "description": "Sanying (Tianying) pepper — facing-heaven chilli from Henan & Hebei at 20,000–50,000 SHU for hot sauce, chilli oil and snacks. ISO 9001 & HACCP.",
+  "url": "https://drychillis.com/products/sanying-chilli/",
+  "sku": "TENDA-SANYING-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Origin", "value": "Henan & Hebei, China" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +60,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Sanying Chilli — 20,000–50,000 SHU | Tenda Peppers"
   description="Sanying (Tianying) pepper — facing-heaven chilli from Henan & Hebei at 20,000–50,000 SHU for hot sauce, chilli oil and snacks."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
