@@ -10,6 +10,7 @@ const L = lang as Lang;
 
 const navItems = [
   { href: "/", label: t(L, "nav.home") },
+  { href: "/products/", label: t(L, "nav.products") },
   { href: "/products/paprika-powder/", label: t(L, "nav.paprika") },
   { href: "/products/dried-chillies/", label: t(L, "nav.chillies") },
   { href: "/quality-certifications/", label: t(L, "nav.quality") },
@@ -20,8 +21,11 @@ const navItems = [
 
 const pathname = Astro.url.pathname;
 const pathSkeleton = pathname.replace(/^\/(es|ar)(?=\/|$)/, "");
-const isActive = (href: string) =>
-  href === "/" ? pathSkeleton === "/" : pathSkeleton.startsWith(href);
+const isActive = (href: string) => {
+  if (href === "/") return pathSkeleton === "/";
+  if (href === "/products/") return pathSkeleton === "/products/";
+  return pathSkeleton.startsWith(href);
+};
 
 const langLabel: Record<string, string> = { en: "English", es: "Español", ar: "العربية" };
 const switchUrl = (target: string) => {

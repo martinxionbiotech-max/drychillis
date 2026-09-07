@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Erjingtiao chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao (二荆条) is a slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of hotpot, chilli oil and doubanjiang (broad bean paste). It is bought for aroma and fragrance more than raw heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Erjingtiao?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao sits at the top of the medium band into high-medium — roughly 15,000–30,000 SHU, about 15–30x hotter than sweet paprika and below the high-heat Sanying and Zidantou band. Heat varies with the Sichuan growing region, so confirm your window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Erjingtiao used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao is the classic for Sichuan applications: hotpot base, doubanjiang (broad bean paste), chilli oil and fermented chilli paste. Its aroma — not its heat — is the point, which is why it is often used whole or coarse-crushed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Erjingtiao aroma fade in fine powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao's aroma comes from its thin flesh and high surface-to-volume ratio. Fine grinding exposes more of that volatile aromatic surface to air, so aroma fades faster than in a thick-fleshed variety — whole or coarse-crushed Erjingtiao holds its fragrance better than 80-mesh powder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Erjingtiao vs Jinta vs Xian — which do I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose by what the product is judged on. Jinta is the colour-and-appearance flake (long, glossy, deep red). Erjingtiao is the aroma variety for paste and hotpot. Xian is the versatile dark-red middle for powder and sauce. If aroma is the point, Erjingtiao; if looks, Jinta."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Erjingtiao Chilli — 15,000–30,000 SHU | Tenda Peppers"
+  description="Erjingtiao (二荆条) — slender aromatic Sichuan chilli at 15,000–30,000 SHU for hotpot, doubanjiang and chilli oil. China manufacturer."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/">Products</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Erjingtiao
+    </nav>
+    <h1>Erjingtiao Chilli</h1>
+    <p class="lead">
+      A slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of
+      hotpot, chilli oil and doubanjiang. Bought for fragrance more than raw heat.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Erjingtiao (二荆条) is the aroma variety, not the heat variety. At roughly 15,000–30,000 SHU it sits at the top of the medium band, but its real value is fragrance — which is why it is used whole or coarse-crushed in hotpot and doubanjiang rather than milled to fine powder.
+    </div>
+
+    <h2 style="margin-top:32px;">What is Erjingtiao chilli?</h2>
+    <p>
+      Erjingtiao is a slender, wrinkled Sichuan chilli whose name translates loosely as
+      "two-thorn strip", after the pods' characteristic taper. It sits at roughly 15,000–30,000 SHU
+      — the top of the medium band into high-medium — and is grown across the Sichuan basin. Unlike
+      the colour varieties (Jinta) or the heat varieties (Sanying, Jixin), Erjingtiao is chosen for
+      <strong>aroma</strong>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>15,000 – 30,000 (upper medium)</td></tr>
+        <tr><td><strong>Region</strong></td><td>Sichuan (Chengdu plain)</td></tr>
+        <tr><td><strong>Fruit type</strong></td><td>Slender, wrinkled, thin-fleshed pod</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Hotpot, doubanjiang, chilli oil, paste</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      SHU is a representative range (MEDIUM confidence) and varies by Sichuan growing region — some
+      sources place Erjingtiao at 10,000–20,000. Confirm your target window with us.
+    </p>
+
+    <h2 style="margin-top:32px;">What is Erjingtiao used for?</h2>
+    <ul>
+      <li>Hotpot and mala soup base</li>
+      <li>Doubanjiang (fermented broad bean paste)</li>
+      <li>Chilli oil and infused oil</li>
+      <li>Fermented chilli paste and seasoning</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Why aroma fades in fine powder</h2>
+    <p>
+      Erjingtiao's fragrance comes from a thin flesh and a high surface-to-volume ratio — the same
+      geometry that makes it aromatic also makes it fragile. Grinding to fine powder exposes more
+      aromatic surface to air, so the volatile fragrance fades faster than in a thick-fleshed
+      variety. This is why Erjingtiao is traditionally used <strong>whole or coarse-crushed</strong>:
+      a 20–40 mesh crush holds its aroma far longer than an 80-mesh powder. If your application
+      demands fine powder, accept a trade-off in aroma and consider blending a thick-fleshed variety
+      to carry the heat while Erjingtiao carries the flavour.
+    </p>
+
+    <h2 style="margin-top:32px;">Erjingtiao vs Jinta vs Xian</h2>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>SHU</th><th>Bought for</th><th>Best form</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Aroma, fragrance</td><td>Whole, coarse crush, paste</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Colour, glossy appearance</td><td>Visible flakes</td></tr>
+        <tr><td><strong>Xian</strong></td><td>10,000 – 20,000</td><td>Versatile dark red</td><td>Powder, sauce</td></tr>
+      </tbody>
+    </table>
+    <p>
+      The decision rule: judge what the finished product is scored on. If it is scored on fragrance
+      — a hotpot base or doubanjiang — Erjingtiao wins. If it is scored on how the flake looks,
+      Jinta wins. If you need an all-round red powder, Xian is the versatile middle.
+    </p>
+
+    <h2 style="margin-top:32px;">What most guides skip about Erjingtiao</h2>
+    <p>
+      Most guides say Erjingtiao is "fragrant" and move on. What they skip is the processing
+      implication: because the aroma is volatile and the flesh is thin, <strong>grind level is a
+      flavour decision, not just a texture decision</strong>. The same Erjingtiao at 20–40 mesh and
+      at 80 mesh will deliver visibly different aroma in the finished product. Specify mesh as a
+      flavour spec, and ask for whole pods if the aroma must survive long supply chains.
+    </p>
+
+    <h2 style="margin-top:32px;">How to specify Erjingtiao</h2>
+    <p>
+      Name the variety, the form (whole, coarse crush or paste-grade), target SHU window, and mesh.
+      For aroma-sensitive applications, favour whole or 20–40 mesh crush and confirm moisture under
+      13%. If the product is a fine powder, tell us — we will advise on blending to hold both heat
+      and fragrance.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Erjingtiao chilli?</h3>
+      <p>Erjingtiao (二荆条) is a slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of hotpot, chilli oil and doubanjiang. It is bought for aroma more than raw heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Erjingtiao?</h3>
+      <p>Erjingtiao sits at the top of the medium band into high-medium — roughly 15,000–30,000 SHU, about 15–30x hotter than sweet paprika and below the high-heat Sanying and Zidantou band.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Erjingtiao used for?</h3>
+      <p>Erjingtiao is the classic for Sichuan applications: hotpot base, doubanjiang, chilli oil and fermented chilli paste. Its aroma — not heat — is the point, so it is often used whole or coarse-crushed.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does Erjingtiao aroma fade in fine powder?</h3>
+      <p>Its aroma comes from thin flesh and a high surface-to-volume ratio. Fine grinding exposes more aromatic surface to air, so fragrance fades faster — whole or coarse-crushed Erjingtiao holds aroma better than 80-mesh powder.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Erjingtiao vs Jinta vs Xian — which do I choose?</h3>
+      <p>Jinta for colour-and-appearance flakes, Erjingtiao for aroma (paste and hotpot), Xian for a versatile red powder. If aroma is the point, choose Erjingtiao; if looks, Jinta.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Erjingtiao Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>

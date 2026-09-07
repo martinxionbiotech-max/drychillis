@@ -7,6 +7,7 @@ export const ui = {
     brandTag: 'Paprika & Dried Chillies',
     nav: {
       home: 'Home',
+      products: 'Products',
       paprika: 'Paprika',
       chillies: 'Dried Chillies',
       quality: 'Quality',
@@ -54,6 +55,7 @@ export const ui = {
     brandTag: 'Pimentón y Chiles Secos',
     nav: {
       home: 'Inicio',
+      products: 'Productos',
       paprika: 'Pimentón',
       chillies: 'Chiles Secos',
       quality: 'Calidad',
@@ -101,6 +103,7 @@ export const ui = {
     brandTag: 'فلفل حلو وفلفل حار مجفف',
     nav: {
       home: 'الرئيسية',
+      products: 'المنتجات',
       paprika: 'الفلفل الحلو',
       chillies: 'الفلفل المجفف',
       quality: 'الجودة',

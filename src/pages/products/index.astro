@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What chilli products does Tenda Peppers manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two product families from one crop: colour-focused paprika powder (sweet under 500 SHU, low-heat under 10,000 SHU, ASTA 60–240) and heat-focused dried chillies (whole, flakes, powder and segments from 10,000 to 70,000 SHU)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between paprika and chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika is colour-first: low heat (under 10,000 SHU) milled from sweet peppers and specified by ASTA colour value. Chilli powder is heat-first: 20,000–70,000+ SHU milled from hot varieties and specified by SHU. A 500-SHU paprika and a 70,000-SHU chilli powder sit 140x apart on heat yet can look the same red."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose between paprika, flakes, powder, whole and segments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose by function: paprika for colour (specify ASTA), flakes for visible texture (20–40 mesh), powder for heat dispersion (60–80 mesh), whole pods for presentation and segments for controlled heat in soups and stews. Mesh and form are independent of heat — a 20,000-SHU flake and a 20,000-SHU powder differ in texture, not heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What heat range do you supply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From under 500 SHU (sweet paprika) to 70,000+ SHU (Jixin and Xiaomi extra-hot), a span of more than 140x. Because heat is non-linear, each band is supplied to a precise SHU window rather than a vague 'hot' or 'mild' label."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a custom specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Name the product form, target SHU window, ASTA colour value, mesh and moisture (under 13% standard), and we match the spec with batch documentation and traceability to one of 12 controlled growing bases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MOQ depends on product and specification — a single-variety whole-chilli order differs from a blended, de-seeded, 80-mesh powder. Send your target quantity and destination port and we confirm MOQ, lead time and shipping terms."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Paprika & Dried Chilli Products | Tenda Peppers"
+  description="Paprika powder and dried chilli products from a China manufacturer — sweet paprika, chilli flakes, powder, whole and segments. SHU <500 to 70,000+, ASTA 60–240."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; Products
+    </nav>
+    <h1>Paprika &amp; Dried Chilli Products</h1>
+    <p class="lead">
+      One crop — chilli peppers — milled into two product families: colour-focused paprika powder
+      (sweet and low-heat) and heat-focused dried chillies (whole, flakes, powder and segments).
+      Every form is specified by a number, not a word: ASTA for colour, SHU for heat, mesh for texture.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Tenda Peppers makes two families from one crop. Paprika powder is specified by ASTA colour value (60–240) at low heat (under 10,000 SHU). Dried chillies are specified by SHU (10,000–70,000+) across four forms — whole, flakes, powder and segments. Heat and texture are independent: the same 20,000-SHU chilli can ship as a flake, a powder or a whole pod.
+    </div>
+
+    <h2 style="margin-top:32px;">Two Product Families</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Paprika Powder</h3>
+        <p>
+          Low-heat, high-colour paprika from sweet peppers — sweet paprika (under 500 SHU) for pure
+          colour, and low-heat paprika (under 10,000 SHU) for colour with a clear chilli aroma.
+          Specified by ASTA 60–240.
+        </p>
+        <a href="/products/paprika-powder/">View Paprika Powder →</a>
+      </div>
+      <div class="card">
+        <h3>Dried Chillies</h3>
+        <p>
+          Whole chillies, flakes, powder and segments from 10,000 to 70,000+ SHU — for sauces,
+          snacks, seasonings and food service. Specified by SHU window and mesh.
+        </p>
+        <a href="/products/dried-chillies/">View Dried Chillies →</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:32px;">Product Forms at a Glance</h2>
+    <table>
+      <thead>
+        <tr><th>Form</th><th>Heat (SHU)</th><th>Colour (ASTA)</th><th>Mesh</th><th>Typical use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sweet paprika powder</td><td>&lt;500</td><td>60–240</td><td>60–80</td><td>Colouring, oleoresin (E160c)</td></tr>
+        <tr><td>Low-heat paprika powder</td><td>&lt;10,000</td><td>High</td><td>60–80</td><td>Colour + aroma, marinades</td></tr>
+        <tr><td>Chilli flakes</td><td>10,000–50,000</td><td>—</td><td>20–40</td><td>Visible texture, pizza, blends</td></tr>
+        <tr><td>Chilli powder</td><td>10,000–70,000</td><td>—</td><td>60–80</td><td>Heat dispersion, seasoning</td></tr>
+        <tr><td>Whole dried chillies</td><td>10,000–70,000</td><td>—</td><td>n/a</td><td>Presentation, sauces, retail</td></tr>
+        <tr><td>Chilli segments</td><td>20,000–70,000</td><td>—</td><td>n/a</td><td>Controlled heat in soups &amp; stews</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Ranges are representative. Mesh and form are independent of heat — confirm your target SHU,
+      ASTA and mesh when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Variety Reference</h2>
+    <p>
+      Heat is variety-dependent and non-linear. This table maps the varieties we mill to their
+      working SHU bands and best use:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety</th><th>SHU band</th><th>Region</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Xinjiang sweet pepper / Yidu red</td><td>&lt;500 – 10,000</td><td>Xinjiang, Shandong</td><td>Paprika, colour</td></tr>
+        <tr><td>Jinta</td><td>10,000 – 20,000</td><td>Gansu, Xinjiang</td><td>Visible flakes, colour</td></tr>
+        <tr><td>Erjingtiao</td><td>15,000 – 30,000</td><td>Sichuan</td><td>Aroma, chilli paste, hotpot</td></tr>
+        <tr><td>Lantern (Denglongjiao)</td><td>10,000 – 20,000</td><td>Shandong, Hebei</td><td>Whole pod, dry-pot</td></tr>
+        <tr><td>Sanying (Tianying)</td><td>20,000 – 50,000</td><td>Henan, Hebei</td><td>Hot sauce, chilli oil</td></tr>
+        <tr><td>Zidantou (Bullet)</td><td>20,000 – 50,000</td><td>Shandong, Anhui</td><td>Heat-forward powder</td></tr>
+        <tr><td>Tianjin Red / Facing heaven</td><td>30,000 – 50,000</td><td>Tianjin (export)</td><td>Export whole &amp; powder</td></tr>
+        <tr><td>Jixin (Chicken-heart)</td><td>50,000 – 70,000</td><td>Guizhou, Hunan</td><td>Extreme heat, chilli oil</td></tr>
+        <tr><td>Xiaomi (Millet)</td><td>50,000 – 70,000</td><td>Yunnan, Guizhou</td><td>Whole pod, segments</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Colour vs Heat: Two Different Numbers</h2>
+    <p>
+      The single most useful thing to know before ordering: <strong>colour and heat are independent</strong>.
+      A deep-red powder can be a 500-SHU sweet paprika or a 70,000-SHU extra-hot chilli — the red colour
+      tells you nothing about heat. That is why paprika is bought on ASTA and chilli is bought on SHU.
+      Buying on colour alone is how a "mild" seasoning accidentally becomes a hot one.
+    </p>
+    <p>
+      As a rough rule of thumb, the heat span we mill runs from under 500 SHU to over 70,000 SHU — a
+      ratio of more than 140:1. A blend that needs "medium" heat sits at 10,000–20,000 SHU, roughly
+      20–40 times hotter than sweet paprika, not "a bit hotter".
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What chilli products does Tenda Peppers manufacture?</h3>
+      <p>Two product families from one crop: colour-focused paprika powder (sweet under 500 SHU, low-heat under 10,000 SHU, ASTA 60–240) and heat-focused dried chillies (whole, flakes, powder and segments from 10,000 to 70,000 SHU).</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between paprika and chilli powder?</h3>
+      <p>Paprika is colour-first (under 10,000 SHU, specified by ASTA); chilli powder is heat-first (20,000–70,000+ SHU, specified by SHU). A 500-SHU paprika and a 70,000-SHU chilli powder sit 140x apart on heat yet can look the same red.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I choose between paprika, flakes, powder, whole and segments?</h3>
+      <p>Choose by function: paprika for colour, flakes (20–40 mesh) for visible texture, powder (60–80 mesh) for heat dispersion, whole pods for presentation and segments for controlled heat. Mesh and form are independent of heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What heat range do you supply?</h3>
+      <p>From under 500 SHU to 70,000+ SHU — a span of more than 140x. Each band is supplied to a precise SHU window, not a vague 'hot' or 'mild' label.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I get a custom specification?</h3>
+      <p>Yes. Name the form, target SHU window, ASTA colour value, mesh and moisture (under 13% standard), and we match the spec with batch documentation and traceability to 12 controlled growing bases.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the minimum order quantity?</h3>
+      <p>MOQ depends on product and specification. Send your target quantity and destination port and we confirm MOQ, lead time and shipping terms.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request a Product Quotation</a>
+    </div>
+  </div>
+</BaseLayout>
