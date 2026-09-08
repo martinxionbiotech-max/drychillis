@@ -71,6 +71,26 @@
 - [Return & Refund Policy](https://drychillis.com/return-refund-policy/)
 - [Shipping & Delivery Policy](https://drychillis.com/shipping-delivery-policy/)
 
+## Localized pages
+
+### Español
+- [Inicio](https://drychillis.com/es/)
+- [Productos](https://drychillis.com/es/products/)
+- [Pimentón en Polvo](https://drychillis.com/es/products/paprika-powder/)
+- [Chiles Secos](https://drychillis.com/es/products/dried-chillies/)
+- [Guías Técnicas](https://drychillis.com/es/guides/)
+- [Calidad y Certificaciones](https://drychillis.com/es/quality-certifications/)
+- [Contacto](https://drychillis.com/es/contact/)
+
+### العربية
+- [الرئيسية](https://drychillis.com/ar/)
+- [المنتجات](https://drychillis.com/ar/products/)
+- [مسحوق الفلفل الحلو](https://drychillis.com/ar/products/paprika-powder/)
+- [الفلفل المجفف](https://drychillis.com/ar/products/dried-chillies/)
+- [الأدلة](https://drychillis.com/ar/guides/)
+- [الجودة والشهادات](https://drychillis.com/ar/quality-certifications/)
+- [اتصل بنا](https://drychillis.com/ar/contact/)
+
 ## Knowledge Hub
 
 Deep technical documentation lives at [docs.drychillis.com](https://docs.drychillis.com):

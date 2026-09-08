@@ -21,6 +21,8 @@ const navItems = [
 
 const pathname = Astro.url.pathname;
 const pathSkeleton = pathname.replace(/^\/(es|ar)(?=\/|$)/, "");
+const localizedBase = lang === "en" ? "" : "/" + lang;
+const localizedHref = (href: string) => localizedBase + href;
 const isActive = (href: string) => {
   if (href === "/") return pathSkeleton === "/";
   if (href === "/products/") return pathSkeleton === "/products/";
@@ -36,14 +38,14 @@ const switchUrl = (target: string) => {
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href={switchUrl(lang)} class="brand" aria-label="Tenda Peppers — Home">
+    <a href={lang === "en" ? "/" : "/" + lang + "/"} class="brand" aria-label="Tenda Peppers — Home">
       <span class="brand-text">{t(L, "brand")}<small>{t(L, "brandTag")}</small></span>
     </a>
     <nav class="site-nav" aria-label={t(L, "nav.mainNav")}>
       {
         navItems.map((item) => (
           <a
-            href={item.href}
+            href={localizedHref(item.href)}
             aria-current={isActive(item.href) ? "page" : undefined}
             class={isActive(item.href) ? "active" : undefined}
             target={item.external ? "_blank" : undefined}

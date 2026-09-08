@@ -14,6 +14,9 @@
 - Existing agent surface: `robots.txt`, sitemap, `llms.txt`, Schema.org JSON-LD
 - Backend/API/database: none
 - Authentication/protected resources: none
+- Multilingual internal-linking defect: found and fixed in this run (header navigation and logo)
+- Content Signals: now declared in both the HTTP header and `robots.txt`
+- `llms.txt`: expanded with Spanish and Arabic discovery links
 
 ## Site Classification
 
@@ -73,7 +76,7 @@ Additional low-risk machine-access layer:
 
 | Capability | Decision | Reason |
 |---|---|---|
-| Content-Signal header | RECOMMENDED | Static, performance-neutral, explicitly welcomes AI training/search/agent input |
+| Content-Signal (HTTP header + robots.txt) | RECOMMENDED | Static, performance-neutral, explicitly welcomes AI training/search/agent input in both surfaces |
 | `llms.txt` correction | REQUIRED | Existing file has outdated redirect-era URLs; keep canonical links accurate |
 
 ## Selected Technologies
@@ -86,11 +89,13 @@ Implement now:
 3. Add Cloudflare Pages `_headers`:
    - `Content-Signal: ai-train=yes, search=yes, ai-input=yes`
    - `Link: </data/products.json>; rel="describedby"` on relevant discovery surface
-4. Add missing Product JSON-LD to English product pages that currently have only FAQ schema:
+4. Fix multilingual header navigation so Spanish and Arabic menus do not leak users to English routes.
+5. Add missing Product JSON-LD to English product pages that currently have only FAQ schema:
    - `/products/yidu-chilli/`
    - `/products/erjingtiao-chilli/`
    - `/products/tianjin-red-chilli/`
-5. Preserve existing Schema.org and HTML, with no route/SEO changes.
+6. Expand `llms.txt` with Spanish and Arabic hub links.
+7. Preserve existing Schema.org and HTML, with no route/SEO changes.
 
 Deployment action documented, not code-implementable in this static repo:
 - Enable Cloudflare **Markdown for Agents** for `drychillis.com`.
@@ -142,6 +147,9 @@ Files changed:
 - `public/data/varieties.json` — static Schema.org `Dataset` of 5 chilli-variety reference records.
 - `public/llms.txt` — corrected stale redirect-era URLs and added canonical product/variety/data links.
 - `public/_headers` — Cloudflare Pages headers for `Content-Signal` and `describedby` dataset discovery.
+- `public/robots.txt` — added `Content-Signal: ai-train=yes, search=yes, ai-input=yes` declarations.
+- `src/components/Header.astro` — localized logo and navigation URLs for `/`, `/es/`, and `/ar/`.
+- `src/layouts/BaseLayout.astro` — removed a duplicated `"en"` entry from WebSite `inLanguage`.
 - `src/pages/products/yidu-chilli/index.astro` — added Product JSON-LD.
 - `src/pages/products/erjingtiao-chilli/index.astro` — added Product JSON-LD.
 - `src/pages/products/tianjin-red-chilli/index.astro` — added Product JSON-LD.
@@ -162,23 +170,26 @@ Local build:
 - Astro copied `public/_headers`, `public/llms.txt`, `public/data/products.json`,
   and `public/data/varieties.json` into `dist/` unchanged.
 - Generated HTML for Yidu Red, Erjingtiao and Tianjin Red now includes Product JSON-LD.
-- `npm run preview` was not executed in this sandbox because binding to `127.0.0.1`
-  is blocked; static output was validated directly instead.
+- Generated Spanish and Arabic header navigation now uses `/es/...` and `/ar/...` paths,
+  and the logo now returns to the localized home page instead of the current page.
+- `npm run preview -- --host 127.0.0.1 --port 4321` returned HTTP 200 for `/`, `/es/`,
+  `/ar/`, `/robots.txt`, `/llms.txt`, `/data/products.json`, and `/sitemap-index.xml`.
 
 Canonical link check:
 - All URLs in the updated `llms.txt` were checked against the generated sitemap/route list;
   stale redirect-era slugs are gone. Live HTTP 200 checks require deployed/running access.
 
 External readiness scan:
-- A live readiness scan was not re-run in this restricted environment. Expected post-deploy
-  results:
-  - PASS: robots.txt, sitemap, AI bot rules, Link headers, Content Signals.
-  - Not applicable by design: API Catalog, OAuth discovery, MCP Card, A2A Agent Card,
-    Agent Skills, WebMCP, ARD.
-  - Deferred: Markdown negotiation (Cloudflare dashboard/API setting).
+- Live `isitagentready.com` scan of the currently deployed site:
+  - PASS: robots.txt, sitemap, Link headers (`describedby`), AI bot rules.
+  - FAIL (live): Content Signals in robots.txt (fix is present in this repository build
+    and should pass after deployment), Markdown Negotiation, DNS-AID, API Catalog, OAuth,
+    auth.md, MCP Server Card, A2A Agent Card, Agent Skills, WebMCP, ARD.
+  - Neutral/informational: Web Bot Auth, x402/MPP/UCP/ACP/AP2 commerce checks.
 - Architecture interpretation:
   - API Catalog, OAuth, MCP, A2A, Agent Skills, WebMCP, ARD: NOT_REQUIRED for this static content/dataset site.
   - Link headers and Content Signals: implemented in `_headers` and should pass after Cloudflare Pages deploy.
+  - Content Signals in `robots.txt`: added in this run and validated in `dist/robots.txt`.
   - Markdown negotiation: blocked on a Cloudflare dashboard/API setting; no static-code implementation is available.
 
 ## Remaining Issues
