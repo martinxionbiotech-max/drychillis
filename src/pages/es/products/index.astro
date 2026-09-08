@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué productos de pimentón y chile fabrica Tenda Peppers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dos familias de producto de un solo cultivo: pimentón en polvo centrado en el color (dulce y de bajo picor, ASTA 60–240) y chiles secos centrados en el picor (enteros, copos, polvo y trocitos, desde 10.000 hasta 70.000+ SHU)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre pimentón y chile en polvo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón se elabora con pimientos dulces de bajo picor (menos de 10.000 SHU) y se especifica por color ASTA. El chile en polvo se muele de variedades picantes (20.000–70.000+ SHU) y se especifica por SHU. Color y picor son números independientes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué formas de chile seco suministran?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chiles secos enteros, copos (20–40 mesh), polvo (60–80 mesh) y segmentos. La malla y la forma son independientes del picor: el mismo rango SHU puede enviarse como copo, polvo o vaina entera."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué rango de picor pueden suministrar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Desde menos de 500 SHU (pimentón dulce) hasta más de 70.000 SHU (Jixin y Xiaomi). Cada banda se suministra con una ventana SHU precisa, no con una etiqueta vaga de 'picante' o 'suave'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo pedir una especificación personalizada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Indique la forma, la ventana SHU, el valor ASTA, la malla y la humedad (menos del 13% estándar), y preparamos una cotización con documentación de lote y trazabilidad a una de las 12 bases de cultivo controladas."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Productos de Pimentón y Chile Seco | Tenda Peppers"
+  description="Pimentón en polvo y chiles secos de un fabricante chino: pimentón dulce, copos, polvo, entero y segmentos. SHU desde <500 hasta 70.000+, ASTA 60–240."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; Productos
+    </nav>
+    <h1>Productos de Pimentón y Chile Seco</h1>
+    <p class="lead">
+      Un solo cultivo — el pimiento — molido en dos familias de producto: pimentón centrado en el
+      color y chiles secos centrados en el picor. Cada forma se especifica con un número, no con una
+      palabra: ASTA para el color, SHU para el picor y mesh para la textura.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta corta:</strong> Tenda Peppers fabrica dos familias de un solo cultivo. El
+      pimentón en polvo se especifica por color ASTA (60–240) con bajo picor (menos de 10.000 SHU).
+      Los chiles secos se especifican por SHU (10.000–70.000+) en cuatro formas: entero, copos, polvo
+      y segmentos. Picor y textura son independientes.
+    </div>
+
+    <h2 style="margin-top:32px;">Dos Familias de Producto</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Pimentón en Polvo</h3>
+        <p>
+          Pimentón dulce y de bajo picor, elaborado con pimientos dulces de Xinjiang y Yidu red.
+          Color natural para embutidos, mezclas de especias y adobos. Especificado por ASTA 60–240.
+        </p>
+        <a href="/es/products/paprika-powder/">Ver Pimentón en Polvo →</a>
+      </div>
+      <div class="card">
+        <h3>Chiles Secos</h3>
+        <p>
+          Chiles enteros, copos, polvo y segmentos desde 10.000 hasta 70.000+ SHU — para salsas,
+          snacks, condimentos y food service. Especificados por ventana SHU y mesh.
+        </p>
+        <a href="/es/products/dried-chillies/">Ver Chiles Secos →</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:32px;">Formas de Producto</h2>
+    <p>Explore por forma según la función que necesita:</p>
+    <ul>
+      <li><a href="/es/products/paprika-powder/">Pimentón en polvo</a> — color natural y picor bajo.</li>
+      <li><a href="/es/products/dried-chillies/whole-dried-chillies/">Chiles secos enteros</a> — presentación y food service.</li>
+      <li><a href="/es/products/dried-chillies/chilli-flakes/">Copos de chile</a> — textura visible, 20–40 mesh.</li>
+      <li><a href="/es/products/dried-chillies/chilli-powder/">Chile en polvo</a> — dispersión de picor, 60–80 mesh.</li>
+      <li><a href="/es/products/dried-chillies/chilli-segments/">Segmentos de chile</a> — picor controlado en guisos y sopas.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Referencia de Variedades</h2>
+    <p>
+      El picor depende de la variedad y no es lineal. Esta tabla vincula las variedades que molemos
+      con sus bandas SHU de trabajo y uso recomendado:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad</th><th>Banda SHU</th><th>Región</th><th>Mejor uso</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pimiento dulce de Xinjiang / Yidu red</td><td>&lt;500 – 10.000</td><td>Xinjiang, Shandong</td><td>Pimentón, color</td></tr>
+        <tr><td>Jinta</td><td>10.000 – 20.000</td><td>Gansu, Xinjiang</td><td>Copos visibles, color</td></tr>
+        <tr><td>Erjingtiao</td><td>15.000 – 30.000</td><td>Sichuan</td><td>Aroma, pasta de chile, hotpot</td></tr>
+        <tr><td>Linterna (Denglongjiao)</td><td>10.000 – 20.000</td><td>Shandong, Hebei</td><td>Vaina entera, dry-pot</td></tr>
+        <tr><td>Sanying (Tianying)</td><td>20.000 – 50.000</td><td>Henan, Hebei</td><td>Salsa picante, aceite de chile</td></tr>
+        <tr><td>Zidantou (Bala)</td><td>20.000 – 50.000</td><td>Shandong, Anhui</td><td>Polvo de picor alto</td></tr>
+        <tr><td>Rojo de Tianjin / Facing Heaven</td><td>30.000 – 50.000</td><td>Tianjin (exportación)</td><td>Entero y polvo de exportación</td></tr>
+        <tr><td>Jixin (Corazón de pollo)</td><td>50.000 – 70.000</td><td>Guizhou, Hunan</td><td>Picor extremo, aceite de chile</td></tr>
+        <tr><td>Xiaomi (Mijo)</td><td>50.000 – 70.000</td><td>Yunnan, Guizhou</td><td>Vaina entera, segmentos</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Color vs Picor: Dos Números Diferentes</h2>
+    <p>
+      El punto más útil antes de pedir: <strong>el color y el picor son independientes</strong>. Un
+      polvo rojo intenso puede ser un pimentón dulce de 500 SHU o un chile extra picante de 70.000 SHU;
+      el color no indica el picor. Por eso el pimentón se compra por ASTA y el chile se compra por SHU.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué productos de pimentón y chile fabrica Tenda Peppers?</h3>
+      <p>Dos familias de un solo cultivo: pimentón en polvo centrado en el color (dulce y de bajo picor, ASTA 60–240) y chiles secos centrados en el picor (entero, copos, polvo y segmentos, desde 10.000 hasta 70.000+ SHU).</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre pimentón y chile en polvo?</h3>
+      <p>El pimentón se especifica por color ASTA y bajo picor; el chile en polvo se especifica por SHU y aporta picor. Un pimentón de 500 SHU y un chile de 70.000 SHU pueden verse igual de rojos.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo elijo entre pimentón, copos, polvo, entero y segmentos?</h3>
+      <p>Elija por función: pimentón para color, copos para textura visible, polvo para dispersar el picor, vaina entera para presentación y segmentos para picor controlado. La malla y la forma son independientes del picor.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>
