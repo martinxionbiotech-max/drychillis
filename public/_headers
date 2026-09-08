@@ -1,0 +1,13 @@
+/*
+  Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+/
+  Link: </data/products.json>; rel="describedby", </data/varieties.json>; rel="describedby"
+
+/data/products.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data/varieties.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate

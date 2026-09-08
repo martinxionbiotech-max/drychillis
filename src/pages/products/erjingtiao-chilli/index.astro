@@ -1,6 +1,24 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Erjingtiao Chilli",
+  "description": "A slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of hotpot, chilli oil and doubanjiang.",
+  "url": "https://drychillis.com/products/erjingtiao-chilli/",
+  "sku": "TENDA-ERJINGTIAO-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "15,000 – 30,000 (upper medium)" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Sichuan (Chengdu plain)" },
+    { "@type": "PropertyValue", "name": "Fruit Type", "value": "Slender, wrinkled, thin-fleshed pod" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Hotpot, doubanjiang, chilli oil, paste" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -52,7 +70,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Erjingtiao Chilli — 15,000–30,000 SHU | Tenda Peppers"
   description="Erjingtiao (二荆条) — slender aromatic Sichuan chilli at 15,000–30,000 SHU for hotpot, doubanjiang and chilli oil. China manufacturer."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

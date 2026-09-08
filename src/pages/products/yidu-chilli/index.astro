@@ -1,6 +1,25 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Yidu Red Chilli",
+  "description": "Yidu red (益都红) is a low-heat, thick-fleshed sweet-type pepper from Shandong and Xinjiang, grown as a paprika raw material for its colour yield (ASTA) rather than heat.",
+  "url": "https://drychillis.com/products/yidu-chilli/",
+  "sku": "TENDA-YIDU-RED-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "<1,000 sweet range (under 10,000 ceiling)" },
+    { "@type": "PropertyValue", "name": "Colour", "value": "High (thick flesh) — confirm ASTA with us" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Shandong (Yidu/Qingzhou), Xinjiang" },
+    { "@type": "PropertyValue", "name": "Fruit Type", "value": "Thick-fleshed sweet-type pod" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Paprika powder, natural red colouring, oleoresin" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -52,7 +71,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Yidu Red Chilli — Low-Heat Colour Pepper | Tenda Peppers"
   description="Yidu red (益都红) — low-heat, thick-fleshed sweet-type pepper from Shandong & Xinjiang for paprika powder and natural red colouring. China manufacturer."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

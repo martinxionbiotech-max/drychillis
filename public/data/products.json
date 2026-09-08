@@ -1,0 +1,196 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://drychillis.com/data/products.json",
+  "name": "Tenda Peppers Product Specifications",
+  "description": "Public product specifications for Tenda Peppers paprika powder and dried chilli products. Values are representative ranges and should be confirmed for a target quotation.",
+  "url": "https://drychillis.com/data/products.json",
+  "publisher": { "@id": "https://drychillis.com/#organization" },
+  "dateModified": "2026-09-08",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://drychillis.com/data/products.json"
+  },
+  "mainEntity": [
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/paprika-powder/#product",
+      "name": "Paprika Powder (Sweet & Low-Heat)",
+      "description": "China paprika powder manufacturer — sweet paprika and low-heat paprika from Xinjiang sweet pepper and Yidu red, for natural red colouring, spice blends and marinades. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/paprika-powder/",
+      "sku": "TENDA-PAPRIKA-POWDER",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "image": [
+        "https://drychillis.com/images/products/paprika-powder.jpg",
+        "https://drychillis.com/images/products/paprika-sweet.jpg",
+        "https://drychillis.com/images/products/paprika-low-heat.jpg"
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "ASTA Colour Value", "value": "60–240 (variety-dependent)" },
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "<500 – 10,000" },
+        { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh" },
+        { "@type": "PropertyValue", "name": "Processing", "value": "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/#product",
+      "name": "Dried Chillies (Whole, Flakes, Powder, Segments)",
+      "description": "China dried chillies manufacturer — whole dried chillies, chilli flakes, chilli powder and chilli segments across heat levels from 10,000 to 70,000+ SHU. ISO 9001 & HACCP certified, supplying Europe, the Middle East and North America.",
+      "url": "https://drychillis.com/products/dried-chillies/",
+      "sku": "TENDA-DRIED-CHILLIES",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "image": [
+        "https://drychillis.com/images/products/chilli-whole.jpg",
+        "https://drychillis.com/images/products/chilli-flakes.jpg",
+        "https://drychillis.com/images/products/chilli-powder.jpg",
+        "https://drychillis.com/images/products/chilli-segments.jpg"
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 70,000+" },
+        { "@type": "PropertyValue", "name": "Product Forms", "value": "Whole, flakes, powder, segments" },
+        { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh (powder)" },
+        { "@type": "PropertyValue", "name": "Processing", "value": "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/#product",
+      "name": "Whole Dried Chillies",
+      "description": "China whole dried chillies manufacturer — lantern, Jinta, facing-heaven and Xiaomi at 10,000–50,000+ SHU, graded by size and moisture. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/",
+      "sku": "TENDA-WHOLE-DRIED-CHILLIES",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000–50,000+", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "Varieties", "value": "Lantern, Jinta, facing-heaven, Xiaomi" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-flakes/#product",
+      "name": "Chilli Flakes (Crushed Red Pepper)",
+      "description": "China chilli flakes manufacturer — crushed red pepper flakes at 10,000–20,000 SHU, 20–40 mesh, from Xian, Jinta and Erjingtiao. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-flakes/",
+      "sku": "TENDA-CHILLI-FLAKES",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "Mesh Size", "value": "20–40", "unitText": "mesh" },
+        { "@type": "PropertyValue", "name": "Varieties", "value": "Xian, Jinta, Erjingtiao" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-powder/#product",
+      "name": "Chilli Powder (60–80 Mesh)",
+      "description": "China chilli powder manufacturer — 60–80 mesh, 20,000–50,000 SHU, from Sanying, Zidantou and Seven-Star for hot sauce and seasoning. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-powder/",
+      "sku": "TENDA-CHILLI-POWDER",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "Mesh Size", "value": "60–80", "unitText": "mesh" },
+        { "@type": "PropertyValue", "name": "Varieties", "value": "Sanying, Zidantou, Seven-Star" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-segments/#product",
+      "name": "Chilli Segments (50,000+ SHU)",
+      "description": "China chilli segments manufacturer — extra-hot pieces over 50,000 SHU from Jixin, Xiaomi and Chilli King for Sichuan dishes and chilli oil. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-segments/",
+      "sku": "TENDA-CHILLI-SEGMENTS",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": ">50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "Varieties", "value": "Jixin, Xiaomi, Chilli King" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/sanying-chilli/#product",
+      "name": "Sanying Chilli (Tianying Pepper)",
+      "description": "Sanying (Tianying) pepper — facing-heaven chilli from Henan & Hebei at 20,000–50,000 SHU for hot sauce, chilli oil and snacks. ISO 9001 & HACCP.",
+      "url": "https://drychillis.com/products/sanying-chilli/",
+      "sku": "TENDA-SANYING-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "Origin", "value": "Henan & Hebei, China" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/yidu-chilli/#product",
+      "name": "Yidu Red Chilli",
+      "description": "Yidu red (益都红) is a low-heat, thick-fleshed sweet-type pepper from Shandong and Xinjiang, grown as a paprika raw material for its colour yield (ASTA) rather than heat.",
+      "url": "https://drychillis.com/products/yidu-chilli/",
+      "sku": "TENDA-YIDU-RED-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "<1,000 sweet range (under 10,000 ceiling)" },
+        { "@type": "PropertyValue", "name": "Colour", "value": "High (thick flesh) — confirm ASTA with us" },
+        { "@type": "PropertyValue", "name": "Region", "value": "Shandong (Yidu/Qingzhou), Xinjiang" },
+        { "@type": "PropertyValue", "name": "Fruit Type", "value": "Thick-fleshed sweet-type pod" },
+        { "@type": "PropertyValue", "name": "Best For", "value": "Paprika powder, natural red colouring, oleoresin" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/erjingtiao-chilli/#product",
+      "name": "Erjingtiao Chilli",
+      "description": "A slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of hotpot, chilli oil and doubanjiang.",
+      "url": "https://drychillis.com/products/erjingtiao-chilli/",
+      "sku": "TENDA-ERJINGTIAO-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "15,000 – 30,000 (upper medium)" },
+        { "@type": "PropertyValue", "name": "Region", "value": "Sichuan (Chengdu plain)" },
+        { "@type": "PropertyValue", "name": "Fruit Type", "value": "Slender, wrinkled, thin-fleshed pod" },
+        { "@type": "PropertyValue", "name": "Best For", "value": "Hotpot, doubanjiang, chilli oil, paste" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/tianjin-red-chilli/#product",
+      "name": "Tianjin Red (Facing-Heaven) Chilli",
+      "description": "Cluster-type facing-heaven (朝天椒) chillies at roughly 30,000–50,000 SHU — the mainstream high-heat whole chilli and powder for export, shipped through the Tianjin trading hub.",
+      "url": "https://drychillis.com/products/tianjin-red-chilli/",
+      "sku": "TENDA-TIANJIN-RED-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "30,000 – 50,000 (medium-high to high)" },
+        { "@type": "PropertyValue", "name": "Region", "value": "Collected/exported via Tianjin" },
+        { "@type": "PropertyValue", "name": "Fruit Type", "value": "Cluster-type, upward-pointing pods" },
+        { "@type": "PropertyValue", "name": "Best For", "value": "Export whole, powder, flakes, segments" }
+      ]
+    }
+  ]
+}
