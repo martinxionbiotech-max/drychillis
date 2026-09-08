@@ -1,1 +1,31 @@
 /sitemap.xml /sitemap-index.xml 301
+
+/products/paprika/ /products/paprika-powder/ 301
+/quality/ /quality-certifications/ 301
+/about/ /about-us/ 301
+/terms-and-conditions/ /terms/ 301
+/blog/ /guides/ 301
+/blog/how-to-specify-chilli-powder/ /guides/paprika-chilli-buying-guide/ 301
+/blog/chilli-heat-shu-explained/ /guides/asta-colour-and-shu-heat-explained/ 301
+/blog/chinese-chilli-varieties-guide/ /guides/chinese-chilli-varieties-grades/ 301
+/varieties/sanying/ /products/sanying-chilli/ 301
+
+/es/products/paprika/ /es/products/paprika-powder/ 301
+/es/quality/ /es/quality-certifications/ 301
+/es/about/ /es/about-us/ 301
+/es/terms-and-conditions/ /es/terms/ 301
+/es/blog/ /es/guides/ 301
+/es/blog/how-to-specify-chilli-powder/ /es/guides/paprika-chilli-buying-guide/ 301
+/es/blog/chilli-heat-shu-explained/ /es/guides/asta-colour-and-shu-heat-explained/ 301
+/es/blog/chinese-chilli-varieties-guide/ /es/guides/chinese-chilli-varieties-grades/ 301
+/es/varieties/sanying/ /es/products/sanying-chilli/ 301
+
+/ar/products/paprika/ /ar/products/paprika-powder/ 301
+/ar/quality/ /ar/quality-certifications/ 301
+/ar/about/ /ar/about-us/ 301
+/ar/terms-and-conditions/ /ar/terms/ 301
+/ar/blog/ /ar/guides/ 301
+/ar/blog/how-to-specify-chilli-powder/ /ar/guides/paprika-chilli-buying-guide/ 301
+/ar/blog/chilli-heat-shu-explained/ /ar/guides/asta-colour-and-shu-heat-explained/ 301
+/ar/blog/chinese-chilli-varieties-guide/ /ar/guides/chinese-chilli-varieties-grades/ 301
+/ar/varieties/sanying/ /ar/products/sanying-chilli/ 301

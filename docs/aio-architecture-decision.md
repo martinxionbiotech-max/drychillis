@@ -15,6 +15,10 @@
 - Backend/API/database: none
 - Authentication/protected resources: none
 - Multilingual internal-linking defect: found and fixed in this run (header navigation and logo)
+- Multilingual hreflang defect: found and fixed in this run (English-only product pages no longer
+  advertise non-existent `/es/` and `/ar/` translations)
+- Legacy-route 301 defect: found and fixed in this run (`public/_redirects` now issues real edge 301s
+  before Astro's generated HTML fallback pages are served on Cloudflare Pages)
 - Content Signals: now declared in both the HTTP header and `robots.txt`
 - `llms.txt`: expanded with Spanish and Arabic discovery links
 
@@ -78,6 +82,8 @@ Additional low-risk machine-access layer:
 |---|---|---|
 | Content-Signal (HTTP header + robots.txt) | RECOMMENDED | Static, performance-neutral, explicitly welcomes AI training/search/agent input in both surfaces |
 | `llms.txt` correction | REQUIRED | Existing file has outdated redirect-era URLs; keep canonical links accurate |
+| Multilingual hreflang correctness | REQUIRED | English-only product pages must not advertise missing `/es/` and `/ar/` translations |
+| Legacy-route HTTP 301s | REQUIRED | Cloudflare Pages `_redirects` must issue edge 301s before Astro-generated HTML fallbacks |
 
 ## Selected Technologies
 
@@ -95,7 +101,10 @@ Implement now:
    - `/products/erjingtiao-chilli/`
    - `/products/tianjin-red-chilli/`
 6. Expand `llms.txt` with Spanish and Arabic hub links.
-7. Preserve existing Schema.org and HTML, with no route/SEO changes.
+7. Suppress nonexistent hreflang/OG locale alternates on English-only product pages.
+8. Add Cloudflare Pages `_redirects` rules for all legacy routes in `astro.config.mjs`, including
+   `/es/` and `/ar/` equivalents.
+9. Preserve existing Schema.org and HTML, with no route/SEO changes.
 
 Deployment action documented, not code-implementable in this static repo:
 - Enable Cloudflare **Markdown for Agents** for `drychillis.com`.
@@ -150,6 +159,14 @@ Files changed:
 - `public/robots.txt` — added `Content-Signal: ai-train=yes, search=yes, ai-input=yes` declarations.
 - `src/components/Header.astro` — localized logo and navigation URLs for `/`, `/es/`, and `/ar/`.
 - `src/layouts/BaseLayout.astro` — removed a duplicated `"en"` entry from WebSite `inLanguage`.
+- `src/layouts/BaseLayout.astro` — added optional `multilingual` prop so pages can omit non-existent
+  `/es/` and `/ar/` hreflang and OpenGraph locale alternates.
+- `src/pages/products/index.astro` — set `multilingual={false}` (English-only page).
+- `src/pages/products/yidu-chilli/index.astro` — set `multilingual={false}` (English-only page).
+- `src/pages/products/erjingtiao-chilli/index.astro` — set `multilingual={false}` (English-only page).
+- `src/pages/products/tianjin-red-chilli/index.astro` — set `multilingual={false}` (English-only page).
+- `public/_redirects` — added true Cloudflare Pages 301 rules for all 27 legacy routes plus the
+  existing `/sitemap.xml` -> `/sitemap-index.xml` redirect.
 - `src/pages/products/yidu-chilli/index.astro` — added Product JSON-LD.
 - `src/pages/products/erjingtiao-chilli/index.astro` — added Product JSON-LD.
 - `src/pages/products/tianjin-red-chilli/index.astro` — added Product JSON-LD.
@@ -159,8 +176,9 @@ Well-known/discovery resources added:
 - `/data/varieties.json`
 - `/llms.txt` (updated)
 - `_headers` rules for `Content-Signal` and `Link: </data/products.json>; rel="describedby"`
+- `_redirects` rules for legacy route 301s
 
-No new dependency, route, redirect, or HTML content change was introduced.
+No new dependency or HTML content change was introduced.
 
 ## Validation Results
 
@@ -172,6 +190,10 @@ Local build:
 - Generated HTML for Yidu Red, Erjingtiao and Tianjin Red now includes Product JSON-LD.
 - Generated Spanish and Arabic header navigation now uses `/es/...` and `/ar/...` paths,
   and the logo now returns to the localized home page instead of the current page.
+- Generated English-only product pages now emit only `hreflang="en"` and `x-default`
+  (with no fake `es`/`ar` alternates), while localized pages still emit the full valid set.
+- `dist/_redirects` contains 28 valid rule lines; all 27 legacy routes from `astro.config.mjs`
+  are mirrored with exact trailing-slash sources and destinations.
 - `npm run preview -- --host 127.0.0.1 --port 4321` returned HTTP 200 for `/`, `/es/`,
   `/ar/`, `/robots.txt`, `/llms.txt`, `/data/products.json`, and `/sitemap-index.xml`.
 
@@ -181,15 +203,14 @@ Canonical link check:
 
 External readiness scan:
 - Live `isitagentready.com` scan of the currently deployed site:
-  - PASS: robots.txt, sitemap, Link headers (`describedby`), AI bot rules.
-  - FAIL (live): Content Signals in robots.txt (fix is present in this repository build
-    and should pass after deployment), Markdown Negotiation, DNS-AID, API Catalog, OAuth,
-    auth.md, MCP Server Card, A2A Agent Card, Agent Skills, WebMCP, ARD.
+  - PASS: robots.txt, Content Signals in robots.txt, sitemap, Link headers (`describedby`), AI bot rules.
+  - FAIL (live): Markdown Negotiation, DNS-AID, API Catalog, OAuth, auth.md, MCP Server Card,
+    A2A Agent Card, Agent Skills, WebMCP, ARD.
   - Neutral/informational: Web Bot Auth, x402/MPP/UCP/ACP/AP2 commerce checks.
 - Architecture interpretation:
   - API Catalog, OAuth, MCP, A2A, Agent Skills, WebMCP, ARD: NOT_REQUIRED for this static content/dataset site.
   - Link headers and Content Signals: implemented in `_headers` and should pass after Cloudflare Pages deploy.
-  - Content Signals in `robots.txt`: added in this run and validated in `dist/robots.txt`.
+  - Content Signals in `robots.txt`: added in this run and now confirmed PASS on the live scan.
   - Markdown negotiation: blocked on a Cloudflare dashboard/API setting; no static-code implementation is available.
 
 ## Remaining Issues
