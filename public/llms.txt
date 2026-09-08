@@ -16,8 +16,8 @@
 - **Languages**: English (en), Español (es), العربية (ar)
 - **Knowledge Hub**: https://docs.drychillis.com
 - **Machine-readable data**:
-  - [Products dataset](https://drychillis.com/data/products.json)
-  - [Varieties dataset](https://drychillis.com/data/varieties.json)
+  - [Products dataset](https://drychillis.com/data/products.json) · [ES](https://drychillis.com/data/products.es.json) · [AR](https://drychillis.com/data/products.ar.json)
+  - [Varieties dataset](https://drychillis.com/data/varieties.json) · [ES](https://drychillis.com/data/varieties.es.json) · [AR](https://drychillis.com/data/varieties.ar.json)
 
 ## Pages
 

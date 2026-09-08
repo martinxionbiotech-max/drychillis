@@ -1,0 +1,196 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://drychillis.com/data/products.ar.json",
+  "name": "مواصفات منتجات Tenda Peppers",
+  "description": "مواصفات المنتجات العامة لمسحوق الفلفل الحلو والفلفل المجفف من Tenda Peppers. القيم نطاقات تمثيلية ويجب تأكيدها عند طلب عرض سعر.",
+  "url": "https://drychillis.com/data/products.ar.json",
+  "publisher": { "@id": "https://drychillis.com/#organization" },
+  "dateModified": "2026-09-08",
+  "inLanguage": "ar",
+  "isAccessibleForFree": true,
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://drychillis.com/data/products.ar.json"
+  },
+  "mainEntity": [
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/paprika-powder/#product",
+      "name": "مسحوق الفلفل الحلو (حلو ومنخفض الحرارة)",
+      "description": "مصنّع صيني لمسحوق الفلفل الحلو — فلفل حلو وحلو منخفض الحرارة من أصناف شينجيانغ الحلوة وYidu red، للتلوين الأحمر الطبيعي وخلطات التوابل والتتبيلات. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/paprika-powder/",
+      "sku": "TENDA-PAPRIKA-POWDER",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "image": [
+        "https://drychillis.com/images/products/paprika-powder.jpg",
+        "https://drychillis.com/images/products/paprika-sweet.jpg",
+        "https://drychillis.com/images/products/paprika-low-heat.jpg"
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "قيمة اللون ASTA", "value": "60–240 (حسب الصنف)" },
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "<500 – 10,000" },
+        { "@type": "PropertyValue", "name": "الرطوبة", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "الشبكة (Mesh)", "value": "60–80 شبكة" },
+        { "@type": "PropertyValue", "name": "المعالجة", "value": "منزوع البذور، مُفلتر مغناطيسياً، مُفحص بالأشعة السينية، مُفرز حسب اللون" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/#product",
+      "name": "الفلفل المجفف (كامل، رقائق، مسحوق، قطع)",
+      "description": "مصنّع صيني للفلفل المجفف — فلفل مجفف كامل ورقائق ومسحوق وقطع بمستويات حرارة من 10,000 إلى 70,000+ SHU. حاصل على ISO 9001 وHACCP، ويورّد إلى أوروبا والشرق الأوسط وأمريكا الشمالية.",
+      "url": "https://drychillis.com/products/dried-chillies/",
+      "sku": "TENDA-DRIED-CHILLIES",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "image": [
+        "https://drychillis.com/images/products/chilli-whole.jpg",
+        "https://drychillis.com/images/products/chilli-flakes.jpg",
+        "https://drychillis.com/images/products/chilli-powder.jpg",
+        "https://drychillis.com/images/products/chilli-segments.jpg"
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "10,000 – 70,000+" },
+        { "@type": "PropertyValue", "name": "أشكال المنتج", "value": "كامل، رقائق، مسحوق، قطع" },
+        { "@type": "PropertyValue", "name": "الرطوبة", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "الشبكة (Mesh)", "value": "60–80 شبكة (مسحوق)" },
+        { "@type": "PropertyValue", "name": "المعالجة", "value": "منزوع البذور، مُفلتر مغناطيسياً، مُفحص بالأشعة السينية، مُفرز حسب اللون" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/#product",
+      "name": "الفلفل المجفف الكامل",
+      "description": "مصنّع صيني للفلفل المجفف الكامل — لانترن وجينتا وفاسينغ هيفن وشياومي عند 10,000–50,000+ SHU، مُصنّف حسب الحجم والرطوبة. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/",
+      "sku": "TENDA-WHOLE-DRIED-CHILLIES",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "10,000–50,000+", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "الرطوبة", "value": "<13%" },
+        { "@type": "PropertyValue", "name": "الأصناف", "value": "لانترن، جينتا، فاسينغ هيفن، شياومي" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-flakes/#product",
+      "name": "رقائق الفلفل (فلفل أحمر مطحون)",
+      "description": "مصنّع صيني لرقائق الفلفل — رقائق فلفل أحمر مطحون عند 10,000–20,000 SHU، 20–40 شبكة، من شيان وجينتا وإرجينغتياو. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-flakes/",
+      "sku": "TENDA-CHILLI-FLAKES",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "حجم الشبكة", "value": "20–40", "unitText": "mesh" },
+        { "@type": "PropertyValue", "name": "الأصناف", "value": "شيان، جينتا، إرجينغتياو" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-powder/#product",
+      "name": "مسحوق الفلفل (60–80 شبكة)",
+      "description": "مصنّع صيني لمسحوق الفلفل — 60–80 شبكة، 20,000–50,000 SHU، من سانينغ وزيدانتو وسيفن ستار للصلصة الحارة والتتبيل. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-powder/",
+      "sku": "TENDA-CHILLI-POWDER",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "حجم الشبكة", "value": "60–80", "unitText": "mesh" },
+        { "@type": "PropertyValue", "name": "الأصناف", "value": "سانينغ، زيدانتو، سيفن ستار" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/dried-chillies/chilli-segments/#product",
+      "name": "قطع الفلفل (50,000+ SHU)",
+      "description": "مصنّع صيني لقطع الفلفل — قطع شديدة الحرارة فوق 50,000 SHU من جيشين وشياومي وتشيلي كينغ لأطباق سيتشوان وزيت الفلفل. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/dried-chillies/chilli-segments/",
+      "sku": "TENDA-CHILLI-SEGMENTS",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": ">50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "الأصناف", "value": "جيشين، شياومي، تشيلي كينغ" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/sanying-chilli/#product",
+      "name": "فلفل سانينغ (فلفل تيانينغ)",
+      "description": "فلفل سانينغ (تيانينغ) — فلفل فاسينغ هيفن من خنان وخبي عند 20,000–50,000 SHU للصلصة الحارة وزيت الفلفل والوجبات الخفيفة. حاصل على ISO 9001 وHACCP.",
+      "url": "https://drychillis.com/products/sanying-chilli/",
+      "sku": "TENDA-SANYING-CHILLI",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+        { "@type": "PropertyValue", "name": "المنشأ", "value": "خنان وخبي، الصين" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/yidu-chilli/#product",
+      "name": "فلفل ييدو الأحمر",
+      "description": "ييدو الأحمر (益都红) هو فلفل من النوع الحلو منخفض الحرارة سميك اللحم من شاندونغ وشينجيانغ، يُزرع كمادة خام للفلفل الحلو لعائد لونه (ASTA) بدلاً من حرارته.",
+      "url": "https://drychillis.com/products/yidu-chilli/",
+      "sku": "TENDA-YIDU-RED-CHILLI",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "<1,000 نطاق حلو (بسقف أقل من 10,000)" },
+        { "@type": "PropertyValue", "name": "اللون", "value": "مرتفع (لحم سميك) — أكّد قيمة ASTA معنا" },
+        { "@type": "PropertyValue", "name": "المنطقة", "value": "شاندونغ (ييدو/تشينغتشو)، شينجيانغ" },
+        { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "قرن من النوع الحلو سميك اللحم" },
+        { "@type": "PropertyValue", "name": "الأفضل لـ", "value": "مسحوق الفلفل الحلو، تلوين أحمر طبيعي، أوليوريزين" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/erjingtiao-chilli/#product",
+      "name": "فلفل إرجينغتياو",
+      "description": "فلفل سيتشواني نحيف وعطري عند نحو 15,000–30,000 SHU — العمود الفقري للنكهة في الهوت بوت وزيت الفلفل والدوبانجيانغ.",
+      "url": "https://drychillis.com/products/erjingtiao-chilli/",
+      "sku": "TENDA-ERJINGTIAO-CHILLI",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "15,000 – 30,000 (متوسط مرتفع)" },
+        { "@type": "PropertyValue", "name": "المنطقة", "value": "سيتشوان (سهل تشنغدو)" },
+        { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "قرن نحيف مجعّد رقيق اللحم" },
+        { "@type": "PropertyValue", "name": "الأفضل لـ", "value": "هوت بوت، دوبانجيانغ، زيت الفلفل، معجون" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/tianjin-red-chilli/#product",
+      "name": "فلفل تيانجين الأحمر (فاسينغ هيفن)",
+      "description": "فلفل فاسينغ هيفن (朝天椒) العنقودي عند نحو 30,000–50,000 SHU — الفلفل الكامل والمسحوق عالي الحرارة الأكثر شيوعاً للتصدير، ويُشحن عبر مركز تيانجين التجاري.",
+      "url": "https://drychillis.com/products/tianjin-red-chilli/",
+      "sku": "TENDA-TIANJIN-RED-CHILLI",
+      "category": "البهارات والتوابل",
+      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "30,000 – 50,000 (متوسط مرتفع إلى مرتفع)" },
+        { "@type": "PropertyValue", "name": "المنطقة", "value": "يُجمع/يُصدَّر عبر تيانجين" },
+        { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "قرون عنقودية متجهة للأعلى" },
+        { "@type": "PropertyValue", "name": "الأفضل لـ", "value": "تصدير كامل، مسحوق، رقائق، قطع" }
+      ]
+    }
+  ]
+}

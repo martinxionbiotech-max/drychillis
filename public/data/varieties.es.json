@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://drychillis.com/data/varieties.es.json",
+  "name": "Datos de Referencia de Variedades de Chile de Tenda Peppers",
+  "description": "Datos públicos de referencia de las variedades de chile chinas suministradas o descritas por Tenda Peppers. Los valores de picor son rangos representativos y deben confirmarse para una cotización.",
+  "url": "https://drychillis.com/data/varieties.es.json",
+  "publisher": { "@id": "https://drychillis.com/#organization" },
+  "dateModified": "2026-09-08",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://drychillis.com/data/varieties.es.json"
+  },
+  "mainEntity": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://drychillis.com/varieties/jinta/#term",
+      "name": "Chile Jinta",
+      "description": "Chile de picor medio de Gansu y Xinjiang a 10.000–20.000 SHU. Vainas largas de 11–14 cm con piel gruesa, brillante y de un rojo azufaifa intenso; se usa para copos de chile visibles, color, condimento y pasta de chile.",
+      "url": "https://drychillis.com/varieties/jinta/",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000 – 20,000" },
+        { "@type": "PropertyValue", "name": "Región", "value": "Gansu, Xinjiang" },
+        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina larga (11–14 cm), piel gruesa y brillante" },
+        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Copos visibles, color, condimento" }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://drychillis.com/varieties/lantern/#term",
+      "name": "Pimiento Linterna (Denglongjiao)",
+      "description": "Chile entero de picor medio a 10.000–20.000 SHU de Shandong y Hebei, con color, aroma y sabor equilibrados. Las vainas en forma de linterna se usan para dry-pot, hot-pot y food service donde el chile permanece visible.",
+      "url": "https://drychillis.com/varieties/lantern/",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000 – 20,000 (medio)" },
+        { "@type": "PropertyValue", "name": "Región", "value": "Shandong, Hebei" },
+        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina en forma de linterna, planta de 1–1,2 m" },
+        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Dry-pot, hot-pot, chile entero visible" }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://drychillis.com/varieties/zidantou/#term",
+      "name": "Chile Zidantou (Bala)",
+      "description": "Chile cónico en forma de bala, de alto picor, a 20.000–50.000 SHU, de Shandong y Anhui. Se usa como base fiable para salsa picante, alimentos industriales y chile en polvo.",
+      "url": "https://drychillis.com/varieties/zidantou/",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "20,000 – 50,000" },
+        { "@type": "PropertyValue", "name": "Región", "value": "Shandong, Anhui" },
+        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Cónico (bala)" },
+        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Salsa picante, alimentos industriales, polvo" }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://drychillis.com/varieties/jixin/#term",
+      "name": "Chile Jixin (Corazón de Pollo)",
+      "description": "Vaina pequeña con forma de corazón, extra picante, a 50.000–70.000 SHU, de Guizhou y Hunan. Estándar para productos de picor extremo, aceite de chile y platos al estilo Sichuan.",
+      "url": "https://drychillis.com/varieties/jixin/",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "50,000 – 70,000" },
+        { "@type": "PropertyValue", "name": "Región", "value": "Guizhou, Hunan" },
+        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina pequeña con forma de corazón" },
+        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Picor extremo, aceite de chile, platos de Sichuan" }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://drychillis.com/varieties/xiaomi/#term",
+      "name": "Chile Xiaomi",
+      "description": "Chile pequeño y esbelto, extra picante, a 50.000–70.000 SHU, de Yunnan y Guizhou. Su vaina compacta concentra el picor, lo que lo hace adecuado para chiles enteros de alto picor, segmentos y aceite de chile.",
+      "url": "https://drychillis.com/varieties/xiaomi/",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "50,000 – 70,000" },
+        { "@type": "PropertyValue", "name": "Región", "value": "Yunnan, Guizhou" },
+        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina pequeña y esbelta" },
+        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Chile entero, segmentos, aceite de chile" }
+      ]
+    }
+  ]
+}
