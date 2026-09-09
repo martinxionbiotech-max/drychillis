@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какие основные сорта китайского чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "От сладких до экстра-острых: Xinjiang sweet pepper (ниже 500 SHU), Yidu red и Wangdu (ниже 10 000), Xian и Jinta (10 000–20 000), Erjingtiao (15 000–30 000), Sanying, Zidantou и Seven-Star (20 000–50 000), и Jixin, Xiaomi и Chilli King (свыше 50 000 SHU)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Где в Китае выращивают перец?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Китай выращивает перец в пяти регионах: Северная равнина (Хэнань, Хэбэй, Шаньдун), высокоострый пояс (Хунань, Гуйчжоу, Сычуань, Чунцин), северо-западный цветовой пояс (Синьцзян, Ганьсу), регионы специалитетов (Шэньси, Юньнань) и регионы прохладного климата (Внутренняя Монголия, Шаньси, Ляонин, Цзилинь)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Почему сорт важен при покупке перца?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сорт определяет остроту (SHU), цвет (ASTA) и вкус, которые варьируются независимо. Называние сорта — а не общего запроса «порошок чили» — это разница между постоянным продуктом и партией, меняющейся с каждым заказом."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Китайские сорта чили: руководство по остроте и региону | Tenda Peppers"
+  description="Руководство по китайским сортам чили — от Xinjiang sweet pepper до Jixin, с диапазонами остроты SHU, регионами выращивания и лучшими применениями. Центр знаний Tenda Peppers."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-01"
+  lang="ru"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Руководства</a> &rsaquo; Сорта чили
+    </nav>
+    <h1>Китайские сорта чили: руководство по остроте и региону</h1>
+    <p class="lead">
+      Китайский чили охватывает почти весь спектр остроты — от Xinjiang sweet pepper (ниже 500 SHU) до
+      экстра-острого Jixin (свыше 70 000 SHU). Сорт — это первое решение.
+    </p>
+
+    <h2 style="margin-top:32px;">Спектр остроты вкратце</h2>
+    <table>
+      <thead>
+        <tr><th>Диапазон</th><th>SHU</th><th>Характерные сорта</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Сладкий</td><td>&lt;500</td><td>Xinjiang sweet pepper, Red Dragon 23</td></tr>
+        <tr><td>Низкая острота</td><td>&lt;10,000</td><td>Yidu red, Wangdu</td></tr>
+        <tr><td>Средняя острота</td><td>10,000–20,000</td><td>Xian, Jinta</td></tr>
+        <tr><td>Высокая острота</td><td>20,000–50,000</td><td>Sanying, Zidantou, Seven-Star</td></tr>
+        <tr><td>Экстра-острый</td><td>&gt;50,000</td><td>Jixin, Xiaomi, Chilli King</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Пять регионов выращивания</h2>
+    <p>
+      Регион определяет климат, который определяет остроту и цвет. Северная равнина выращивает
+      кластерный перец facing-heaven; северо-запад — цветовой пояс; высокоострый пояс выращивает острые
+      сорта; регионы специалитетов добавляют особые типы, такие как Shaanxi 8819.
+    </p>
+
+    <h2 style="margin-top:32px;">Почему сорт — это первое решение</h2>
+    <p>
+      Острота, цвет и вкус определяются сортом и климатом созревания — и варьируются независимо.
+      Называние сорта (или точного диапазона SHU) превращает «порошок чили» в воспроизводимый продукт.
+      См. <a href="/ru/heat-levels/medium-heat/">страницы уровня остроты</a> или
+      <a href="https://docs.drychillis.com/ru/chilli-varieties/" target="_blank" rel="noopener">полное руководство по сортам</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Как выбрать сорт</h2>
+    <p>
+      Начните с применения, затем выберите сорт, подходящий диапазону остроты — а не наоборот. Перец
+      для острого соуса требует высокого или экстра-острого диапазона; перец для окрашивания требует
+      сладкого или слабоострого сорта с высоким ASTA. Три вопроса по порядку: <strong>какая острота
+      (SHU)</strong>, <strong>какой цвет (ASTA)</strong> и <strong>какая форма</strong> (целый, хлопья,
+      порошок, кусочки). Ответьте на них, и короткий список обычно сужается до двух-трёх сортов.
+    </p>
+    <p>
+      Для рабочего примера см. <a href="/ru/guides/paprika-chilli-buying-guide/">руководство по спецификации порошка чили</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Регион определяет характер, а не только остроту</h2>
+    <p>
+      Два сорта с одинаковым SHU могут различаться по цвету, аромату и содержанию масла, потому что эти
+      качества определяются <em>местом</em> созревания перца не меньше, чем самим сортом. Северо-западный
+      цветовой пояс перца (Синьцзян, Ганьсу) производит высокоцветный слабоострый перец благодаря своим
+      длинным солнечным дням и низкой влажности; высокоострый пояс (Хунань, Гуйчжоу, Сычуань) производит
+      более острый, ароматный перец в своём влажном климате. Называние сорта <em>и</em> региона
+      выращивания вместе в спецификации — то, что закрепляет вкус партии от партии к партии.
+    </p>
+
+    <h2 style="margin-top:32px;">Справочник сортов и диапазонов остроты</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Сорт</th>
+          <th style="padding:8px;">SHU</th>
+          <th style="padding:8px;">Регион</th>
+          <th style="padding:8px;">Типичное применение</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;">Xinjiang sweet pepper</td>
+          <td style="padding:8px;">&lt;500</td>
+          <td style="padding:8px;">Синьцзян</td>
+          <td style="padding:8px;">Цвет, порошок паприки</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;">Yidu red, Wangdu</td>
+          <td style="padding:8px;">&lt;10,000</td>
+          <td style="padding:8px;">Шаньдун, Хэбэй</td>
+          <td style="padding:8px;">Слабоострый порошок, цвет</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;">Xian, Jinta</td>
+          <td style="padding:8px;">10,000–20,000</td>
+          <td style="padding:8px;">Шэньси, Ганьсу</td>
+          <td style="padding:8px;">Приправы, паста чили</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;">Erjingtiao</td>
+          <td style="padding:8px;">15,000–30,000</td>
+          <td style="padding:8px;">Сычуань</td>
+          <td style="padding:8px;">Паста чили, хот-пот</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;">Sanying, Zidantou, Seven-Star</td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">Хэнань, Хэбэй, Шаньдун</td>
+          <td style="padding:8px;">Острый соус, масло чили</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;">Jixin, Xiaomi, Chilli King</td>
+          <td style="padding:8px;">&gt;50,000</td>
+          <td style="padding:8px;">Гуйчжоу, Хунань, Юньнань</td>
+          <td style="padding:8px;">Экстремальная острота, блюда сычуаньской кухни</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="data-note" style="margin-top:10px;">Значения — представительные диапазоны (MEDIUM confidence), варьируются по сорту и происхождению. Подтвердите с нами целевые SHU, ASTA, влажность и помол. Проверено 2026-09-09.</p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какие основные сорта китайского чили?</h3>
+      <p>От сладких до экстра-острых: Xinjiang sweet pepper (ниже 500 SHU), Yidu red и Wangdu (ниже 10 000), Xian и Jinta (10 000–20 000), Erjingtiao (15 000–30 000), Sanying, Zidantou и Seven-Star (20 000–50 000), и Jixin, Xiaomi и Chilli King (свыше 50 000 SHU).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Где в Китае выращивают перец?</h3>
+      <p>Китай выращивает перец в пяти регионах: Северная равнина (Хэнань, Хэбэй, Шаньдун), высокоострый пояс (Хунань, Гуйчжоу, Сычуань, Чунцин), северо-западный цветовой пояс (Синьцзян, Ганьсу), регионы специалитетов (Шэньси, Юньнань) и регионы прохладного климата (Внутренняя Монголия, Шаньси, Ляонин, Цзилинь).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Почему сорт важен при покупке перца?</h3>
+      <p>Сорт определяет остроту (SHU), цвет (ASTA) и вкус, которые варьируются независимо. Называние сорта — а не общего запроса «порошок чили» — это разница между постоянным продуктом и партией, меняющейся с каждым заказом.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Смотреть сушёный чили</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить расчёт</a>
+    </div>
+  </div>
+</BaseLayout>

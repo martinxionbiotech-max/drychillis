@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Dried Chillies (Whole, Flakes, Powder, Segments)",
+  "description": "Китайский производитель сушёного чили — целый сушёный чили, хлопья, порошок и кусочки, с уровнями остроты от 10 000 до 70 000+ SHU. Сертифицировано ISO 9001 и HACCP.",
+  "image": [
+    "https://drychillis.com/images/products/chilli-whole.jpg",
+    "https://drychillis.com/images/products/chilli-flakes.jpg",
+    "https://drychillis.com/images/products/chilli-powder.jpg",
+    "https://drychillis.com/images/products/chilli-segments.jpg",
+  ],
+  "url": "https://drychillis.com/ru/products/dried-chillies/",
+  "sku": "TENDA-DRIED-CHILLIES",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 70,000+" },
+    { "@type": "PropertyValue", "name": "Product Forms", "value": "Whole, flakes, powder, segments" },
+    { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+    { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh (powder)" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какую продукцию из сушёного чили предлагает Tenda Peppers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Мы предлагаем четыре формы — целый сушёный чили, хлопья чили, порошок чили и кусочки чили — с уровнями остроты от примерно 10 000 до 70 000+ SHU на китайских сортах."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой уровень остроты (SHU) мне нужен?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Средняя острота (10 000–20 000 SHU) подходит для приправ и снеков; высокая (20 000–50 000 SHU) — для острых соусов; экстра-острая (свыше 50 000 SHU) — для продуктов экстремальной остроты. Сообщите целевой SHU, и мы подберём сорт."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можете ли вы поставить целый сушёный чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Мы предлагаем целый сушёный чили таких сортов, как Lantern pepper, Jinta, facing-heaven и Xiaomi, с классификацией по размеру и влажности согласно спецификации."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как контролируются цвет и острота?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Острота и цвет задаются у источника через выбор сорта и контроль класса, затем проверяются внутри. Каждая партия проходит удаление семян, магнитную фильтрацию, рентгеновский контроль и цветовую сортировку."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие спецификации влажности и помола?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сушёный чили обычно поставляется с влажностью ниже 13%, порошок — с помолом 60–80, регулируемым под ваши требования. Точный помол и влажность подтверждаются под вашу спецификацию."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие сорта лучше для острого соуса или экстремальной остроты?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Высокоострые сорта, такие как Sanying (Tianying), Zidantou и Seven-Star (20 000–50 000 SHU), — основа острого соуса. Для экстремальной остроты Jixin (50 000–70 000 SHU), Xiaomi и Chilli King превышают 50 000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как сохранить постоянство остроты между партиями?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Постоянство приходит от указания конкретного сорта (или точного диапазона SHU) вместо общего запроса «порошок чили». Острота, цвет и вкус варьируются независимо, поэтому полная спецификация называет все три."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Производитель сушёного чили в Китае | Tenda Peppers"
+  description="Китайский производитель сушёного чили — целый сушёный чили, хлопья, порошок и кусочки, от 10 000 до 70 000+ SHU. ISO 9001 и HACCP, поставки в Европу, на Ближний Восток и в Северную Америку."
+  ogImage="/images/og-chillies.jpg"
+  lang="ru"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; Сушёный чили
+    </nav>
+    <h1>Сушёный чили</h1>
+    <p class="lead">
+      Целый сушёный чили, хлопья, порошок и кусочки — продукты из перца с акцентом на остроту,
+      смолотые из китайских сортов по всему спектру остроты (от примерно 10 000 до 70 000+ SHU).
+      Мы выращиваем, сушим, сортируем и мелем по ISO 9001 и HACCP.
+    </p>
+
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Целый сушёный чили" width="1400" height="1050" loading="eager" />
+    </div>
+
+    <h2 style="margin-top:32px;">Какую продукцию из сушёного чили предлагает Tenda Peppers?</h2>
+    <p>
+      Мы предлагаем одну культуру в четырёх формах, каждая для своего аспекта пищевой промышленности.
+      Форма зависит от того, как чили выглядит в вашем конечном продукте — видимые кусочки, текстура
+      или равномерное высвобождение остроты.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Форма</th><th>Острота (SHU)</th><th>Сорта</th><th>Лучше всего для</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/ru/products/dried-chillies/whole-dried-chillies/"><strong>Целый сушёный чили</strong></a></td>
+          <td>10,000 – 50,000+</td>
+          <td>Lantern, Jinta, facing-heaven, Xiaomi, Zidantou</td>
+          <td>Общепит, хот-пот, видимый чили</td>
+        </tr>
+        <tr>
+          <td><a href="/ru/products/dried-chillies/chilli-flakes/"><strong>Хлопья чили (дроблёные)</strong></a></td>
+          <td>10,000 – 20,000</td>
+          <td>Xian, Jinta</td>
+          <td>Пицца, смеси специй, снеки</td>
+        </tr>
+        <tr>
+          <td><a href="/ru/products/dried-chillies/chilli-powder/"><strong>Порошок чили</strong></a></td>
+          <td>20,000 – 50,000</td>
+          <td>Sanying, Zidantou, New Generation, Seven-Star</td>
+          <td>Острые соусы, приправы, промышленность</td>
+        </tr>
+        <tr>
+          <td><a href="/ru/products/dried-chillies/chilli-segments/"><strong>Кусочки чили</strong></a></td>
+          <td>&gt;50,000</td>
+          <td>Jixin, Xiaomi, Chilli King, Shuan Shuan</td>
+          <td>Экстремальная острота, блюда сычуаньского стиля</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="product-gallery">
+      <figure><img src="/images/products/chilli-whole.jpg" alt="Целый сушёный чили" loading="lazy" /><figcaption>Целый сушёный чили</figcaption></figure>
+      <figure><img src="/images/products/chilli-flakes.jpg" alt="Хлопья чили" loading="lazy" /><figcaption>Хлопья чили</figcaption></figure>
+      <figure><img src="/images/products/chilli-powder.jpg" alt="Порошок чили" loading="lazy" /><figcaption>Порошок чили</figcaption></figure>
+      <figure><img src="/images/products/chilli-segments.jpg" alt="Кусочки чили" loading="lazy" /><figcaption>Кусочки чили</figcaption></figure>
+    </div>
+
+    <h2 style="margin-top:32px;">Насколько острым бывает китайский сушёный чили?</h2>
+    <p>
+      Китайский чили охватывает почти весь полезный диапазон остроты — от сладкого цветового перца
+      ниже 500 SHU до экстра-острых сортов, превышающих 70 000 SHU. Сушёный чили для остроты делится
+      на четыре диапазона:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Диапазон остроты</th><th>Диапазон SHU</th><th>Характерные сорта</th><th>Типичное применение</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Низкая</td><td>&lt;10,000</td><td>Yidu red, Wangdu</td><td>Маринады, лёгкие хлопья</td></tr>
+        <tr><td>Средняя</td><td>10,000 – 20,000</td><td>Xian, Jinta</td><td>Приправы, паста чили</td></tr>
+        <tr><td>Высокая</td><td>20,000 – 50,000</td><td>Sanying, Zidantou, Seven-Star</td><td>Острый соус, снеки</td></tr>
+        <tr><td>Экстра-острая</td><td>&gt;50,000</td><td>Jixin, Xiaomi, Chilli King</td><td>Экстремальная острота, масло чили</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Острота нелинейна: небольшое количество экстра-острого чили (50 000+ SHU) двигает остроту смеси
+      гораздо сильнее, чем тот же вес среднего чили. Поэтому задание точного диапазона SHU — а не
+      просто «острый» или «средний» — сохраняет соус постоянным от партии к партии.
+    </p>
+    <p style="margin-top:8px;"><strong>Просмотр по уровню остроты:</strong> <a href="/ru/heat-levels/medium-heat/">Средняя</a> · <a href="/ru/heat-levels/high-heat/">Высокая</a> · <a href="/ru/heat-levels/extra-hot/">Экстра-острая</a></p>
+    <p style="margin-top:8px;"><strong>Просмотр по форме:</strong> <a href="/ru/products/dried-chillies/whole-dried-chillies/">Целый</a> · <a href="/ru/products/dried-chillies/chilli-flakes/">Хлопья</a> · <a href="/ru/products/dried-chillies/chilli-powder/">Порошок</a> · <a href="/ru/products/dried-chillies/chilli-segments/">Кусочки</a></p>
+    <p style="margin-top:8px;"><strong>Просмотр по сорту:</strong> <a href="/ru/products/sanying-chilli/">Sanying</a> · <a href="/ru/varieties/zidantou/">Zidantou</a> · <a href="/ru/varieties/jixin/">Jixin</a> · <a href="/ru/varieties/xiaomi/">Xiaomi</a> · <a href="/ru/varieties/jinta/">Jinta</a> · <a href="/ru/varieties/lantern/">Lantern</a></p>
+
+
+    <h2 style="margin-top:32px;">Какой сорт чили мне задать?</h2>
+    <p>
+      Сорт — это первое решение, потому что острота, цвет и вкус задаются сортом и климатом созревания
+      — и варьируются независимо. Полная спецификация называет сорт (или точный диапазон SHU), а не
+      просто «порошок чили».
+    </p>
+    <ul>
+      <li><strong>Для острого соуса и снеков</strong> — Sanying (Tianying), Zidantou, Seven-Star (20 000–50 000 SHU)</li>
+      <li><strong>Для экстремальной остроты и масла чили</strong> — Jixin (50 000–70 000 SHU), Xiaomi, Chilli King</li>
+      <li><strong>Для хлопьев и пиццы</strong> — Xian, Jinta (10 000–20 000 SHU), Erjingtiao (15 000–30 000 SHU)</li>
+      <li><strong>Для видимого целого чили</strong> — Lantern, facing-heaven, Jinta</li>
+    </ul>
+    <p>
+      Полная карта сортов — регион, форма плода и сроки сбора — в
+      <a href="https://docs.drychillis.com/ru/chilli-varieties/" target="_blank" rel="noopener">руководстве по сортам чили</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Спецификации</h2>
+    <table>
+      <thead>
+        <tr><th>Параметр</th><th>Типичный диапазон</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Уровень остроты (SHU)</td><td>10,000 – 70,000+ (по сорту)</td></tr>
+        <tr><td>Влажность</td><td>&lt;13%</td></tr>
+        <tr><td>Помол (порошок)</td><td>60–80 mesh, регулируется</td></tr>
+        <tr><td>Обработка</td><td>Удаление семян, магнитная фильтрация, рентген, цветовая сортировка</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Значения — представительные диапазоны. Точная острота, помол и влажность подтверждаются под вашу
+      спецификацию и документируются в предложении.
+    </p>
+
+    <h2 style="margin-top:32px;">Откуда происходит китайский сушёный чили?</h2>
+    <p>
+      Китай — крупнейший производитель перца в мире в целом и второй по величине экспортёр сушёного
+      чили после Индии. Согласно CBI (европейская служба рыночной информации), Китай производит около
+      320 000 тонн сушёного чили в год и экспортирует около 70% из них; в 2023 году экспорт сушёного
+      чили и сушёной паприки составил 243 000 тонн, из которых Европа приняла около четверти, а Испания
+      — около 65% европейского объёма.
+    </p>
+    <p>
+      Производство сосредоточено в трёх регионах: Северо-Китайская равнина (Шаньдун, Хэнань, Хэбэй),
+      Северо-Запад (Синьцзян, Ганьсу) и высокоострый пояс (Хунань, Гуйчжоу, Сычуань, Чунцин).
+      Tenda Peppers получает сырьё с 12 контролируемых баз выращивания в Шаньдуне, Синьцзяне и Хэнани.
+    </p>
+
+    <h2 style="margin-top:32px;">Что спросить покупателю перед заказом?</h2>
+    <ul>
+      <li><strong>Целевой диапазон SHU</strong> — назовите диапазон и сорт (например, «Sanying, 20 000–50 000 SHU»)</li>
+      <li><strong>Форма продукта</strong> — целый, хлопья, порошок или кусочки</li>
+      <li><strong>Размер помола</strong> — для порошка (стандарт 60–80 mesh, регулируется)</li>
+      <li><strong>Влажность</strong> — подтвердите ниже 13% для стабильности хранения</li>
+      <li><strong>Значение цвета</strong> — ASTA, если цвет важен в вашем применении</li>
+      <li><strong>Сертификаты</strong> — ISO 9001 и HACCP стандартны; подтвердите, если нужны BRC, халяль или кошер</li>
+      <li><strong>Упаковка и пункт назначения</strong> — опт, розница или OEM, с комплектом документов (COA, прослеживаемость, фитосанитарный сертификат)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Применения</h2>
+    <ul>
+      <li>Острые соусы и масло чили</li>
+      <li>Приправы для снеков и лапши быстрого приготовления</li>
+      <li>Смеси специй и приправ</li>
+      <li>Общепит и хот-пот</li>
+      <li>Переработанное мясо и маринады</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какую продукцию из сушёного чили предлагает Tenda Peppers?</h3>
+      <p>Мы предлагаем четыре формы — целый сушёный чили, хлопья чили, порошок чили и кусочки чили — с уровнями остроты от примерно 10 000 до 70 000+ SHU на китайских сортах.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какой уровень остроты (SHU) мне нужен?</h3>
+      <p>Средняя острота (10 000–20 000 SHU) подходит для приправ и снеков; высокая (20 000–50 000 SHU) — для острых соусов; экстра-острая (свыше 50 000 SHU) — для продуктов экстремальной остроты. Сообщите целевой SHU, и мы подберём сорт.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Можете ли вы поставить целый сушёный чили?</h3>
+      <p>Да. Мы предлагаем целый сушёный чили таких сортов, как Lantern pepper, Jinta, facing-heaven и Xiaomi, с классификацией по размеру и влажности согласно спецификации.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Как контролируются цвет и острота?</h3>
+      <p>Острота и цвет задаются у источника через выбор сорта и контроль класса, затем проверяются внутри. Каждая партия проходит удаление семян, магнитную фильтрацию, рентгеновский контроль и цветовую сортировку.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какие спецификации влажности и помола?</h3>
+      <p>Сушёный чили обычно поставляется с влажностью ниже 13%, порошок — с помолом 60–80, регулируемым под ваши требования. Точный помол и влажность подтверждаются под вашу спецификацию.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какие сорта лучше для острого соуса или экстремальной остроты?</h3>
+      <p>Высокоострые сорта, такие как Sanying (Tianying), Zidantou и Seven-Star (20 000–50 000 SHU), — основа острого соуса. Для экстремальной остроты Jixin (50 000–70 000 SHU), Xiaomi и Chilli King превышают 50 000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Как сохранить постоянство остроты между партиями?</h3>
+      <p>Постоянство приходит от указания конкретного сорта (или точного диапазона SHU) вместо общего запроса «порошок чили». Острота, цвет и вкус варьируются независимо, поэтому полная спецификация называет все три.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/contact/">Запросить расчёт по чили</a>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#faf5f2;border-radius:8px;">
+      <h2 style="margin-top:0;">Связанная техническая документация</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="https://docs.drychillis.com/ru/buying-guide/" target="_blank" rel="noopener">Руководство по закупке паприки и чили</a></li>
+        <li><a href="https://docs.drychillis.com/ru/chilli-varieties/" target="_blank" rel="noopener">Сорта и классы чили</a></li>
+        <li><a href="https://docs.drychillis.com/ru/heat-level-reference/" target="_blank" rel="noopener">Справочник уровня остроты</a></li>
+      </ul>
+      <p class="data-note" style="margin-top:12px;">Из <a href="https://docs.drychillis.com/ru/" target="_blank" rel="noopener">Центра знаний Tenda Peppers</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

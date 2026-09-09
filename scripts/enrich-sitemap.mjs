@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const SITE = 'https://drychillis.com';
-const LOCALES = ['en', 'es', 'ar'];
+const LOCALES = ['en', 'es', 'ar', 'ru'];
 
 function localizedUrl(lang, skeleton) {
   const base = lang === 'en' ? '' : `/${lang}`;
@@ -10,7 +10,7 @@ function localizedUrl(lang, skeleton) {
 }
 
 function skeletonFromPath(pathname) {
-  return pathname.replace(/^\/(es|ar)(?=\/|$)/, '');
+  return pathname.replace(/^\/(es|ar|ru)(?=\/|$)/, '');
 }
 
 const target = process.argv[2] || 'dist/sitemap-0.xml';

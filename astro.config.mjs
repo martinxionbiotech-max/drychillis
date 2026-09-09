@@ -7,7 +7,7 @@ export default defineConfig({
   build: { format: 'directory' },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es', 'ar'],
+    locales: ['en', 'es', 'ar', 'ru'],
     routing: {
       prefixDefaultLocale: false,
       redirectToDefaultLocale: false,
@@ -41,6 +41,15 @@ export default defineConfig({
     '/ar/blog/chilli-heat-shu-explained/': '/ar/guides/asta-colour-and-shu-heat-explained/',
     '/ar/blog/chinese-chilli-varieties-guide/': '/ar/guides/chinese-chilli-varieties-grades/',
     '/ar/varieties/sanying/': '/ar/products/sanying-chilli/',
+    '/ru/products/paprika/': '/ru/products/paprika-powder/',
+    '/ru/quality/': '/ru/quality-certifications/',
+    '/ru/about/': '/ru/about-us/',
+    '/ru/terms-and-conditions/': '/ru/terms/',
+    '/ru/blog/': '/ru/guides/',
+    '/ru/blog/how-to-specify-chilli-powder/': '/ru/guides/paprika-chilli-buying-guide/',
+    '/ru/blog/chilli-heat-shu-explained/': '/ru/guides/asta-colour-and-shu-heat-explained/',
+    '/ru/blog/chinese-chilli-varieties-guide/': '/ru/guides/chinese-chilli-varieties-grades/',
+    '/ru/varieties/sanying/': '/ru/products/sanying-chilli/',
   },
   integrations: [sitemap()],
 });

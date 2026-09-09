@@ -48,6 +48,7 @@ const LOCALES: Record<string, { code: string; og: string }> = {
   en: { code: "en", og: "en_US" },
   es: { code: "es", og: "es_ES" },
   ar: { code: "ar", og: "ar_AE" },
+  ru: { code: "ru", og: "ru_RU" },
 };
 const locale = LOCALES[lang] ?? LOCALES.en;
 
@@ -62,7 +63,7 @@ const canonicalUrl = canonical
 
 // hreflang 备选 URL：当前路径去掉语言前缀，得到「路径骨架」，再拼各语言
 const currentPath = Astro.url.pathname;
-const pathSkeleton = currentPath.replace(/^\/(es|ar)(?=\/|$)/, "");
+const pathSkeleton = currentPath.replace(/^\/(es|ar|ru)(?=\/|$)/, "");
 const hreflangUrl = (l: string) => {
   const base = l === "en" ? "" : "/" + l;
   return SITE + base + pathSkeleton;
@@ -142,7 +143,7 @@ const webSiteJsonLd = {
   "url": SITE,
   "name": BRAND_FULL,
   "description": SITE_DESCRIPTION,
-  "inLanguage": ["en", "es", "ar"],
+  "inLanguage": ["en", "es", "ar", "ru"],
   "publisher": { "@id": SITE + "/#organization" },
   "potentialAction": {
     "@type": "SearchAction",
@@ -191,6 +192,7 @@ const breadcrumbJsonLd = {
         <link rel="alternate" hreflang="en" href={hreflangUrl("en")} />
         <link rel="alternate" hreflang="es" href={hreflangUrl("es")} />
         <link rel="alternate" hreflang="ar" href={hreflangUrl("ar")} />
+        <link rel="alternate" hreflang="ru" href={hreflangUrl("ru")} />
         <link rel="alternate" hreflang="x-default" href={hreflangUrl("en")} />
       </>
     ) : (

@@ -1,5 +1,5 @@
 // Centralized UI translation dictionary — en / es / ar
-export type Lang = 'en' | 'es' | 'ar';
+export type Lang = 'en' | 'es' | 'ar' | 'ru';
 
 export const ui = {
   en: {
@@ -145,6 +145,54 @@ export const ui = {
       home: 'الرئيسية',
     },
     dir: 'rtl',
+  },
+  ru: {
+    brand: 'Tenda Peppers',
+    brandTag: 'Паприка и сушёный чили',
+    nav: {
+      home: 'Главная',
+      products: 'Продукция',
+      paprika: 'Паприка',
+      chillies: 'Сушёный чили',
+      quality: 'Качество',
+      guides: 'Гиды',
+      about: 'О нас',
+      contact: 'Контакты',
+      mainNav: 'Основная навигация',
+      language: 'Язык',
+    },
+    footer: {
+      company: 'Компания',
+      products: 'Продукция',
+      resources: 'Ресурсы',
+      legal: 'Правовая информация',
+      knowledgeHub: 'Центр знаний',
+      privacy: 'Политика конфиденциальности',
+      terms: 'Условия и положения',
+      cookie: 'Политика использования файлов cookie',
+      disclaimer: 'Отказ от ответственности',
+      returns: 'Политика возврата и возмещения',
+      shipping: 'Политика доставки',
+      productPaprika: 'Порошок паприки (сладкая и слабоострая)',
+      productChillies: 'Сушёный чили (целый / хлопья / порошок / кусочки)',
+      heatLevels: 'Уровни остроты (SHU)',
+      guides: 'Гиды',
+      phone: 'Телефон / WhatsApp',
+      email: 'Эл. почта',
+      rights: 'Все права защищены.',
+    },
+    common: {
+      requestQuote: 'Запросить расчёт стоимости',
+      contactNow: 'Связаться сейчас',
+      readGuide: 'Читать гид →',
+      viewAll: 'Все гиды →',
+      fromHub: 'Из Центра знаний Tenda Peppers.',
+      relatedDocs: 'Связанная техническая документация',
+      dataNote: 'Характеристики — представительные диапазоны. Подтвердите целевую спецификацию с нами.',
+      skipToContent: 'Перейти к содержанию',
+      home: 'Главная',
+    },
+    dir: 'ltr',
   },
 } as const;
 

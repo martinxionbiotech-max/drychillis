@@ -21,7 +21,7 @@ const navItems = [
 ];
 
 const pathname = Astro.url.pathname;
-const pathSkeleton = pathname.replace(/^\/(es|ar)(?=\/|$)/, "");
+const pathSkeleton = pathname.replace(/^\/(es|ar|ru)(?=\/|$)/, "");
 const localizedBase = lang === "en" ? "" : "/" + lang;
 const localizedHref = (href: string) => localizedBase + href;
 const isActive = (href: string) => {
@@ -30,12 +30,12 @@ const isActive = (href: string) => {
   return pathSkeleton.startsWith(href);
 };
 
-const langLabel: Record<string, string> = { en: "English", es: "Español", ar: "العربية" };
+const langLabel: Record<string, string> = { en: "English", es: "Español", ar: "العربية", ru: "Русский" };
 const switchUrl = (target: string) => {
   const base = target === "en" ? "" : "/" + target;
   return base + pathSkeleton;
 };
-const availableLanguages = multilingual ? ["en", "es", "ar"] : [lang];
+const availableLanguages = multilingual ? ["en", "es", "ar", "ru"] : [lang];
 ---
 
 <header class="site-header">
