@@ -1,10 +1,25 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Tenda Peppers Buyer Guides",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Paprika & Chilli Buying Guide", "item": "https://drychillis.com/guides/paprika-chilli-buying-guide/" },
+    { "@type": "ListItem", "position": 2, "name": "ASTA Colour & SHU Heat Explained", "item": "https://drychillis.com/guides/asta-colour-and-shu-heat-explained/" },
+    { "@type": "ListItem", "position": 3, "name": "Chinese Chilli Varieties & Grades", "item": "https://drychillis.com/guides/chinese-chilli-varieties-grades/" },
+    { "@type": "ListItem", "position": 4, "name": "Chilli Powder Colour Change & Storage", "item": "https://drychillis.com/guides/chilli-powder-colour-storage/" },
+    { "@type": "ListItem", "position": 5, "name": "Smoked Paprika vs Chilli Powder", "item": "https://drychillis.com/guides/smoked-paprika-vs-chilli-powder/" },
+    { "@type": "ListItem", "position": 6, "name": "Sea vs Air Freight for Chilli Imports", "item": "https://drychillis.com/guides/sea-vs-air-freight/" }
+  ]
+};
 ---
 
 <BaseLayout
   title="Guides & Technical Resources | Tenda Peppers"
   description="Buyer guides for paprika and dried chillies — specify chilli powder, Chinese varieties, SHU heat levels, mesh size and packaging."
+  jsonLd={[itemListJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -14,6 +29,20 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <p class="lead">
       Buyer guides and reference pages for specifying and sourcing paprika and dried chillies — from
       heat levels to mesh size and packaging.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> This hub indexes 6 buyer guides that cover the core sourcing decisions — from SHU heat bands (10,000–20,000 medium, 20,000–50,000 high, 50,000+ extra hot) to mesh size, colour storage and sea-vs-air freight. Use the list below when you need a citable specification answer.
+    </div>
+
+    <p>
+      <strong>Guide list at a glance:</strong>
+      <a href="/guides/paprika-chilli-buying-guide/">how to specify chilli powder</a>,
+      <a href="/guides/chinese-chilli-varieties-grades/">Chinese chilli varieties &amp; grades</a>,
+      <a href="/guides/asta-colour-and-shu-heat-explained/">ASTA colour &amp; SHU heat</a>,
+      <a href="/guides/smoked-paprika-vs-chilli-powder/">smoked paprika vs chilli powder</a>,
+      <a href="/guides/chilli-powder-colour-storage/">chilli powder colour &amp; storage</a>, and
+      <a href="/guides/sea-vs-air-freight/">sea vs air freight</a>.
     </p>
 
     <h2 style="margin-top:32px;">Heat Levels (SHU)</h2>

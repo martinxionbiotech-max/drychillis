@@ -40,6 +40,8 @@ const L = lang as Lang;
 const SITE = "https://drychillis.com";
 const BRAND = "Tenda Peppers";
 const BRAND_FULL = "Tenda Peppers — Paprika & Dried Chillies Manufacturer";
+const SITE_DESCRIPTION =
+  "Tenda Peppers manufactures paprika and dried chillies in China — sweet paprika powder, chilli flakes, chilli powder and whole dried chillies for the European, Middle East and North American markets.";
 
 // 语言 → locale 元数据
 const LOCALES: Record<string, { code: string; og: string }> = {
@@ -72,7 +74,7 @@ const articleJsonLd =
   ogType === "article"
     ? {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "TechArticle",
         headline: cleanTitle,
         description,
         image: ogImage.startsWith("http") ? ogImage : SITE + ogImage,
@@ -93,6 +95,10 @@ const orgJsonLd = {
   "@id": SITE + "/#organization",
   "name": "Tenda Peppers",
   "legalName": "Leling Tenda Chili Products Co., Ltd.",
+  "alternateName": "乐陵天达辣椒制品有限公司",
+  "logo": { "@type": "ImageObject", "url": SITE + "/images/logo.png" },
+  "sameAs": [],
+  "description": SITE_DESCRIPTION,
   "url": SITE,
   "email": "joanna@paprikabulk.com",
   "telephone": "+86-15153588090",
@@ -135,8 +141,14 @@ const webSiteJsonLd = {
   "@id": SITE + "/#website",
   "url": SITE,
   "name": BRAND_FULL,
+  "description": SITE_DESCRIPTION,
   "inLanguage": ["en", "es", "ar"],
-  "publisher": { "@id": SITE + "/#organization" }
+  "publisher": { "@id": SITE + "/#organization" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": SITE + "/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 };
 
 const breadcrumbJsonLd = {

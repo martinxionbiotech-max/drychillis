@@ -1,6 +1,21 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": "https://drychillis.com/varieties/zidantou/#term",
+  "name": "Zidantou (Bullet) Chilli",
+  "description": "Conical bullet-shaped high-heat chilli at 20,000–50,000 SHU from Shandong and Anhui. Used as a dependable base for hot sauce, industrial food and chilli powder.",
+  "url": "https://drychillis.com/varieties/zidantou/",
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000 – 50,000" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Shandong, Anhui" },
+    { "@type": "PropertyValue", "name": "Fruit Type", "value": "Conical (bullet)" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Hot sauce, industrial food, powder" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +59,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Zidantou (Bullet) Chilli — 20,000–50,000 SHU | Tenda Peppers"
   description="Zidantou (bullet pepper) — conical high-heat chilli from Shandong & Anhui at 20,000–50,000 SHU for hot sauce and chilli powder."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[definedTermJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

@@ -55,12 +55,30 @@ const faqJsonLd = {
     }
   ]
 };
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Tenda Peppers Products",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Paprika Powder (Sweet & Low-Heat)", "item": "https://drychillis.com/products/paprika-powder/" },
+    { "@type": "ListItem", "position": 2, "name": "Dried Chillies (Overview)", "item": "https://drychillis.com/products/dried-chillies/" },
+    { "@type": "ListItem", "position": 3, "name": "Whole Dried Chillies", "item": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/" },
+    { "@type": "ListItem", "position": 4, "name": "Chilli Flakes (Crushed Red Pepper)", "item": "https://drychillis.com/products/dried-chillies/chilli-flakes/" },
+    { "@type": "ListItem", "position": 5, "name": "Chilli Powder (60–80 Mesh)", "item": "https://drychillis.com/products/dried-chillies/chilli-powder/" },
+    { "@type": "ListItem", "position": 6, "name": "Chilli Segments (50,000+ SHU)", "item": "https://drychillis.com/products/dried-chillies/chilli-segments/" },
+    { "@type": "ListItem", "position": 7, "name": "Sanying Chilli (Tianying Pepper)", "item": "https://drychillis.com/products/sanying-chilli/" },
+    { "@type": "ListItem", "position": 8, "name": "Yidu Red Chilli", "item": "https://drychillis.com/products/yidu-chilli/" },
+    { "@type": "ListItem", "position": 9, "name": "Erjingtiao Chilli", "item": "https://drychillis.com/products/erjingtiao-chilli/" },
+    { "@type": "ListItem", "position": 10, "name": "Tianjin Red (Facing-Heaven) Chilli", "item": "https://drychillis.com/products/tianjin-red-chilli/" }
+  ]
+};
 ---
 
 <BaseLayout
   title="Paprika & Dried Chilli Products | Tenda Peppers"
   description="Paprika powder and dried chilli products from a China manufacturer — sweet paprika, chilli flakes, powder, whole and segments. SHU <500 to 70,000+, ASTA 60–240."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[itemListJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

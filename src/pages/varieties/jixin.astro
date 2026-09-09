@@ -1,6 +1,21 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": "https://drychillis.com/varieties/jixin/#term",
+  "name": "Jixin (Chicken-Heart) Chilli",
+  "description": "Small heart-shaped extra-hot pod at 50,000–70,000 SHU from Guizhou and Hunan. Standard for extreme-heat products, chilli oil and Sichuan-style dishes.",
+  "url": "https://drychillis.com/varieties/jixin/",
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "50,000 – 70,000" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Guizhou, Hunan" },
+    { "@type": "PropertyValue", "name": "Fruit Type", "value": "Small, heart-shaped pod" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Extreme heat, chilli oil, Sichuan dishes" }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -44,7 +59,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Jixin Chilli — 50,000–70,000 SHU | Tenda Peppers"
   description="Jixin (chicken-heart) pepper — extra-hot chilli from Guizhou & Hunan at 50,000–70,000 SHU for chilli oil and Sichuan dishes."
-  jsonLd={[faqJsonLd]}
+  jsonLd={[definedTermJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

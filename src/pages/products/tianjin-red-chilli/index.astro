@@ -4,6 +4,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": "https://drychillis.com/products/tianjin-red-chilli/#product",
   "name": "Tianjin Red (Facing-Heaven) Chilli",
   "description": "Cluster-type facing-heaven (朝天椒) chillies at roughly 30,000–50,000 SHU — the mainstream high-heat whole chilli and powder for export, shipped through the Tianjin trading hub.",
   "url": "https://drychillis.com/products/tianjin-red-chilli/",
@@ -13,6 +14,8 @@ const productJsonLd = {
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "30,000 – 50,000 (medium-high to high)" },
+    { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+    { "@type": "PropertyValue", "name": "Mesh", "value": "60–80 mesh (powder)" },
     { "@type": "PropertyValue", "name": "Region", "value": "Collected/exported via Tianjin" },
     { "@type": "PropertyValue", "name": "Fruit Type", "value": "Cluster-type, upward-pointing pods" },
     { "@type": "PropertyValue", "name": "Best For", "value": "Export whole, powder, flakes, segments" }

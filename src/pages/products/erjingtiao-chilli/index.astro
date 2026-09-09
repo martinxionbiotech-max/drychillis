@@ -4,6 +4,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": "https://drychillis.com/products/erjingtiao-chilli/#product",
   "name": "Erjingtiao Chilli",
   "description": "A slender, aromatic Sichuan chilli at roughly 15,000–30,000 SHU — the flavour backbone of hotpot, chilli oil and doubanjiang.",
   "url": "https://drychillis.com/products/erjingtiao-chilli/",
@@ -13,6 +14,8 @@ const productJsonLd = {
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "15,000 – 30,000 (upper medium)" },
+    { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
+    { "@type": "PropertyValue", "name": "Mesh", "value": "20–40 mesh (coarse crush)" },
     { "@type": "PropertyValue", "name": "Region", "value": "Sichuan (Chengdu plain)" },
     { "@type": "PropertyValue", "name": "Fruit Type", "value": "Slender, wrinkled, thin-fleshed pod" },
     { "@type": "PropertyValue", "name": "Best For", "value": "Hotpot, doubanjiang, chilli oil, paste" }
