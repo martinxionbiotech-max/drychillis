@@ -1,13 +1,17 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const definedTermJsonLd = {
+const productJsonLd = {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "@id": "https://drychillis.com/varieties/jixin/#term",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/jixin-chilli/#product",
   "name": "Jixin (Chicken-Heart) Chilli",
   "description": "Small heart-shaped extra-hot pod at 50,000–70,000 SHU from Guizhou and Hunan. Standard for extreme-heat products, chilli oil and Sichuan-style dishes.",
-  "url": "https://drychillis.com/varieties/jixin/",
+  "url": "https://drychillis.com/products/jixin-chilli/",
+  "sku": "TENDA-JIXIN-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "50,000 – 70,000" },
     { "@type": "PropertyValue", "name": "Region", "value": "Guizhou, Hunan" },
@@ -59,7 +63,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Jixin Chilli — 50,000–70,000 SHU | Tenda Peppers"
   description="Jixin (chicken-heart) pepper — extra-hot chilli from Guizhou & Hunan at 50,000–70,000 SHU for chilli oil and Sichuan dishes."
-  jsonLd={[definedTermJsonLd, faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -151,7 +155,7 @@ const faqJsonLd = {
 
     <div style="margin-top:32px;">
       <a class="cta" href="/contact/">Request Jixin Quotation</a>
-      <a class="cta cta-outline" href="/varieties/xiaomi/" style="margin-left:8px;">Xiaomi →</a>
+      <a class="cta cta-outline" href="/products/xiaomi-chilli/" style="margin-left:8px;">Xiaomi →</a>
     </div>
   </div>
 </BaseLayout>

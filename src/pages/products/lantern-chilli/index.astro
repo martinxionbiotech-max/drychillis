@@ -1,13 +1,17 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const definedTermJsonLd = {
+const productJsonLd = {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "@id": "https://drychillis.com/varieties/lantern/#term",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/lantern-chilli/#product",
   "name": "Lantern Pepper (Denglongjiao)",
   "description": "Medium-heat whole chilli at 10,000–20,000 SHU from Shandong and Hebei, with balanced colour, aroma and flavour. Lantern-shaped pods are used for dry-pot, hot-pot and food service where the chilli stays visible.",
-  "url": "https://drychillis.com/varieties/lantern/",
+  "url": "https://drychillis.com/products/lantern-chilli/",
+  "sku": "TENDA-LANTERN-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 20,000 (medium)" },
     { "@type": "PropertyValue", "name": "Region", "value": "Shandong, Hebei" },
@@ -51,7 +55,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Lantern Pepper (Denglongjiao) | Tenda Peppers"
   description="Lantern pepper (denglongjiao) — medium-heat whole chilli with balanced colour, aroma and flavour for dry-pot, hot-pot and food service. China manufacturer."
-  jsonLd={[definedTermJsonLd, faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

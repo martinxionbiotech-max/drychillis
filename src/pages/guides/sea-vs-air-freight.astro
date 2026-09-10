@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sea vs Air Freight for Chilli Imports", "description": "Sea vs air freight for chilli and paprika imports — cost, transit time, customs documents and Incoterms explained.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-02", "dateModified": "2026-09-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/sea-vs-air-freight/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -40,7 +42,7 @@ const faqJsonLd = {
   author="Tenda Peppers Technical Team"
   datePublished="2026-09-02"
   dateModified="2026-09-02"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

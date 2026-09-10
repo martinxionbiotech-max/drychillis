@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Копчёная паприка против порошка чили", "description": "Копчёная паприка против порошка чили — слабоострый сладкий перец для дыма и цвета против смолотого острого перца для остроты.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-02", "dateModified": "2026-09-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/smoked-paprika-vs-chilli-powder/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -49,7 +51,7 @@ const faqJsonLd = {
   datePublished="2026-09-02"
   dateModified="2026-09-02"
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

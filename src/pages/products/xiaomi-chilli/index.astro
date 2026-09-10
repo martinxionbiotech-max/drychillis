@@ -1,13 +1,17 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const definedTermJsonLd = {
+const productJsonLd = {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "@id": "https://drychillis.com/varieties/xiaomi/#term",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/xiaomi-chilli/#product",
   "name": "Xiaomi Chilli",
   "description": "Small slender extra-hot chilli at 50,000–70,000 SHU from Yunnan and Guizhou. Its compact pod concentrates heat, making it suitable for high-heat whole chillies, segments and chilli oil.",
-  "url": "https://drychillis.com/varieties/xiaomi/",
+  "url": "https://drychillis.com/products/xiaomi-chilli/",
+  "sku": "TENDA-XIAOMI-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "50,000 – 70,000" },
     { "@type": "PropertyValue", "name": "Region", "value": "Yunnan, Guizhou" },
@@ -59,7 +63,7 @@ const faqJsonLd = {
 <BaseLayout
   title="Xiaomi Chilli — 50,000–70,000 SHU | Tenda Peppers"
   description="Xiaomi pepper — small slender extra-hot chilli from Yunnan & Guizhou at 50,000–70,000 SHU for whole chillies, segments and chilli oil. China manufacturer."
-  jsonLd={[definedTermJsonLd, faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -152,7 +156,7 @@ const faqJsonLd = {
 
     <div style="margin-top:32px;">
       <a class="cta" href="/contact/">Request Xiaomi Quotation</a>
-      <a class="cta cta-outline" href="/varieties/jinta/" style="margin-left:8px;">Jinta (Medium) →</a>
+      <a class="cta cta-outline" href="/products/jinta-chilli/" style="margin-left:8px;">Jinta (Medium) →</a>
     </div>
   </div>
 </BaseLayout>

@@ -2,7 +2,7 @@
   Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 /
-  Link: </data/products.json>; rel="describedby", </data/products.es.json>; rel="describedby", </data/products.ar.json>; rel="describedby", </data/varieties.json>; rel="describedby", </data/varieties.es.json>; rel="describedby", </data/varieties.ar.json>; rel="describedby"
+  Link: </data/products.json>; rel="describedby", </data/products.es.json>; rel="describedby", </data/products.ar.json>; rel="describedby", </data/products.ru.json>; rel="describedby", 
 
 /data/*.json
   Content-Type: application/json; charset=utf-8

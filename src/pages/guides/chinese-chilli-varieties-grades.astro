@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Chinese Chilli Varieties: Heat & Region", "description": "Chinese chilli varieties guide — from Xinjiang sweet pepper to Jixin, with SHU heat bands, growing regions and best uses.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/chinese-chilli-varieties-grades/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -40,7 +42,7 @@ const faqJsonLd = {
   author="Tenda Peppers Technical Team"
   datePublished="2026-09-01"
   dateModified="2026-09-01"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

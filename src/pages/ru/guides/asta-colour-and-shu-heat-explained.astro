@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Острота перца: объяснение SHU против капсаицина", "description": "Как работает острота перца — SHU (единицы Сковилла), капсаицин и почему острота нелинейна. Руководство для покупателей. Центр знаний Tenda Peppers.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/asta-colour-and-shu-heat-explained/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -41,7 +43,7 @@ const faqJsonLd = {
   datePublished="2026-09-01"
   dateModified="2026-09-01"
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Variedades de Chile Chino: Picor y Región", "description": "Guía de variedades de chile chino — del pimiento dulce de Xinjiang al Jixin, con bandas SHU, regiones y mejores usos.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/chinese-chilli-varieties-grades/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -41,7 +43,7 @@ const faqJsonLd = {
   datePublished="2026-09-01"
   dateModified="2026-09-01"
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

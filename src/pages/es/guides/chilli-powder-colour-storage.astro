@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Color y Almacenamiento del Chile en Polvo", "description": "Por qué se desvanece el chile en polvo y se oscurece el pimentón dulce, y cómo almacenarlo (fresco, seco, oscuro, sellado) para mantener el color.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-02", "dateModified": "2026-09-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/chilli-powder-colour-storage/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -41,7 +43,7 @@ const faqJsonLd = {
   datePublished="2026-09-02"
   dateModified="2026-09-02"
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">

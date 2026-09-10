@@ -5,8 +5,10 @@
   "name": "Especificaciones de Producto de Tenda Peppers",
   "description": "Especificaciones públicas de producto para el pimentón en polvo y los chiles secos de Tenda Peppers. Los valores son rangos representativos y deben confirmarse para una cotización.",
   "url": "https://drychillis.com/data/products.es.json",
-  "publisher": { "@id": "https://drychillis.com/#organization" },
-  "dateModified": "2026-09-08",
+  "publisher": {
+    "@id": "https://drychillis.com/#organization"
+  },
+  "dateModified": "2026-09-10",
   "inLanguage": "es",
   "isAccessibleForFree": true,
   "distribution": {
@@ -23,19 +25,44 @@
       "url": "https://drychillis.com/products/paprika-powder/",
       "sku": "TENDA-PAPRIKA-POWDER",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "image": [
         "https://drychillis.com/images/products/paprika-powder.jpg",
         "https://drychillis.com/images/products/paprika-sweet.jpg",
         "https://drychillis.com/images/products/paprika-low-heat.jpg"
       ],
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Valor de Color ASTA", "value": "60–240 (según variedad)" },
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "<500 – 10,000" },
-        { "@type": "PropertyValue", "name": "Humedad", "value": "<13%" },
-        { "@type": "PropertyValue", "name": "Malla (Mesh)", "value": "60–80 mesh" },
-        { "@type": "PropertyValue", "name": "Procesamiento", "value": "Desemillado, filtrado por imán, inspeccionado por rayos X, clasificado por color" }
+        {
+          "@type": "PropertyValue",
+          "name": "Valor de Color ASTA",
+          "value": "60–240 (según variedad)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "<500 – 10,000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Humedad",
+          "value": "<13%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Malla (Mesh)",
+          "value": "60–80 mesh"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Procesamiento",
+          "value": "Desemillado, filtrado por imán, inspeccionado por rayos X, clasificado por color"
+        }
       ]
     },
     {
@@ -46,8 +73,13 @@
       "url": "https://drychillis.com/products/dried-chillies/",
       "sku": "TENDA-DRIED-CHILLIES",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "image": [
         "https://drychillis.com/images/products/chilli-whole.jpg",
         "https://drychillis.com/images/products/chilli-flakes.jpg",
@@ -55,11 +87,31 @@
         "https://drychillis.com/images/products/chilli-segments.jpg"
       ],
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000 – 70,000+" },
-        { "@type": "PropertyValue", "name": "Formas de Producto", "value": "Enteros, copos, polvo, segmentos" },
-        { "@type": "PropertyValue", "name": "Humedad", "value": "<13%" },
-        { "@type": "PropertyValue", "name": "Malla (Mesh)", "value": "60–80 mesh (polvo)" },
-        { "@type": "PropertyValue", "name": "Procesamiento", "value": "Desemillado, filtrado por imán, inspeccionado por rayos X, clasificado por color" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000 – 70,000+"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Formas de Producto",
+          "value": "Enteros, copos, polvo, segmentos"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Humedad",
+          "value": "<13%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Malla (Mesh)",
+          "value": "60–80 mesh (polvo)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Procesamiento",
+          "value": "Desemillado, filtrado por imán, inspeccionado por rayos X, clasificado por color"
+        }
       ]
     },
     {
@@ -70,12 +122,30 @@
       "url": "https://drychillis.com/products/dried-chillies/whole-dried-chillies/",
       "sku": "TENDA-WHOLE-DRIED-CHILLIES",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000–50,000+", "unitText": "SHU" },
-        { "@type": "PropertyValue", "name": "Humedad", "value": "<13%" },
-        { "@type": "PropertyValue", "name": "Variedades", "value": "Linterna, Jinta, facing-heaven, Xiaomi" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000–50,000+",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Humedad",
+          "value": "<13%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Variedades",
+          "value": "Linterna, Jinta, facing-heaven, Xiaomi"
+        }
       ]
     },
     {
@@ -86,12 +156,31 @@
       "url": "https://drychillis.com/products/dried-chillies/chilli-flakes/",
       "sku": "TENDA-CHILLI-FLAKES",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
-        { "@type": "PropertyValue", "name": "Tamaño de Malla", "value": "20–40", "unitText": "mesh" },
-        { "@type": "PropertyValue", "name": "Variedades", "value": "Xian, Jinta, Erjingtiao" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000–20,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño de Malla",
+          "value": "20–40",
+          "unitText": "mesh"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Variedades",
+          "value": "Xian, Jinta, Erjingtiao"
+        }
       ]
     },
     {
@@ -102,12 +191,31 @@
       "url": "https://drychillis.com/products/dried-chillies/chilli-powder/",
       "sku": "TENDA-CHILLI-POWDER",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
-        { "@type": "PropertyValue", "name": "Tamaño de Malla", "value": "60–80", "unitText": "mesh" },
-        { "@type": "PropertyValue", "name": "Variedades", "value": "Sanying, Zidantou, Seven-Star" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño de Malla",
+          "value": "60–80",
+          "unitText": "mesh"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Variedades",
+          "value": "Sanying, Zidantou, Seven-Star"
+        }
       ]
     },
     {
@@ -118,11 +226,25 @@
       "url": "https://drychillis.com/products/dried-chillies/chilli-segments/",
       "sku": "TENDA-CHILLI-SEGMENTS",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": ">50,000", "unitText": "SHU" },
-        { "@type": "PropertyValue", "name": "Variedades", "value": "Jixin, Xiaomi, Chilli King" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": ">50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Variedades",
+          "value": "Jixin, Xiaomi, Chilli King"
+        }
       ]
     },
     {
@@ -133,11 +255,25 @@
       "url": "https://drychillis.com/products/sanying-chilli/",
       "sku": "TENDA-SANYING-CHILLI",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
-        { "@type": "PropertyValue", "name": "Origen", "value": "Henan y Hebei, China" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Origen",
+          "value": "Henan y Hebei, China"
+        }
       ]
     },
     {
@@ -148,14 +284,39 @@
       "url": "https://drychillis.com/products/yidu-chilli/",
       "sku": "TENDA-YIDU-RED-CHILLI",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "<1,000 rango dulce (tope inferior a 10,000)" },
-        { "@type": "PropertyValue", "name": "Color", "value": "Alto (pulpa gruesa) — confirme ASTA con nosotros" },
-        { "@type": "PropertyValue", "name": "Región", "value": "Shandong (Yidu/Qingzhou), Xinjiang" },
-        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina de tipo dulce de pulpa gruesa" },
-        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Pimentón en polvo, colorante rojo natural, oleorresina" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "<1,000 rango dulce (tope inferior a 10,000)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Color",
+          "value": "Alto (pulpa gruesa) — confirme ASTA con nosotros"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong (Yidu/Qingzhou), Xinjiang"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina de tipo dulce de pulpa gruesa"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Pimentón en polvo, colorante rojo natural, oleorresina"
+        }
       ]
     },
     {
@@ -166,13 +327,34 @@
       "url": "https://drychillis.com/products/erjingtiao-chilli/",
       "sku": "TENDA-ERJINGTIAO-CHILLI",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "15,000 – 30,000 (medio-alto)" },
-        { "@type": "PropertyValue", "name": "Región", "value": "Sichuan (llanura de Chengdu)" },
-        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vaina delgada, arrugada, de pulpa fina" },
-        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Hotpot, doubanjiang, aceite de chile, pasta" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "15,000 – 30,000 (medio-alto)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Sichuan (llanura de Chengdu)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina delgada, arrugada, de pulpa fina"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Hotpot, doubanjiang, aceite de chile, pasta"
+        }
       ]
     },
     {
@@ -183,13 +365,224 @@
       "url": "https://drychillis.com/products/tianjin-red-chilli/",
       "sku": "TENDA-TIANJIN-RED-CHILLI",
       "category": "Especias y Condimentos",
-      "brand": { "@type": "Brand", "name": "Tenda Peppers" },
-      "manufacturer": { "@id": "https://drychillis.com/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "30,000 – 50,000 (medio-alto a alto)" },
-        { "@type": "PropertyValue", "name": "Región", "value": "Recolectado/exportado vía Tianjin" },
-        { "@type": "PropertyValue", "name": "Tipo de Fruto", "value": "Vainas en racimo, apuntando hacia arriba" },
-        { "@type": "PropertyValue", "name": "Ideal Para", "value": "Exportación entero, polvo, copos, segmentos" }
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "30,000 – 50,000 (medio-alto a alto)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Recolectado/exportado vía Tianjin"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vainas en racimo, apuntando hacia arriba"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Exportación entero, polvo, copos, segmentos"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/jinta-chilli/#product",
+      "name": "Chile Jinta",
+      "description": "Chile de picor medio de Gansu y Xinjiang a 10.000–20.000 SHU. Vainas largas de 11–14 cm con piel gruesa, brillante y de un rojo azufaifa intenso; se usa para copos de chile visibles, color, condimento y pasta de chile.",
+      "url": "https://drychillis.com/products/jinta-chilli/",
+      "sku": "TENDA-JINTA-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000 – 20,000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Gansu, Xinjiang"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina larga (11–14 cm), piel gruesa y brillante"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Copos visibles, color, condimento"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/lantern-chilli/#product",
+      "name": "Pimiento Linterna (Denglongjiao)",
+      "description": "Chile entero de picor medio a 10.000–20.000 SHU de Shandong y Hebei, con color, aroma y sabor equilibrados. Las vainas en forma de linterna se usan para dry-pot, hot-pot y food service donde el chile permanece visible.",
+      "url": "https://drychillis.com/products/lantern-chilli/",
+      "sku": "TENDA-LANTERN-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000 – 20,000 (medio)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong, Hebei"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina en forma de linterna, planta de 1–1,2 m"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Dry-pot, hot-pot, chile entero visible"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/zidantou-chilli/#product",
+      "name": "Chile Zidantou (Bala)",
+      "description": "Chile cónico en forma de bala, de alto picor, a 20.000–50.000 SHU, de Shandong y Anhui. Se usa como base fiable para salsa picante, alimentos industriales y chile en polvo.",
+      "url": "https://drychillis.com/products/zidantou-chilli/",
+      "sku": "TENDA-ZIDANTOU-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "20,000 – 50,000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong, Anhui"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Cónico (bala)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Salsa picante, alimentos industriales, polvo"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/jixin-chilli/#product",
+      "name": "Chile Jixin (Corazón de Pollo)",
+      "description": "Vaina pequeña con forma de corazón, extra picante, a 50.000–70.000 SHU, de Guizhou y Hunan. Estándar para productos de picor extremo, aceite de chile y platos al estilo Sichuan.",
+      "url": "https://drychillis.com/products/jixin-chilli/",
+      "sku": "TENDA-JIXIN-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "50,000 – 70,000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Guizhou, Hunan"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina pequeña con forma de corazón"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Picor extremo, aceite de chile, platos de Sichuan"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/xiaomi-chilli/#product",
+      "name": "Chile Xiaomi",
+      "description": "Chile pequeño y esbelto, extra picante, a 50.000–70.000 SHU, de Yunnan y Guizhou. Su vaina compacta concentra el picor, lo que lo hace adecuado para chiles enteros de alto picor, segmentos y aceite de chile.",
+      "url": "https://drychillis.com/products/xiaomi-chilli/",
+      "sku": "TENDA-XIAOMI-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "50,000 – 70,000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Yunnan, Guizhou"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tipo de Fruto",
+          "value": "Vaina pequeña y esbelta"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Chile entero, segmentos, aceite de chile"
+        }
       ]
     }
   ]

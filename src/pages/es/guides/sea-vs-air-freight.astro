@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Flete Marítimo vs Aéreo para Importar Chile", "description": "Flete marítimo vs aéreo para importar chile y pimentón — coste, tiempo de tránsito, documentos de aduana e Incoterms (FOB, CIF) explicados.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-02", "dateModified": "2026-09-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/sea-vs-air-freight/"}};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -41,7 +43,7 @@ const faqJsonLd = {
   datePublished="2026-09-02"
   dateModified="2026-09-02"
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
