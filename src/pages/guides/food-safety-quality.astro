@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Dried Chilli Food Safety & Quality: Contaminants, Limits and Testing", "description": "Aflatoxins, ochratoxin A, pesticide residues, Salmonella, heavy metals, moisture and water activity — the contaminant limits, test methods and buyer implications for dried chilli and paprika.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/food-safety-quality/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the main food-safety risks in dried chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main risks are mycotoxins (aflatoxins, ochratoxin A), pesticide residues, and microbial contamination (Salmonella), plus moisture and foreign matter. EU limits are aflatoxin B1 < 5 µg/kg, total aflatoxins < 10 µg/kg and ochratoxin A < 20 µg/kg for dried chilli and paprika."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do aflatoxins matter in dried chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aflatoxins are potent mycotoxins produced by moulds (Aspergillus) when chilli is poorly dried or stored humid. They are tightly regulated — the EU caps aflatoxin B1 at 5 µg/kg — so drying and storage control, plus batch testing, are essential."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does drying concentrate pesticide residues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — drying removes water but not most pesticides, so residues concentrate relative to fresh weight. EU rules apply a dehydration factor when assessing dried-product MRLs, which is why residue testing is done on the dried material."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Dried Chilli Food Safety & Quality: Contaminants, Limits & Testing | Tenda Peppers"
+  description="Aflatoxins, ochratoxin A, pesticide residues, Salmonella, heavy metals, moisture and water activity — contaminant limits, test methods and buyer implications for dried chilli."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Food Safety &amp; Quality
+    </nav>
+
+    <h1>Dried Chilli Food Safety &amp; Quality: Contaminants, Limits and Testing</h1>
+    <p class="lead">
+      Dried chilli fails an import not because it is not red enough, but because a contaminant test
+      came back over limit. This guide walks the three contaminant families that actually stop a
+      shipment — mycotoxins, pesticide residues and microbes — plus the moisture and foreign-matter
+      controls that sit behind them.
+    </p>
+
+    <h2 style="margin-top:32px;">The three contaminant families that matter</h2>
+    <p>
+      A dried chilli food-safety programme is really about three families, plus two physical
+      parameters:
+    </p>
+    <ul>
+      <li><strong>Mycotoxins</strong> — aflatoxins and ochratoxin A, produced by moulds when the crop
+      is poorly dried or stored humid.</li>
+      <li><strong>Pesticide residues</strong> — field chemicals that concentrate during drying.</li>
+      <li><strong>Microbial</strong> — chiefly <em>Salmonella</em>, the pathogen that drives spice
+      recalls.</li>
+      <li><strong>Moisture and water activity</strong> — the physical controls that prevent both
+      mould growth and microbial survival.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Aflatoxins and ochratoxin A (mycotoxins)</h2>
+    <p>
+      <strong>What:</strong> Aflatoxins are potent toxins produced by <em>Aspergillus</em> moulds;
+      ochratoxin A comes from <em>Aspergillus</em> and <em>Penicillium</em>. Both form when chilli is
+      harvested damp, dried too slowly, or stored in humid conditions.
+    </p>
+    <p>
+      <strong>Why it matters:</strong> They are carcinogenic and tightly regulated. The European Union
+      (Regulation EC 1881/2006) caps <strong>aflatoxin B1 at 5 µg/kg</strong> and
+      <strong>total aflatoxins (B1+B2+G1+G2) at 10 µg/kg</strong> for dried chilli and paprika, with
+      <strong>ochratoxin A at 20 µg/kg</strong>. Other markets differ — India's FSSAI, for example,
+      allows a higher total aflatoxin ceiling — so you must check the target market's limit, not
+      assume one global number.
+    </p>
+    <p>
+      <strong>How controlled:</strong> Fast, uniform drying to a low moisture, clean storage, and
+      <strong>batch testing</strong> on the dried product. This is prevention first, testing second —
+      testing catches problems, it does not remove them.
+    </p>
+
+    <h2 style="margin-top:32px;">Pesticide residues</h2>
+    <p>
+      <strong>What:</strong> Residues of field-applied pesticides. <strong>Why it matters:</strong>
+      they are limited by maximum residue levels (MRLs) that differ by market and by pesticide.
+    </p>
+    <p>
+      <strong>The drying concentration effect:</strong> drying removes water but not most pesticides,
+      so the residue <em>concentrates</em> relative to fresh weight. EU rules account for this with a
+      dehydration factor when assessing dried-product MRLs. This is why residue testing is done on
+      the <em>dried</em> material, not the fresh fruit.
+    </p>
+    <p>
+      <strong>Buyer implication:</strong> request a residue screen against the target market's MRL
+      list, and confirm the supplier tests the dried product — not a wet-weight surrogate.
+    </p>
+
+    <h2 style="margin-top:32px;">Salmonella and microbial specification</h2>
+    <p>
+      <strong>What:</strong> <em>Salmonella</em> is the microbial hazard that matters most in dried
+      spices — it survives drying and has caused major recalls. <strong>Why:</strong> dried chilli is
+      used in ready-to-eat foods, so a pathogen present in the raw spice transfers to the finished
+      dish.
+    </p>
+    <p>
+      <strong>How controlled:</strong> absence testing for <em>Salmonella</em> per lot, plus a total
+      aerobic count and yeast/mould spec. Where a buyer's spec requires it, a
+      <strong>microbial-reduction step</strong> — steam sterilisation or, where permitted,
+      irradiation — lowers the microbial load. Each method has trade-offs: steam can darken colour
+      slightly, irradiation is restricted in some markets.
+    </p>
+
+    <h2 style="margin-top:32px;">Heavy metals and foreign matter</h2>
+    <p>
+      <strong>Heavy metals</strong> (lead, cadmium, arsenic) are limited by regulation and arise from
+      soil and environment. They are tested by the lab, not managed on the line.
+      <strong>Foreign matter</strong> (stones, glass, metal, stems) is a physical hazard managed by
+      screening: de-seeding, magnetic filtration for ferrous metal, X-ray inspection for dense
+      objects, and optical colour sorting for defects. See our
+      <a href="/quality-certifications/">quality &amp; certifications</a> page for the production
+      chain behind this.
+    </p>
+
+    <h2 style="margin-top:32px;">Moisture and water activity</h2>
+    <p>
+      <strong>What:</strong> moisture is the water content by weight; <strong>water activity
+      (a<sub>w</sub>)</strong> is the free water available for microbial growth — the more meaningful
+      number. <strong>Why:</strong> low water activity is what keeps a dried chilli shelf-stable and
+      stops mould (and therefore mycotoxin formation).
+    </p>
+    <p>
+      A typical dried-chilli spec targets <strong>moisture below about 13%</strong> and a low water
+      activity. Moisture and water activity are related but not interchangeable — a product can read
+      acceptable moisture yet still have high free water, which is why water activity is the better
+      safety indicator.
+    </p>
+
+    <h2 style="margin-top:32px;">What a food-safety documentation set should contain</h2>
+    <ul>
+      <li><strong>COA</strong> — a certificate of analysis for the specific lot, showing measured
+      values, not a catalogue range.</li>
+      <li><strong>Mycotoxin screen</strong> — aflatoxin B1/total and ochratoxin A against the target
+      market's limit.</li>
+      <li><strong>Pesticide screen</strong> — against the target market's MRL list.</li>
+      <li><strong>Microbial</strong> — <em>Salmonella</em> absence, total plate count, yeast/mould.</li>
+      <li><strong>Traceability</strong> — lot-to-growing-base linkage, retained samples, and a
+      complaint/recall process.</li>
+    </ul>
+    <p>
+      A supplier that can produce this for the lot you are actually buying — not a generic
+      certificate — is the practical test of a serious food-safety programme.
+    </p>
+
+    <h2 style="margin-top:32px;">Limitations and common misconceptions</h2>
+    <ul>
+      <li><strong>"X-ray and a magnet make it safe."</strong> They control foreign matter only; they
+      do nothing for mycotoxins, pesticides or Salmonella.</li>
+      <li><strong>"One global limit applies."</strong> No — aflatoxin, ochratoxin and MRL limits differ
+      by market; specify the destination.</li>
+      <li><strong>"Drying removes pesticides."</strong> No — drying concentrates them relative to
+      weight.</li>
+      <li><strong>"Low moisture means safe."</strong> Water activity is the better indicator; check
+      both.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, the biggest food-safety mistake a chilli buyer makes is
+      trusting a supplier's marketing claims instead of asking for the lot-specific COA and test
+      results.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Aflatoxins and Salmonella are invisible, so the only evidence that
+      counts is a test number tied to the lot you are buying. A supplier who says "we have HACCP"
+      but cannot produce a mycotoxin screen for that specific lot has not reduced your risk — they
+      have only described their system. Prevention (drying, storage) and proof (testing) are two
+      different things, and the buyer should demand both.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a dried-chilli supplier's technical
+      team, not a regulatory statement. The limits cited are the European Union's published values;
+      confirm the current limit for your target market and lot before contracting.
+    </p>
+
+    <h2 style="margin-top:32px;">Sources</h2>
+    <ul style="font-size:0.9rem;color:#6b5a54;">
+      <li>European Commission Regulation (EC) 1881/2006 — maximum levels for aflatoxins and ochratoxin A in spices.</li>
+      <li>Regulation (EC) 396/2005 — pesticide MRLs and the dehydration factor for dried products.</li>
+      <li>CBI / EU buyer-requirements guidance for spices and herbs.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What are the main food-safety risks in dried chilli?</h3>
+      <p>Mycotoxins (aflatoxins, ochratoxin A), pesticide residues and microbial contamination (Salmonella), plus moisture and foreign matter. EU limits: aflatoxin B1 &lt; 5 µg/kg, total aflatoxins &lt; 10 µg/kg, ochratoxin A &lt; 20 µg/kg.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do aflatoxins matter in dried chilli?</h3>
+      <p>Aflatoxins are potent mould toxins formed when chilli is poorly dried or stored humid. They are tightly regulated (EU caps B1 at 5 µg/kg), so drying, storage and batch testing are essential.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does drying concentrate pesticide residues?</h3>
+      <p>Yes — drying removes water but not most pesticides, so residues concentrate relative to fresh weight. EU rules apply a dehydration factor when assessing dried-product MRLs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What documentation should I request?</h3>
+      <p>A lot-specific COA with mycotoxin screen, pesticide screen, Salmonella absence, and traceability to the growing base.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/quality-certifications/">Our Quality &amp; Certifications</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
