@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Paprika vs Chilli Powder: What's the Difference", "description": "Paprika is sweet, non-pungent pepper ground for colour and mild flavour; chilli powder is hot chilli ground for heat. A buyer's guide to telling them apart and choosing the right one.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/paprika-vs-chilli-powder/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between paprika and chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paprika is ground sweet, non-pungent pepper (near 0 SHU) bought for red colour and mild flavour; chilli powder is ground hot chilli bought for heat and flavour. They are not interchangeable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I substitute paprika for chilli powder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for heat — paprika has essentially no capsaicin. You can use paprika for colour without heat, but you cannot get chilli-powder heat from paprika."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Paprika vs Chilli Powder: What's the Difference | Tenda Peppers"
+  description="Paprika is sweet, non-pungent pepper ground for colour; chilli powder is hot chilli ground for heat. A buyer's guide to telling them apart and choosing the right one."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Paprika vs Chilli Powder
+    </nav>
+
+    <h1>Paprika vs Chilli Powder: What's the Difference</h1>
+    <p class="lead">
+      Paprika and chilli powder are both red powders from the same plant genus, and that is where the
+      similarity ends. One is bought for colour and mild flavour; the other is bought for heat. This
+      guide explains the difference and how to specify each correctly.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Paprika is ground <em>sweet, non-pungent</em> pepper (near 0 SHU)
+      bought for its red colour and mild flavour; chilli powder is ground <em>hot</em> chilli bought for
+      heat. They are not interchangeable — paprika cannot provide chilli heat.
+    </div>
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Paprika</th>
+          <th style="padding:8px;">Chilli powder</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Source</strong></td>
+          <td style="padding:8px;">Sweet, non-pungent pepper (Capsicum annuum)</td>
+          <td style="padding:8px;">Hot chilli varieties</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">~0–500 (non-pungent)</td>
+          <td style="padding:8px;">Variable — thousands to tens of thousands</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Bought for</strong></td>
+          <td style="padding:8px;">Colour (ASTA) + mild flavour</td>
+          <td style="padding:8px;">Heat + flavour</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Key spec</strong></td>
+          <td style="padding:8px;">ASTA colour value</td>
+          <td style="padding:8px;">SHU heat window</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the two are confused</h2>
+    <p>
+      Both are dried, ground red pepper powders, and in some regions "chilli powder" is used loosely to
+      describe either. The confusion costs money when a buyer orders "chilli powder" expecting heat and
+      receives a colour-grade paprika — or vice versa. The fix is to specify the <em>variety and the
+      SHU window</em>, which removes the ambiguity entirely.
+    </p>
+
+    <h2 style="margin-top:32px;">How to specify each correctly</h2>
+    <ul>
+      <li><strong>Paprika</strong> — specify the <a href="/guides/asta-colour-value/">ASTA colour
+      value</a> and confirm it is sweet (non-pungent), not hot.</li>
+      <li><strong>Chilli powder</strong> — specify the <a href="/guides/asta-colour-and-shu-heat-explained/">SHU
+      window</a>, the variety, and the mesh.</li>
+    </ul>
+    <p>
+      The two properties you are separating are exactly the two independent dimensions this site covers:
+      <a href="/guides/asta-colour-value/">colour (ASTA)</a> and
+      <a href="/guides/asta-colour-and-shu-heat-explained/">heat (SHU)</a>. Paprika optimises colour with
+      no heat; chilli powder optimises heat, usually with less colour.
+    </p>
+
+    <h2 style="margin-top:32px;">When to use each</h2>
+    <ul>
+      <li><strong>Paprika</strong> — colour and mild sweet flavour: goulash, paprika chicken, colour
+      blending, snacks, and anywhere heat is unwanted.</li>
+      <li><strong>Chilli powder</strong> — heat and chilli flavour: curries, hot sauces, chilli oil,
+      seasoning blends and anything scored on spiciness.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, the paprika-vs-chilli-powder mix-up is a specification
+      problem, not a sourcing problem — and it is solved by writing a variety and an SHU window instead
+      of a generic name.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> The two powders look alike and the names blur across regions, so the
+      only reliable separation is the number: ASTA for paprika, SHU for chilli powder. A buyer who
+      writes "paprika, ASTA 120, sweet" or "Sanying chilli powder, 30,000–50,000 SHU" never receives the
+      wrong product. The buyer who writes "red powder" is guessing.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a dried-chilli supplier's technical team,
+      not a universal naming rule — regional terminology varies, so always confirm the variety and the
+      heat window.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between paprika and chilli powder?</h3>
+      <p>Paprika is ground sweet, non-pungent pepper (near 0 SHU) bought for colour and mild flavour; chilli powder is ground hot chilli bought for heat. They are not interchangeable.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I substitute paprika for chilli powder?</h3>
+      <p>Not for heat — paprika has essentially no capsaicin. Use paprika for colour without heat; get chilli heat from chilli powder.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/paprika-powder/">Browse Paprika Powder</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Browse Chilli Powder</a>
+    </div>
+  </div>
+</BaseLayout>
