@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Choosing Chilli by Application: Hot Sauce, Chilli Oil, Snack Seasoning", "description": "How to select the right chilli variety, SHU, ASTA and form for hot sauce, chilli oil, snack seasoning and blends — an application-by-application formulation guide.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/chilli-applications/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which chilli should I use for hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-heat varieties in the 20,000–50,000+ SHU band — Sanying, Zidantou or Jixin — usually as powder or flakes. Specify the variety and a precise SHU window, not a generic 'hot chilli'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What chilli is best for chilli oil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aromatic varieties carry chilli oil — Erjingtiao for fragrance, often blended with a heat variety like Sanying or Jixin, in flakes or segments for even infusion."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Choosing Chilli by Application: Hot Sauce, Chilli Oil & Snack Seasoning | Tenda Peppers"
+  description="How to select the right chilli variety, SHU, ASTA and form for hot sauce, chilli oil, snack seasoning and blends."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Chilli by Application
+    </nav>
+
+    <h1>Choosing Chilli by Application: Hot Sauce, Chilli Oil &amp; Snack Seasoning</h1>
+    <p class="lead">
+      The right chilli depends on what the finished product is scored on — heat, colour, aroma or all
+      three. This guide maps the four common applications to the variety, SHU, form and mesh that suit
+      each.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Hot sauce wants high heat (Sanying/Zidantou/Jixin, 20,000–50,000+
+      SHU); chilli oil wants aroma (Erjingtiao) blended with heat; snack seasoning wants balanced heat
+      and even dispersion (Seven-Star powder); seasoning blends want a controlled, consistent SHU window
+      by variety.
+    </div>
+
+    <h2 style="margin-top:32px;">Hot sauce</h2>
+    <p>
+      Hot sauce is scored on heat and colour. Use high-heat varieties —
+      <strong>Sanying, Zidantou or Jixin</strong> in the 20,000–50,000+ SHU band — usually as powder or
+      flakes. Specify the variety and a precise SHU window; heat is non-linear, so "hot" is not a
+      specification. See <a href="/guides/asta-colour-and-shu-heat-explained/">SHU explained</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Chilli oil and infused oil</h2>
+    <p>
+      Chilli oil is judged on fragrance as much as heat. The classic base is aromatic
+      <strong>Erjingtiao</strong> (15,000–30,000 SHU), often blended with a heat variety such as
+      Sanying or Jixin. Use <strong>flakes or segments</strong> for even infusion and to keep the
+      aromatic surface intact — fine powder clouds the oil and fades faster.
+    </p>
+
+    <h2 style="margin-top:32px;">Snack seasoning</h2>
+    <p>
+      Snack coating wants even, instant heat and colour dispersion across a large surface. Use
+      <strong>Seven-Star</strong> (or a Sanying/Zidantou blend) at <strong>60–80 mesh powder</strong>,
+      in a controlled SHU window. Powder disperses fastest, which is exactly what a dry snack seasoning
+      needs.
+    </p>
+
+    <h2 style="margin-top:32px;">Seasoning blends and spice mixes</h2>
+    <p>
+      Blends need a <strong>controlled, consistent SHU window by variety</strong>, plus a defined colour
+      (ASTA) where colour matters. Specify the variety, the SHU window, the mesh and the ASTA — heat,
+      colour and flavour are independent, and a blend drifts unless each is pinned. See
+      <a href="/guides/paprika-chilli-buying-guide/">how to specify and source</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Application → selection matrix</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Application</th>
+          <th style="padding:8px;">Variety</th>
+          <th style="padding:8px;">SHU</th>
+          <th style="padding:8px;">Form</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Hot sauce</strong></td>
+          <td style="padding:8px;">Sanying, Zidantou, Jixin</td>
+          <td style="padding:8px;">20,000–50,000+</td>
+          <td style="padding:8px;">Powder, flakes</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Chilli oil</strong></td>
+          <td style="padding:8px;">Erjingtiao + heat variety</td>
+          <td style="padding:8px;">15,000–50,000</td>
+          <td style="padding:8px;">Flakes, segments</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Snack seasoning</strong></td>
+          <td style="padding:8px;">Seven-Star, Sanying</td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">Powder (60–80 mesh)</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Seasoning blends</strong></td>
+          <td style="padding:8px;">Variety-pinned</td>
+          <td style="padding:8px;">Controlled window</td>
+          <td style="padding:8px;">Powder, flakes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, application selection is really three questions — what is
+      the product scored on, what SHU window delivers it, and which variety holds that window
+      consistently — and the answer is a blend, not a single chilli.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Heat, colour and aroma rarely all peak in one variety, so serious
+      products blend. A hot sauce pairs a heat variety with a colour/aroma variety; a chilli oil pairs
+      aromatic Erjingtiao with heat. The buyers who get consistent product are the ones who name the
+      varieties and the window, not the ones who order "hot chilli".
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a chilli supplier's technical team.
+      Confirm your exact SHU, ASTA, form and mesh with us for your specific product.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Which chilli should I use for hot sauce?</h3>
+      <p>High-heat varieties in the 20,000–50,000+ SHU band — Sanying, Zidantou or Jixin — usually as powder or flakes. Specify the variety and a precise SHU window.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What chilli is best for chilli oil?</h3>
+      <p>Aromatic Erjingtiao carries the fragrance, usually blended with a heat variety like Sanying or Jixin, in flakes or segments for even infusion.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

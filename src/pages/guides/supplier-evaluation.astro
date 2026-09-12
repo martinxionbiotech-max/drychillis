@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "How to Evaluate a Dried Chilli Supplier: A Qualification Checklist", "description": "A buyer's checklist for evaluating a dried chilli and paprika supplier — certification, lot COA, traceability, samples, factory audit and the red flags that signal risk.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/supplier-evaluation/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I evaluate a dried chilli supplier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check four things: food-safety certification, a lot-specific COA (not a catalogue certificate), traceability from growing base to lot, and verification by sample or factory audit. A supplier who cannot produce a lot COA has not de-risked your order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the biggest red flag in a chilli supplier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No lot-specific COA — a supplier who offers only a generic certificate or a catalogue range cannot prove the lot you are buying is within spec. Lot-level test results and traceability are the proof."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="How to Evaluate a Dried Chilli Supplier: A Qualification Checklist | Tenda Peppers"
+  description="A buyer's checklist for evaluating a dried chilli supplier — certification, lot COA, traceability, samples, factory audit and red flags."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Supplier Evaluation
+    </nav>
+
+    <h1>How to Evaluate a Dried Chilli Supplier: A Qualification Checklist</h1>
+    <p class="lead">
+      A supplier who says "we have HACCP" has described their system; a supplier who can show the lot
+      COA has reduced your risk. This checklist separates the two.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Evaluate a chilli supplier on four things — food-safety
+      certification, a lot-specific COA, traceability from growing base to lot, and verification by
+      sample or factory audit. The biggest red flag is no lot COA.
+    </div>
+
+    <h2 style="margin-top:32px;">The four things to check</h2>
+    <ol>
+      <li><strong>Food-safety certification</strong> — HACCP, ISO 22000 or equivalent, and any
+      destination-specific certificates (organic, phytosanitary).</li>
+      <li><strong>Lot-specific COA</strong> — a certificate of analysis for the lot you are buying,
+      showing measured SHU, ASTA, moisture, microbial, pesticide and mycotoxin values.</li>
+      <li><strong>Traceability</strong> — a chain from growing base to finished lot, with retained
+      samples and a recall process.</li>
+      <li><strong>Verification</strong> — a sample against spec, and a factory audit for large
+      programmes.</li>
+    </ol>
+
+    <h2 style="margin-top:32px;">The qualification checklist</h2>
+    <ul>
+      <li>Certificate: current, in the supplier's name, covering the products you buy.</li>
+      <li>COA: lot-specific, not a range copied from a catalogue.</li>
+      <li>Mycotoxin and pesticide screens: against your target market's limits (see
+      <a href="/guides/food-safety-quality/">food safety</a>).</li>
+      <li>Traceability: growing-base to lot, with retained samples.</li>
+      <li>Sample: matches the specification you wrote (see
+      <a href="/guides/paprika-chilli-buying-guide/">how to specify</a>).</li>
+      <li>Audit: production chain and food-safety controls (see
+      <a href="/quality-certifications/">our quality &amp; certifications</a>).</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Red flags that signal risk</h2>
+    <ul>
+      <li><strong>No lot COA</strong> — only a generic certificate or a catalogue range.</li>
+      <li><strong>No traceability</strong> — cannot link the lot to a growing base.</li>
+      <li><strong>Vague specifications</strong> — "hot chilli" instead of a variety and SHU window.</li>
+      <li><strong>Certificate in a different name</strong> — a broker reselling someone else's cert.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, the single most useful test of a chilli supplier is simple:
+      can they produce a lot-specific COA for the lot you are actually buying?
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Aflatoxins and Salmonella are invisible, so the only evidence that
+      counts is a test number tied to your lot. A supplier who offers a system description instead of a
+      test result has not reduced your risk — they have described it. Certification proves the system;
+      the COA proves the lot. Buyers who demand both, and a sample, rarely get burned.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a dried-chilli supplier's technical team,
+      not a contractual or regulatory statement.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How do I evaluate a dried chilli supplier?</h3>
+      <p>Check food-safety certification, a lot-specific COA, traceability from growing base to lot, and verification by sample or factory audit. A supplier who cannot produce a lot COA has not de-risked your order.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the biggest red flag in a chilli supplier?</h3>
+      <p>No lot-specific COA — a generic certificate or catalogue range cannot prove the lot you are buying is within spec. Lot-level test results and traceability are the proof.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/quality-certifications/">Our Quality &amp; Certifications</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
