@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Chinese vs Indian Dried Chilli: Which Origin to Source", "description": "A decision guide comparing Chinese and Indian dried chilli — varieties, heat, colour, aroma and applications — to help buyers choose the right origin for their product.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/chinese-vs-indian-chilli/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Chinese and Indian chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chinese chillies lean toward colour (ASTA) and aromatic varieties with controlled heat (Jinta, Zidantou, Erjingtiao); Indian chillies span the full heat spectrum — from mild Kashmiri to super-hot Bhut Jolokia — and India is the dominant global exporter of dried chilli."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which origin should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Chinese for colour-forward and aromatic applications with consistent, controllable heat; choose Indian for specific heat profiles, from colour-grade Byadgi/Kashmiri to very-hot Teja and super-hot varieties."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chinese vs Indian Dried Chilli: Which Origin to Source | Tenda Peppers"
+  description="A decision guide comparing Chinese and Indian dried chilli — varieties, heat, colour, aroma and applications — to help buyers choose the right origin."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Chinese vs Indian Chilli
+    </nav>
+
+    <h1>Chinese vs Indian Dried Chilli: Which Origin to Source</h1>
+    <p class="lead">
+      China and India dominate world chilli supply, but they are not interchangeable. This guide
+      compares the two origins by variety, heat, colour, aroma and application, so you can choose on
+      product fit rather than habit.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Choose Chinese chilli for colour-forward and aromatic applications
+      with controlled heat (Jinta, Zidantou, Erjingtiao); choose Indian chilli when you need a specific
+      heat profile — from colour-grade Kashmiri and Byadgi to the very-hot Teja and super-hot varieties.
+      The origin sets the variety toolbox, not a single heat level.
+    </div>
+
+    <h2 style="margin-top:32px;">The two origins at a glance</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Chinese chilli</th>
+          <th style="padding:8px;">Indian chilli</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Signature varieties</strong></td>
+          <td style="padding:8px;">Jinta, Zidantou (colour); Erjingtiao (aroma); Sanying, Jixin, Xiaomi (heat)</td>
+          <td style="padding:8px;">Kashmiri, Byadgi (colour); Guntur Sannam, Teja (heat); Bhut Jolokia (super-hot)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat range</strong></td>
+          <td style="padding:8px;">Mainly low-to-high medium; controlled, consistent</td>
+          <td style="padding:8px;">Full spectrum — mild to super-hot</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Colour (ASTA)</strong></td>
+          <td style="padding:8px;">Strong — high-ASTA colour varieties</td>
+          <td style="padding:8px;">Byadgi/Kashmiri are the colour workhorses</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Typical use</strong></td>
+          <td style="padding:8px;">Colour, aroma, controlled-heat blends, paprika-type</td>
+          <td style="padding:8px;">Heat-dominant dishes, curry, oleoresin, chilli extract</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Where Chinese chilli wins</h2>
+    <ul>
+      <li><strong>Colour</strong> — high-ASTA varieties (Jinta, Zidantou) and paprika-grade material.</li>
+      <li><strong>Aroma</strong> — Erjingtiao is a fragrance variety with no Indian equivalent in the same
+      role.</li>
+      <li><strong>Controlled, consistent heat</strong> — the Chinese culinary spectrum sits mostly in the
+      medium-to-high band, well suited to seasoning blends and hot sauces.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Where Indian chilli wins</h2>
+    <ul>
+      <li><strong>Heat depth</strong> — from Kashmiri's mild colour to Teja and super-hots; unmatched
+      heat ceiling.</li>
+      <li><strong>Oleoresin and extract</strong> — India is the dominant source for capsaicin oleoresin
+      and chilli extract.</li>
+      <li><strong>Specific regional profiles</strong> — Guntur Sannam for balanced heat-colour, Byadgi for
+      deep-red colour.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The decision rule</h2>
+    <p>
+      Choose by what the finished product is scored on. If colour and aroma carry the product — a
+      seasoning blend, a colour-forward sauce — Chinese varieties give you high ASTA and controlled heat.
+      If heat is the point — a curry, an extract, an extreme-heat product — Indian varieties give you the
+      heat ceiling and the oleoresin supply chain. Many industrial buyers source <em>both</em>, blending
+      Chinese colour with Indian heat.
+    </p>
+
+    <h2 style="margin-top:32px;">Limitations and notes</h2>
+    <ul>
+      <li>Both origins vary by region and crop year — always specify variety and origin, not just the
+      country.</li>
+      <li>Market supply and export rules change; confirm current conditions and the destination's
+      food-safety limits with your supplier.</li>
+      <li>This is a variety-level comparison — not a claim that one country is uniformly "hotter" or
+      "better".</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, "Chinese vs Indian chilli" is the wrong question — the
+      right question is which variety does your product need, and the answer is usually a blend of
+      origins.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> No single origin optimises heat, colour and aroma at once. Chinese
+      varieties give you controlled heat and strong colour; Indian varieties give you the heat ceiling
+      and oleoresin. Buyers who choose a country instead of a variety end up with a compromise; buyers
+      who specify the variety get the profile they actually want, from whichever origin grows it best.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a dried-chilli supplier's technical team,
+      not a market or regulatory claim. Verify current supply and limits before contracting.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between Chinese and Indian chilli?</h3>
+      <p>Chinese chillies lean toward colour and aromatic varieties with controlled heat (Jinta, Zidantou, Erjingtiao); Indian chillies span the full heat spectrum, from mild Kashmiri to super-hot Bhut Jolokia, and India dominates dried-chilli export.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which origin should I choose?</h3>
+      <p>Choose Chinese for colour-forward and aromatic applications with controllable heat; choose Indian for specific heat profiles and oleoresin supply.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
