@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Specify Chilli Powder: SHU, Mesh & Moisture", "description": "How to specify chilli powder — SHU heat, mesh size, moisture and ASTA colour. A buyer's guide to a complete specification.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/paprika-chilli-buying-guide/"}};
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "How to Specify and Source Dried Chilli for Food Manufacturing", "description": "A complete buyer's guide to specifying and sourcing dried chilli and paprika — variety, origin, form, mesh, moisture, water activity, SHU, ASTA, food safety, packaging, COA, supplier qualification, shipping and OEM.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/paprika-chilli-buying-guide/"}};
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -9,26 +9,26 @@ const faqJsonLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I specify chilli powder?",
+      "name": "How do I specify dried chilli?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Name five things: the variety (or SHU window), heat level in SHU, mesh size, moisture, and colour (ASTA) if relevant. A complete specification names all five — heat, colour and flavour vary independently."
+        "text": "Name the variety (or SHU window), origin, form (whole/flakes/powder), mesh, moisture, water activity, SHU, ASTA colour, and the food-safety parameters for your target market. A complete specification pins heat, colour, texture, safety and shelf life."
       }
     },
     {
       "@type": "Question",
-      "name": "What does 60–80 mesh mean for chilli powder?",
+      "name": "What does 60–80 mesh mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mesh is particle size. 60–80 mesh is the standard fine grind for chilli and paprika powder — even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces."
+        "text": "Mesh is particle size. 60–80 mesh is the standard fine grind for powder; 20–40 is for flakes; 100+ for smooth sauces."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does batch consistency matter?",
+      "name": "What documents should I request from a supplier?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because heat is non-linear and variety-dependent. A named variety plus a precise SHU window — not a generic 'chilli powder' — is what keeps a sauce or seasoning consistent from one production run to the next."
+        "text": "A lot-specific COA (SHU, ASTA, moisture, microbial, pesticide, mycotoxin), food-safety certificates, and traceability to the growing base. A generic catalogue certificate is not a lot COA."
       }
     }
   ]
@@ -36,90 +36,195 @@ const faqJsonLd = {
 ---
 
 <BaseLayout
-  title="Specify Chilli Powder: SHU, Mesh & Moisture | Tenda Peppers"
-  description="How to specify chilli powder — SHU heat, mesh size, moisture and ASTA colour. A buyer's guide to a complete specification."
+  title="How to Specify and Source Dried Chilli for Food Manufacturing | Tenda Peppers"
+  description="A complete buyer's guide to specifying and sourcing dried chilli and paprika — variety, origin, form, mesh, moisture, SHU, ASTA, food safety, COA, supplier qualification and OEM."
   ogType="article"
   author="Tenda Peppers Technical Team"
   datePublished="2026-09-01"
-  dateModified="2026-09-01"
+  dateModified="2026-09-12"
   jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
-      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Specify Chilli Powder
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Specify &amp; Source Dried Chilli
     </nav>
-    <h1>How to Specify Chilli Powder: SHU, Mesh &amp; Moisture</h1>
+
+    <h1>How to Specify and Source Dried Chilli for Food Manufacturing</h1>
     <p class="lead">
-      A chilli powder specification is five numbers — variety, heat (SHU), mesh, moisture and colour.
-      Miss one and you risk a batch that looks right but performs wrong.
+      A dried chilli specification is more than a heat level. This guide lays out the full chain — from
+      variety and origin, through form, mesh and moisture, to food safety, packaging and supplier
+      qualification — so you can write a spec that produces the same product every batch.
     </p>
 
     <div class="takeaways">
-      <strong>Short answer:</strong> A chilli powder specification is five numbers: variety, heat (SHU), mesh, moisture and colour (ASTA). Miss one and you get a batch that looks right but performs wrong — because heat, colour and texture are independent and each is controlled by a different number.
+      <strong>Short answer:</strong> Specify the variety (or SHU window), origin, form, mesh, moisture,
+      water activity, SHU, ASTA colour and the food-safety parameters for your market. Then verify with
+      a lot COA and a qualified supplier. Heat, colour, texture, safety and shelf life are each controlled
+      by a different number — miss one and the batch changes.
     </div>
 
-    <h2 style="margin-top:32px;">The five things to specify</h2>
+    <h2 style="margin-top:32px;">The core things to specify</h2>
     <ol>
-      <li><strong>Variety (or SHU window)</strong> — "Sanying, 20,000–50,000 SHU", not "hot chilli"</li>
-      <li><strong>Heat level (SHU)</strong> — the precise window, because heat is non-linear</li>
-      <li><strong>Mesh size</strong> — 60–80 mesh standard, adjust for flakes or smooth sauces</li>
-      <li><strong>Moisture</strong> — under 13% for shelf stability</li>
-      <li><strong>Colour (ASTA)</strong> — if colour matters in your application</li>
+      <li><strong>Variety (or SHU window)</strong> — "Sanying, 20,000–50,000 SHU", not "hot chilli".</li>
+      <li><strong>Origin / growing region</strong> — variety performance varies by region.</li>
+      <li><strong>Form</strong> — whole, flakes, segments or powder.</li>
+      <li><strong>Mesh size</strong> — 60–80 standard powder; 20–40 flakes; 100+ smooth sauces.</li>
+      <li><strong>Moisture and water activity</strong> — under ~13% moisture, low a<sub>w</sub>.</li>
+      <li><strong>Heat (SHU)</strong> and <strong>colour (ASTA)</strong> — see the dedicated guides.</li>
+      <li><strong>Food-safety parameters</strong> — microbial, pesticide, mycotoxin, heavy metals.</li>
     </ol>
 
     <h2 style="margin-top:32px;">Why "chilli powder" is not a specification</h2>
     <p>
       Heat, colour and flavour vary independently between varieties. Two powders can both be "chilli
-      powder" yet sit 40,000 SHU apart — one a mild seasoning, the other an extreme-heat product. The
-      variety and the SHU window are what pin the product down.
-    </p>
-    <p>
-      See our <a href="/heat-levels/high-heat/">high heat</a> and
-      <a href="/heat-levels/extra-hot/">extra hot</a> pages for the variety-to-SHU mapping, or the
-      full <a href="https://docs.drychillis.com/heat-level-reference/" target="_blank" rel="noopener">heat level reference</a> in the Knowledge Hub.
+      powder" yet sit 40,000 SHU apart. The variety, origin and the SHU window are what pin the product
+      down — and they fix the trade-off you cannot otherwise control.
     </p>
 
-    <h2 style="margin-top:32px;">Mesh and moisture: the two people forget</h2>
+    <h2 style="margin-top:32px;">Origin and growing region</h2>
     <p>
-      Mesh controls particle size — how evenly heat and colour disperse, and how the powder feels in
-      a sauce. Moisture (under 13%) controls shelf life and clumping. Both are cheap to get right and
-      expensive to get wrong.
+      The same variety grown in different regions can differ in heat, colour and size — water stress and
+      climate shift capsaicinoid and pigment production. Naming the region (for example, Sichuan for
+      Erjingtiao, Gansu for Jinta) is part of the specification, not a footnote. It is also what lets a
+      supplier hold a batch consistent crop to crop.
     </p>
+
+    <h2 style="margin-top:32px;">Form: whole, flakes, segments or powder</h2>
+    <ul>
+      <li><strong>Whole pods</strong> — longest shelf life, slowest colour/aroma loss; used for display,
+      grinding at destination, or rehydration.</li>
+      <li><strong>Flakes / crushed (20–40 mesh)</strong> — visible texture; retain aroma better than fine
+      powder.</li>
+      <li><strong>Segments</strong> — mid-size pieces for sauces and blends.</li>
+      <li><strong>Powder (60–80 mesh)</strong> — even dispersion and smooth mouthfeel, but faster colour
+      and aroma fade due to surface area.</li>
+    </ul>
+    <p>
+      Form is a <em>flavour and shelf-life decision</em>, not just texture — a fine powder oxidises
+      faster than a whole pod, so choose form against your lead time and storage.
+    </p>
+
+    <h2 style="margin-top:32px;">Mesh and moisture — the two people forget</h2>
+    <p>
+      Mesh controls particle size and how evenly heat and colour disperse. Moisture (under ~13%) controls
+      shelf life and clumping. <strong>Water activity</strong> is the better safety indicator than
+      moisture alone — a product can read acceptable moisture yet still have high free water. Both are
+      cheap to get right and expensive to get wrong.
+    </p>
+
+    <h2 style="margin-top:32px;">Heat, colour and the independent dimensions</h2>
+    <p>
+      Heat (<a href="/guides/asta-colour-and-shu-heat-explained/">SHU</a>), colour
+      (<a href="/guides/asta-colour-value/">ASTA</a>) and flavour are three independent dimensions. A
+      complete spec names the heat window, the colour window where colour matters, and the variety that
+      ties them together. See the linked guides for how each is measured and why each varies.
+    </p>
+
+    <h2 style="margin-top:32px;">Food-safety parameters</h2>
+    <p>
+      A spec that ignores food safety will fail at the border. State the
+      <a href="/guides/food-safety-quality/">mycotoxin, pesticide, microbial and heavy-metal
+      limits</a> for your target market — the EU, for example, caps aflatoxin B1 at 5 µg/kg and total
+      aflatoxins at 10 µg/kg for dried chilli. These limits differ by market, so the destination belongs
+      in the specification.
+    </p>
+
+    <h2 style="margin-top:32px;">Packaging, shelf life and storage</h2>
+    <ul>
+      <li><strong>Packaging</strong> — kraft bags, cartons or vacuum; moisture-barrier for long transit.</li>
+      <li><strong>Shelf life</strong> — typically 18–24 months under correct storage; colour fades with
+      oxygen, light and heat.</li>
+      <li><strong>Storage</strong> — cool, dark, dry, sealed; storage is part of the spec because it is
+      where colour and aroma are lost.</li>
+    </ul>
 
     <h2 style="margin-top:32px;">A worked example specification</h2>
-    <p>
-      Here is what a complete, ready-to-quote chilli powder specification looks like in one line:
-    </p>
     <div class="takeaways">
-      <strong>Example:</strong> "Sanying chilli powder, 20,000–50,000 SHU, 60–80 mesh, moisture ≤13%, ASTA ≥100, packed 25 kg kraft bags, export grade."
+      <strong>Example:</strong> "Sanying chilli powder, Shandong origin, 20,000–50,000 SHU, 60–80 mesh,
+      moisture ≤13%, a<sub>w</sub> ≤0.65, ASTA ≥100, EU aflatoxin limits, packed 25 kg kraft bags, export
+      grade."
     </div>
     <p>
-      Everything is pinned: the variety fixes heat, colour and flavour; the mesh fixes texture; the
-      moisture fixes shelf life; the packaging fixes the supply chain. A supplier who sees this can
-      quote accurately; a supplier who sees only "chilli powder" has to guess — and a guess is a batch
-      that changes every order.
+      Everything is pinned: variety, origin, heat, texture, moisture, safety, colour and packaging. A
+      supplier who sees this can quote accurately; a supplier who sees only "chilli powder" has to guess
+      — and a guess is a batch that changes every order.
+    </p>
+
+    <h2 style="margin-top:32px;">Batch consistency, COA and sampling</h2>
+    <p>
+      A specification is only as good as the verification. Request a <strong>lot-specific COA</strong>
+      — a certificate of analysis showing the <em>measured</em> SHU, ASTA, moisture, microbial and
+      mycotoxin values for the lot you are buying, not a range copied from a catalogue. Agree a sampling
+      protocol and retain samples; this is what turns a written spec into repeatable product.
+    </p>
+
+    <h2 style="margin-top:32px;">Supplier qualification and factory audit</h2>
+    <p>
+      Qualify the supplier before the order: ask for food-safety certification (HACCP, ISO 22000 or
+      equivalent), traceability from growing base to finished lot, and — for large programmes — a factory
+      audit. A supplier who can show the production chain and the lot paperwork is the difference between
+      a source and a risk. See our <a href="/quality-certifications/">quality &amp; certifications</a>
+      page for what a real food-safety control chain looks like.
+    </p>
+
+    <h2 style="margin-top:32px;">Shipping, documentation and import</h2>
+    <p>
+      Chilli ships by <a href="/guides/sea-vs-air-freight/">sea or air</a>; the choice is a lead-time
+      versus cost trade-off. Prepare the import documentation up front — commercial invoice, packing list,
+      COA, phytosanitary where required, and any market-specific certificates. Confirm the destination's
+      contaminant limits before you book, not after the shipment is held.
+    </p>
+
+    <h2 style="margin-top:32px;">OEM and private label</h2>
+    <p>
+      If you sell under your own brand, specify the <strong>packaging, grind, blend and label</strong> as
+      part of the order. OEM/ODM lets you fix a private recipe and packaging format; the same specification
+      discipline applies — the difference is that you now own the brand on top of the spec.
     </p>
 
     <h2 style="margin-top:32px;">The three mistakes that change your batch</h2>
     <ul>
       <li><strong>Specifying "hot" or "mild"</strong> — no SHU window means the supplier picks a variety, and it will drift.</li>
-      <li><strong>Forgetting moisture</strong> — it is invisible at quotation time and ruins the batch later.</li>
-      <li><strong>Specifying colour and heat but not variety</strong> — you cannot optimise all three independently; the variety sets the trade-off.</li>
+      <li><strong>Forgetting moisture and water activity</strong> — invisible at quotation time, they ruin the batch later.</li>
+      <li><strong>Specifying heat and colour but not variety or origin</strong> — you cannot optimise all three independently; the variety and region set the trade-off.</li>
     </ul>
-    <p class="data-note" style="margin-top:10px;">Values are representative ranges (MEDIUM confidence) that vary by variety and origin. Confirm your target SHU, ASTA, moisture and mesh with us. 复核 2026-09-09.</p>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, most chilli sourcing failures are specification failures —
+      the buyer names a heat level and leaves the other six parameters to guesswork.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Heat, colour, texture, safety and shelf life each drift on their own
+      when unspecified. A one-line spec that names variety, origin, form, mesh, moisture, SHU, ASTA and
+      the market's food-safety limits costs nothing to write and saves a failed batch. The buyers who get
+      consistent product are the ones who specify all of it and then verify with a lot COA.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a dried-chilli supplier's technical team,
+      not a contractual or regulatory statement. The example values are representative ranges — confirm
+      your exact SHU, ASTA, moisture and market limits with us before contracting.
+    </p>
+
+    <h2 style="margin-top:32px;">Sources</h2>
+    <ul style="font-size:0.9rem;color:#6b5a54;">
+      <li>European Commission Regulation (EC) 1881/2006 — contaminant maximum levels for spices.</li>
+      <li>ASTA Method 20.1 — extractable colour in capsicums.</li>
+      <li>Industry specification practice for dried spices (mesh, moisture, water activity).</li>
+    </ul>
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">
-      <h3>How do I specify chilli powder?</h3>
-      <p>Name five things: the variety (or SHU window), heat level in SHU, mesh size, moisture, and colour (ASTA) if relevant. A complete specification names all five — heat, colour and flavour vary independently.</p>
+      <h3>How do I specify dried chilli?</h3>
+      <p>Name the variety (or SHU window), origin, form, mesh, moisture, water activity, SHU, ASTA colour and the food-safety parameters for your market. A complete specification pins heat, colour, texture, safety and shelf life.</p>
     </div>
     <div class="faq-item">
-      <h3>What does 60–80 mesh mean for chilli powder?</h3>
-      <p>Mesh is particle size. 60–80 mesh is the standard fine grind for chilli and paprika powder — even dispersion and smooth mouthfeel. Coarser (20–40) is for flakes; finer (100+) for smooth sauces.</p>
+      <h3>What does 60–80 mesh mean?</h3>
+      <p>Mesh is particle size. 60–80 mesh is the standard fine grind for powder; 20–40 is for flakes; 100+ for smooth sauces.</p>
     </div>
     <div class="faq-item">
-      <h3>Why does batch consistency matter?</h3>
-      <p>Because heat is non-linear and variety-dependent. A named variety plus a precise SHU window — not a generic 'chilli powder' — is what keeps a sauce or seasoning consistent from one production run to the next.</p>
+      <h3>What documents should I request from a supplier?</h3>
+      <p>A lot-specific COA (SHU, ASTA, moisture, microbial, pesticide, mycotoxin), food-safety certificates, and traceability to the growing base. A generic catalogue certificate is not a lot COA.</p>
     </div>
 
     <div style="margin-top:32px;">
