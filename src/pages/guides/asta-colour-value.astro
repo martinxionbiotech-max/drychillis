@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "ASTA Color Value in Paprika: Complete Technical Guide", "description": "What ASTA Color Value measures, capsanthin and carotenoids, the ASTA 20.1 spectrophotometric method, colour grades, processing and degradation effects, and how to specify colour reliably.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/asta-colour-value/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does ASTA Color Value measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA Color Value measures the extractable carotenoid pigments — chiefly capsanthin — that give paprika its red colour, quantified by spectrophotometry at 460 nm (ASTA Method 20.1). It measures colour, not heat, flavour or freshness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ASTA and SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA measures colour (carotenoid pigments such as capsanthin); SHU measures heat (capsaicinoids). They are separate properties, controlled independently — a paprika can be high-ASTA and zero-heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does paprika colour fade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carotenoids degrade under oxygen, light and heat. ASTA colour declines roughly logarithmically with age, so storage in cool, dark, sealed conditions and fresh lot turnover preserve colour."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="ASTA Color Value in Paprika: Complete Technical Guide | Tenda Peppers"
+  description="What ASTA Color Value measures, capsanthin and carotenoids, the ASTA 20.1 method, colour grades, processing and degradation effects, and how to specify paprika colour reliably."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-01"
+  dateModified="2026-09-12"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; ASTA Color Value
+    </nav>
+
+    <h1>ASTA Color Value in Paprika: Complete Technical Guide</h1>
+    <p class="lead">
+      Colour is paprika's job. A buyer specifies it as an ASTA Color Value — but the number is widely
+      misunderstood, and a lot of "red" paprika fails in the application because the colour was
+      specified without understanding what ASTA actually measures and how fast it fades.
+    </p>
+
+    <h2 style="margin-top:32px;">What ASTA Color Value measures</h2>
+    <p>
+      ASTA Color Value is a numerical measure of the <strong>extractable carotenoid pigments</strong>
+      in paprika — chiefly <strong>capsanthin</strong> — that give the spice its red colour. The method
+      comes from the American Spice Trade Association (ASTA Method 20.1) and is recognized by the US
+      FDA, EU spice regulations and ISO 7541. It is expressed in ASTA units: a paprika graded
+      <strong>ASTA 120</strong> or <strong>ASTA 180</strong>.
+    </p>
+    <p>
+      The important negative: ASTA measures <em>colour only</em>. It does not measure flavour or aroma
+      (that needs GC-MS volatile analysis), it does not measure heat (that is <a
+      href="/guides/asta-colour-and-shu-heat-explained/">SHU</a>, the capsaicinoid side), and it does
+      not directly measure freshness — though colour does fade predictably with age.
+    </p>
+
+    <h2 style="margin-top:32px;">The pigments behind the number</h2>
+    <p>
+      Paprika's red comes from a family of oil-soluble carotenoids. The dominant one is
+      <strong>capsanthin</strong>, which typically accounts for roughly 30–40% of total carotenoids and
+      is essentially unique to the <em>Capsicum</em> genus. This uniqueness matters commercially:
+      capsanthin is a chemical marker that laboratories use to distinguish genuine paprika pigment from
+      synthetic colorants or adulterated material.
+    </p>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Carotenoid</th>
+          <th style="padding:8px;">Typical share</th>
+          <th style="padding:8px;">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Capsanthin</strong></td>
+          <td style="padding:8px;">30–40%</td>
+          <td style="padding:8px;">Primary red pigment; authenticity marker</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Capsorubin</strong></td>
+          <td style="padding:8px;">8–15%</td>
+          <td style="padding:8px;">Deepens red hue disproportionately</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Beta-carotene</strong></td>
+          <td style="padding:8px;">10–20%</td>
+          <td style="padding:8px;">Orange component</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Zeaxanthin / others</strong></td>
+          <td style="padding:8px;">5–10% each</td>
+          <td style="padding:8px;">Yellow-orange balance</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      A subtle but real point: two paprikas can have the <em>same ASTA value yet a visibly different
+      red shade</em>, because the capsanthin-to-capsorubin ratio differs. When precise hue matching
+      matters, buyers request an HPLC carotenoid profile or a CIE L*a*b* colour read on top of the
+      ASTA number.
+    </p>
+
+    <h2 style="margin-top:32px;">How ASTA is measured — Method 20.1</h2>
+    <p>
+      ASTA Method 20.1 extracts the pigment from a weighed paprika sample into acetone, then measures
+      the <strong>absorbance at 460 nm</strong> in a spectrophotometer (a 10 mm cell). The absorbance
+      is converted to an ASTA value with a fixed formula:
+    </p>
+    <p>
+      <code>ASTA Color = (Absorbance@460nm × 164 × I + C) ÷ sample weight (g)</code>
+    </p>
+    <p>
+      The related <strong>International Colour (IC)</strong> unit is simply
+      <strong>IC = ASTA × 40</strong>. Because the method rests on physical absorbance at a single
+      wavelength, it is reproducible — but it is also why two samples can read the same ASTA while
+      looking different: absorbance at 460 nm does not capture the full visible spectrum.
+    </p>
+
+    <h2 style="margin-top:32px;">Colour grades in practice</h2>
+    <p>
+      Commercial paprika powder typically spans roughly <strong>ASTA 80–180</strong>. Higher-value
+      material reaches <strong>ASTA 180–260</strong>, with a theoretical ceiling near ASTA 340 and the
+      best commercial paprikas around ASTA 260–280. The grade you need depends on the application: a
+      colour-forward snack seasoning wants a high, stable ASTA, while a blend where paprika is a minor
+      note tolerates a lower grade.
+    </p>
+
+    <h2 style="margin-top:32px;">Processing effects on colour</h2>
+    <ul>
+      <li><strong>Drying</strong> — slow, low-temperature drying preserves carotenoids; aggressive
+      heat degrades them and can brown the material.</li>
+      <li><strong>Grinding</strong> — fine grinding increases surface area and speeds oxidation, so
+      colour fades faster in fine powders than in whole pods or coarse flakes.</li>
+      <li><strong>Maturity</strong> — pigment builds as the fruit ripens; early-harvested fruit is
+      paler and lower in ASTA.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Why colour fades — and how to slow it</h2>
+    <p>
+      Carotenoids degrade under <strong>oxygen, light and heat</strong>, and ASTA colour declines
+      roughly logarithmically with storage time. The practical consequences for a buyer:
+    </p>
+    <ul>
+      <li>Specify colour <em>and</em> insist on fresh lot turnover — a high-ASTA spec on old stock is
+      meaningless.</li>
+      <li>Require sealed, light-protective, moisture-barrier packaging.</li>
+      <li>Store cool and dark; a "fading" batch is usually a storage problem, not a pigment problem.</li>
+    </ul>
+    <p>
+      See <a href="/guides/chilli-powder-colour-storage/">chilli powder colour change &amp; storage</a>
+      for the storage side in detail.
+    </p>
+
+    <h2 style="margin-top:32px;">What a reliable colour specification contains</h2>
+    <p>
+      A dependable paprika colour spec states the <strong>ASTA window</strong> (not a single number),
+      the <strong>method</strong> (ASTA 20.1), and ideally a <strong>CIE L*a*b*</strong> read when hue
+      matching matters. A lot COA should show the measured value for the lot you are buying — not a
+      range copied from a catalogue. See our
+      <a href="/guides/paprika-chilli-buying-guide/">buying guide</a> for the full specification
+      checklist, and <a href="/products/paprika-powder/">paprika powder</a> for the product side.
+    </p>
+
+    <h2 style="margin-top:32px;">Limitations and common misconceptions</h2>
+    <ul>
+      <li><strong>"Higher ASTA always means better paprika."</strong> Not necessarily — flavour and
+      aroma are independent of colour, and a very high ASTA can come with a flat flavour.</li>
+      <li><strong>"ASTA measures heat."</strong> No — heat is SHU; ASTA is colour. A paprika can be
+      high-ASTA and completely non-pungent.</li>
+      <li><strong>"One ASTA number is enough."</strong> No — two lots at the same ASTA can differ in
+      hue; state the window and, for colour-critical work, the carotenoid profile or L*a*b*.</li>
+      <li><strong>"Colour is stable."</strong> No — it fades with oxygen, light, heat and age; storage
+      and turnover are part of the specification.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, the most common paprika-buying mistake is chasing the
+      highest ASTA number while ignoring flavour, freshness and storage — which is how you end up with
+      "bright but bland" paprika.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Colour is only one of three independent dimensions — heat, colour and
+      flavour — and it is the one that degrades fastest in poor storage. A stable ASTA 120 lot with a
+      documented profile beats a faded "ASTA 180" that was ground six months ago. Buyers who specify
+      colour as a window, tied to a fresh COA and a storage protocol, get consistency; buyers who fixate
+      on one headline number get surprises.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a paprika supplier's technical team,
+      grounded in how carotenoid pigments actually behave — not a laboratory claim. Treat the ASTA
+      ranges above as planning bands and confirm the exact window against a lot COA.
+    </p>
+
+    <h2 style="margin-top:32px;">Sources</h2>
+    <ul style="font-size:0.9rem;color:#6b5a54;">
+      <li>ASTA Method 20.1 — Extractable Color in Capsicums and Their Oleoresins (spectrophotometry at 460 nm).</li>
+      <li>Correlation of carotenoid content and ASTA colour values (peer-reviewed, capsanthin r = 0.981).</li>
+      <li>HunterLab / industry technical notes on ASTA and IC colour of paprika.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What does ASTA Color Value measure?</h3>
+      <p>ASTA measures the extractable carotenoid pigments — chiefly capsanthin — that give paprika its red colour, quantified at 460 nm by ASTA Method 20.1. It measures colour, not heat, flavour or freshness.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between ASTA and SHU?</h3>
+      <p>ASTA measures colour (carotenoids such as capsanthin); SHU measures heat (capsaicinoids). They are independent — a paprika can be high-ASTA and zero-heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does paprika colour fade?</h3>
+      <p>Carotenoids degrade under oxygen, light and heat, and ASTA colour declines with age. Cool, dark, sealed storage and fresh lot turnover preserve colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is ASTA colour measured?</h3>
+      <p>By acetone extraction and spectrophotometry at 460 nm (ASTA Method 20.1), then converting absorbance to ASTA units. IC colour is ASTA × 40.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/paprika-powder/">Browse Paprika Powder</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
