@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Chilli Heat Explained: SHU vs Capsaicin", "description": "How chilli heat works — SHU (Scoville Heat Units), capsaicin, and why heat is non-linear. A guide for chilli and paprika buyers.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/asta-colour-and-shu-heat-explained/"}};
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Scoville Heat Units (SHU): Complete Technical Guide for Food Manufacturers", "description": "What SHU actually measures, the Scoville principle, HPLC capsaicinoid testing, why heat varies by growing conditions, perceived vs measured heat, and how to specify SHU reliably.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-01", "dateModified": "2026-09-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/asta-colour-and-shu-heat-explained/"}};
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -9,26 +9,26 @@ const faqJsonLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is SHU and how is chilli heat measured?",
+      "name": "What does SHU actually measure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SHU (Scoville Heat Units) measures chilli heat as the concentration of capsaicin — the compound that triggers the heat sensation. The higher the SHU, the hotter the chilli: sweet pepper is under 500 SHU, while extra-hot varieties exceed 50,000 SHU."
+        "text": "SHU (Scoville Heat Units) measures the concentration of capsaicinoids — primarily capsaicin — in chilli, quantified by HPLC and converted to SHU (roughly 1 ppm capsaicin ≈ 16 SHU). It is a chemical concentration, not a taste strength."
       }
     },
     {
       "@type": "Question",
-      "name": "Is chilli heat linear?",
+      "name": "Why does the same chilli variety vary in SHU?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Heat is non-linear: a small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a 10,000 SHU variety. That is why precise SHU windows matter in a specification."
+        "text": "Capsaicinoid content varies with growing conditions — soil, temperature, water stress and maturity — and can shift ±40% within a single variety. That is why specifications use an SHU window, not a single number."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between heat and flavour?",
+      "name": "Is measured SHU the same as perceived heat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Heat (capsaicin, measured in SHU) and flavour (aroma compounds) are separate and vary independently. Two chillies can share the same SHU but taste completely different — another reason to name the variety, not just the heat."
+        "text": "No. SHU is a lab-measured chemical concentration; perceived heat is a sensory response that depends on capsaicinoid mix, food matrix and the individual taster. The two correlate but are not interchangeable."
       }
     }
   ]
@@ -36,23 +36,24 @@ const faqJsonLd = {
 ---
 
 <BaseLayout
-  title="Chilli Heat Explained: SHU vs Capsaicin | Tenda Peppers"
-  description="How chilli heat works — SHU (Scoville Heat Units), capsaicin, and why heat is non-linear. A guide for chilli and paprika buyers. Tenda Peppers Knowledge Hub."
+  title="Scoville Heat Units (SHU): Complete Technical Guide for Food Manufacturers | Tenda Peppers"
+  description="What SHU actually measures, the Scoville principle, HPLC capsaicinoid testing, why heat varies ±40% by growing conditions, perceived vs measured heat, and how to specify SHU reliably."
   ogType="article"
   author="Tenda Peppers Technical Team"
   datePublished="2026-09-01"
-  dateModified="2026-09-01"
+  dateModified="2026-09-12"
   jsonLd={[articleJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
-      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Chilli Heat Explained
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Scoville Heat Units (SHU)
     </nav>
-    <h1>Chilli Heat Explained: SHU vs Capsaicin</h1>
+
+    <h1>Scoville Heat Units (SHU): Complete Technical Guide for Food Manufacturers</h1>
     <p class="lead">
-      Chilli heat is measured in Scoville Heat Units (SHU) — a proxy for capsaicin concentration. But
-      heat is not flavour, and it is not linear. Understanding both is what makes a specification
-      reliable.
+      SHU is the number food manufacturers put on a chilli specification — but it is widely
+      misunderstood. This guide separates what SHU <em>actually measures</em> from what it does not,
+      explains how it is tested, and shows how to specify heat so a batch does not surprise you.
     </p>
 
     <div class="takeaways">
@@ -61,50 +62,106 @@ const faqJsonLd = {
 
     <h2 style="margin-top:32px;">What SHU actually measures</h2>
     <p>
-      SHU quantifies the concentration of capsaicin, the compound that triggers the heat sensation on
-      the palate. Sweet pepper registers under 500 SHU; the hottest common Chinese varieties — Jixin,
-      Chilli King — exceed 50,000 SHU. The number is a concentration, not a "taste strength", which is
-      why two chillies can share an SHU rating yet feel very different.
+      Scoville Heat Units quantify the concentration of <strong>capsaicinoids</strong> — the family of
+      alkaloids that trigger the burning sensation. The number is a chemical concentration, not a
+      "taste strength". Sweet pepper (bell pepper) contains essentially no capsaicin and registers near
+      0 SHU; the hottest cultivars on record exceed 2 million SHU; the common Chinese culinary
+      varieties sit between a few thousand and roughly 100,000 SHU.
     </p>
-
-    <h2 style="margin-top:32px;">Heat is non-linear — dose accordingly</h2>
     <p>
-      A small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a
-      10,000 SHU variety. In practice this means extra-hot chillies are usually blended as an accent,
-      and precise SHU windows — not "hot" or "medium" — are what keep a product consistent batch to
-      batch.
+      The crucial distinction, and the one most spec sheets get wrong, is that <em>SHU is not
+      flavour</em> and <em>not linear perception</em>. Two chillies can share an identical SHU yet
+      burn at a different speed, linger for a different time, and taste entirely different — because
+      the number averages several capsaicinoids whose sensory character differs.
     </p>
 
-    <h2 style="margin-top:32px;">Heat vs colour vs flavour</h2>
+    <h2 style="margin-top:32px;">The Scoville principle — and why it is now obsolete</h2>
     <p>
-      Three separate properties, controlled independently. Heat (capsaicin, SHU) is what burns; colour
-      (carotenoids, ASTA) is what tints red; flavour (aroma compounds) is what you taste. A complete
-      specification names all three — which is why a variety name beats a generic "chilli powder".
-      See <a href="/heat-levels/high-heat/">high heat</a> and
-      <a href="/specs/mesh-size/">mesh size</a> for the practical next steps.
+      The scale dates to 1912, when the pharmacist Wilbur Scoville extracted chilli heat into alcohol,
+      then diluted the extract in sugar water until a panel of tasters could no longer detect any
+      burn. One "Scoville Heat Unit" was one dilution step. The method was subjective — it depended on
+      a taster's palate — and it is no longer used for commercial measurement.
     </p>
-
-    <h2 style="margin-top:32px;">How SHU is measured today</h2>
     <p>
-      The scale dates to 1912, when Wilbur Scoville diluted chilli extract in sugar water until a
-      tasting panel could no longer detect heat — one "Scoville Heat Unit" per dilution step. Today
-      the number is measured instrumentally: a laboratory extracts the chilli and quantifies its
-      capsaicinoids by high-performance liquid chromatography (HPLC), then converts the concentration
-      into SHU. Roughly 1 part per million of capsaicin corresponds to about 16 SHU, which is why pure
-      capsaicin registers around 16 million SHU.
+      What survives is the <em>name</em>. Modern "SHU" values are produced instrumentally and are, in
+      effect, a converted capsaicinoid concentration. This matters because it means a modern SHU is
+      reproducible and comparable <em>only if the same analytical method was used</em> — a point we
+      return to under limitations.
     </p>
 
-    <h2 style="margin-top:32px;">The capsaicinoids behind the number</h2>
+    <h2 style="margin-top:32px;">SHU vs capsaicin concentration</h2>
     <p>
-      "Capsaicin" is actually a small family of related compounds — the capsaicinoids. Capsaicin and
-      dihydrocapsaicin together account for the great majority of heat in most chillies, with smaller
-      amounts of nordihydrocapsaicin, homocapsaicin and homodihydrocapsaicin rounding out the mix. The
-      exact ratio varies by variety, which is part of why two chillies at the same SHU can still feel
-      different — the burn arrives at a different speed and lingers for a different time. This is
-      another reason to specify by <em>variety and SHU window</em>, not by a single generic number.
+      "Capsaicin" is often used loosely to mean "heat", but it is really the dominant member of a small
+      family of <strong>capsaicinoids</strong>. In most chillies, <strong>capsaicin</strong> accounts
+      for the majority of heat, with <strong>dihydrocapsaicin</strong> as the second major component
+      and smaller amounts of nordihydrocapsaicin, homocapsaicin and homodihydrocapsaicin rounding out
+      the mix. Pure capsaicin is assigned a value of about 16 million SHU; the other capsaicinoids sit
+      close to it in potency.
+    </p>
+    <p>
+      The practical point: an HPLC report gives a total capsaicinoid concentration (or individual
+      concentrations), which is converted to SHU. A widely cited conversion is
+      <strong>1 part per million (ppm) of capsaicin ≈ 16 SHU</strong>. This is the bridge between
+      "milligrams of capsaicin per kilogram" and the familiar SHU scale.
     </p>
 
-    <h2 style="margin-top:32px;">A practical heat guide</h2>
+    <h2 style="margin-top:32px;">How SHU is measured today — HPLC</h2>
+    <p>
+      Since the 1980s the standard method has been <strong>high-performance liquid chromatography
+      (HPLC)</strong>. A laboratory extracts the capsaicinoids from a weighed, dried chilli sample,
+      separates them on an HPLC column, and quantifies them against reference standards. The result is
+      reported either as capsaicinoid concentration or converted to SHU.
+    </p>
+    <p>
+      For a manufacturer this has two consequences worth remembering:
+    </p>
+    <ul>
+      <li>The SHU on a COA is <em>derived</em> from a measured concentration — it is only as good as
+      the extraction, the standards and the conversion factor used.</li>
+      <li>There is no meaningful "home" SHU test. Any consumer-facing "how to measure SHU at home"
+      claim is fiction; the number comes from a lab.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Why SHU varies — and by how much</h2>
+    <p>
+      The single biggest source of confusion in chilli sourcing is assuming a variety has a fixed SHU.
+      It does not. Capsaicinoid biosynthesis is strongly influenced by environment:
+    </p>
+    <ul>
+      <li><strong>Growing conditions</strong> — soil, temperature, water stress and sunlight all
+      shift capsaicinoid production. A stressed plant tends to be hotter.</li>
+      <li><strong>Maturity</strong> — capsaicinoid content changes as the fruit ripens.</li>
+      <li><strong>Genetics and cross-pollination</strong> — outcrossing can change the profile of the
+      next generation.</li>
+      <li><strong>Post-harvest handling</strong> — drying and grinding affect the concentration on a
+      dry-weight basis and can degrade or redistribute capsaicinoids.</li>
+    </ul>
+    <p>
+      Reported SHU for a single variety can swing by roughly <strong>±40%</strong> between crops and
+      lots. This is not a defect; it is the biology of the crop. It is exactly why a responsible
+      specification states an <strong>SHU window</strong> (for example, 25,000–35,000 SHU) rather than
+      a single number, and why a supplier should be able to produce a lot-specific COA.
+    </p>
+
+    <h2 style="margin-top:32px;">Perceived heat vs measured heat</h2>
+    <p>
+      Here is where many buyer-side comparisons go wrong. Measured SHU is a lab number. Perceived heat
+      is a sensory response that depends on at least three things beyond concentration:
+    </p>
+    <ul>
+      <li><strong>Capsaicinoid mix</strong> — different capsaicinoids have different onset and
+      duration, so two lots at the same total SHU can feel different.</li>
+      <li><strong>Food matrix</strong> — fat, acidity, sugar and cooking all change how heat is
+      perceived. Roasting can reduce perceived heat even though the measured capsaicin is unchanged.</li>
+      <li><strong>The taster</strong> — individual tolerance and repeated exposure alter perception.</li>
+    </ul>
+    <p>
+      The takeaway for a formulator: SHU is your <em>consistency</em> tool (it keeps lot-to-lot heat
+      aligned), but it will never fully predict the sensory experience. For that you need the variety
+      and a tasting protocol alongside the number.
+    </p>
+
+    <h2 style="margin-top:32px;">A practical heat guide for specification</h2>
     <table style="width:100%;border-collapse:collapse;margin-top:8px;">
       <thead>
         <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
@@ -115,7 +172,7 @@ const faqJsonLd = {
       </thead>
       <tbody>
         <tr style="border-bottom:1px solid #eee0d8;">
-          <td style="padding:8px;"><strong>Sweet</strong></td>
+          <td style="padding:8px;"><strong>Sweet / non-pungent</strong></td>
           <td style="padding:8px;">&lt;500</td>
           <td style="padding:8px;">Colour and mild flavour — paprika</td>
         </tr>
@@ -142,23 +199,77 @@ const faqJsonLd = {
       </tbody>
     </table>
     <p style="margin-top:8px;">
-      See our <a href="/heat-levels/medium-heat/">heat level pages</a> for the variety-to-SHU mapping
-      behind each band.
+      Heat is non-linear in a blend: a small weight of a 50,000+ SHU variety moves the heat far more
+      than the same weight of a 10,000 SHU variety. Extra-hot chillies are usually blended as an
+      accent, not a base. See our <a href="/heat-levels/medium-heat/">heat-level pages</a> for the
+      variety-to-SHU mapping behind each band.
     </p>
     <p class="data-note" style="margin-top:10px;">Conversion is an industry-standard approximation (MEDIUM confidence) for reference, not an exact substitution. 复核 2026-09-09.</p>
 
+    <h2 style="margin-top:32px;">Limitations and common misconceptions</h2>
+    <ul>
+      <li><strong>"Higher SHU always means hotter taste."</strong> False — SHU is concentration; the
+      sensory experience also depends on capsaicinoid mix, matrix and the taster.</li>
+      <li><strong>"SHU is precise."</strong> Not in practice — crop variation and method differences
+      mean a stated SHU is a window, not an exact reading.</li>
+      <li><strong>"I can measure SHU at home."</strong> No consumer-grade strip or "milk trick" gives a
+      real SHU; it requires HPLC in a laboratory.</li>
+      <li><strong>"A single SHU number is enough for a spec."</strong> No — you also need the variety,
+      the method and the moisture basis, otherwise the number is not comparable lot to lot.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">What a reliable specification should contain</h2>
+    <p>
+      When you buy chilli on heat, ask for more than "hot" or "medium". A dependable spec states:
+      the <strong>variety</strong>, the <strong>SHU window</strong>, the <strong>analytical method</strong>
+      (HPLC), and the <strong>moisture basis</strong>. A supplier COA should show the actual measured
+      value for the lot you are buying, not a generic range copied from a catalogue. See our
+      <a href="/guides/paprika-chilli-buying-guide/">buying guide</a> for the full specification
+      checklist, and <a href="/specs/mesh-size/">mesh size</a> for the particle-size half of the spec.
+    </p>
+
+    <h2 style="margin-top:32px;">The Author's Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, most chilli buying errors come not from picking the wrong
+      SHU, but from treating a single SHU number as if it were the whole story.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> SHU is a derived, lot-dependent number with real biological spread —
+      ±40% is normal, not a supplier being sloppy. The number only becomes a reliable purchasing tool
+      when it is paired with the variety name, the HPLC method and a stated window. Buyers who fixate
+      on one figure usually end up with a "spec-compliant" lot that still tastes wrong, because heat
+      and flavour and onset-speed all vary independently of the headline SHU.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a chilli supplier's technical team,
+      grounded in how capsicum crops actually vary — not a laboratory claim. Treat the specific SHU
+      ranges in the table as planning bands, and confirm the exact window against a lot COA.
+    </p>
+
+    <h2 style="margin-top:32px;">Sources</h2>
+    <ul style="font-size:0.9rem;color:#6b5a54;">
+      <li>Scoville scale and capsaicinoid measurement — encyclopedic reference and HPLC literature
+      (capsaicinoid quantification, ppm × 16 conversion).</li>
+      <li>Determination of capsaicin and dihydrocapsaicin in Capsicum fruit by HPLC (peer-reviewed).</li>
+      <li>American Spice Trade Association pungency units (capsaicin-equivalent ppm).</li>
+    </ul>
+
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">
-      <h3>What is SHU and how is chilli heat measured?</h3>
-      <p>SHU (Scoville Heat Units) measures chilli heat as the concentration of capsaicin — the compound that triggers the heat sensation. The higher the SHU, the hotter the chilli: sweet pepper is under 500 SHU, while extra-hot varieties exceed 50,000 SHU.</p>
+      <h3>What does SHU actually measure?</h3>
+      <p>SHU measures the concentration of capsaicinoids (mainly capsaicin), quantified by HPLC and converted to SHU — roughly 1 ppm capsaicin ≈ 16 SHU. It is a chemical concentration, not a taste strength.</p>
     </div>
     <div class="faq-item">
-      <h3>Is chilli heat linear?</h3>
-      <p>No. Heat is non-linear: a small amount of a 50,000+ SHU variety moves a blend's heat far more than the same weight of a 10,000 SHU variety. That is why precise SHU windows matter in a specification.</p>
+      <h3>Why does the same chilli variety vary in SHU?</h3>
+      <p>Capsaicinoid content varies with growing conditions — soil, temperature, water stress and maturity — and can shift ±40% within a single variety. Specifications therefore use an SHU window, not a single number.</p>
     </div>
     <div class="faq-item">
-      <h3>What is the difference between heat and flavour?</h3>
-      <p>Heat (capsaicin, measured in SHU) and flavour (aroma compounds) are separate and vary independently. Two chillies can share the same SHU but taste completely different — another reason to name the variety, not just the heat.</p>
+      <h3>Is measured SHU the same as perceived heat?</h3>
+      <p>No. SHU is a lab-measured chemical concentration; perceived heat depends on the capsaicinoid mix, the food matrix and the taster. They correlate but are not interchangeable.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is SHU measured today?</h3>
+      <p>By HPLC — a lab extracts the capsaicinoids and quantifies them, then converts the concentration to SHU. There is no reliable home measurement.</p>
     </div>
 
     <div style="margin-top:32px;">
