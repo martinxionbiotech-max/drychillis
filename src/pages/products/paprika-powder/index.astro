@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/paprika-powder/";
+const productOffers = buildOffers("paprika-powder", productUrl);
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -17,6 +21,7 @@ const productJsonLd = {
   "category": "Spices and Seasonings",
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "ASTA Colour Value", "value": "60–240 (variety-dependent)" },
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "<500 – 10,000" },
@@ -106,6 +111,7 @@ const faqJsonLd = {
     <div class="product-media">
       <img src="/images/products/paprika-powder.jpg" alt="Paprika powder" width="1360" height="1400" loading="eager" />
     </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("paprika-powder", "en")}</p>
 
     <h2 style="margin-top:32px;">What paprika does Tenda Peppers supply?</h2>
     <p>

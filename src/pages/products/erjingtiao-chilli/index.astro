@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/erjingtiao-chilli/";
+const productOffers = buildOffers("erjingtiao-chilli", productUrl);
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -13,6 +17,7 @@ const productJsonLd = {
   "category": "Spices and Seasonings",
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "15,000 – 30,000 (upper medium)" },
     { "@type": "PropertyValue", "name": "Moisture", "value": "<13%" },
@@ -89,6 +94,7 @@ const faqJsonLd = {
     <div class="product-media">
       <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />
     </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("erjingtiao-chilli", "en")}</p>
 
 
     <div class="takeaways">

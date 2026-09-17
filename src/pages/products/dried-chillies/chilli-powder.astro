@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/dried-chillies/chilli-powder/";
+const productOffers = buildOffers("chilli-powder", productUrl);
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -13,6 +17,7 @@ const productJsonLd = {
   "category": "Spices and Seasonings",
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
     { "@type": "PropertyValue", "name": "Mesh Size", "value": "60–80", "unitText": "mesh" },
@@ -78,6 +83,7 @@ const faqJsonLd = {
     <div class="product-media">
       <img src="/images/products/chilli-powder.jpg" alt="Chilli powder (60–80 mesh)" width="1400" height="1400" loading="eager" />
     </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-powder", "en")}</p>
 
 
     <div class="takeaways">

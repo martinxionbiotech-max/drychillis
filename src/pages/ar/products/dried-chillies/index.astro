@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/ar/products/dried-chillies/";
+const productOffers = buildOffers("dried-chillies", productUrl);
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -17,6 +21,7 @@ const productJsonLd = {
   "category": "Spices and Seasonings",
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000 – 70,000+" },
     { "@type": "PropertyValue", "name": "Product Forms", "value": "Whole, flakes, powder, segments" },
@@ -109,6 +114,7 @@ const faqJsonLd = {
     <div class="product-media">
       <img src="/images/products/chilli-whole.jpg" alt="فلفل مجفف كامل" width="1400" height="1050" loading="eager" />
     </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("dried-chillies", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما منتجات الفلفل المجفف التي توفرها Tenda Peppers؟</h2>
     <p>
