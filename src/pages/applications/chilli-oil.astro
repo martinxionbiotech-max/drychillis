@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What chilli is best for chilli oil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aromatic Erjingtiao carries the fragrance, usually blended with a heat variety like Sanying or Jixin, in flakes or segments for even infusion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Flakes or powder for chilli oil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flakes or segments — fine powder clouds the oil and fades faster. Flakes and segments infuse evenly and keep the aromatic surface intact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot should chilli oil chilli be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The aromatic base (Erjingtiao) sits at 15,000–30,000 SHU; blends with a heat variety reach 50,000 SHU or more. Specify the SHU window of each variety in the blend."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Base variety", value: "Erjingtiao" },
+  { label: "Heat", value: "15,000–50,000 SHU" },
+  { label: "Form", value: "Flakes, segments" },
+  { label: "Scored on", value: "Fragrance & heat" }
+];
+---
+
+<BaseLayout
+  title="Chilli for Chilli Oil | Tenda Peppers"
+  description="Which chilli for chilli oil — aromatic Erjingtiao blended with Sanying or Jixin, in flakes or segments. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Chilli Oil
+    </nav>
+    <h1>Chilli for Chilli Oil</h1>
+    <p class="lead">
+      Chilli oil is judged on fragrance as much as heat. The classic base is aromatic Erjingtiao, blended with a heat variety such as Sanying or Jixin — in flakes or segments, not fine powder.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Chilli oil wants aroma (Erjingtiao, 15,000–30,000 SHU) blended with heat (Sanying or Jixin). Use flakes or segments for even infusion — fine powder clouds the oil and fades faster.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What makes a good chilli oil chilli?</h2>
+    <p>
+      Chilli oil is judged on fragrance as much as heat. The classic base is aromatic Erjingtiao (15,000–30,000 SHU), often blended with a heat variety such as Sanying or Jixin. Flakes or segments infuse evenly and keep the aromatic surface intact.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Aromatic base, chilli paste, hotpot</td><td><a href="/products/erjingtiao-chilli/">View →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Heat blend partner</td><td><a href="/products/sanying-chilli/">View →</a></td></tr>
+        <tr><td><strong>Xiaomi (Millet)</strong></td><td>50,000 – 70,000</td><td>Chilli oil, extreme heat</td><td><a href="/products/xiaomi-chilli/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify chilli for chilli oil</h2>
+    <p>
+      Use flakes or segments for even infusion and to keep the aromatic surface intact — fine powder clouds the oil and fades faster. Name the base variety (Erjingtiao) and the heat blend partner, plus the SHU window of each.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What chilli is best for chilli oil?</h3>
+      <p>Aromatic Erjingtiao carries the fragrance, usually blended with a heat variety like Sanying or Jixin, in flakes or segments for even infusion.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Flakes or powder for chilli oil?</h3>
+      <p>Flakes or segments — fine powder clouds the oil and fades faster. Flakes and segments infuse evenly and keep the aromatic surface intact.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot should chilli oil chilli be?</h3>
+      <p>The aromatic base (Erjingtiao) sits at 15,000–30,000 SHU; blends with a heat variety reach 50,000 SHU or more. Specify the SHU window of each variety in the blend.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What chilli is best for snack seasoning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star (or a Sanying/Zidantou blend) at 60–80 mesh powder, in a controlled SHU window. Medium heat also works where heat should be present but not dominant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why 60–80 mesh powder for snacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Powder disperses fastest, which is exactly what a dry snack seasoning needs for even, instant heat and colour dispersion across a large surface."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot should snack seasoning be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard is the 20,000–50,000 SHU band in a controlled window; choose the medium 10,000–20,000 SHU band for milder, mass-market products."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Core variety", value: "Seven-Star" },
+  { label: "Heat", value: "20,000–50,000 SHU" },
+  { label: "Form", value: "Powder (60–80 mesh)" },
+  { label: "Scored on", value: "Even dispersion" }
+];
+---
+
+<BaseLayout
+  title="Chilli for Snack Seasoning | Tenda Peppers"
+  description="Snack seasoning chilli — Seven-Star at 60–80 mesh powder for even, instant heat and colour dispersion. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Snack Seasoning
+    </nav>
+    <h1>Chilli for Snack Seasoning</h1>
+    <p class="lead">
+      Snack coating wants even, instant heat and colour dispersion across a large surface. Seven-Star (or a Sanying/Zidantou blend) at 60–80 mesh powder does exactly that.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Snack seasoning wants balanced heat and even dispersion — Seven-Star (or a Sanying/Zidantou blend) at 60–80 mesh powder in a controlled SHU window. Powder disperses fastest.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What makes a good snack seasoning chilli?</h2>
+    <p>
+      Snack coating wants even, instant heat and colour dispersion across a large surface. Use Seven-Star (or a Sanying/Zidantou blend) at 60–80 mesh powder, in a controlled SHU window. See <a href="/products/seven-star-chilli/">Seven-Star chilli</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Snack seasoning, hot-pot bases</td><td><a href="/products/seven-star-chilli/">View →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Blend partner</td><td><a href="/products/sanying-chilli/">View →</a></td></tr>
+        <tr><td><strong>Medium band</strong></td><td>10,000 – 20,000</td><td>Where heat is present but not dominant</td><td><a href="/heat-levels/medium-heat/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify chilli for snack seasoning</h2>
+    <p>
+      Specify the variety and a controlled SHU window, at 60–80 mesh powder. Powder disperses fastest, which is exactly what a dry snack seasoning needs across a large surface.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What chilli is best for snack seasoning?</h3>
+      <p>Seven-Star (or a Sanying/Zidantou blend) at 60–80 mesh powder, in a controlled SHU window. Medium heat also works where heat should be present but not dominant.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why 60–80 mesh powder for snacks?</h3>
+      <p>Powder disperses fastest, which is exactly what a dry snack seasoning needs for even, instant heat and colour dispersion across a large surface.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot should snack seasoning be?</h3>
+      <p>The standard is the 20,000–50,000 SHU band in a controlled window; choose the medium 10,000–20,000 SHU band for milder, mass-market products.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

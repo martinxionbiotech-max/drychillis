@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which chilli should I use for hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-heat varieties in the 20,000–50,000+ SHU band — Sanying, Zidantou or Jixin — usually as powder or flakes. Specify the variety and a precise SHU window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I specify heat for hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name the variety and a precise SHU window. Heat is non-linear, so \"hot\" is not a specification — the variety name is what locks batch-to-batch consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a colour variety in hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for most recipes: a hot sauce pairs a heat variety with a colour/aroma variety, because heat, colour and aroma rarely all peak in one variety."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Heat band", value: "20,000–50,000+ SHU" },
+  { label: "Core varieties", value: "Sanying, Zidantou, Jixin" },
+  { label: "Form", value: "Powder, flakes" },
+  { label: "Scored on", value: "Heat & colour" }
+];
+---
+
+<BaseLayout
+  title="Chilli for Hot Sauce | Tenda Peppers"
+  description="Which chilli for hot sauce — Sanying, Zidantou and Jixin at 20,000–50,000+ SHU as powder or flakes. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Hot Sauce
+    </nav>
+    <h1>Chilli for Hot Sauce</h1>
+    <p class="lead">
+      Hot sauce is scored on heat and colour. The workhorse varieties are Sanying, Zidantou and Jixin in the 20,000–50,000+ SHU band, usually as powder or flakes.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Hot sauce wants high heat — Sanying, Zidantou or Jixin at 20,000–50,000+ SHU, as powder or flakes. Specify the variety and a precise SHU window; heat is non-linear, so &ldquo;hot&rdquo; is not a specification.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What makes a good hot sauce chilli?</h2>
+    <p>
+      Hot sauce is scored on heat and colour. Use high-heat varieties — Sanying, Zidantou or Jixin in the 20,000–50,000+ SHU band — usually as powder or flakes. See <a href="/guides/asta-colour-and-shu-heat-explained/">SHU explained</a> for how heat is measured.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Classic hot-sauce variety</td><td><a href="/products/sanying-chilli/">View →</a></td></tr>
+        <tr><td><strong>Zidantou</strong></td><td>20,000 – 50,000</td><td>Classic hot-sauce variety</td><td><a href="/products/zidantou-chilli/">View →</a></td></tr>
+        <tr><td><strong>Jixin (chicken-heart)</strong></td><td>50,000 – 70,000</td><td>Extreme heat, usually blended</td><td><a href="/products/jixin-chilli/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify chilli for hot sauce</h2>
+    <p>
+      Specify the variety and a precise SHU window; heat is non-linear, so "hot" is not a specification. A hot sauce pairs a heat variety with a colour/aroma variety. Powder gives smooth sauces and uniform colour; flakes give visible texture.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Which chilli should I use for hot sauce?</h3>
+      <p>High-heat varieties in the 20,000–50,000+ SHU band — Sanying, Zidantou or Jixin — usually as powder or flakes. Specify the variety and a precise SHU window.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I specify heat for hot sauce?</h3>
+      <p>Name the variety and a precise SHU window. Heat is non-linear, so "hot" is not a specification — the variety name is what locks batch-to-batch consistency.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need a colour variety in hot sauce?</h3>
+      <p>Yes, for most recipes: a hot sauce pairs a heat variety with a colour/aroma variety, because heat, colour and aroma rarely all peak in one variety.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

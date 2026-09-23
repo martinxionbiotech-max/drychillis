@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What chilli is best for hot pot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star is common in hot-pot bases; Erjingtiao carries chilli paste and fragrance; Xiaomi and Chilli King add the extreme heat for Sichuan-style dishes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is hot pot chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It spans the ladder: Erjingtiao at 15,000–30,000 SHU for aroma, Seven-Star at 20,000–50,000 SHU for the base, and Xiaomi at 50,000–70,000 SHU for Sichuan-style heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Segments or powder for hot pot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Segments suit sauces, pastes and slow-cooked dishes that need even extraction without a dusty texture; powder suits bases that must dissolve cleanly."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Core varieties", value: "Seven-Star, Erjingtiao, Xiaomi" },
+  { label: "Heat", value: "15,000–70,000 SHU" },
+  { label: "Form", value: "Segments, powder" },
+  { label: "Scored on", value: "Slow-release heat & aroma" }
+];
+---
+
+<BaseLayout
+  title="Chilli for Hot Pot | Tenda Peppers"
+  description="Hot pot chilli — Seven-Star for hot-pot bases, Erjingtiao for chilli paste and fragrance, Xiaomi for Sichuan-style dishes. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Hot Pot
+    </nav>
+    <h1>Chilli for Hot Pot</h1>
+    <p class="lead">
+      Hot pot spans the heat ladder: Seven-Star is common in hot-pot bases, Erjingtiao carries fragrance for chilli paste, and Xiaomi or Chilli King power Sichuan-style dishes.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Hot pot uses several varieties at once — Seven-Star (20,000–50,000 SHU) is common in hot-pot bases, Erjingtiao (15,000–30,000) adds aroma for chilli paste, and Xiaomi (50,000–70,000) drives Sichuan-style dishes.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What makes a good hot pot chilli?</h2>
+    <p>
+      Hot pot is built in layers: an aromatic base (Erjingtiao for chilli paste), a heat backbone (Seven-Star, common in hot-pot bases), and a top note of extreme heat (Xiaomi or Chilli King) for Sichuan-style dishes. See the <a href="/heat-levels/high-heat/">high heat</a> and <a href="/heat-levels/extra-hot/">extra hot</a> pages.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Chilli paste, hotpot</td><td><a href="/products/erjingtiao-chilli/">View →</a></td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Hot-pot bases</td><td><a href="/products/seven-star-chilli/">View →</a></td></tr>
+        <tr><td><strong>Xiaomi (Millet)</strong></td><td>50,000 – 70,000</td><td>Sichuan-style dishes</td><td><a href="/products/xiaomi-chilli/">View →</a></td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>>50,000</td><td>Extreme-heat, Sichuan-style</td><td><a href="/products/chilli-king/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify chilli for hot pot</h2>
+    <p>
+      Name each variety in the recipe and its SHU window. Segments suit sauces, pastes and slow-cooked dishes that need even extraction without a dusty texture; powder suits bases that must dissolve cleanly.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What chilli is best for hot pot?</h3>
+      <p>Seven-Star is common in hot-pot bases; Erjingtiao carries chilli paste and fragrance; Xiaomi and Chilli King add the extreme heat for Sichuan-style dishes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is hot pot chilli?</h3>
+      <p>It spans the ladder: Erjingtiao at 15,000–30,000 SHU for aroma, Seven-Star at 20,000–50,000 SHU for the base, and Xiaomi at 50,000–70,000 SHU for Sichuan-style heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Segments or powder for hot pot?</h3>
+      <p>Segments suit sauces, pastes and slow-cooked dishes that need even extraction without a dusty texture; powder suits bases that must dissolve cleanly.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

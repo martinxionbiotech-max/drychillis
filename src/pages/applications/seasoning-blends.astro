@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I specify chilli for a seasoning blend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specify the variety, the SHU window, the mesh and the ASTA. Heat, colour and flavour are independent, and a blend drifts unless each is pinned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a blend drift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because heat, colour and flavour are independent variables. Pin the variety and the SHU window to lock batch-to-batch consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Powder or flakes in a blend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flakes when the finished product shows the chilli; powder (60–80 mesh) for uniform colour and heat dispersion with a smooth mouthfeel."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Varieties", value: "Variety-pinned" },
+  { label: "Heat", value: "Controlled SHU window" },
+  { label: "Form", value: "Powder, flakes" },
+  { label: "Pin", value: "Variety, SHU, mesh, ASTA" }
+];
+---
+
+<BaseLayout
+  title="Chilli for Seasoning Blends | Tenda Peppers"
+  description="Chilli for seasoning blends — variety-pinned SHU windows, defined ASTA colour and mesh for consistent spice mixes. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Seasoning Blends
+    </nav>
+    <h1>Chilli for Seasoning Blends</h1>
+    <p class="lead">
+      Blends need a controlled, consistent SHU window by variety, plus a defined colour (ASTA) where colour matters. Pin the variety, the SHU window, the mesh and the ASTA — a blend drifts unless each is pinned.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Seasoning blends want a controlled, consistent SHU window by variety. Specify the variety, SHU window, mesh and ASTA — heat, colour and flavour are independent, and a blend drifts unless each is pinned.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What does a seasoning blend need from its chilli?</h2>
+    <p>
+      Blends need a controlled, consistent SHU window by variety, plus a defined colour (ASTA) where colour matters. Heat, colour and flavour are independent, and a blend drifts unless each is pinned. See <a href="/guides/paprika-chilli-buying-guide/">how to specify and source</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Medium band</strong></td><td>10,000 – 20,000</td><td>Default for everyday spice blends</td><td><a href="/heat-levels/medium-heat/">View →</a></td></tr>
+        <tr><td><strong>High band</strong></td><td>20,000 – 50,000</td><td>Heat-forward blends</td><td><a href="/heat-levels/high-heat/">View →</a></td></tr>
+        <tr><td><strong>Extra-hot band</strong></td><td>>50,000</td><td>Heat-dosed industrial seasoning</td><td><a href="/heat-levels/extra-hot/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify chilli for a blend</h2>
+    <p>
+      Specify the variety, the SHU window, the mesh and the ASTA — heat, colour and flavour are independent, and a blend drifts unless each is pinned. Powder (60–80 mesh) gives uniform colour and heat dispersion; flakes give visible texture.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How do I specify chilli for a seasoning blend?</h3>
+      <p>Specify the variety, the SHU window, the mesh and the ASTA. Heat, colour and flavour are independent, and a blend drifts unless each is pinned.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does a blend drift?</h3>
+      <p>Because heat, colour and flavour are independent variables. Pin the variety and the SHU window to lock batch-to-batch consistency.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Powder or flakes in a blend?</h3>
+      <p>Flakes when the finished product shows the chilli; powder (60–80 mesh) for uniform colour and heat dispersion with a smooth mouthfeel.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

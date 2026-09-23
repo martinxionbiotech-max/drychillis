@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What chilli is best for pizza flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta is the preferred flake variety — deep red colour and thick glossy skin — with Xian pepper as the versatile alternative in the same 10,000–20,000 SHU band."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot are pizza chilli flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medium heat is the default: 10,000–20,000 SHU. The wider flake range runs 10,000–50,000 SHU, so specify the SHU window you want."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What mesh are pizza flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "20–40 mesh — coarse enough to read as visible texture on the slice, fine enough to sprinkle evenly."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Heat", value: "10,000–20,000 SHU" },
+  { label: "Preferred variety", value: "Jinta (Xian)" },
+  { label: "Mesh", value: "20–40" },
+  { label: "Scored on", value: "Colour & visible texture" }
+];
+---
+
+<BaseLayout
+  title="Chilli Flakes for Pizza | Tenda Peppers"
+  description="Pizza chilli flakes — medium heat (10,000–20,000 SHU), Jinta for deep red colour, 20–40 mesh. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/chilli-applications/">Chilli Applications</a> &rsaquo; Pizza Flakes
+    </nav>
+    <h1>Chilli Flakes for Pizza</h1>
+    <p class="lead">
+      Pizza flakes are a visible topping, not a hidden ingredient. Medium heat is the default band — 10,000–20,000 SHU — and Jinta is the preferred flake variety for its deep red colour and thick glossy skin.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Pizza topping wants medium heat (10,000–20,000 SHU) flakes at 20–40 mesh. Jinta is the preferred flake variety — deep red colour and thick glossy skin.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">What makes a good pizza flake?</h2>
+    <p>
+      Pizza topping shows the chilli, so colour and texture matter as much as heat. Medium heat (10,000–20,000 SHU) is the default band for pizza and pasta topping. Jinta is the preferred flake variety for its deep red colour and thick glossy skin — see <a href="/products/jinta-chilli/">Jinta chilli</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variety / band</th><th>Heat (SHU)</th><th>Role</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Preferred flake variety, deep red, glossy</td><td><a href="/products/jinta-chilli/">View →</a></td></tr>
+        <tr><td><strong>Xian pepper</strong></td><td>10,000 – 20,000</td><td>Versatile middle, dark red and oily</td><td><a href="/products/xian-pepper/">View →</a></td></tr>
+        <tr><td><strong>Flake range</strong></td><td>10,000 – 50,000</td><td>Visible texture, pizza, blends</td><td><a href="/products/dried-chillies/chilli-flakes/">View →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">How to specify pizza chilli flakes</h2>
+    <p>
+      Specify 20–40 mesh flakes with visible texture, and name the variety (Jinta for colour). Flakes keep retained fragrance — choose them when the finished product shows the chilli.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What chilli is best for pizza flakes?</h3>
+      <p>Jinta is the preferred flake variety — deep red colour and thick glossy skin — with Xian pepper as the versatile alternative in the same 10,000–20,000 SHU band.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot are pizza chilli flakes?</h3>
+      <p>Medium heat is the default: 10,000–20,000 SHU. The wider flake range runs 10,000–50,000 SHU, so specify the SHU window you want.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What mesh are pizza flakes?</h3>
+      <p>20–40 mesh — coarse enough to read as visible texture on the slice, fine enough to sprinkle evenly.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/chilli-flakes/">Browse Chilli Flakes</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
