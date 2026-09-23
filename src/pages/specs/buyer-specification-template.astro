@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Buyer Specification Template: Chilli Powder, Flakes & Paprika", "description": "Copy-paste specification templates for chilli powder, chilli flakes and paprika powder — variety, origin, SHU, ASTA, mesh, moisture, water activity, food safety and packaging.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/specs/buyer-specification-template/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What goes in a complete chilli specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name the variety (or SHU window), origin, form (whole/flakes/powder), mesh, moisture, water activity, SHU, ASTA colour, and the food-safety parameters for your target market. A complete specification pins heat, colour, texture, safety and shelf life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use this template?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copy the block for your product form, replace each bracket with your target value, and send it with your enquiry. The pre-filled lines use representative values from our buying guide — confirm your exact SHU, ASTA, moisture and market limits before contracting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What COA documents should I require with the specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot-specific COA (SHU, ASTA, moisture, microbial, pesticide, mycotoxin), food-safety certificates, and traceability to the growing base. A generic catalogue certificate is not a lot COA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which mesh should I write for powder and flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh is the standard fine grind for chilli and paprika powder; 20–40 mesh is for flakes and crushed chilli; 100+ mesh for smooth sauces. Mesh is adjustable to your requirement — name the mesh or the target particle size."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Forms covered", value: "Powder, flakes, paprika" },
+  { label: "Key fields", value: "Variety, SHU, ASTA, mesh, moisture, a<sub>w</sub>" },
+  { label: "Moisture default", value: "≤13% · a<sub>w</sub> ≤0.65" },
+  { label: "COA rule", value: "Lot-specific, never generic" }
+];
+---
+
+<BaseLayout
+  title="Buyer Specification Template: Chilli Powder, Flakes & Paprika | Tenda Peppers"
+  description="Copy-paste buyer specification templates for chilli powder, chilli flakes and paprika powder — variety, origin, SHU, ASTA, mesh, moisture, food safety and packaging. China manufacturer."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Buyer Specification Template
+    </nav>
+
+    <h1>Buyer Specification Template: Chilli Powder, Flakes &amp; Paprika</h1>
+    <p class="lead">
+      Three copy-paste specification templates — one for chilli powder, one for chilli flakes,
+      one for paprika powder. Fill in the brackets, send it with your enquiry, and every number
+      your product depends on is pinned from the first quotation.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> A complete specification names the variety (or SHU window),
+      origin, form, mesh, moisture, water activity, SHU, ASTA colour and the food-safety parameters
+      for your market. Copy the block for your product form below, replace each bracket with your
+      target value, and require a lot-specific COA.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">Template 1 — Chilli powder</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Chilli powder
+Variety:        [Sanying / Zidantou / Jixin — or state SHU window only]
+Origin:         [Shandong]
+SHU window:     [20,000–50,000]
+ASTA:           [≥100]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [EU aflatoxin limits · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · food-safety certificates · traceability]</code></pre>
+    <p class="data-note" style="margin-top:10px;">Bracketed values are representative examples from our <a href="/guides/paprika-chilli-buying-guide/">buying guide</a> — confirm exact limits with us before contracting.</p>
+
+    <h2 style="margin-top:32px;">Template 2 — Chilli flakes / crushed</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Chilli flakes / crushed chilli
+Variety:        [Jinta / Xian — visible flakes, bright colour]
+Origin:         [Gansu]
+SHU window:     [10,000–20,000]
+ASTA:           [target value]
+Mesh:           [20–40 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [kraft bags / cartons, moisture-barrier]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Template 3 — Paprika powder</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Paprika powder (sweet / low-heat)
+Variety:        [Xinjiang sweet pepper / Yidu red, Wangdu]
+Origin:         [Xinjiang / Shandong]
+ASTA:           [60–240 — confirm target]
+SHU:            [&lt;500 sweet · &lt;10,000 low-heat]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Blank template — any form</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        [whole / flakes / powder / segments]
+Variety:        [name or SHU window]
+Origin:         [province]
+SHU window:     [–]
+ASTA:           [–]
+Mesh:           [20–40 flakes · 60–80 powder · 100+ sauces]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [market limits]
+Packaging:      [bag type, weight]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Why a written specification pays for itself</h2>
+    <p>
+      Heat, colour, texture, safety and shelf life each drift on their own when unspecified.
+      A one-line spec costs nothing to write and saves a failed batch — the buyers who get
+      consistent product are the ones who specify all of it and then verify with a lot COA.
+      For how each parameter works, see <a href="/guides/asta-colour-value/">ASTA colour value</a>,
+      <a href="/guides/asta-colour-and-shu-heat-explained/">SHU explained</a> and
+      <a href="/specs/mesh-size/">mesh size</a>.
+    </p>
+    <p class="data-note">
+      These templates summarise the parameters in our buying guide. Example values are
+      representative, not contractual — confirm your exact SHU, ASTA, moisture and market limits
+      with us before ordering.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What goes in a complete chilli specification?</h3>
+      <p>Name the variety (or SHU window), origin, form (whole/flakes/powder), mesh, moisture, water activity, SHU, ASTA colour, and the food-safety parameters for your target market. A complete specification pins heat, colour, texture, safety and shelf life.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I use this template?</h3>
+      <p>Copy the block for your product form, replace each bracket with your target value, and send it with your enquiry. The pre-filled lines use representative values from our buying guide — confirm your exact SHU, ASTA, moisture and market limits before contracting.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What COA documents should I require with the specification?</h3>
+      <p>A lot-specific COA (SHU, ASTA, moisture, microbial, pesticide, mycotoxin), food-safety certificates, and traceability to the growing base. A generic catalogue certificate is not a lot COA.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which mesh should I write for powder and flakes?</h3>
+      <p>60–80 mesh is the standard fine grind for chilli and paprika powder; 20–40 mesh is for flakes and crushed chilli; 100+ mesh for smooth sauces. Mesh is adjustable to your requirement — name the mesh or the target particle size.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request a Quote</a>
+      <a class="cta cta-outline" href="/guides/paprika-chilli-buying-guide/" style="margin-left:8px;">Read the Buying Guide</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -62,6 +62,7 @@
 
 ### Specs & Packaging
 - [Chilli Powder Mesh Size Guide](https://drychillis.com/specs/mesh-size/)
+- [Buyer Specification Template](https://drychillis.com/specs/buyer-specification-template/)
 - [Bulk & OEM Packaging](https://drychillis.com/packaging/)
 
 ### Guides
