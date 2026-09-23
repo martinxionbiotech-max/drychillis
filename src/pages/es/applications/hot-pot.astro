@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué chile es mejor para hotpot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao para la base aromática, normalmente con Xiaomi o Chilli King para el picor extremo, más Seven-Star para cuerpo. Cada variedad aporta un papel distinto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el chile para hotpot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las bases de hotpot típicas cubren 15.000–50.000+ SHU mezclando Erjingtiao aromático con variedades de picor extremo como Xiaomi o Chilli King."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué forma de chile para hotpot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copos y segmentos para bases líquidas — infunden uniformemente y mantienen la superficie aromática. La pasta de chile premezclada es la opción de procesamiento industrial."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Variedad base", value: "Erjingtiao" },
+  { label: "Picor", value: "15,000–50,000+ SHU" },
+  { label: "Forma", value: "Copos, segmentos" },
+  { label: "Se evalúa por", value: "Aroma y ola de picor" }
+];
+---
+
+<BaseLayout
+  title="Chile para Hotpot | Tenda Peppers"
+  description="Chile para hotpot — Erjingtiao aromático, Xiaomi o Chilli King para picor extremo, Seven-Star para cuerpo. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Hotpot
+    </nav>
+    <h1>Chile para Hotpot</h1>
+    <p class="lead">
+      El hotpot combina tres papeles de chile: el Erjingtiao aromático para la base, Xiaomi o Chilli King para el picor extremo, y Seven-Star para cuerpo. Cada variedad aporta un papel distinto.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Las bases de hotpot usan Erjingtiao para el aroma, Xiaomi o Chilli King para el picor extremo y Seven-Star para cuerpo, mezclando la banda de 15.000–50.000+ SHU. Los copos y segmentos infunden uniformemente; la pasta de chile premezclada es la opción industrial.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué hace un buen chile para hotpot?</h2>
+    <p>
+      El hotpot combina tres papeles de chile: Erjingtiao para la base aromática, Xiaomi o Chilli King para el picor extremo y Seven-Star para cuerpo. Vea <a href="/es/heat-levels/extra-hot/">banda extra-picante</a> para conocer las opciones.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Base aromática, pasta de chile</td><td><a href="https://drychillis.com/products/erjingtiao-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Xiaomi (Mijo)</strong></td><td>50,000 – 70,000</td><td>Picor extremo</td><td><a href="/es/products/xiaomi-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>>50,000</td><td>Picor extremo</td><td><a href="/es/products/chilli-king/">Ver →</a></td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Cuerpo</td><td><a href="/es/products/seven-star-chilli/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile para hotpot</h2>
+    <p>
+      Use copos y segmentos para bases líquidas — infunden uniformemente y mantienen la superficie aromática. La pasta de chile premezclada es la opción de procesamiento industrial. Nombre cada variedad y su papel en la receta.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué chile es mejor para hotpot?</h3>
+      <p>Erjingtiao para la base aromática, normalmente con Xiaomi o Chilli King para el picor extremo, más Seven-Star para cuerpo. Cada variedad aporta un papel distinto.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el chile para hotpot?</h3>
+      <p>Las bases de hotpot típicas cubren 15.000–50.000+ SHU mezclando Erjingtiao aromático con variedades de picor extremo como Xiaomi o Chilli King.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué forma de chile para hotpot?</h3>
+      <p>Copos y segmentos para bases líquidas — infunden uniformemente y mantienen la superficie aromática. La pasta de chile premezclada es la opción de procesamiento industrial.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Форма продукта", value: "Уточнить спецификацию" },
+  { param: "Сорт", value: "Перец Seven-Star" },
+  { param: "Уровень остроты (SHU)", value: "20,000–50,000" },
+  { param: "Цветность ASTA", value: "Уточнить спецификацию" },
+  { param: "Размер частиц (mesh)", value: "Уточнить спецификацию" },
+  { param: "Влажность", value: "<13%" },
+  { param: "Обработка", value: "Уточнить спецификацию" },
+  { param: "Сертификаты", value: "ISO 9001 и HACCP стандартно — BRC, Halal, Kosher по запросу" },
+];
+
+const glanceFacts = [
+  { label: "Уровень остроты", value: "20 000–50 000 SHU" },
+  { label: "Регион", value: "Шаньдун, Шаньси" },
+  { label: "Лучше всего для", value: "Приправы для снеков, основы хого" },
+  { label: "Сертификаты", value: "ISO 9001 и HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+  "name": "Перец Seven-Star",
+  "description": "Перец Seven-Star — острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси, для приправ к снекам и основ хого. Китайский производитель, ISO 9001 и HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/seven-star-chilli/",
+  "sku": "TENDA-SEVEN-STAR-CHILLI",
+  "category": "Специи и приправы",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Уровень остроты (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Регион", "value": "Шаньдун, Шаньси" },
+    { "@type": "PropertyValue", "name": "Лучше всего для", "value": "Приправы для снеков, основы хого" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое перец Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star — острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси, используется в основном для приправ к снекам и основ хого. Это одна из рабочих разновидностей высокой остроты наряду с Sanying и Zidantou."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым является перец Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star относится к диапазону высокой остроты, 20 000–50 000 SHU — сильная и стойкая, выше средних сортов, таких как Xian и Jinta (10 000–20 000), и ниже сверхострых Jixin, Xiaomi и Chilli King (свыше 50 000). Указывайте точное окно SHU, а не просто «высокая острота»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Для чего используется перец Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star — стандарт для приправ к снекам и основ хого, его перемалывают вместе с Sanying и Zidantou для порошка чили. Указывайте сорт и окно SHU, чтобы зафиксировать постоянство от партии к партии."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Перец Seven-Star — 20 000–50 000 SHU | Tenda Peppers"
+  description="Перец Seven-Star — острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси, для приправ к снекам и основ хого. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/products/dried-chillies/">Сушёный чили</a> &rsaquo; Seven-Star
+    </nav>
+    <h1>Перец Seven-Star</h1>
+    <p class="lead">
+      Острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси — рабочая лошадка для приправ к снекам и основ хого.
+    </p>
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Seven-Star — острый перец (20 000–50 000 SHU) из Шаньдуна и Шаньси, который обычно перемалывают для приправ к снекам и основ хого. Он в одной полосе с Sanying и Zidantou — там, где острота определяет продукт, не заглушая остальные вкусы.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Целый сушёный чили" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Цена подтверждается при запросе котировки — MOQ, упаковка и спецификация согласовываются до заказа.</p>
+
+    <h2 style="margin-top:32px;">Что такое перец Seven-Star?</h2>
+    <p>
+      Seven-Star — острый перец при 20 000–50 000 SHU, выращиваемый в Шаньдуне и Шаньси. На странице <a href="/ru/heat-levels/high-heat/">высокой остроты</a> он указан наряду с Sanying и Zidantou как одна из рабочих разновидностей полосы 20 000–50 000 SHU — достаточно острый, чтобы определять продукт, и достаточно мягкий, чтобы остальные вкусы оставались в игре.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Свойство</th><th>Значение</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Острота (SHU)</strong></td><td>20,000–50,000</td></tr>
+        <tr><td><strong>Регион</strong></td><td>Шаньдун, Шаньси</td></tr>
+        <tr><td><strong>Лучше всего для</strong></td><td>Приправы для снеков, основы хого</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Для чего используется перец Seven-Star?</h2>
+    <ul>
+      <li>Приправы для снеков</li>
+      <li>Основы хого</li>
+      <li>Порошок чили (помол с Sanying и Zidantou)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Seven-Star против Sanying против Zidantou</h2>
+    <p>
+      Sanying (Tianying) и Zidantou — классические сорта для острого соуса при 20 000–50 000 SHU; Seven-Star распространён в приправах для снеков и основах хого. Острота, цвет и вкус меняются независимо, поэтому указывайте сорт и точное окно SHU — именно название сорта фиксирует постоянство от партии к партии.
+    </p>
+
+    <h2 style="margin-top:32px;">Seven-Star в цифрах</h2>
+    <p>
+      Seven-Star находится на уровне 20 000–50 000 SHU — примерно в 40–100 раз острее сладкой паприки (менее 500 SHU) и на полосу ниже сверхострых Jixin, Xiaomi и Chilli King (свыше 50 000 SHU).
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="ru" confirmText="Уточнить спецификацию" />
+
+    <h2 style="margin-top:32px;">В той же полосе 20 000–50 000 SHU</h2>
+    <p>
+      Другие сорта этой полосы: <a href="/ru/products/sanying-chilli/">Sanying</a>, <a href="/ru/products/zidantou-chilli/">Zidantou</a>, <a href="/ru/products/new-generation-chilli/">New Generation</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Что такое перец Seven-Star?</h3>
+      <p>Seven-Star — острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси, используется в основном для приправ к снекам и основ хого. Это одна из рабочих разновидностей высокой остроты наряду с Sanying и Zidantou.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым является перец Seven-Star?</h3>
+      <p>Seven-Star относится к диапазону высокой остроты, 20 000–50 000 SHU — сильная и стойкая, выше средних сортов, таких как Xian и Jinta (10 000–20 000), и ниже сверхострых Jixin, Xiaomi и Chilli King (свыше 50 000). Указывайте точное окно SHU, а не просто «высокая острота».</p>
+    </div>
+    <div class="faq-item">
+      <h3>Для чего используется перец Seven-Star?</h3>
+      <p>Seven-Star — стандарт для приправ к снекам и основ хого, его перемалывают вместе с Sanying и Zidantou для порошка чили. Указывайте сорт и окно SHU, чтобы зафиксировать постоянство от партии к партии.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/contact/">Запросить Котировку Seven-Star</a>
+      <a class="cta cta-outline" href="/ru/products/dried-chillies/" style="margin-left:8px;">Сушёный чили →</a>
+    </div>
+  </div>
+</BaseLayout>

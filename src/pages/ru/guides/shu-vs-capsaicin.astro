@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "SHU против Содержания Капсаицина: В Чем Разница", "description": "Капсаицин — химическое вещество, которое жжёт; SHU — шкала, измеряющая концентрацию капсаициноидов — примерно 1 ppm капсаицина ≈ 16 SHU. Что означает каждое в спецификации.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/shu-vs-capsaicin/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между SHU и капсаицином?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Капсаицин — химическое соединение, доминирующий капсаициноид, вызывающий жгучесть. SHU — шкала, измеряющая концентрацию капсаициноидов: примерно 1 ppm капсаицина ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько чистого капсаицина в SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Чистый капсаицин регистрирует около 16 миллионов SHU — пересчёт примерно 1 ppm капсаицина ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Всегда ли один и тот же SHU жжёт одинаково?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Два перца могут иметь идентичный SHU, но жечь с разной скоростью и оставаться на разное время, потому что число усредняет несколько капсаициноидов с разным сенсорным характером."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Капсаицин", value: "Доминирующий капсаициноидный алкалоид" },
+  { label: "SHU", value: "Шкала концентрации" },
+  { label: "Пересчёт", value: "1 ppm капсаицина ≈ 16 SHU" },
+  { label: "Чистый капсаицин", value: "≈16 миллионов SHU" }
+];
+---
+
+<BaseLayout
+  title="SHU против Содержания Капсаицина: В Чем Разница | Tenda Peppers"
+  description="Капсаицин — химическое вещество, которое жжёт; SHU — шкала, измеряющая концентрацию капсаициноидов — примерно 1 ppm капсаицина ≈ 16 SHU. Что означает каждое в спецификации."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; SHU против Капсаицина
+    </nav>
+
+    <h1>SHU против Содержания Капсаицина: В Чем Разница</h1>
+    <p class="lead">
+      Капсаицин — химическое соединение, вызывающее жгучесть; SHU — шкала, которая её количественно определяет. Это сравнение объясняет связь — и что SHU говорит и не говорит вам о том, как будет жечь перец.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Капсаицин — доминирующий член семейства капсаициноидов — алкалоидов, вызывающих ощущение жгучести. SHU количественно определяет их концентрацию: результаты HPLC пересчитываются в SHU, примерно 1 ppm капсаицина ≈ 16 SHU — поэтому чистый капсаицин регистрирует около 16 миллионов SHU.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Капсаицин</th>
+          <th style="padding:8px;">SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Что это</strong></td>
+          <td style="padding:8px;">Доминирующий член семейства капсаициноидных алкалоидов</td>
+          <td style="padding:8px;">Шкала концентрации капсаициноидов, прежде всего капсаицина</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Роль</strong></td>
+          <td style="padding:8px;">Вызывает ощущение жгучести</td>
+          <td style="padding:8px;">Количественно определяет её — химическая концентрация, а не сила вкуса</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Пересчёт</strong></td>
+          <td style="padding:8px;">Примерно 1 ppm капсаицина ≈ 16 SHU</td>
+          <td style="padding:8px;">Чистый капсаицин ≈ 16 миллионов SHU</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ограничение</strong></td>
+          <td style="padding:8px;">Одно соединение среди нескольких</td>
+          <td style="padding:8px;">Усредняет несколько капсаициноидов — один SHU может жечь по-разному</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      «Капсаицин» часто используют вольно в значении «острота», но на самом деле это доминирующий член небольшого семейства алкалоидов. Полная справка — на странице <a href="/ru/guides/asta-colour-and-shu-heat-explained/">объяснение SHU</a>. Два перца могут иметь идентичный SHU, но жечь с разной скоростью, оставаться на разное время и иметь совершенно разный вкус — потому что число усредняет несколько капсаициноидов с разным сенсорным характером.
+    </p>
+    <h2 style="margin-top:32px;">Чего SHU не говорит</h2>
+    <p>
+      SHU — это химическая концентрация, а не сила вкуса. Воспринимаемая острота — сенсорная реакция, зависящая от смеси капсаициноидов, пищевой матрицы и конкретного дегустатора — измеренный SHU и воспринимаемая острота коррелируют, но не взаимозаменяемы.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Указывайте остроту как окно SHU, а не одно число — содержание капсаициноидов может смещаться на ±40% внутри одного сорта в зависимости от условий выращивания.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между SHU и капсаицином?</h3>
+      <p>Капсаицин — химическое соединение, доминирующий капсаициноид, вызывающий жгучесть. SHU — шкала, измеряющая концентрацию капсаициноидов: примерно 1 ppm капсаицина ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Сколько чистого капсаицина в SHU?</h3>
+      <p>Чистый капсаицин регистрирует около 16 миллионов SHU — пересчёт примерно 1 ppm капсаицина ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Всегда ли один и тот же SHU жжёт одинаково?</h3>
+      <p>Нет. Два перца могут иметь идентичный SHU, но жечь с разной скоростью и оставаться на разное время, потому что число усредняет несколько капсаициноидов с разным сенсорным характером.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/guides/asta-colour-and-shu-heat-explained/">Читать Гайд по SHU</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

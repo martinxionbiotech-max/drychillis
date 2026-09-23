@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying против Jinta: Острота против Цвета", "description": "Sanying — база высокой остроты (20 000–50 000 SHU); Jinta — сорт цвета средней остроты (10 000–20 000 SHU) для видимых хлопьев. Сравнение для покупателей.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/sanying-vs-jinta/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между Sanying и Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying — перец высокой остроты при 20 000–50 000 SHU из Хэнани и Хэбэя, база для острого соуса и масла чили. Jinta — перец средней остроты при 10 000–20 000 SHU из Ганьсу с длинными тёмно-красными глянцевыми стручками, выбираемый для видимых хлопьев и яркого цвета."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что острее, Sanying или Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying, при 20 000–50 000 SHU, острее Jinta при 10 000–20 000 SHU — разница составляет целую полосу остроты."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой использовать для видимых хлопьев?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta — его длинные стручки с толстой, глянцевой, тёмной кожицей цвета ююбы делают его предпочтительным сортом для хлопьев. Цвет и острота независимы, и Jinta тяготеет к цвету."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "20,000–50,000 SHU, Хэнань и Хэбэй" },
+  { label: "Jinta", value: "10,000–20,000 SHU, Ганьсу" },
+  { label: "Sanying тяготеет к", value: "Остроте" },
+  { label: "Jinta тяготеет к", value: "Цвету" }
+];
+---
+
+<BaseLayout
+  title="Sanying против Jinta: Острота против Цвета | Tenda Peppers"
+  description="Sanying — база высокой остроты (20 000–50 000 SHU); Jinta — сорт цвета средней остроты (10 000–20 000 SHU) для видимых хлопьев. Сравнение для покупателей."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Sanying против Jinta
+    </nav>
+
+    <h1>Sanying против Jinta: Острота против Цвета</h1>
+    <p class="lead">
+      Sanying и Jinta разделяет одна полоса остроты, и они созданы для разных задач: Sanying даёт надёжную высокую остроту, Jinta даёт длинные тёмно-красные стручки для видимых хлопьев и яркого цвета. Это сравнение различает их.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Sanying — перец высокой остроты (20 000–50 000 SHU) из Хэнани и Хэбэя, база для острого соуса, масла чили и приправ к снекам. Jinta — перец средней остроты (10 000–20 000 SHU) из Ганьсу с длинными стручками 11–14 см, толстой глянцевой кожицей цвета ююбы — выбирается для видимых хлопьев и цвета. Цвет и острота независимы, и Jinta тяготеет к цвету.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Jinta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Острота (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">10,000–20,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Регион</strong></td>
+          <td style="padding:8px;">Хэнань, Хэбэй</td>
+          <td style="padding:8px;">Ганьсу</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Стручок</strong></td>
+          <td style="padding:8px;">Кластер, растёт вверх</td>
+          <td style="padding:8px;">Длинный 11–14 см, толстая глянцевая кожица цвета ююбы</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Тяготеет к</strong></td>
+          <td style="padding:8px;">Остроте</td>
+          <td style="padding:8px;">Цвету</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Лучше всего для</strong></td>
+          <td style="padding:8px;">Острый соус, масло чили, приправы к снекам</td>
+          <td style="padding:8px;">Видимые хлопья, топпинг пиццы, смеси приправ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Это решение «острота против цвета». <a href="/ru/products/sanying-chilli/">Sanying</a> даёт 20 000–50 000 SHU — надёжную базу высокой остроты для острого соуса, масла чили и приправ к снекам. <a href="/ru/products/jinta-chilli/">Jinta</a> — средняя острота при 10 000–20 000 SHU, с длинными тёмными стручками цвета ююбы и толстой глянцевой кожицей — стандарт для видимых хлопьев и яркого цвета. См. страницы <a href="/ru/heat-levels/medium-heat/">средней остроты</a> и <a href="/ru/heat-levels/high-heat/">высокой остроты</a>.
+    </p>
+    <h2 style="margin-top:32px;">Когда выбирать каждый</h2>
+    <p>
+      Выбирайте Sanying, когда острота — главное и конечный продукт оценивается по жгучести; выбирайте Jinta, когда конечный продукт показывает чили — топпинг пиццы, видимые хлопья и смеси приправ — потому что его стручок чётко читается как хлопья и держит яркий цвет.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Назовите сорт и точное окно SHU — острота, цвет и вкус меняются независимо, поэтому название сорта фиксирует постоянство между партиями. Для Jinta также подтвердите помол (20–40 для видимых хлопьев).
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между Sanying и Jinta?</h3>
+      <p>Sanying — перец высокой остроты при 20 000–50 000 SHU из Хэнани и Хэбэя, база для острого соуса и масла чили. Jinta — перец средней остроты при 10 000–20 000 SHU из Ганьсу с длинными тёмно-красными глянцевыми стручками, выбираемый для видимых хлопьев и яркого цвета.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Что острее, Sanying или Jinta?</h3>
+      <p>Sanying, при 20 000–50 000 SHU, острее Jinta при 10 000–20 000 SHU — разница составляет целую полосу остроты.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какой использовать для видимых хлопьев?</h3>
+      <p>Jinta — его длинные стручки с толстой, глянцевой, тёмной кожицей цвета ююбы делают его предпочтительным сортом для хлопьев. Цвет и острота независимы, и Jinta тяготеет к цвету.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

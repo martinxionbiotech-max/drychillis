@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo especifico chile para una mezcla de condimentos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Especifique la variedad, la ventana SHU, la malla y el ASTA. Picor, color y sabor son independientes, y una mezcla se desvía a menos que cada uno esté fijado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué se desvía una mezcla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque picor, color y sabor son variables independientes. Fije la variedad y la ventana SHU para asegurar la consistencia entre lotes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Polvo o copos en una mezcla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copos cuando el producto final muestra el chile; polvo (malla 60–80) para una dispersión uniforme de color y picor con sensación suave en boca."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Variedades", value: "Fijadas por variedad" },
+  { label: "Picor", value: "Ventana SHU controlada" },
+  { label: "Forma", value: "Polvo, copos" },
+  { label: "Fijar", value: "Variedad, SHU, malla, ASTA" }
+];
+---
+
+<BaseLayout
+  title="Chile para Mezclas de Condimentos | Tenda Peppers"
+  description="Chile para mezclas de condimentos — ventanas SHU fijadas por variedad, color ASTA definido y malla para mezclas de especias consistentes. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Mezclas de Condimentos
+    </nav>
+    <h1>Chile para Mezclas de Condimentos</h1>
+    <p class="lead">
+      Las mezclas necesitan una ventana SHU controlada y consistente por variedad, más un color definido (ASTA) donde el color importa. Fije la variedad, la ventana SHU, la malla y el ASTA — una mezcla se desvía a menos que cada uno esté fijado.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Las mezclas de condimentos quieren una ventana SHU controlada y consistente por variedad. Especifique variedad, ventana SHU, malla y ASTA — picor, color y sabor son independientes, y una mezcla se desvía a menos que cada uno esté fijado.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué necesita una mezcla de condimentos de su chile?</h2>
+    <p>
+      Las mezclas necesitan una ventana SHU controlada y consistente por variedad, más un color definido (ASTA) donde el color importa. Picor, color y sabor son independientes, y una mezcla se desvía a menos que cada uno esté fijado. Vea <a href="/es/guides/paprika-chilli-buying-guide/">cómo especificar y comprar</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Banda media</strong></td><td>10,000 – 20,000</td><td>Por defecto para mezclas de especias cotidianas</td><td><a href="/es/heat-levels/medium-heat/">Ver →</a></td></tr>
+        <tr><td><strong>Banda alta</strong></td><td>20,000 – 50,000</td><td>Mezclas con protagonismo del picor</td><td><a href="/es/heat-levels/high-heat/">Ver →</a></td></tr>
+        <tr><td><strong>Banda extra-picante</strong></td><td>>50,000</td><td>Condimentos industriales dosificados por picor</td><td><a href="/es/heat-levels/extra-hot/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile para una mezcla</h2>
+    <p>
+      Especifique la variedad, la ventana SHU, la malla y el ASTA — picor, color y sabor son independientes, y una mezcla se desvía a menos que cada uno esté fijado. El polvo (malla 60–80) da dispersión uniforme de color y picor; los copos dan textura visible.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cómo especifico chile para una mezcla de condimentos?</h3>
+      <p>Especifique la variedad, la ventana SHU, la malla y el ASTA. Picor, color y sabor son independientes, y una mezcla se desvía a menos que cada uno esté fijado.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Por qué se desvía una mezcla?</h3>
+      <p>Porque picor, color y sabor son variables independientes. Fije la variedad y la ventana SHU para asegurar la consistencia entre lotes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Polvo o copos en una mezcla?</h3>
+      <p>Copos cuando el producto final muestra el chile; polvo (malla 60–80) para una dispersión uniforme de color y picor con sensación suave en boca.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

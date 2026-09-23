@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "60 против 80 Mesh: Какой Помол Порошка Выбрать", "description": "60 mesh — около 250 мкм, 80 mesh — около 180 мкм — оба внутри стандартного диапазона порошка 60–80 mesh. Что означает каждый помол для дисперсии и ощущения во рту.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/60-vs-80-mesh/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между 60 и 80 mesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60 mesh — около 250 мкм, 80 mesh — около 180 мкм — оба внутри стандартного диапазона порошка 60–80 mesh. Помол 80 mesh мельче и глаже."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой выбрать?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh — стандартный диапазон порошка: 60 mesh для обычного порошка и смесей приправ, 80 mesh для более гладкого порошка. Помол регулируется под ваше требование — назовите mesh или целевой размер частиц."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Меняет ли более мелкий помол остроту?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Mesh измеряет помол, а не остроту или цвет перца. Более мелкий помол меняет дисперсию, ощущение во рту и суспензию — не SHU."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "60 mesh", value: "≈250 мкм, стандартный порошок" },
+  { label: "80 mesh", value: "≈180 мкм, гладкий порошок" },
+  { label: "Стандартный диапазон", value: "60–80 mesh для порошка" },
+  { label: "Контролирует", value: "Дисперсию, ощущение во рту, суспензию" }
+];
+---
+
+<BaseLayout
+  title="60 против 80 Mesh: Какой Помол Порошка Выбрать | Tenda Peppers"
+  description="60 mesh — около 250 мкм, 80 mesh — около 180 мкм — оба внутри стандартного диапазона порошка 60–80 mesh. Что означает каждый помол для дисперсии и ощущения во рту."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; 60 против 80 Mesh
+    </nav>
+
+    <h1>60 против 80 Mesh: Какой Помол Порошка Выбрать</h1>
+    <p class="lead">
+      60 и 80 mesh — оба внутри стандартного диапазона порошка чили — разница в размере частиц: около 250 мкм против около 180 мкм. Это сравнение объясняет, что меняет более мелкий помол и как выбрать.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Mesh — это число отверстий на линейный дюйм сита — 80 mesh означает 80 проволок на дюйм и отверстие около 180 мкм; 60 mesh — около 250 мкм. Оба внутри стандартного диапазона порошка 60–80 mesh: 60 — стандартный помол порошка, 80 — более мелкий, гладкий помол.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">60 mesh</th>
+          <th style="padding:8px;">80 mesh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Отверстие</strong></td>
+          <td style="padding:8px;">≈250 мкм</td>
+          <td style="padding:8px;">≈180 мкм</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Проволок на дюйм</strong></td>
+          <td style="padding:8px;">60</td>
+          <td style="padding:8px;">80</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Характер</strong></td>
+          <td style="padding:8px;">Мелкий — стандартный порошок</td>
+          <td style="padding:8px;">Мелкий — гладкий порошок</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Лучше всего для</strong></td>
+          <td style="padding:8px;">Обычный порошок, смеси приправ</td>
+          <td style="padding:8px;">Более гладкий порошок, соусы</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Стандартный диапазон</strong></td>
+          <td style="padding:8px;">60–80 mesh для порошка чили и паприки</td>
+          <td style="padding:8px;">60–80 mesh для порошка чили и паприки</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Mesh — шкала размера частиц: число отверстий на линейный дюйм сита. Больший mesh означает более мелкие частицы — он измеряет помол, а не остроту или цвет перца. Полный гайд — на странице <a href="/ru/specs/mesh-size/">размер mesh</a>.
+    </p>
+    <h2 style="margin-top:32px;">Что меняет более мелкий помол</h2>
+    <p>
+      Mesh контролирует сразу три вещи: насколько равномерно распределяются острота и цвет, как порошок ощущается на нёбе и как он суспендируется в соусе. Помол 80 mesh распределяется быстрее и ощущается глаже; помол 60 mesh — стандартный универсальный порошок. Грубее (20–40 mesh) — хлопья; мельче (100+ mesh) — для гладких соусов и быстрорастворимых смесей.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Назовите mesh или целевой размер частиц — он регулируется под ваше требование и документируется в котировке вместе с вашим окном SHU и влажностью.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между 60 и 80 mesh?</h3>
+      <p>60 mesh — около 250 мкм, 80 mesh — около 180 мкм — оба внутри стандартного диапазона порошка 60–80 mesh. Помол 80 mesh мельче и глаже.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какой выбрать?</h3>
+      <p>60–80 mesh — стандартный диапазон порошка: 60 mesh для обычного порошка и смесей приправ, 80 mesh для более гладкого порошка. Помол регулируется под ваше требование — назовите mesh или целевой размер частиц.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Меняет ли более мелкий помол остроту?</h3>
+      <p>Нет. Mesh измеряет помол, а не остроту или цвет перца. Более мелкий помол меняет дисперсию, ощущение во рту и суспензию — не SHU.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/specs/mesh-size/">Читать Гайд по Mesh</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

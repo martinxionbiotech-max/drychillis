@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "شكل المنتج", value: "تأكيد المواصفات" },
+  { param: "الصنف", value: "فلفل سفن ستار" },
+  { param: "مستوى الحرارة (SHU)", value: "20,000–50,000" },
+  { param: "قيمة اللون ASTA", value: "تأكيد المواصفات" },
+  { param: "حجم الشبكة (Mesh)", value: "تأكيد المواصفات" },
+  { param: "الرطوبة", value: "<13%" },
+  { param: "المعالجة", value: "تأكيد المواصفات" },
+  { param: "الشهادات", value: "ISO 9001 وHACCP قياسيًا — BRC وحلال وكوشر عند الطلب" },
+];
+
+const glanceFacts = [
+  { label: "مستوى الحرارة", value: "20,000–50,000 SHU" },
+  { label: "المنطقة", value: "شاندونغ، شانشي" },
+  { label: "الأنسب لـ", value: "تتبيلة الوجبات الخفيفة، قواعد الهوت بوت" },
+  { label: "الشهادات", value: "ISO 9001 وHACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+  "name": "فلفل سفن ستار",
+  "description": "فلفل سفن ستار — فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي، لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. مصنع صيني، ISO 9001 وHACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/seven-star-chilli/",
+  "sku": "TENDA-SEVEN-STAR-CHILLI",
+  "category": "البهارات والتوابل",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "المنطقة", "value": "شاندونغ، شانشي" },
+    { "@type": "PropertyValue", "name": "الأنسب لـ", "value": "تتبيلة الوجبات الخفيفة، قواعد الهوت بوت" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هو فلفل سفن ستار؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سفن ستار فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي، يُستخدم أساسًا لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. وهو من أصناف العمل في الحرارة العالية إلى جانب سانينغ وزيدانتو."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما مدى حرارة فلفل سفن ستار؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سفن ستار في نطاق الحرارة العالية، 20,000–50,000 SHU — قوي وثابت، أعلى من الأصناف المتوسطة مثل شيان وجينتا (10,000–20,000) وأقل من الأصناف فائقة الحرارة جيشين وشياومي وتشيلي كينغ (أكثر من 50,000). حدد نافذة SHU دقيقة، وليس فقط «حرارة عالية»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فيمَ يُستخدم فلفل سفن ستار؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سفن ستار معيار لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت، ويُطحن مع سانينغ وزيدانتو لمسحوق الفلفل. اذكر الصنف ونافذة SHU لتثبيت الاتساق بين الدفعات."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="فلفل سفن ستار — 20,000–50,000 SHU | Tenda Peppers"
+  description="فلفل سفن ستار — فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي، لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/dried-chillies/">الفلفل المجفف</a> &rsaquo; سفن ستار
+    </nav>
+    <h1>فلفل سفن ستار</h1>
+    <p class="lead">
+      فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي — حصان عمل لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت.
+    </p>
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> سفن ستار فلفل عالي الحرارة (20,000–50,000 SHU) من شاندونغ وشانشي، يُطحن عادة لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. يقع في نفس نطاق سانينغ وزيدانتو — النطاق الذي تُحدد فيه الحرارة المنتج دون أن تطغى على بقية النكهات.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="فلفل مجفف كامل" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">يُؤكَّد السعر عند طلب العرض — يُتفق على الحد الأدنى للطلب والتعبئة والمواصفات قبل الطلب.</p>
+
+    <h2 style="margin-top:32px;">ما هو فلفل سفن ستار؟</h2>
+    <p>
+      سفن ستار فلفل عالي الحرارة عند 20,000–50,000 SHU، يُزرع في شاندونغ وشانشي. يظهر في صفحة <a href="/ar/heat-levels/high-heat/">الحرارة العالية</a> إلى جانب سانينغ وزيدانتو كأحد أصناف العمل في نطاق 20,000–50,000 SHU — حار بما يكفي لتحديد المنتج، ولطيف بما يكفي لإبقاء بقية النكهات حاضرة.
+    </p>
+    <table>
+      <thead>
+        <tr><th>الخاصية</th><th>التفاصيل</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>الحرارة (SHU)</strong></td><td>20,000–50,000</td></tr>
+        <tr><td><strong>المنطقة</strong></td><td>شاندونغ، شانشي</td></tr>
+        <tr><td><strong>الأنسب لـ</strong></td><td>تتبيلة الوجبات الخفيفة، قواعد الهوت بوت</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">فيمَ يُستخدم فلفل سفن ستار؟</h2>
+    <ul>
+      <li>تتبيلة الوجبات الخفيفة</li>
+      <li>قواعد الهوت بوت</li>
+      <li>مسحوق الفلفل (مطحون مع سانينغ وزيدانتو)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">سفن ستار مقابل سانينغ مقابل زيدانتو</h2>
+    <p>
+      سانينغ (تيانينغ) وزيدانتو هما الصنفان الكلاسيكيان للصلصة الحارة عند 20,000–50,000 SHU؛ أما سفن ستار فشائع في تتبيلة الوجبات الخفيفة وقواعد الهوت بوت. الحرارة واللون والنكهة تتغير باستقلالية، لذا اذكر الصنف ونافذة SHU دقيقة — اسم الصنف هو ما يثبت الاتساق بين الدفعات.
+    </p>
+
+    <h2 style="margin-top:32px;">سفن ستار بالأرقام</h2>
+    <p>
+      يقع سفن ستار عند 20,000–50,000 SHU — أكثر حرارة بنحو 40–100 مرة من البابريكا الحلوة (أقل من 500 SHU) ونطاق واحد تحت الأصناف فائقة الحرارة جيشين وشياومي وتشيلي كينغ (أكثر من 50,000 SHU).
+    </p>
+    <p class="data-note">
+      قيم الحرارة تمثيلية لكل صنف. أكّد نافذة SHU والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="ar" confirmText="تأكيد المواصفات" />
+
+    <h2 style="margin-top:32px;">في نفس نطاق 20,000–50,000 SHU</h2>
+    <p>
+      أصناف أخرى في هذا النطاق: <a href="/ar/products/sanying-chilli/">سانينغ</a>، <a href="/ar/products/zidantou-chilli/">زيدانتو</a>، <a href="/ar/products/new-generation-chilli/">نيو جينيريشن</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هو فلفل سفن ستار؟</h3>
+      <p>سفن ستار فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي، يُستخدم أساسًا لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. وهو من أصناف العمل في الحرارة العالية إلى جانب سانينغ وزيدانتو.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة فلفل سفن ستار؟</h3>
+      <p>سفن ستار في نطاق الحرارة العالية، 20,000–50,000 SHU — قوي وثابت، أعلى من الأصناف المتوسطة مثل شيان وجينتا (10,000–20,000) وأقل من الأصناف فائقة الحرارة جيشين وشياومي وتشيلي كينغ (أكثر من 50,000). حدد نافذة SHU دقيقة، وليس فقط «حرارة عالية».</p>
+    </div>
+    <div class="faq-item">
+      <h3>فيمَ يُستخدم فلفل سفن ستار؟</h3>
+      <p>سفن ستار معيار لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت، ويُطحن مع سانينغ وزيدانتو لمسحوق الفلفل. اذكر الصنف ونافذة SHU لتثبيت الاتساق بين الدفعات.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر سفن ستار</a>
+      <a class="cta cta-outline" href="/ar/products/dried-chillies/" style="margin-left:8px;">الفلفل المجفف ←</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "سانينغ ضد جينتا: الحرارة ضد اللون", "description": "سانينغ هو قاعدة الحرارة العالية (20,000–50,000 SHU)؛ جينتا هو صنف اللون متوسط الحرارة (10,000–20,000 SHU) للرقائق المرئية. مقارنة للمشتري.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/sanying-vs-jinta/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين سانينغ وجينتا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سانينغ فلفل عالي الحرارة عند 20,000–50,000 SHU من خنان وخبي، قاعدة الصلصة الحارة وزيت الفلفل. جينتا فلفل متوسط الحرارة عند 10,000–20,000 SHU من قانسو بقرون طويلة حمراء داكنة لامعة، يُختار للرقائق المرئية واللون الزاهي."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أحر، سانينغ أم جينتا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سانينغ، عند 20,000–50,000 SHU، أحر من جينتا عند 10,000–20,000 SHU — الفرق نطاق حرارة كامل."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أستخدم للرقائق المرئية؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "جينتا — قرونها الطويلة بقشرة سميكة لامعة بلون العناب الأحمر العميق تجعلها الصنف المفضل للرقائق. اللون والحرارة مستقلان، وجينتا يميل نحو اللون."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "سانينغ", value: "20,000–50,000 SHU، خنان وخبي" },
+  { label: "جينتا", value: "10,000–20,000 SHU، قانسو" },
+  { label: "سانينغ يميل نحو", value: "الحرارة" },
+  { label: "جينتا يميل نحو", value: "اللون" }
+];
+---
+
+<BaseLayout
+  title="سانينغ ضد جينتا: الحرارة ضد اللون | Tenda Peppers"
+  description="سانينغ هو قاعدة الحرارة العالية (20,000–50,000 SHU)؛ جينتا هو صنف اللون متوسط الحرارة (10,000–20,000 SHU) للرقائق المرئية. مقارنة للمشتري."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; سانينغ ضد جينتا
+    </nav>
+
+    <h1>سانينغ ضد جينتا: الحرارة ضد اللون</h1>
+    <p class="lead">
+      يفصل بين سانينغ وجينتا نطاق حرارة كامل، وبُنيا لمهمتين مختلفتين: سانينغ يقدم حرارة عالية موثوقة، وجينتا يقدم قرونًا طويلة حمراء داكنة للرقائق المرئية واللون الزاهي. هذه المقارنة تميز بينهما.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> سانينغ فلفل عالي الحرارة (20,000–50,000 SHU) من خنان وخبي، قاعدة الصلصة الحارة وزيت الفلفل وتوابل الوجبات الخفيفة. جينتا فلفل متوسط الحرارة (10,000–20,000 SHU) من قانسو بقرون طويلة 11–14 سم بقشرة سميكة لامعة بلون العناب الأحمر — يُختار للرقائق المرئية واللون. اللون والحرارة مستقلان، وجينتا يميل نحو اللون.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">سانينغ (تيانيينغ)</th>
+          <th style="padding:8px;">جينتا</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الحرارة (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">10,000–20,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>المنطقة</strong></td>
+          <td style="padding:8px;">خنان، خبي</td>
+          <td style="padding:8px;">قانسو</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>القرن</strong></td>
+          <td style="padding:8px;">عنقودي متجه للسماء</td>
+          <td style="padding:8px;">طويل 11–14 سم، قشرة سميكة لامعة بلون العناب</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>يميل نحو</strong></td>
+          <td style="padding:8px;">الحرارة</td>
+          <td style="padding:8px;">اللون</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الأنسب لـ</strong></td>
+          <td style="padding:8px;">الصلصة الحارة، زيت الفلفل، توابل الوجبات الخفيفة</td>
+          <td style="padding:8px;">الرقائق المرئية، إضافة البيتزا، خلطات التوابل</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      هذا قرار حرارة ضد لون. <a href="/ar/products/sanying-chilli/">سانينغ</a> يقدم 20,000–50,000 SHU — القاعدة الموثوقة للحرارة العالية للصلصة الحارة وزيت الفلفل وتوابل الوجبات الخفيفة. <a href="/ar/products/jinta-chilli/">جينتا</a> حرارة متوسطة عند 10,000–20,000 SHU بقرون طويلة بلون العناب العميق وقشرة سميكة لامعة — معيار للرقائق المرئية واللون الزاهي. انظر صفحتي <a href="/ar/heat-levels/medium-heat/">الحرارة المتوسطة</a> و<a href="/ar/heat-levels/high-heat/">الحرارة العالية</a> للنطاقات.
+    </p>
+    <h2 style="margin-top:32px;">متى تختار كلًا منهما</h2>
+    <p>
+      اختر سانينغ عندما تكون الحرارة هي العنوان ويُقيَّم المنتج النهائي بالحرارة؛ اختر جينتا عندما يُظهر المنتج النهائي الفلفل — إضافة البيتزا والرقائق المرئية وخلطات التوابل — لأن قرنه يقرأ بوضوح كرقاقة ويحافظ على لون زاهٍ.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      اذكر الصنف ونافذة SHU دقيقة — الحرارة واللون والطعم تختلف باستقلالية، لذا اسم الصنف يثبّت الاتساق بين الدفعات. لجينتا، أكّد أيضًا الشبكة (20–40 للرقائق المرئية).
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين سانينغ وجينتا؟</h3>
+      <p>سانينغ فلفل عالي الحرارة عند 20,000–50,000 SHU من خنان وخبي، قاعدة الصلصة الحارة وزيت الفلفل. جينتا فلفل متوسط الحرارة عند 10,000–20,000 SHU من قانسو بقرون طويلة حمراء داكنة لامعة، يُختار للرقائق المرئية واللون الزاهي.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أحر، سانينغ أم جينتا؟</h3>
+      <p>سانينغ، عند 20,000–50,000 SHU، أحر من جينتا عند 10,000–20,000 SHU — الفرق نطاق حرارة كامل.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أستخدم للرقائق المرئية؟</h3>
+      <p>جينتا — قرونها الطويلة بقشرة سميكة لامعة بلون العناب الأحمر العميق تجعلها الصنف المفضل للرقائق. اللون والحرارة مستقلان، وجينتا يميل نحو اللون.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/">الفلفل المجفف ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

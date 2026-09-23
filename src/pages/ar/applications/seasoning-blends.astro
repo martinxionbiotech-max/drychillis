@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "كيف أحدد الفلفل لخلطة توابل؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "حدّد الصنف ونافذة SHU والشبكة وASTA. الحرارة واللون والطعم مستقلة، والخلطة تنحرف ما لم يُثبَّت كل منها."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "لماذا تنحرف الخلطة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لأن الحرارة واللون والطعم متغيرات مستقلة. ثبّت الصنف ونافذة SHU لضمان الاتساق بين الدفعات."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "مسحوق أم رقائق في الخلطة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "رقائق عندما يُظهر المنتج النهائي الفلفل؛ مسحوق (شبكة 60–80) لتوزيع متساوٍ للون والحرارة مع إحساس ناعم في الفم."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "الأصناف", value: "مثبتة بالصنف" },
+  { label: "الحرارة", value: "نافذة SHU مضبوطة" },
+  { label: "الشكل", value: "مسحوق، رقائق" },
+  { label: "ثبّت", value: "الصنف، SHU، الشبكة، ASTA" }
+];
+---
+
+<BaseLayout
+  title="فلفل لخلطات التوابل | Tenda Peppers"
+  description="فلفل لخلطات التوابل — نوافذ SHU مضبوطة بالصنف، لون ASTA محدد وشبكة لخلطات متسقة. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; خلطات التوابل
+    </nav>
+    <h1>فلفل لخلطات التوابل</h1>
+    <p class="lead">
+      تحتاج الخلطات نافذة SHU مضبوطة ومتسقة بالصنف، إضافة إلى لون محدد (ASTA) حيث يهم اللون. ثبّت الصنف ونافذة SHU والشبكة وASTA — الخلطة تنحرف ما لم يُثبَّت كل منها.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> خلطات التوابل تريد نافذة SHU مضبوطة ومتسقة بالصنف. حدّد الصنف ونافذة SHU والشبكة وASTA — الحرارة واللون والطعم مستقلة، والخلطة تنحرف ما لم يُثبَّت كل منها.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">ماذا تحتاج خلطة التوابل من فلفلك؟</h2>
+    <p>
+      تحتاج الخلطات نافذة SHU مضبوطة ومتسقة بالصنف، إضافة إلى لون محدد (ASTA) حيث يهم اللون. الحرارة واللون والطعم مستقلة، والخلطة تنحرف ما لم يُثبَّت كل منها. اطلع على <a href="/ar/guides/paprika-chilli-buying-guide/">كيفية التحديد والشراء</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>الصنف / النطاق</th><th>الحرارة (SHU)</th><th>الدور</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>النطاق المتوسط</strong></td><td>10,000 – 20,000</td><td>الافتراضي لخلطات التوابل اليومية</td><td><a href="/ar/heat-levels/medium-heat/">عرض ←</a></td></tr>
+        <tr><td><strong>النطاق العالي</strong></td><td>20,000 – 50,000</td><td>خلطات تقودها الحرارة</td><td><a href="/ar/heat-levels/high-heat/">عرض ←</a></td></tr>
+        <tr><td><strong>النطاق شديد الحرارة</strong></td><td>>50,000</td><td>توابل صناعية تُجرَّع بالحرارة</td><td><a href="/ar/heat-levels/extra-hot/">عرض ←</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">كيف تحدد الفلفل لخلطة</h2>
+    <p>
+      حدّد الصنف ونافذة SHU والشبكة وASTA — الحرارة واللون والطعم مستقلة، والخلطة تنحرف ما لم يُثبَّت كل منها. المسحوق (شبكة 60–80) يعطي توزيعًا متساويًا للون والحرارة؛ الرقائق تعطي ملمسًا مرئيًا.
+    </p>
+    <p class="data-note">
+      قيم الحرارة تمثيلية لكل صنف. أكّد نافذة SHU والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>كيف أحدد الفلفل لخلطة توابل؟</h3>
+      <p>حدّد الصنف ونافذة SHU والشبكة وASTA. الحرارة واللون والطعم مستقلة، والخلطة تنحرف ما لم يُثبَّت كل منها.</p>
+    </div>
+    <div class="faq-item">
+      <h3>لماذا تنحرف الخلطة؟</h3>
+      <p>لأن الحرارة واللون والطعم متغيرات مستقلة. ثبّت الصنف ونافذة SHU لضمان الاتساق بين الدفعات.</p>
+    </div>
+    <div class="faq-item">
+      <h3>مسحوق أم رقائق في الخلطة؟</h3>
+      <p>رقائق عندما يُظهر المنتج النهائي الفلفل؛ مسحوق (شبكة 60–80) لتوزيع متساوٍ للون والحرارة مع إحساس ناعم في الفم.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/">الفلفل المجفف ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

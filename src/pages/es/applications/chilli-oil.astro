@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué chile es mejor para aceite de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Erjingtiao aromático aporta la fragancia, normalmente mezclado con una variedad de picor como Sanying o Jixin, en copos o segmentos para una infusión uniforme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Copos o polvo para aceite de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copos o segmentos — el polvo fino enturbia el aceite y pierde aroma más rápido. Los copos y segmentos infunden uniformemente y mantienen intacta la superficie aromática."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante debe ser el chile para aceite de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La base aromática (Erjingtiao) está en 15.000–30.000 SHU; las mezclas con una variedad de picor alcanzan 50.000 SHU o más. Especifique la ventana SHU de cada variedad de la mezcla."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Variedad base", value: "Erjingtiao" },
+  { label: "Picor", value: "15,000–50,000 SHU" },
+  { label: "Forma", value: "Copos, segmentos" },
+  { label: "Se evalúa por", value: "Fragancia y picor" }
+];
+---
+
+<BaseLayout
+  title="Chile para Aceite de Chile | Tenda Peppers"
+  description="Qué chile usar para aceite de chile — Erjingtiao aromático mezclado con Sanying o Jixin, en copos o segmentos. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Aceite de Chile
+    </nav>
+    <h1>Chile para Aceite de Chile</h1>
+    <p class="lead">
+      El aceite de chile se juzga por la fragancia tanto como por el picor. La base clásica es el Erjingtiao aromático, mezclado con una variedad de picor como Sanying o Jixin — en copos o segmentos, no en polvo fino.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> El aceite de chile quiere aroma (Erjingtiao, 15.000–30.000 SHU) mezclado con picor (Sanying o Jixin). Use copos o segmentos para una infusión uniforme — el polvo fino enturbia el aceite y pierde aroma más rápido.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué hace un buen chile para aceite de chile?</h2>
+    <p>
+      El aceite de chile se juzga por la fragancia tanto como por el picor. La base clásica es el Erjingtiao aromático (15.000–30.000 SHU), a menudo mezclado con una variedad de picor como Sanying o Jixin. Los copos o segmentos infunden uniformemente y mantienen intacta la superficie aromática.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Base aromática, pasta de chile, hotpot</td><td><a href="https://drychillis.com/products/erjingtiao-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Socio de picor en la mezcla</td><td><a href="/es/products/sanying-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Xiaomi (Mijo)</strong></td><td>50,000 – 70,000</td><td>Aceite de chile, picor extremo</td><td><a href="/es/products/xiaomi-chilli/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile para aceite de chile</h2>
+    <p>
+      Use copos o segmentos para una infusión uniforme y para mantener intacta la superficie aromática — el polvo fino enturbia el aceite y pierde aroma más rápido. Nombre la variedad base (Erjingtiao) y el socio de picor, más la ventana SHU de cada uno.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué chile es mejor para aceite de chile?</h3>
+      <p>El Erjingtiao aromático aporta la fragancia, normalmente mezclado con una variedad de picor como Sanying o Jixin, en copos o segmentos para una infusión uniforme.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Copos o polvo para aceite de chile?</h3>
+      <p>Copos o segmentos — el polvo fino enturbia el aceite y pierde aroma más rápido. Los copos y segmentos infunden uniformemente y mantienen intacta la superficie aromática.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante debe ser el chile para aceite de chile?</h3>
+      <p>La base aromática (Erjingtiao) está en 15.000–30.000 SHU; las mezclas con una variedad de picor alcanzan 50.000 SHU o más. Especifique la ventana SHU de cada variedad de la mezcla.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

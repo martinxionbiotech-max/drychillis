@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Цвет ASTA против Остроты SHU: В Чем Разница", "description": "ASTA измеряет цвет (каротиноиды капсантин); SHU измеряет остроту (капсаициноиды). Две независимые спецификации — паприка может быть высокой по ASTA и нулевой по остроте.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/asta-vs-shu/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между ASTA и SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA измеряет цвет — извлекаемые каротиноидные пигменты, такие как капсантин, которые придают паприке красный цвет. SHU измеряет остроту — капсаициноиды, вызывающие жгучесть. Это отдельные свойства, контролируемые независимо."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Может ли перец быть высоким по ASTA и нулевым по остроте?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. ASTA и SHU независимы — паприка может быть высокой по ASTA и нулевой по остроте, и это ровно то, чем является сладкая паприка."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что указывать первым?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Оба, отдельными строками: ASTA для цвета, окно SHU для остроты. Ни один не предсказывает другой, поэтому спецификация с одним числом оставляет другое неконтролируемым."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "ASTA", value: "Цвет (капсантин), 460 нм" },
+  { label: "SHU", value: "Острота (капсаициноиды), HPLC" },
+  { label: "Связь", value: "Независимы" },
+  { label: "Доказательство", value: "Паприка может быть высокой по ASTA и нулевой по остроте" }
+];
+---
+
+<BaseLayout
+  title="Цвет ASTA против Остроты SHU: В Чем Разница | Tenda Peppers"
+  description="ASTA измеряет цвет (каротиноиды капсантин); SHU измеряет остроту (капсаициноиды). Две независимые спецификации — паприка может быть высокой по ASTA и нулевой по остроте."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; ASTA против SHU
+    </nav>
+
+    <h1>Цвет ASTA против Остроты SHU: В Чем Разница</h1>
+    <p class="lead">
+      ASTA и SHU — два числа в каждой спецификации чили — и они измеряют совершенно разные вещи. ASTA — это цвет, SHU — острота, и ни один не предсказывает другой. Это сравнение объясняет оба.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> ASTA измеряет цвет — извлекаемые каротиноидные пигменты, главным образом капсантин, количественно определяемые спектрофотометрией при 460 нм (Метод ASTA 20.1). SHU измеряет остроту — концентрацию капсаициноидов, количественно определяемую HPLC и пересчитываемую в SHU (примерно 1 ppm капсаицина ≈ 16 SHU). Это отдельные свойства, контролируемые независимо.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Цветность ASTA</th>
+          <th style="padding:8px;">Острота SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Измеряет</strong></td>
+          <td style="padding:8px;">Цвет — извлекаемые каротиноиды, главным образом капсантин</td>
+          <td style="padding:8px;">Остроту — концентрацию капсаициноидов</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Метод</strong></td>
+          <td style="padding:8px;">Спектрофотометрия при 460 нм (Метод ASTA 20.1)</td>
+          <td style="padding:8px;">HPLC, пересчёт в SHU (≈1 ppm капсаицина ≈ 16 SHU)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Контроль</strong></td>
+          <td style="padding:8px;">Независимо</td>
+          <td style="padding:8px;">Независимо</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Стабильность</strong></td>
+          <td style="padding:8px;">Разрушается под кислородом, светом и теплом</td>
+          <td style="padding:8px;">Меняется ±40% в зависимости от условий выращивания</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Много неправильно купленного чили происходит от отношения к двум числам как к одному свойству. Это не так: ASTA — цвет, SHU — острота, и они контролируются независимо — паприка может быть высокой по ASTA и нулевой по остроте. Полная техническая справка — на странице <a href="/ru/guides/asta-colour-and-shu-heat-explained/">объяснение SHU</a>.
+    </p>
+    <h2 style="margin-top:32px;">Как указать оба</h2>
+    <p>
+      Укажите цель ASTA для цвета и окно SHU для остроты отдельными строками в спецификации — плюс сорт и помол. Каротиноиды разрушаются под кислородом, светом и теплом, поэтому цвет тускнеет со временем; свежая ротация партий защищает купленный вами ASTA.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между ASTA и SHU?</h3>
+      <p>ASTA измеряет цвет — извлекаемые каротиноидные пигменты, такие как капсантин, которые придают паприке красный цвет. SHU измеряет остроту — капсаициноиды, вызывающие жгучесть. Это отдельные свойства, контролируемые независимо.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Может ли перец быть высоким по ASTA и нулевым по остроте?</h3>
+      <p>Да. ASTA и SHU независимы — паприка может быть высокой по ASTA и нулевой по остроте, и это ровно то, чем является сладкая паприка.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Что указывать первым?</h3>
+      <p>Оба, отдельными строками: ASTA для цвета, окно SHU для остроты. Ни один не предсказывает другой, поэтому спецификация с одним числом оставляет другое неконтролируемым.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/guides/asta-colour-and-shu-heat-explained/">Читать Гайд по SHU</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

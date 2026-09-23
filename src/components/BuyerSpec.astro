@@ -6,31 +6,59 @@ interface SpecRow {
 
 interface Props {
   rows: SpecRow[];
+  lang?: string;
+  confirmText?: string;
 }
 
-const { rows = [] } = Astro.props;
+const { rows = [], lang = "en", confirmText = "Confirm specification" } = Astro.props;
+
+const T: Record<string, { title: string; intro: string; th1: string; th2: string; note: string }> = {
+  en: {
+    title: "Buyer Specification",
+    intro: "The matrix below is confirmed together before quotation — our typical range against your target. Where a value reads <em>Confirm specification</em>, we set it to your requirement and document it in the quotation.",
+    th1: "Specification",
+    th2: "Typical / available",
+    note: "Values are representative ranges. Packaging (bulk, retail or OEM), MOQ and the document set (COA, batch traceability, phytosanitary) are confirmed on inquiry — always confirm your exact target specification before a final order.",
+  },
+  es: {
+    title: "Especificación del Comprador",
+    intro: "La matriz siguiente se confirma junto antes de la cotización: nuestro rango típico frente a su objetivo. Donde un valor dice <em>Confirmar especificación</em>, lo fijamos a su requisito y lo documentamos en la cotización.",
+    th1: "Especificación",
+    th2: "Típico / disponible",
+    note: "Los valores son rangos representativos. El embalaje (a granel, minorista u OEM), el MOQ y el conjunto de documentos (COA, trazabilidad por lote, fitosanitario) se confirman al consultar — confirme siempre su especificación objetivo exacta antes del pedido final.",
+  },
+  ar: {
+    title: "مواصفات المشتري",
+    intro: "يتم تأكيد الجدول أدناه معًا قبل عرض السعر — نطاقنا المعتاد مقابل هدفكم. حيث تكون القيمة <em>تأكيد المواصفات</em>، نضبطها وفق متطلباتكم ونوثقها في عرض السعر.",
+    th1: "المواصفة",
+    th2: "النموذجي / المتاح",
+    note: "القيم نطاقات تمثيلية. يتم تأكيد التعبئة (سائبة أو تجزئة أو OEM)، والحد الأدنى للطلب، ومجموعة المستندات (شهادة التحليل، تتبع الدفعة، الصحة النباتية) عند الاستفسار — أكّد دائمًا مواصفاتكم المستهدفة بدقة قبل الطلب النهائي.",
+  },
+  ru: {
+    title: "Спецификация покупателя",
+    intro: "Матрица ниже подтверждается совместно до котировки — наш типичный диапазон против вашего целевого. Где указано <em>Уточнить спецификацию</em>, мы устанавливаем её под ваше требование и фиксируем в котировке.",
+    th1: "Спецификация",
+    th2: "Типично / доступно",
+    note: "Значения — репрезентативные диапазоны. Упаковка (опт, розница или OEM), MOQ и комплект документов (COA, прослеживаемость партии, фитосанитарный сертификат) подтверждаются при запросе — всегда уточняйте точную целевую спецификацию перед окончательным заказом.",
+  },
+};
+const txt = T[lang] ?? T.en;
 ---
-<h2 style="margin-top:32px;">Buyer Specification</h2>
-<p>
-  The matrix below is confirmed together before quotation — our typical range against your target.
-  Where a value reads <em>Confirm specification</em>, we set it to your requirement and document it
-  in the quotation.
-</p>
+<h2 style="margin-top:32px;">{txt.title}</h2>
+<p set:html={txt.intro} />
 <table>
   <thead>
-    <tr><th>Specification</th><th>Typical / available</th></tr>
+    <tr><th>{txt.th1}</th><th>{txt.th2}</th></tr>
   </thead>
   <tbody>
     {rows.map((row) => (
       <tr>
         <td>{row.param}</td>
-        <td>{row.value.startsWith("Confirm specification") ? <em>{row.value}</em> : row.value}</td>
+        <td>{row.value.startsWith(confirmText) ? <em>{row.value}</em> : row.value}</td>
       </tr>
     ))}
   </tbody>
 </table>
 <p class="data-note">
-  Values are representative ranges. Packaging (bulk, retail or OEM), MOQ and the document set (COA,
-  batch traceability, phytosanitary) are confirmed on inquiry — always confirm your exact target
-  specification before a final order.
+  {txt.note}
 </p>

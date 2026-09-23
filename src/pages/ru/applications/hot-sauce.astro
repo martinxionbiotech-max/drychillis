@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой перец использовать для острого соуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сорта высокой остроты в диапазоне 20 000–50 000+ SHU — Sanying, Zidantou или Jixin — обычно в виде порошка или хлопьев. Укажите сорт и точное окно SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как указать остроту для острого соуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Назовите сорт и точное окно SHU. Острота не линейна, поэтому «острый» — не спецификация; именно название сорта фиксирует постоянство между партиями."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужен ли цветовой сорт в остром соусе?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, для большинства рецептур: острый соус сочетает сорт остроты с сортом цвета/аромата, поскольку острота, цвет и аромат редко достигают пика в одном сорте."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Диапазон остроты", value: "20,000–50,000+ SHU" },
+  { label: "Ключевые сорта", value: "Sanying, Zidantou, Jixin" },
+  { label: "Форма", value: "Порошок, хлопья" },
+  { label: "Оценивается по", value: "Остроте и цвету" }
+];
+---
+
+<BaseLayout
+  title="Перец для Острого Соуса | Tenda Peppers"
+  description="Какой перец использовать для острого соуса — Sanying, Zidantou и Jixin при 20 000–50 000+ SHU в порошке или хлопьях. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Острый соус
+    </nav>
+    <h1>Перец для Острого Соуса</h1>
+    <p class="lead">
+      Острый соус оценивается по остроте и цвету. Рабочие сорта — Sanying, Zidantou и Jixin в диапазоне 20 000–50 000+ SHU, обычно в порошке или хлопьях.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Острому соусу нужна высокая острота — Sanying, Zidantou или Jixin при 20 000–50 000+ SHU, в порошке или хлопьях. Укажите сорт и точное окно SHU; острота не линейна, поэтому «острый» — не спецификация.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Что делает перец хорошим для острого соуса?</h2>
+    <p>
+      Острый соус оценивается по остроте и цвету. Используйте сорта высокой остроты — Sanying, Zidantou или Jixin в диапазоне 20 000–50 000+ SHU — обычно в порошке или хлопьях. См. <a href="/ru/guides/asta-colour-and-shu-heat-explained/">объяснение SHU</a> о том, как измеряется острота.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Сорт / диапазон</th><th>Острота (SHU)</th><th>Роль</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Классический сорт острого соуса</td><td><a href="/ru/products/sanying-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Zidantou</strong></td><td>20,000 – 50,000</td><td>Классический сорт острого соуса</td><td><a href="/ru/products/zidantou-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Jixin (куриное сердце)</strong></td><td>50,000 – 70,000</td><td>Экстремальная острота, обычно в смеси</td><td><a href="/ru/products/jixin-chilli/">См. →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Как указать перец для острого соуса</h2>
+    <p>
+      Укажите сорт и точное окно SHU; острота не линейна, поэтому «острый» — не спецификация. Острый соус сочетает сорт остроты с сортом цвета/аромата. Порошок даёт гладкие соусы и равномерный цвет; хлопья дают видимую текстуру.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какой перец использовать для острого соуса?</h3>
+      <p>Сорта высокой остроты в диапазоне 20 000–50 000+ SHU — Sanying, Zidantou или Jixin — обычно в виде порошка или хлопьев. Укажите сорт и точное окно SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Как указать остроту для острого соуса?</h3>
+      <p>Назовите сорт и точное окно SHU. Острота не линейна, поэтому «острый» — не спецификация; именно название сорта фиксирует постоянство между партиями.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Нужен ли цветовой сорт в остром соусе?</h3>
+      <p>Да, для большинства рецептур: острый соус сочетает сорт остроты с сортом цвета/аромата, поскольку острота, цвет и аромат редко достигают пика в одном сорте.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

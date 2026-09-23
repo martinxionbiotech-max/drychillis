@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "سانينغ ضد زيدانتو: أي فلفل عالي الحرارة تختار", "description": "سانينغ (تيانيينغ) وزيدانتو (الرصاصة) هما الصنفان الكلاسيكيان للصلصة الحارة عند 20,000–50,000 SHU. مقارنة للمشتري: شكل القرن، المنشأ وسلوك المسحوق.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/sanying-vs-zidantou/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين سانينغ وزيدانتو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "سانينغ (تيانيينغ) فلفل عنقودي متجه نحو السماء من خنان وخبي؛ زيدانتو فلفل مخروطي على شكل رصاصة من شاندونغ وآنهوي بلبّ أسمك. كلاهما صنفا صلصة حارة عند 20,000–50,000 SHU، لكن نسبة اللب إلى القشرة الأعلى في زيدانتو تُطحن إلى مسحوق أكثر تجانسًا."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أفضل للصلصة الحارة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "كلاهما صنفا صلصة حارة كلاسيكيان في نفس نطاق 20,000–50,000 SHU. سانينغ هو القاعدة الموثوقة للحرارة العالية؛ زيدانتو يُفضَّل عندما تكون الوصفة قائمة على المسحوق ويهم تجانس الطحن."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل سانينغ وزيدانتو قابلان للتبادل؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "من حيث الحرارة، نعم — يقعان في نفس نطاق SHU. من حيث الشكل وسلوك المسحوق، لا: شكل القرنين ونسب اللب تختلف. أكّد الصنف ونافذة SHU دقيقة في مواصفاتك."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "سانينغ", value: "عنقودي متجه للسماء، خنان وخبي" },
+  { label: "زيدانتو", value: "رصاصة مخروطية، شاندونغ وآنهوي" },
+  { label: "كلاهما", value: "20,000–50,000 SHU" },
+  { label: "الفرق الرئيسي", value: "نسبة اللب → تجانس المسحوق" }
+];
+---
+
+<BaseLayout
+  title="سانينغ ضد زيدانتو: أي فلفل عالي الحرارة تختار | Tenda Peppers"
+  description="سانينغ (تيانيينغ) وزيدانتو (الرصاصة) هما الصنفان الكلاسيكيان للصلصة الحارة عند 20,000–50,000 SHU. مقارنة للمشتري: شكل القرن، المنشأ وسلوك المسحوق."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; سانينغ ضد زيدانتو
+    </nav>
+
+    <h1>سانينغ ضد زيدانتو: أي فلفل عالي الحرارة تختار</h1>
+    <p class="lead">
+      سانينغ وزيدانتو هما الصنفان الكلاسيكيان للصلصة الحارة عند 20,000–50,000 SHU — نفس نطاق الحرارة، لكن قرونًا مختلفة ومناشئ مختلفة وسلوك مسحوق مختلف. هذه المقارنة تفصل بينهما لتطلب الصحيح.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> سانينغ (تيانيينغ) فلفل عنقودي متجه نحو السماء من خنان وخبي؛ زيدانتو فلفل مخروطي على شكل رصاصة من شاندونغ وآنهوي بلبّ أسمك. كلاهما صنفا صلصة حارة عند 20,000–50,000 SHU، لكن نسبة اللب إلى القشرة الأعلى في زيدانتو تُطحن إلى مسحوق أكثر تجانسًا.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">سانينغ (تيانيينغ)</th>
+          <th style="padding:8px;">زيدانتو (الرصاصة)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الشكل</strong></td>
+          <td style="padding:8px;">عنقودي متجه للسماء</td>
+          <td style="padding:8px;">رصاصة مخروطية</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>المنطقة</strong></td>
+          <td style="padding:8px;">خنان، خبي</td>
+          <td style="padding:8px;">شاندونغ، آنهوي</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الحرارة (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">20,000–50,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>اللب</strong></td>
+          <td style="padding:8px;">عنقودي رقيق الجدار</td>
+          <td style="padding:8px;">لبّ سميك، نسبة لب إلى قشرة أعلى</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الطحن</strong></td>
+          <td style="padding:8px;">شكل الفلفل الجاف الكلاسيكي</td>
+          <td style="padding:8px;">مسحوق أكثر تجانسًا، تباين أقل في البذور والقشرة</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الأنسب لـ</strong></td>
+          <td style="padding:8px;">الصلصة الحارة، زيت الفلفل، توابل الوجبات الخفيفة</td>
+          <td style="padding:8px;">الصلصة الحارة، الأغذية الصناعية، مسحوق الفلفل</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      كلاهما الصنفان الكلاسيكيان للصلصة الحارة عند 20,000–50,000 SHU — انظر صفحة <a href="/ar/heat-levels/high-heat/">الحرارة العالية</a>. الفرق هو القرن. <a href="/ar/products/sanying-chilli/">سانينغ</a> فلفل عنقودي متجه للسماء من خنان وخبي، القاعدة الموثوقة للحرارة العالية للصلصة الحارة وزيت الفلفل وتوابل الوجبات الخفيفة. <a href="/ar/products/zidantou-chilli/">زيدانتو</a> رصاصة مخروطية من شاندونغ وآنهوي يطحن لبّه السميك إلى مسحوق قوي ومتسق — ولهذا هو قاعدة المسحوق الموثوقة عالية الحرارة للصلصة الحارة والأغذية الصناعية.
+    </p>
+    <h2 style="margin-top:32px;">متى تختار كلًا منهما</h2>
+    <p>
+      اختر سانينغ عندما تُبنى الوصفة على الشكل الكلاسيكي المتجه للسماء والقرون الكاملة المجففة؛ اختر زيدانتو عندما تكون الوصفة قائمة على المسحوق ويهم تجانس الطحن. يتبادلان في الحرارة داخل نفس نطاق SHU، لكن ليس في الشكل ونسبة اللب.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      اذكر الصنف ونافذة SHU دقيقة. الحرارة واللون والطعم تختلف باستقلالية، لذا اسم الصنف هو ما يثبّت الاتساق بين الدفعات.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين سانينغ وزيدانتو؟</h3>
+      <p>سانينغ (تيانيينغ) فلفل عنقودي متجه نحو السماء من خنان وخبي؛ زيدانتو فلفل مخروطي على شكل رصاصة من شاندونغ وآنهوي بلبّ أسمك. كلاهما صنفا صلصة حارة عند 20,000–50,000 SHU، لكن نسبة اللب إلى القشرة الأعلى في زيدانتو تُطحن إلى مسحوق أكثر تجانسًا.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أفضل للصلصة الحارة؟</h3>
+      <p>كلاهما صنفا صلصة حارة كلاسيكيان في نفس نطاق 20,000–50,000 SHU. سانينغ هو القاعدة الموثوقة للحرارة العالية؛ زيدانتو يُفضَّل عندما تكون الوصفة قائمة على المسحوق ويهم تجانس الطحن.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل سانينغ وزيدانتو قابلان للتبادل؟</h3>
+      <p>من حيث الحرارة، نعم — يقعان في نفس نطاق SHU. من حيث الشكل وسلوك المسحوق، لا: شكل القرنين ونسب اللب تختلف. أكّد الصنف ونافذة SHU دقيقة في مواصفاتك.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/">الفلفل المجفف ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

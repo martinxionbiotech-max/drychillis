@@ -6,12 +6,20 @@ interface GlanceFact {
 
 interface Props {
   facts: GlanceFact[];
+  lang?: string;
 }
 
-const { facts = [] } = Astro.props;
+const { facts = [], lang = "en" } = Astro.props;
+
+const TITLES: Record<string, string> = {
+  en: "At a Glance",
+  es: "De un Vistazo",
+  ar: "نظرة سريعة",
+  ru: "Кратко",
+};
 ---
 <div class="at-a-glance" aria-label="At a glance — key facts">
-  <h2 style="margin:0 0 10px;">At a Glance</h2>
+  <h2 style="margin:0 0 10px;">{TITLES[lang] ?? TITLES.en}</h2>
   <dl>
     {
       facts.map((f) => (

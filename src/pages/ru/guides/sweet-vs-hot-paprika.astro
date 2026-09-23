@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Сладкая против Острой (Низкой Остроты) Паприки: В Чем Разница", "description": "Сладкая паприка (менее 500 SHU) против паприки низкой остроты (менее 10 000 SHU) — сорта, цвет ASTA и когда используется каждый сорт. Китайский производитель, ISO 9001 и HACCP.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/sweet-vs-hot-paprika/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между сладкой паприкой и паприкой низкой остроты?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сладкая паприка (менее 500 SHU) делается из высокоцветных сортов сладкого перца, таких как сладкий перец Синьцзяна и Red Dragon 23, с цветностью ASTA 80–180. Паприка низкой остроты (менее 10 000 SHU) происходит из сортов, таких как красный Yidu и Wangdu, добавляя мягкую остроту и ясный аромат чили поверх цвета."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Может ли паприка низкой остроты заменить сладкую?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Только если добавленная острота и аромат чили приемлемы в вашем продукте. Сладкая паприка — менее 500 SHU; низкой остроты — менее 10 000 SHU. Подтвердите целевое значение цвета и уровень остроты при запросе."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какая паприка лучше для пищевого красителя?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Высокоцветные сорта сладкого перца из Синьцзяна — такие как Red Dragon 23 и US Red — дают самый сильный цвет на единицу и являются стандартом для экстракции олеорезина паприки и пищевого окрашивания."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Сладкая паприка", value: "&lt;500 SHU, ASTA 80–180" },
+  { label: "Паприка низкой остроты", value: "&lt;10,000 SHU" },
+  { label: "Сорта", value: "Red Dragon 23 против красный Yidu, Wangdu" },
+  { label: "Диапазон ASTA", value: "60–240, зависит от сорта" }
+];
+---
+
+<BaseLayout
+  title="Сладкая против Острой (Низкой Остроты) Паприки: В Чем Разница | Tenda Peppers"
+  description="Сладкая паприка (менее 500 SHU) против паприки низкой остроты (менее 10 000 SHU) — сорта, цвет ASTA и когда используется каждый сорт. Китайский производитель, ISO 9001 и HACCP."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Сладкая против острой паприки
+    </nav>
+
+    <h1>Сладкая против Острой (Низкой Остроты) Паприки: В Чем Разница</h1>
+    <p class="lead">
+      Паприка бывает двух сортов: сладкая, для цвета без жгучести, и низкой остроты, для цвета плюс мягкой остроты и аромата чили. Это сравнение объясняет разделение SHU, сорта за каждым и как указать нужный сорт.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Сладкая паприка (менее 500 SHU) делается из высокоцветных сортов сладкого перца, таких как сладкий перец Синьцзяна и Red Dragon 23, с цветностью ASTA 80–180. Паприка низкой остроты (менее 10 000 SHU) происходит из сортов, таких как красный Yidu и Wangdu, добавляя мягкую остроту и ясный аромат чили поверх цвета.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Сладкая паприка</th>
+          <th style="padding:8px;">Паприка низкой остроты</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Острота (SHU)</strong></td>
+          <td style="padding:8px;">Менее 500</td>
+          <td style="padding:8px;">Менее 10,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Сорта</strong></td>
+          <td style="padding:8px;">Сладкий перец Синьцзяна, Red Dragon 23</td>
+          <td style="padding:8px;">Красный Yidu, Wangdu</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Цвет (ASTA)</strong></td>
+          <td style="padding:8px;">80–180 (сладкий сорт)</td>
+          <td style="padding:8px;">Диапазон 60–240, зависит от сорта</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Характер</strong></td>
+          <td style="padding:8px;">Цвет, без жгучести</td>
+          <td style="padding:8px;">Цвет + мягкая острота + аромат чили</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Оба сорта происходят из сладких перцев низкой остроты и высокого цвета — страница <a href="/ru/products/paprika-powder/">паприка в порошке</a> описывает сорта. Сладкую паприку (менее 500 SHU) покупают за цвет и мягкий вкус, практически без жгучести. Паприка низкой остроты (менее 10 000 SHU) добавляет мягкую остроту и ясный аромат чили поверх цвета. Ни та, ни другая не взаимозаменяема с порошком чили, который делается из более острых сортов (20 000–70 000+ SHU) для добавления остроты.
+    </p>
+    <h2 style="margin-top:32px;">Когда выбирать каждый</h2>
+    <p>
+      Выбирайте сладкую паприку для окрашивания, где острота нежелательна — натуральное красное окрашивание, смешивание цветов, мягкие снеки. Выбирайте паприку низкой остроты, где продукту нужны цвет плюс мягкое тепло и аромат чили поверх.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Подтвердите целевое значение цвета ASTA и уровень остроты при запросе — диапазон поставки примерно ASTA 60–240 в зависимости от сорта и качества. Цвет и острота независимы.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между сладкой паприкой и паприкой низкой остроты?</h3>
+      <p>Сладкая паприка (менее 500 SHU) делается из высокоцветных сортов сладкого перца, таких как сладкий перец Синьцзяна и Red Dragon 23, с цветностью ASTA 80–180. Паприка низкой остроты (менее 10 000 SHU) происходит из сортов, таких как красный Yidu и Wangdu, добавляя мягкую остроту и ясный аромат чили поверх цвета.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Может ли паприка низкой остроты заменить сладкую?</h3>
+      <p>Только если добавленная острота и аромат чили приемлемы в вашем продукте. Сладкая паприка — менее 500 SHU; низкой остроты — менее 10 000 SHU. Подтвердите целевое значение цвета и уровень остроты при запросе.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какая паприка лучше для пищевого красителя?</h3>
+      <p>Высокоцветные сорта сладкого перца из Синьцзяна — такие как Red Dragon 23 и US Red — дают самый сильный цвет на единицу и являются стандартом для экстракции олеорезина паприки и пищевого окрашивания.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/paprika-powder/">Паприка в порошке →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

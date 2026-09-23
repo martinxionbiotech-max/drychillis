@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "البابريكا الحلوة ضد البابريكا الحارة (منخفضة الحرارة): ما الفرق", "description": "البابريكا الحلوة (أقل من 500 SHU) ضد البابريكا منخفضة الحرارة (أقل من 10,000 SHU) — الأصناف ولون ASTA ومتى يُستخدم كل صنف. مصنع صيني، ISO 9001 وHACCP.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/sweet-vs-hot-paprika/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين البابريكا الحلوة والبابريكا منخفضة الحرارة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "البابريكا الحلوة (أقل من 500 SHU) تُصنع من أصناف فلفل حلو عالية اللون مثل فلفل شينجيانغ الحلو وRed Dragon 23، بقيمة لون ASTA من 80–180. البابريكا منخفضة الحرارة (أقل من 10,000 SHU) تأتي من أصناف مثل ييدو الأحمر ووانغدو، مضيفة حرارة خفيفة ورائحة فلفل واضحة فوق اللون."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن للبابريكا منخفضة الحرارة أن تحل محل الحلوة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "فقط إذا كانت الحرارة المضافة ورائحة الفلفل مقبولة في منتجك. البابريكا الحلوة أقل من 500 SHU؛ منخفضة الحرارة أقل من 10,000 SHU. أكّد قيمة اللون المستهدفة ومستوى الحرارة عند الاستفسار."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أي بابريكا أفضل لتلوين الطعام؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "أصناف الفلفل الحلو عالية اللون من شينجيانغ — مثل Red Dragon 23 وUS Red — تعطي أقوى لون لكل وحدة، وهي المعيار لاستخلاص أوليوريسين البابريكا وتلوين الطعام."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "البابريكا الحلوة", value: "أقل من 500 SHU، ASTA 80–180" },
+  { label: "البابريكا منخفضة الحرارة", value: "أقل من 10,000 SHU" },
+  { label: "الأصناف", value: "Red Dragon 23 ضد ييدو الأحمر ووانغدو" },
+  { label: "نطاق ASTA المتوفر", value: "60–240 حسب الصنف" }
+];
+---
+
+<BaseLayout
+  title="البابريكا الحلوة ضد البابريكا الحارة (منخفضة الحرارة): ما الفرق | Tenda Peppers"
+  description="البابريكا الحلوة (أقل من 500 SHU) ضد البابريكا منخفضة الحرارة (أقل من 10,000 SHU) — الأصناف ولون ASTA ومتى يُستخدم كل صنف. مصنع صيني، ISO 9001 وHACCP."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; البابريكا الحلوة ضد الحارة
+    </nav>
+
+    <h1>البابريكا الحلوة ضد البابريكا الحارة (منخفضة الحرارة): ما الفرق</h1>
+    <p class="lead">
+      تأتي البابريكا في درجتين: الحلوة، للون دون حرق، ومنخفضة الحرارة، للون مع حرارة خفيفة ورائحة فلفل. تشرح هذه المقارنة تقسيم SHU والأصناف خلف كل درجة وكيفية تحديد الدرجة التي تحتاجها.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> البابريكا الحلوة (أقل من 500 SHU) تُصنع من أصناف فلفل حلو عالية اللون مثل فلفل شينجيانغ الحلو وRed Dragon 23، بقيمة لون ASTA من 80–180. البابريكا منخفضة الحرارة (أقل من 10,000 SHU) تأتي من أصناف مثل ييدو الأحمر ووانغدو، مضيفة حرارة خفيفة ورائحة فلفل واضحة فوق اللون.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">البابريكا الحلوة</th>
+          <th style="padding:8px;">البابريكا منخفضة الحرارة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الحرارة (SHU)</strong></td>
+          <td style="padding:8px;">أقل من 500</td>
+          <td style="padding:8px;">أقل من 10,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الأصناف</strong></td>
+          <td style="padding:8px;">فلفل شينجيانغ الحلو، Red Dragon 23</td>
+          <td style="padding:8px;">ييدو الأحمر، وانغدو</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>اللون (ASTA)</strong></td>
+          <td style="padding:8px;">80–180 (الدرجة الحلوة)</td>
+          <td style="padding:8px;">نطاق 60–240 حسب الصنف</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الطابع</strong></td>
+          <td style="padding:8px;">لون، دون حرق</td>
+          <td style="padding:8px;">لون + حرارة خفيفة + رائحة فلفل</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      تأتي الدرجتان من فلفل حلو منخفض الحرارة عالي اللون — صفحة <a href="/ar/products/paprika-powder/">مسحوق البابريكا</a> تفصّل الدرجات. تُشترى البابريكا الحلوة (أقل من 500 SHU) للون والطعم الخفيف دون حرق يذكر. تضيف البابريكا منخفضة الحرارة (أقل من 10,000 SHU) حرارة خفيفة ورائحة فلفل واضحة فوق اللون. ليست أي منهما قابلة للتبادل مع مسحوق الفلفل الحار، الذي يُصنع من أصناف أحر (20,000–70,000+ SHU) لإضافة الحرارة.
+    </p>
+    <h2 style="margin-top:32px;">متى تختار كلًا منهما</h2>
+    <p>
+      اختر البابريكا الحلوة للتلوين حيث لا يُراد الحرارة — التلوين الأحمر الطبيعي ومزج الألوان والوجبات الخفيفة الخفيفة. اختر البابريكا منخفضة الحرارة حيث يحتاج المنتج اللون مع دفء خفيف ورائحة فلفل فوقه.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      أكّد قيمة لون ASTA المستهدفة ومستوى الحرارة عند الاستفسار — النطاق المتوفر نحو ASTA 60–240 حسب الصنف والدرجة. اللون والحرارة مستقلان.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين البابريكا الحلوة والبابريكا منخفضة الحرارة؟</h3>
+      <p>البابريكا الحلوة (أقل من 500 SHU) تُصنع من أصناف فلفل حلو عالية اللون مثل فلفل شينجيانغ الحلو وRed Dragon 23، بقيمة لون ASTA من 80–180. البابريكا منخفضة الحرارة (أقل من 10,000 SHU) تأتي من أصناف مثل ييدو الأحمر ووانغدو، مضيفة حرارة خفيفة ورائحة فلفل واضحة فوق اللون.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل يمكن للبابريكا منخفضة الحرارة أن تحل محل الحلوة؟</h3>
+      <p>فقط إذا كانت الحرارة المضافة ورائحة الفلفل مقبولة في منتجك. البابريكا الحلوة أقل من 500 SHU؛ منخفضة الحرارة أقل من 10,000 SHU. أكّد قيمة اللون المستهدفة ومستوى الحرارة عند الاستفسار.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أي بابريكا أفضل لتلوين الطعام؟</h3>
+      <p>أصناف الفلفل الحلو عالية اللون من شينجيانغ — مثل Red Dragon 23 وUS Red — تعطي أقوى لون لكل وحدة، وهي المعيار لاستخلاص أوليوريسين البابريكا وتلوين الطعام.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/paprika-powder/">مسحوق البابريكا ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

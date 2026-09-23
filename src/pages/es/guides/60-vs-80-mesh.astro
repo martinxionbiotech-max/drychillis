@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Malla 60 vs 80: Qué Molido de Polvo Elegir", "description": "Malla 60 son unos 250 µm y malla 80 unos 180 µm — ambos dentro del rango estándar de polvo 60–80 mesh. Qué significa cada molido para dispersión y sensación en boca.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/60-vs-80-mesh/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre malla 60 y 80?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Malla 60 son unos 250 µm y malla 80 unos 180 µm — ambos dentro del rango estándar de polvo 60–80 mesh. El molido de malla 80 es más fino y suave."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál debo elegir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh es el rango estándar de polvo: malla 60 para polvo general y mezclas de condimentos, malla 80 para un polvo más suave. La malla es ajustable a su requisito — nombre la malla o el tamaño de partícula objetivo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Una malla más fina cambia el picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La malla mide el molido, no el picor ni el color del chile. Una malla más fina cambia la dispersión, la sensación en boca y la suspensión — no el SHU."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Malla 60", value: "≈250 µm, polvo estándar" },
+  { label: "Malla 80", value: "≈180 µm, polvo suave" },
+  { label: "Rango estándar", value: "60–80 mesh para polvo" },
+  { label: "Controla", value: "Dispersión, sensación en boca, suspensión" }
+];
+---
+
+<BaseLayout
+  title="Malla 60 vs 80: Qué Molido de Polvo Elegir | Tenda Peppers"
+  description="Malla 60 son unos 250 µm y malla 80 unos 180 µm — ambos dentro del rango estándar de polvo 60–80 mesh. Qué significa cada molido para dispersión y sensación en boca."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Malla 60 vs 80
+    </nav>
+
+    <h1>Malla 60 vs 80: Qué Molido de Polvo Elegir</h1>
+    <p class="lead">
+      Malla 60 y 80 están ambas dentro del rango estándar de chile en polvo — la diferencia es el tamaño de partícula: unos 250 µm frente a unos 180 µm. Esta comparación explica qué cambia el molido más fino y cómo elegir.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> La malla es el número de aberturas por pulgada lineal de un tamiz — malla 80 significa 80 hilos por pulgada y una abertura de unos 180 µm; malla 60 son unos 250 µm. Ambas están dentro del rango estándar de polvo 60–80 mesh: 60 es el molido de polvo estándar, 80 es el molido más fino y suave.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Malla 60</th>
+          <th style="padding:8px;">Malla 80</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Abertura</strong></td>
+          <td style="padding:8px;">≈250 µm</td>
+          <td style="padding:8px;">≈180 µm</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Hilos por pulgada</strong></td>
+          <td style="padding:8px;">60</td>
+          <td style="padding:8px;">80</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Carácter</strong></td>
+          <td style="padding:8px;">Fino — polvo estándar</td>
+          <td style="padding:8px;">Fino — polvo suave</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ideal para</strong></td>
+          <td style="padding:8px;">Polvo general, mezclas de condimentos</td>
+          <td style="padding:8px;">Polvo más suave, salsas</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Rango estándar</strong></td>
+          <td style="padding:8px;">60–80 mesh para chile y pimentón en polvo</td>
+          <td style="padding:8px;">60–80 mesh para chile y pimentón en polvo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      La malla es la escala de tamaño de partícula: el número de aberturas por pulgada lineal de un tamiz. Más malla significa partículas más finas — mide el molido, no el picor ni el color del chile. La guía completa está en la página de <a href="/es/specs/mesh-size/">tamaño de malla</a>.
+    </p>
+    <h2 style="margin-top:32px;">Qué cambia el molido más fino</h2>
+    <p>
+      La malla controla tres cosas a la vez: con qué uniformidad se dispersan el picor y el color, cómo se siente el polvo en el paladar y cómo se suspende en una salsa. El molido de malla 80 se dispersa más rápido y se siente más suave; el de malla 60 es el polvo estándar todoterreno. Más grueso (20–40 mesh) son copos; más fino (100+ mesh) conviene a salsas suaves y mezclas instantáneas.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Nombre la malla o el tamaño de partícula objetivo — es ajustable a su requisito y se documenta en la cotización, junto con su ventana SHU y humedad.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre malla 60 y 80?</h3>
+      <p>Malla 60 son unos 250 µm y malla 80 unos 180 µm — ambos dentro del rango estándar de polvo 60–80 mesh. El molido de malla 80 es más fino y suave.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál debo elegir?</h3>
+      <p>60–80 mesh es el rango estándar de polvo: malla 60 para polvo general y mezclas de condimentos, malla 80 para un polvo más suave. La malla es ajustable a su requisito — nombre la malla o el tamaño de partícula objetivo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Una malla más fina cambia el picor?</h3>
+      <p>No. La malla mide el molido, no el picor ni el color del chile. Una malla más fina cambia la dispersión, la sensación en boca y la suspensión — no el SHU.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/specs/mesh-size/">Leer la Guía de Malla</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

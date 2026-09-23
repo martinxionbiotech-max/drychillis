@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفلفل الأفضل لرقائق البيتزا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "جينتا هو الصنف المفضل للرقائق — أحمر مكثف وقشرة سميكة لامعة — مع فلفل شيان كبديل متعدد الاستخدامات في نفس نطاق 10,000–20,000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما مدى حرارة رقائق الفلفل للبيتزا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الحرارة المتوسطة هي المعيار: 10,000–20,000 SHU. النطاق الأوسع للرقائق من 10,000 إلى 50,000 SHU، لذا حدّد نافذة SHU التي تريدها."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما شبكة الرقائق للبيتزا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "شبكة 20–40 — خشنة بما يكفي لتُقرأ كملمس مرئي على الشريحة، وناعمة بما يكفي لرشّ متساوٍ."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "الحرارة", value: "10,000–20,000 SHU" },
+  { label: "الصنف المفضل", value: "جينتا (شيان)" },
+  { label: "الشبكة", value: "20–40" },
+  { label: "يُقيَّم بـ", value: "اللون والملمس المرئي" }
+];
+---
+
+<BaseLayout
+  title="رقائق فلفل للبيتزا | Tenda Peppers"
+  description="رقائق فلفل للبيتزا — حرارة متوسطة (10,000–20,000 SHU)، جينتا للون الأحمر المكثف، شبكة 20–40. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; رقائق البيتزا
+    </nav>
+    <h1>رقائق فلفل للبيتزا</h1>
+    <p class="lead">
+      رقائق البيتزا إضافة مرئية، لا مكوّن مخفي. الحرارة المتوسطة هي النطاق الافتراضي — 10,000–20,000 SHU — وجينتا هو الصنف المفضل للرقائق بلونه الأحمر المكثف وقشرته السميكة اللامعة.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> إضافة البيتزا تريد رقائق حرارة متوسطة (10,000–20,000 SHU) بشبكة 20–40. جينتا هو الصنف المفضل للرقائق — أحمر مكثف وقشرة سميكة لامعة.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">ما الذي يجعل الرقائق جيدة للبيتزا؟</h2>
+    <p>
+      إضافة البيتزا تُظهر الفلفل، لذا يهم اللون والملمس بقدر الحرارة. الحرارة المتوسطة (10,000–20,000 SHU) هي النطاق الافتراضي لإضافات البيتزا والمكرونة. جينتا هو الصنف المفضل للرقائق بلونه الأحمر المكثف وقشرته السميكة اللامعة — اطلع على <a href="/ar/products/jinta-chilli/">فلفل جينتا</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>الصنف / النطاق</th><th>الحرارة (SHU)</th><th>الدور</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>جينتا</strong></td><td>10,000 – 20,000</td><td>الصنف المفضل للرقائق، أحمر مكثف، لامع</td><td><a href="/ar/products/jinta-chilli/">عرض ←</a></td></tr>
+        <tr><td><strong>فلفل شيان</strong></td><td>10,000 – 20,000</td><td>الوسط متعدد الاستخدامات، أحمر داكن ودهني</td><td><a href="/ar/products/xian-pepper/">عرض ←</a></td></tr>
+        <tr><td><strong>نطاق الرقائق</strong></td><td>10,000 – 50,000</td><td>ملمس مرئي، بيتزا، خلطات</td><td><a href="/ar/products/dried-chillies/chilli-flakes/">عرض ←</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">كيف تحدد رقائق الفلفل للبيتزا</h2>
+    <p>
+      حدّد رقائق شبكة 20–40 بملمس مرئي، واذكر الصنف (جينتا للون). الرقائق تحتفظ بالرائحة — اخترها عندما يُظهر المنتج النهائي الفلفل.
+    </p>
+    <p class="data-note">
+      قيم الحرارة تمثيلية لكل صنف. أكّد نافذة SHU والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفلفل الأفضل لرقائق البيتزا؟</h3>
+      <p>جينتا هو الصنف المفضل للرقائق — أحمر مكثف وقشرة سميكة لامعة — مع فلفل شيان كبديل متعدد الاستخدامات في نفس نطاق 10,000–20,000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة رقائق الفلفل للبيتزا؟</h3>
+      <p>الحرارة المتوسطة هي المعيار: 10,000–20,000 SHU. النطاق الأوسع للرقائق من 10,000 إلى 50,000 SHU، لذا حدّد نافذة SHU التي تريدها.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما شبكة الرقائق للبيتزا؟</h3>
+      <p>شبكة 20–40 — خشنة بما يكفي لتُقرأ كملمس مرئي على الشريحة، وناعمة بما يكفي لرشّ متساوٍ.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/chilli-flakes/">رقائق الفلفل ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

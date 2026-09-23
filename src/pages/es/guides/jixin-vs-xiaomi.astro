@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Jixin vs Xiaomi: ¿Qué Chile Extra-Picante Elegir?", "description": "Jixin (corazón de gallina) y Xiaomi (mijo) son ambos chiles extra-picantes de 50.000–70.000 SHU. Comparación para compradores: forma de vaina, origen y dosificación.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/jixin-vs-xiaomi/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Jixin y Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ambos son extra-picantes a 50.000–70.000 SHU. Jixin es una vaina pequeña en forma de corazón de Guizhou y Hunan, el estándar para productos de calor extremo y platos estilo Sichuan; Xiaomi es una vaina pequeña y esbelta de Yunnan y Guizhou cuyo tamaño compacto la mantiene visible entera en platos o en segmentos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál pica más, Jixin o Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Están en la misma banda de 50.000–70.000 SHU — la diferencia es la forma de la vaina y el uso, no el picor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Jixin necesito para una mezcla de picor medio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para lograr una mezcla de 10.000 SHU, Jixin es aproximadamente el 14–20% de la receta en peso — unas 1 parte de Jixin por 4–6 partes de base. Dosifique por peso porque el picor no es lineal."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Jixin", value: "Forma de corazón, Guizhou &amp; Hunan" },
+  { label: "Xiaomi", value: "Pequeña esbelta, Yunnan &amp; Guizhou" },
+  { label: "Ambos", value: "50,000–70,000 SHU" },
+  { label: "Dosis de mezcla", value: "≈14–20% para una mezcla de 10,000 SHU" }
+];
+---
+
+<BaseLayout
+  title="Jixin vs Xiaomi: ¿Qué Chile Extra-Picante Elegir? | Tenda Peppers"
+  description="Jixin (corazón de gallina) y Xiaomi (mijo) son ambos chiles extra-picantes de 50.000–70.000 SHU. Comparación para compradores: forma de vaina, origen y dosificación."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Jixin vs Xiaomi
+    </nav>
+
+    <h1>Jixin vs Xiaomi: ¿Qué Chile Extra-Picante Elegir?</h1>
+    <p class="lead">
+      Jixin y Xiaomi son las dos variedades extra-picantes de trabajo a 50.000–70.000 SHU. La banda de picor es idéntica — la diferencia es la forma de la vaina, el origen y cómo se comporta cada una en un plato o mezcla.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Jixin (corazón de gallina) es una vaina pequeña en forma de corazón de Guizhou y Hunan, el estándar para productos de calor extremo y platos estilo Sichuan, dosificado como acento por peso. Xiaomi (mijo) es una vaina pequeña y esbelta de Yunnan y Guizhou cuyo tamaño compacto concentra el picor — se mantiene visible entera en platos o en segmentos.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Jixin (corazón de gallina)</th>
+          <th style="padding:8px;">Xiaomi (mijo)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Forma</strong></td>
+          <td style="padding:8px;">Pequeña en forma de corazón</td>
+          <td style="padding:8px;">Pequeña, esbelta</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Región</strong></td>
+          <td style="padding:8px;">Guizhou, Hunan</td>
+          <td style="padding:8px;">Yunnan, Guizhou</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Picor (SHU)</strong></td>
+          <td style="padding:8px;">50,000–70,000</td>
+          <td style="padding:8px;">50,000–70,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ideal para</strong></td>
+          <td style="padding:8px;">Productos de calor extremo, aceite de chile, platos estilo Sichuan, bases de hotpot</td>
+          <td style="padding:8px;">Chiles enteros de calor alto, segmentos, aceite de chile</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>En platos</strong></td>
+          <td style="padding:8px;">Dosificado como acento por peso</td>
+          <td style="padding:8px;">La vaina compacta se mantiene visible</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      Ambos son extra-picantes a 50.000–70.000 SHU — vea la página de <a href="/es/heat-levels/extra-hot/">extra-picante</a>. <a href="/es/products/jixin-chilli/">Jixin</a> es la referencia del calor extremo: vainas pequeñas en forma de corazón de Guizhou y Hunan, estándar para productos de calor extremo, aceite de chile y platos estilo Sichuan. <a href="/es/products/xiaomi-chilli/">Xiaomi</a> es una vaina pequeña y esbelta de Yunnan y Guizhou cuyo tamaño compacto concentra el picor, de modo que aporta calor fuerte desde una vaina pequeña y visible — usado entero, en segmentos o en aceite de chile.
+    </p>
+    <h2 style="margin-top:32px;">Matemática de dosis: por qué el extra-picante se mezcla, no se usa puro</h2>
+    <p>
+      Para lograr una mezcla de 10.000 SHU, Jixin (50.000–70.000 SHU) es aproximadamente el 14–20% de la receta en peso — unas 1 parte de Jixin por 4–6 partes de base. Dosifique por peso, porque el picor no es lineal y una pequeña sobredosis mueve la mezcla mucho más de lo que lo haría un chile medio.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Nombre la variedad y una ventana SHU precisa, y confirme la forma — segmentos y polvo son los más comunes en este nivel de picor. Las variedades extra-picantes normalmente se mezclan, no se usan puras.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre Jixin y Xiaomi?</h3>
+      <p>Ambos son extra-picantes a 50.000–70.000 SHU. Jixin es una vaina pequeña en forma de corazón de Guizhou y Hunan, el estándar para productos de calor extremo y platos estilo Sichuan; Xiaomi es una vaina pequeña y esbelta de Yunnan y Guizhou cuyo tamaño compacto la mantiene visible entera en platos o en segmentos.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál pica más, Jixin o Xiaomi?</h3>
+      <p>Están en la misma banda de 50.000–70.000 SHU — la diferencia es la forma de la vaina y el uso, no el picor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuánto Jixin necesito para una mezcla de picor medio?</h3>
+      <p>Para lograr una mezcla de 10.000 SHU, Jixin es aproximadamente el 14–20% de la receta en peso — unas 1 parte de Jixin por 4–6 partes de base. Dosifique por peso porque el picor no es lineal.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

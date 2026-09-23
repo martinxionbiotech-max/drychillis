@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "شبكة 60 ضد 80: أي طحن للمسحوق تختار", "description": "شبكة 60 نحو 250 ميكرون وشبكة 80 نحو 180 ميكرون — كلاهما ضمن النطاق القياسي للمسحوق 60–80 شبكة. ماذا يعني كل طحن للتوزيع والملمس الفموي.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/60-vs-80-mesh/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين شبكة 60 و80؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "شبكة 60 نحو 250 ميكرون وشبكة 80 نحو 180 ميكرون — كلاهما ضمن النطاق القياسي للمسحوق 60–80 شبكة. طحن شبكة 80 أنعم وأكثر نعومة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أختار؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 شبكة هو النطاق القياسي للمسحوق: شبكة 60 للمسحوق العام وخلطات التوابل، وشبكة 80 لمسحوق أنعم. الشبكة قابلة للتعديل حسب متطلبك — اذكر الشبكة أو حجم الجسيم المستهدف."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل تغير الشبكة الأنعم الحرارة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا. تقيس الشبكة الطحن، لا حرارة الفلفل أو لونه. تغير الشبكة الأنعم التوزيع والملمس الفموي والتعليق — لا SHU."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "شبكة 60", value: "≈250 ميكرون، مسحوق قياسي" },
+  { label: "شبكة 80", value: "≈180 ميكرون، مسحوق ناعم" },
+  { label: "النطاق القياسي", value: "60–80 شبكة للمسحوق" },
+  { label: "يضبط", value: "التوزيع، الملمس الفموي، التعليق" }
+];
+---
+
+<BaseLayout
+  title="شبكة 60 ضد 80: أي طحن للمسحوق تختار | Tenda Peppers"
+  description="شبكة 60 نحو 250 ميكرون وشبكة 80 نحو 180 ميكرون — كلاهما ضمن النطاق القياسي للمسحوق 60–80 شبكة. ماذا يعني كل طحن للتوزيع والملمس الفموي."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; شبكة 60 ضد 80
+    </nav>
+
+    <h1>شبكة 60 ضد 80: أي طحن للمسحوق تختار</h1>
+    <p class="lead">
+      شبكة 60 و80 كلتاهما ضمن النطاق القياسي لمسحوق الفلفل — الفرق هو حجم الجسيم: نحو 250 ميكرون مقابل نحو 180 ميكرون. تشرح هذه المقارنة ما يغيّره الطحن الأنعم وكيف تختار.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> الشبكة هي عدد الفتحات في البوصة الخطية للمنخل — شبكة 80 تعني 80 سلكًا في البوصة وفتحة نحو 180 ميكرون؛ شبكة 60 نحو 250 ميكرون. كلتاهما ضمن النطاق القياسي للمسحوق 60–80 شبكة: 60 هو طحن المسحوق القياسي، و80 هو الطحن الأنعم والأكثر نعومة.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">شبكة 60</th>
+          <th style="padding:8px;">شبكة 80</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الفتحة</strong></td>
+          <td style="padding:8px;">≈250 ميكرون</td>
+          <td style="padding:8px;">≈180 ميكرون</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>أسلاك في البوصة</strong></td>
+          <td style="padding:8px;">60</td>
+          <td style="padding:8px;">80</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الطابع</strong></td>
+          <td style="padding:8px;">ناعم — مسحوق قياسي</td>
+          <td style="padding:8px;">ناعم — مسحوق أملس</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الأنسب لـ</strong></td>
+          <td style="padding:8px;">مسحوق عام، خلطات توابل</td>
+          <td style="padding:8px;">مسحوق أنعم، صلصات</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>النطاق القياسي</strong></td>
+          <td style="padding:8px;">60–80 شبكة لمسحوق الفلفل والبابريكا</td>
+          <td style="padding:8px;">60–80 شبكة لمسحوق الفلفل والبابريكا</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      الشبكة هي مقياس حجم الجسيم: عدد الفتحات في البوصة الخطية للمنخل. شبكة أعلى تعني جسيمات أنعم — تقيس الطحن، لا حرارة الفلفل أو لونه. الدليل الكامل في صفحة <a href="/ar/specs/mesh-size/">حجم الشبكة</a>.
+    </p>
+    <h2 style="margin-top:32px;">ماذا يغيّر الطحن الأنعم</h2>
+    <p>
+      تضبط الشبكة ثلاثة أشياء دفعة واحدة: مدى تساوي توزع الحرارة واللون، وإحساس المسحوق في الحنك، وكيف يعلق في الصلصة. طحن شبكة 80 يتوزع أسرع ويشعر بأنعم؛ طحن شبكة 60 هو المسحوق القياسي الشامل. الأخشن (20–40 شبكة) رقائق؛ الأنعم (100+ شبكة) يناسب الصلصات الناعمة والخلطات الفورية.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      اذكر الشبكة أو حجم الجسيم المستهدف — قابل للتعديل حسب متطلبك ويُوثَّق في عرض السعر، مع نافذة SHU والرطوبة.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين شبكة 60 و80؟</h3>
+      <p>شبكة 60 نحو 250 ميكرون وشبكة 80 نحو 180 ميكرون — كلاهما ضمن النطاق القياسي للمسحوق 60–80 شبكة. طحن شبكة 80 أنعم وأكثر نعومة.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أختار؟</h3>
+      <p>60–80 شبكة هو النطاق القياسي للمسحوق: شبكة 60 للمسحوق العام وخلطات التوابل، وشبكة 80 لمسحوق أنعم. الشبكة قابلة للتعديل حسب متطلبك — اذكر الشبكة أو حجم الجسيم المستهدف.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل تغير الشبكة الأنعم الحرارة؟</h3>
+      <p>لا. تقيس الشبكة الطحن، لا حرارة الفلفل أو لونه. تغير الشبكة الأنعم التوزيع والملمس الفموي والتعليق — لا SHU.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/specs/mesh-size/">اقرأ دليل الشبكة</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

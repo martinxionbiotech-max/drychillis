@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "لون ASTA ضد حرارة SHU: ما الفرق", "description": "ASTA يقيس اللون (كاروتينات الكابسانثين)؛ SHU يقيس الحرارة (الكابسايسينويدات). مواصفتان مستقلتان — يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/asta-vs-shu/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين ASTA وSHU؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA يقيس اللون — أصباغ الكاروتينويد القابلة للاستخلاص مثل الكابسانثين التي تعطي البابريكا لونها الأحمر. SHU يقيس الحرارة — الكابسايسينويدات التي تثير الحرق. إنهما خاصيتان منفصلتان تُضبطان باستقلالية."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن أن يكون الفلفل عالي ASTA وصفر الحرارة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. ASTA وSHU مستقلان — يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة، وهذا بالضبط ما هي البابريكا الحلوة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أحدد أولًا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "كلاهما، في سطرين منفصلين: ASTA للون، نافذة SHU للحرارة. لا يتنبأ أحدهما بالآخر، لذا مواصفة برقم واحد فقط تترك الآخر دون ضبط."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "ASTA", value: "اللون (الكابسانثين)، 460 نانومتر" },
+  { label: "SHU", value: "الحرارة (الكابسايسينويدات)، HPLC" },
+  { label: "العلاقة", value: "مستقلان" },
+  { label: "الدليل", value: "يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة" }
+];
+---
+
+<BaseLayout
+  title="لون ASTA ضد حرارة SHU: ما الفرق | Tenda Peppers"
+  description="ASTA يقيس اللون (كاروتينات الكابسانثين)؛ SHU يقيس الحرارة (الكابسايسينويدات). مواصفتان مستقلتان — يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; ASTA ضد SHU
+    </nav>
+
+    <h1>لون ASTA ضد حرارة SHU: ما الفرق</h1>
+    <p class="lead">
+      ASTA وSHU هما الرقمان في كل مواصفة فلفل — ويقيسان أشياء مختلفة تمامًا. ASTA هو اللون، SHU هو الحرارة، ولا يتنبأ أحدهما بالآخر. تشرح هذه المقارنة كليهما.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> ASTA يقيس اللون — أصباغ الكاروتينويد القابلة للاستخلاص، أساسًا الكابسانثين، بقياس طيفي عند 460 نانومتر (طريقة ASTA 20.1). SHU يقيس الحرارة — تركيز الكابسايسينويدات، بقياس HPLC وتحويله إلى SHU (نحو 1 جزء في المليون كابسايسين ≈ 16 SHU). إنهما خاصيتان منفصلتان تُضبطان باستقلالية.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">قيمة لون ASTA</th>
+          <th style="padding:8px;">حرارة SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>يقيس</strong></td>
+          <td style="padding:8px;">اللون — كاروتينويدات قابلة للاستخلاص، أساسًا الكابسانثين</td>
+          <td style="padding:8px;">الحرارة — تركيز الكابسايسينويدات</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الطريقة</strong></td>
+          <td style="padding:8px;">قياس طيفي عند 460 نانومتر (طريقة ASTA 20.1)</td>
+          <td style="padding:8px;">HPLC، محوّل إلى SHU (≈1 جزء في المليون كابسايسين ≈ 16 SHU)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الضبط</strong></td>
+          <td style="padding:8px;">باستقلالية</td>
+          <td style="padding:8px;">باستقلالية</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الاستقرار</strong></td>
+          <td style="padding:8px;">يتحلل بالأكسجين والضوء والحرارة</td>
+          <td style="padding:8px;">يتغير ±40% حسب ظروف الزراعة</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      كثير من الفلفل المشترى خطأً يأتي من معاملة الرقمين كخاصية واحدة. ليسا كذلك: ASTA هو اللون، SHU هو الحرارة، ويُضبطان باستقلالية — يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة. الخلفية التقنية الكاملة في صفحة <a href="/ar/guides/asta-colour-and-shu-heat-explained/">شرح SHU</a>.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد كلاهما</h2>
+    <p>
+      حدد هدف ASTA للون ونافذة SHU للحرارة في سطرين منفصلين في المواصفة — إضافة إلى الصنف والشبكة. تتحلل الكاروتينويدات بالأكسجين والضوء والحرارة، فيبهت اللون مع الوقت؛ تبدّل الدفعات الطازجة يحمي ASTA الذي اشتريته.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين ASTA وSHU؟</h3>
+      <p>ASTA يقيس اللون — أصباغ الكاروتينويد القابلة للاستخلاص مثل الكابسانثين التي تعطي البابريكا لونها الأحمر. SHU يقيس الحرارة — الكابسايسينويدات التي تثير الحرق. إنهما خاصيتان منفصلتان تُضبطان باستقلالية.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل يمكن أن يكون الفلفل عالي ASTA وصفر الحرارة؟</h3>
+      <p>نعم. ASTA وSHU مستقلان — يمكن أن تكون البابريكا عالية ASTA وصفرية الحرارة، وهذا بالضبط ما هي البابريكا الحلوة.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أحدد أولًا؟</h3>
+      <p>كلاهما، في سطرين منفصلين: ASTA للون، نافذة SHU للحرارة. لا يتنبأ أحدهما بالآخر، لذا مواصفة برقم واحد فقط تترك الآخر دون ضبط.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/guides/asta-colour-and-shu-heat-explained/">اقرأ دليل SHU</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -599,6 +599,181 @@
           "value": "Whole chilli, segments, chilli oil"
         }
       ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+      "name": "Перец Seven-Star",
+      "description": "Острый перец при 20 000–50 000 SHU из Шаньдуна и Шаньси для приправ к снекам и основ хого. ISO 9001 и HACCP.",
+      "url": "https://drychillis.com/products/seven-star-chilli/",
+      "sku": "TENDA-SEVEN-STAR-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Уровень остроты (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Регион",
+          "value": "Шаньдун, Шаньси"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Лучше всего для",
+          "value": "Приправы к снекам, основы хого"
+        }
+      ],
+      "alternateName": "Seven-Star Chilli"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/new-generation-chilli/#product",
+      "name": "Перец New Generation",
+      "description": "Острый перец при 20 000–50 000 SHU из Шаньдуна для смесей приправ и порошка чили. ISO 9001 и HACCP.",
+      "url": "https://drychillis.com/products/new-generation-chilli/",
+      "sku": "TENDA-NEW-GENERATION-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Уровень остроты (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Регион",
+          "value": "Шаньдун"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Лучше всего для",
+          "value": "Смеси приправ, порошок чили"
+        }
+      ],
+      "alternateName": "New Generation Chilli"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/chilli-king/#product",
+      "name": "Chilli King",
+      "description": "Сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня для продуктов экстремальной остроты и масла чили. ISO 9001 и HACCP.",
+      "url": "https://drychillis.com/products/chilli-king/",
+      "sku": "TENDA-CHILLI-KING",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Уровень остроты (SHU)",
+          "value": ">50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Регион",
+          "value": "Фуцзянь, Хайнань"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Лучше всего для",
+          "value": "Продукты экстремальной остроты, масло чили"
+        }
+      ],
+      "alternateName": "Chilli King"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/wangdu-chilli/#product",
+      "name": "Перец Wangdu",
+      "description": "Слабоострый перец ниже 10 000 SHU из Шаньдуна и Хэбэя, используется с красным Yidu для слабоострой паприки и цвета. ISO 9001 и HACCP.",
+      "url": "https://drychillis.com/products/wangdu-chilli/",
+      "sku": "TENDA-WANGDU-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Уровень остроты (SHU)",
+          "value": "<10,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Регион",
+          "value": "Шаньдун, Хэбэй"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Лучше всего для",
+          "value": "Слабоострая паприка, цвет"
+        }
+      ],
+      "alternateName": "Wangdu Chilli"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/xian-pepper/#product",
+      "name": "Перец Сянь",
+      "description": "Среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна для порошка чили, хлопьев и приправ. ISO 9001 и HACCP.",
+      "url": "https://drychillis.com/products/xian-pepper/",
+      "sku": "TENDA-XIAN-PEPPER",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Уровень остроты (SHU)",
+          "value": "10,000–20,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Регион",
+          "value": "Внутренняя Монголия, Синьцзян"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Лучше всего для",
+          "value": "Порошок чили, хлопья, приправы"
+        }
+      ],
+      "alternateName": "Xian Pepper"
     }
   ]
 }

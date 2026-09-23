@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "قالب مواصفات المشتري: مسحوق الفلفل والرقائق والبابريكا", "description": "قوالب مواصفات للنسخ واللصق: مسحوق الفلفل ورقائق الفلفل ومسحوق البابريكا — الصنف والمنشأ وSHU وASTA والشبكة والرطوبة ونشاط الماء وسلامة الغذاء والتعبئة.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/specs/buyer-specification-template/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ماذا تتضمن مواصفة الفلفل الكاملة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "اذكر الصنف (أو نافذة SHU) والمنشأ والشكل (كامل/رقائق/مسحوق) والشبكة والرطوبة ونشاط الماء وSHU ولون ASTA ومعايير سلامة الغذاء لسوقك المستهدف. المواصفة الكاملة تثبّت الحرارة واللون والملمس والسلامة ومدة الصلاحية."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف أستخدم هذا القالب؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "انسخ الكتلة الخاصة بشكل منتجك، واستبدل كل قوس بقيمتك المستهدفة، وأرسلها مع استفسارك. الأسطر المعبأة مسبقًا تستخدم قيمًا تمثيلية من دليل الشراء — أكّد SHU وASTA والرطوبة وحدود السوق بدقة قبل التعاقد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما مستندات COA التي يجب أن أطلبها مع المواصفة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "COA خاص بالدفعة (SHU وASTA والرطوبة والميكروبي والمبيدات والسموم الفطرية)، وشهادات سلامة الغذاء، والتتبع حتى قاعدة الزراعة. شهادة الكتالوج العامة ليست COA دفعة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أي شبكة أكتب للمسحوق والرقائق؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 شبكة هو الطحن الناعم القياسي لمسحوق الفلفل والبابريكا؛ 20–40 شبكة للرقائق والفلفل المجروش؛ 100+ شبكة للصلصات الناعمة. الشبكة قابلة للتعديل حسب متطلبك — اذكر الشبكة أو حجم الجسيم المستهدف."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "الأشكال المغطاة", value: "مسحوق، رقائق، بابريكا" },
+  { label: "الحقول الرئيسية", value: "الصنف، SHU، ASTA، الشبكة، الرطوبة، a<sub>w</sub>" },
+  { label: "الرطوبة الافتراضية", value: "≤13% · a<sub>w</sub> ≤0.65" },
+  { label: "قاعدة COA", value: "خاص بالدفعة، لا عام أبدًا" }
+];
+---
+
+<BaseLayout
+  title="قالب مواصفات المشتري: مسحوق الفلفل والرقائق والبابريكا | Tenda Peppers"
+  description="قوالب مواصفات للنسخ واللصق: مسحوق الفلفل ورقائق الفلفل ومسحوق البابريكا — الصنف والمنشأ وSHU وASTA والشبكة والرطوبة وسلامة الغذاء والتعبئة. مصنع صيني."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/dried-chillies/">الفلفل المجفف</a> &rsaquo; قالب المواصفات
+    </nav>
+
+    <h1>قالب مواصفات المشتري: مسحوق الفلفل والرقائق والبابريكا</h1>
+    <p class="lead">
+      ثلاثة قوالب مواصفات للنسخ واللصق — واحد لمسحوق الفلفل، وواحد لرقائق الفلفل،
+      وواحد لمسحوق البابريكا. املأ الأقواس، وأرسلها مع استفسارك، فيُثبَّت كل رقم
+      يعتمد عليه منتجك من أول عرض سعر.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> المواصفة الكاملة تذكر الصنف (أو نافذة SHU)
+      والمنشأ والشكل والشبكة والرطوبة ونشاط الماء وSHU ولون ASTA ومعايير سلامة الغذاء
+      لسوقك. انسخ كتلة شكل منتجك أدناه، واستبدل كل قوس بقيمتك المستهدفة،
+      واطلب COA خاصًا بالدفعة.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">القالب 1 — مسحوق الفلفل</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;direction:ltr;text-align:left;"><code>Product:        Chilli powder
+Variety:        [Sanying / Zidantou / Jixin — or state SHU window only]
+Origin:         [Shandong]
+SHU window:     [20,000–50,000]
+ASTA:           [≥100]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [EU aflatoxin limits · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · food-safety certificates · traceability]</code></pre>
+    <p class="data-note" style="margin-top:10px;">القيم بين الأقواس أمثلة تمثيلية من <a href="/ar/guides/paprika-chilli-buying-guide/">دليل الشراء</a> — أكّد الحدود الدقيقة معنا قبل التعاقد.</p>
+
+    <h2 style="margin-top:32px;">القالب 2 — رقائق الفلفل / المجروش</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;direction:ltr;text-align:left;"><code>Product:        Chilli flakes / crushed chilli
+Variety:        [Jinta / Xian — visible flakes, bright colour]
+Origin:         [Gansu]
+SHU window:     [10,000–20,000]
+ASTA:           [target value]
+Mesh:           [20–40 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [kraft bags / cartons, moisture-barrier]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">القالب 3 — مسحوق البابريكا</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;direction:ltr;text-align:left;"><code>Product:        Paprika powder (sweet / low-heat)
+Variety:        [Xinjiang sweet pepper / Yidu red, Wangdu]
+Origin:         [Xinjiang / Shandong]
+ASTA:           [60–240 — confirm target]
+SHU:            [&lt;500 sweet · &lt;10,000 low-heat]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">قالب فارغ — أي شكل</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;direction:ltr;text-align:left;"><code>Product:        [whole / flakes / powder / segments]
+Variety:        [name or SHU window]
+Origin:         [province]
+SHU window:     [–]
+ASTA:           [–]
+Mesh:           [20–40 flakes · 60–80 powder · 100+ sauces]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [market limits]
+Packaging:      [bag type, weight]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">لماذا تدفع المواصفة المكتوبة ثمنها بنفسها</h2>
+    <p>
+      الحرارة واللون والملمس والسلامة ومدة الصلاحية ينحرف كل منها وحده عندما لا يُحدد.
+      مواصفة من سطر واحد لا تكلف شيئًا لكتابتها وتجنبك دفعة فاشلة — المشترون الذين يحصلون
+      على منتج متسق هم الذين يحددون كل شيء ثم يتحققون بـCOA دفعة.
+      لكيفية عمل كل معيار، انظر <a href="https://drychillis.com/guides/asta-colour-value/">قيمة لون ASTA</a>،
+      <a href="/ar/guides/asta-colour-and-shu-heat-explained/">شرح SHU</a> و
+      <a href="/ar/specs/mesh-size/">حجم الشبكة</a>.
+    </p>
+    <p class="data-note">
+      تلخص هذه القوالب المعايير في دليل الشراء. قيم الأمثلة تمثيلية، لا تعاقدية — أكّد SHU وASTA
+      والرطوبة وحدود السوق بدقة معنا قبل الطلب.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ماذا تتضمن مواصفة الفلفل الكاملة؟</h3>
+      <p>اذكر الصنف (أو نافذة SHU) والمنشأ والشكل (كامل/رقائق/مسحوق) والشبكة والرطوبة ونشاط الماء وSHU ولون ASTA ومعايير سلامة الغذاء لسوقك المستهدف. المواصفة الكاملة تثبّت الحرارة واللون والملمس والسلامة ومدة الصلاحية.</p>
+    </div>
+    <div class="faq-item">
+      <h3>كيف أستخدم هذا القالب؟</h3>
+      <p>انسخ الكتلة الخاصة بشكل منتجك، واستبدل كل قوس بقيمتك المستهدفة، وأرسلها مع استفسارك. الأسطر المعبأة مسبقًا تستخدم قيمًا تمثيلية من دليل الشراء — أكّد SHU وASTA والرطوبة وحدود السوق بدقة قبل التعاقد.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مستندات COA التي يجب أن أطلبها مع المواصفة؟</h3>
+      <p>COA خاص بالدفعة (SHU وASTA والرطوبة والميكروبي والمبيدات والسموم الفطرية)، وشهادات سلامة الغذاء، والتتبع حتى قاعدة الزراعة. شهادة الكتالوج العامة ليست COA دفعة.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أي شبكة أكتب للمسحوق والرقائق؟</h3>
+      <p>60–80 شبكة هو الطحن الناعم القياسي لمسحوق الفلفل والبابريكا؛ 20–40 شبكة للرقائق والفلفل المجروش؛ 100+ شبكة للصلصات الناعمة. الشبكة قابلة للتعديل حسب متطلبك — اذكر الشبكة أو حجم الجسيم المستهدف.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر</a>
+      <a class="cta cta-outline" href="/ar/guides/paprika-chilli-buying-guide/" style="margin-left:8px;">اقرأ دليل الشراء</a>
+    </div>
+  </div>
+</BaseLayout>

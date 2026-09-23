@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Plantilla de Especificación para Compradores: Chile en Polvo, Copos y Pimentón", "description": "Plantillas de especificación para copiar y pegar: chile en polvo, copos de chile y pimentón en polvo — variedad, origen, SHU, ASTA, malla, humedad, actividad de agua, seguridad alimentaria y envasado.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/specs/buyer-specification-template/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué lleva una especificación completa de chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nombre la variedad (o ventana SHU), origen, forma (entero/copos/polvo), malla, humedad, actividad de agua, SHU, color ASTA y los parámetros de seguridad alimentaria de su mercado. Una especificación completa fija picor, color, textura, seguridad y vida útil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo uso esta plantilla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copie el bloque de su forma de producto, sustituya cada corchete por su valor objetivo y envíelo con su consulta. Las líneas prellenadas usan valores representativos de nuestra guía de compra — confirme su SHU, ASTA, humedad y límites de mercado exactos antes de contratar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentos COA debo exigir con la especificación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un COA específico del lote (SHU, ASTA, humedad, microbiológico, pesticidas, micotoxinas), certificados de seguridad alimentaria y trazabilidad hasta la base de cultivo. Un certificado genérico de catálogo no es un COA de lote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué malla debo escribir para polvo y copos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh es el molido fino estándar para chile y pimentón en polvo; 20–40 mesh para copos y chile triturado; 100+ mesh para salsas suaves. La malla es ajustable a su requisito — nombre la malla o el tamaño de partícula objetivo."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Formas cubiertas", value: "Polvo, copos, pimentón" },
+  { label: "Campos clave", value: "Variedad, SHU, ASTA, malla, humedad, a<sub>w</sub>" },
+  { label: "Humedad por defecto", value: "≤13% · a<sub>w</sub> ≤0.65" },
+  { label: "Regla COA", value: "Específico del lote, nunca genérico" }
+];
+---
+
+<BaseLayout
+  title="Plantilla de Especificación para Compradores: Chile en Polvo, Copos y Pimentón | Tenda Peppers"
+  description="Plantillas de especificación para copiar y pegar: chile en polvo, copos de chile y pimentón en polvo — variedad, origen, SHU, ASTA, malla, humedad, seguridad alimentaria y envasado. Fabricante chino."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Plantilla de Especificación
+    </nav>
+
+    <h1>Plantilla de Especificación para Compradores: Chile en Polvo, Copos &amp; Pimentón</h1>
+    <p class="lead">
+      Tres plantillas de especificación para copiar y pegar — una para chile en polvo, una para copos de chile,
+      una para pimentón en polvo. Rellene los corchetes, envíela con su consulta, y cada número
+      del que depende su producto queda fijado desde la primera cotización.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Una especificación completa nombra la variedad (o ventana SHU),
+      origen, forma, malla, humedad, actividad de agua, SHU, color ASTA y los parámetros de seguridad
+      alimentaria de su mercado. Copie el bloque de su forma de producto, sustituya cada corchete por su
+      valor objetivo y exija un COA específico del lote.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">Plantilla 1 — Chile en polvo</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Producto:        Chile en polvo
+Variedad:        [Sanying / Zidantou / Jixin — o indique solo la ventana SHU]
+Origen:          [Shandong]
+Ventana SHU:     [20,000–50,000]
+ASTA:            [≥100]
+Malla:           [60–80 mesh]
+Humedad:         [≤13%]
+Actividad de agua: [≤0.65]
+Seguridad alimentaria: [límites UE de aflatoxinas · pesticidas · microbiológico según mercado]
+Envasado:        [sacos kraft de 25 kg, cajas de exportación]
+Documentos:      [COA específico del lote · certificados de seguridad alimentaria · trazabilidad]</code></pre>
+    <p class="data-note" style="margin-top:10px;">Los valores entre corchetes son ejemplos representativos de nuestra <a href="/es/guides/paprika-chilli-buying-guide/">guía de compra</a> — confirme los límites exactos con nosotros antes de contratar.</p>
+
+    <h2 style="margin-top:32px;">Plantilla 2 — Copos de chile / triturado</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Producto:        Copos de chile / chile triturado
+Variedad:        [Jinta / Xian — copos visibles, color vivo]
+Origen:          [Gansu]
+Ventana SHU:     [10,000–20,000]
+ASTA:            [valor objetivo]
+Malla:           [20–40 mesh]
+Humedad:         [≤13%]
+Seguridad alimentaria: [aflatoxinas · pesticidas · microbiológico según mercado]
+Envasado:        [sacos kraft / cajas, barrera de humedad]
+Documentos:      [COA específico del lote · certificados · trazabilidad]</code></pre>
+
+    <h2 style="margin-top:32px;">Plantilla 3 — Pimentón en polvo</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Producto:        Pimentón en polvo (dulce / calor bajo)
+Variedad:        [pimiento dulce de Xinjiang / Yidu red, Wangdu]
+Origen:          [Xinjiang / Shandong]
+ASTA:            [60–240 — confirme el objetivo]
+SHU:             [&lt;500 dulce · &lt;10,000 calor bajo]
+Malla:           [60–80 mesh]
+Humedad:         [≤13%]
+Seguridad alimentaria: [aflatoxinas · pesticidas · microbiológico según mercado]
+Envasado:        [sacos kraft de 25 kg, cajas de exportación]
+Documentos:      [COA específico del lote · certificados · trazabilidad]</code></pre>
+
+    <h2 style="margin-top:32px;">Plantilla en blanco — cualquier forma</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Producto:        [entero / copos / polvo / segmentos]
+Variedad:        [nombre o ventana SHU]
+Origen:          [provincia]
+Ventana SHU:     [–]
+ASTA:            [–]
+Malla:           [20–40 copos · 60–80 polvo · 100+ salsas]
+Humedad:         [≤13%]
+Actividad de agua: [≤0.65]
+Seguridad alimentaria: [límites del mercado]
+Envasado:        [tipo de saco, peso]
+Documentos:      [COA específico del lote · certificados · trazabilidad]</code></pre>
+
+    <h2 style="margin-top:32px;">Por qué una especificación escrita se paga sola</h2>
+    <p>
+      Picor, color, textura, seguridad y vida útil derivan cada uno por su cuenta cuando no se especifican.
+      Una especificación de una línea no cuesta nada escribirla y evita un lote fallido — los compradores
+      que reciben producto consistente son los que lo especifican todo y luego lo verifican con un COA de lote.
+      Para cómo funciona cada parámetro, vea <a href="https://drychillis.com/guides/asta-colour-value/">valor de color ASTA</a>,
+      <a href="/es/guides/asta-colour-and-shu-heat-explained/">SHU explicado</a> y
+      <a href="/es/specs/mesh-size/">tamaño de malla</a>.
+    </p>
+    <p class="data-note">
+      Estas plantillas resumen los parámetros de nuestra guía de compra. Los valores de ejemplo son
+      representativos, no contractuales — confirme su SHU, ASTA, humedad y límites de mercado exactos
+      con nosotros antes de pedir.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué lleva una especificación completa de chile?</h3>
+      <p>Nombre la variedad (o ventana SHU), origen, forma (entero/copos/polvo), malla, humedad, actividad de agua, SHU, color ASTA y los parámetros de seguridad alimentaria de su mercado. Una especificación completa fija picor, color, textura, seguridad y vida útil.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo uso esta plantilla?</h3>
+      <p>Copie el bloque de su forma de producto, sustituya cada corchete por su valor objetivo y envíelo con su consulta. Las líneas prellenadas usan valores representativos de nuestra guía de compra — confirme su SHU, ASTA, humedad y límites de mercado exactos antes de contratar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué documentos COA debo exigir con la especificación?</h3>
+      <p>Un COA específico del lote (SHU, ASTA, humedad, microbiológico, pesticidas, micotoxinas), certificados de seguridad alimentaria y trazabilidad hasta la base de cultivo. Un certificado genérico de catálogo no es un COA de lote.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué malla debo escribir para polvo y copos?</h3>
+      <p>60–80 mesh es el molido fino estándar para chile y pimentón en polvo; 20–40 mesh para copos y chile triturado; 100+ mesh para salsas suaves. La malla es ajustable a su requisito — nombre la malla o el tamaño de partícula objetivo.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización</a>
+      <a class="cta cta-outline" href="/es/guides/paprika-chilli-buying-guide/" style="margin-left:8px;">Leer la Guía de Compra</a>
+    </div>
+  </div>
+</BaseLayout>

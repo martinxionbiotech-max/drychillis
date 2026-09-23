@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Jixin против Xiaomi: Какой Сверхострый Перец Выбрать", "description": "Jixin (куриное сердце) и Xiaomi (просо) — оба сверхострые перцы при 50 000–70 000 SHU. Сравнение для покупателей: форма стручка, происхождение и дозировка.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/jixin-vs-xiaomi/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между Jixin и Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Оба сверхострые при 50 000–70 000 SHU. Jixin — маленький сердцевидный стручок из Гуйчжоу и Хунани, стандарт для продуктов экстремальной остроты и блюд в сычуаньском стиле; Xiaomi — маленький, стройный стручок из Юньнани и Гуйчжоу, чей компактный размер сохраняет его видимым целиком в блюдах или сегментами."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что острее, Jixin или Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Они в одной полосе 50 000–70 000 SHU — разница в форме стручка и применении, а не в остроте."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько Jixin нужно для смеси средней остроты?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Чтобы получить смесь 10 000 SHU, Jixin составляет примерно 14–20% рецептуры по весу — около 1 части Jixin на 4–6 частей базы. Дозируйте по весу, потому что острота нелинейна."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Jixin", value: "Сердцевидный, Гуйчжоу и Хунань" },
+  { label: "Xiaomi", value: "Маленький стройный, Юньнань и Гуйчжоу" },
+  { label: "Оба", value: "50,000–70,000 SHU" },
+  { label: "Доза в смеси", value: "≈14–20% для смеси 10,000 SHU" }
+];
+---
+
+<BaseLayout
+  title="Jixin против Xiaomi: Какой Сверхострый Перец Выбрать | Tenda Peppers"
+  description="Jixin (куриное сердце) и Xiaomi (просо) — оба сверхострые перцы при 50 000–70 000 SHU. Сравнение для покупателей: форма стручка, происхождение и дозировка."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Jixin против Xiaomi
+    </nav>
+
+    <h1>Jixin против Xiaomi: Какой Сверхострый Перец Выбрать</h1>
+    <p class="lead">
+      Jixin и Xiaomi — два рабочих сверхострых сорта при 50 000–70 000 SHU. Полоса остроты идентична — разница в форме стручка, происхождении и том, как каждый ведёт себя в блюде или смеси.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Jixin (куриное сердце) — маленький сердцевидный стручок из Гуйчжоу и Хунани, стандарт для продуктов экстремальной остроты и блюд в сычуаньском стиле, дозируется как акцент по весу. Xiaomi (просо) — маленький, стройный стручок из Юньнани и Гуйчжоу, чей компактный размер концентрирует остроту — он остаётся видимым целиком в блюдах или сегментами.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Jixin (куриное сердце)</th>
+          <th style="padding:8px;">Xiaomi (просо)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Форма</strong></td>
+          <td style="padding:8px;">Маленькая сердцевидная</td>
+          <td style="padding:8px;">Маленькая, стройная</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Регион</strong></td>
+          <td style="padding:8px;">Гуйчжоу, Хунань</td>
+          <td style="padding:8px;">Юньнань, Гуйчжоу</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Острота (SHU)</strong></td>
+          <td style="padding:8px;">50,000–70,000</td>
+          <td style="padding:8px;">50,000–70,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Лучше всего для</strong></td>
+          <td style="padding:8px;">Продукты экстремальной остроты, масло чили, сычуаньские блюда, основы хого</td>
+          <td style="padding:8px;">Целые перцы высокой остроты, сегменты, масло чили</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>В блюдах</strong></td>
+          <td style="padding:8px;">Дозируется как акцент по весу</td>
+          <td style="padding:8px;">Компактный стручок остаётся видимым</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Оба сверхострые при 50 000–70 000 SHU — см. страницу <a href="/ru/heat-levels/extra-hot/">сверхвысокой остроты</a>. <a href="/ru/products/jixin-chilli/">Jixin</a> — эталон экстремальной остроты: маленькие сердцевидные стручки из Гуйчжоу и Хунани, стандарт для продуктов экстремальной остроты, масла чили и сычуаньских блюд. <a href="/ru/products/xiaomi-chilli/">Xiaomi</a> — маленький, стройный стручок из Юньнани и Гуйчжоу, чей компактный размер концентрирует остроту, так что он даёт сильную остроту из маленького видимого стручка — целиком, сегментами или в масле чили.
+    </p>
+    <h2 style="margin-top:32px;">Математика дозы: почему сверхострый смешивают, а не используют чистым</h2>
+    <p>
+      Чтобы получить смесь 10 000 SHU, Jixin (50 000–70 000 SHU) составляет примерно 14–20% рецептуры по весу — около 1 части Jixin на 4–6 частей базы. Дозируйте по весу, потому что острота нелинейна и небольшая передозировка сдвигает смесь намного сильнее, чем средний перец.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Назовите сорт и точное окно SHU и подтвердите форму — сегменты и порошок наиболее распространены на этом уровне остроты. Сверхострые сорта обычно смешивают, а не используют чистыми.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между Jixin и Xiaomi?</h3>
+      <p>Оба сверхострые при 50 000–70 000 SHU. Jixin — маленький сердцевидный стручок из Гуйчжоу и Хунани, стандарт для продуктов экстремальной остроты и блюд в сычуаньском стиле; Xiaomi — маленький, стройный стручок из Юньнани и Гуйчжоу, чей компактный размер сохраняет его видимым целиком в блюдах или сегментами.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Что острее, Jixin или Xiaomi?</h3>
+      <p>Они в одной полосе 50 000–70 000 SHU — разница в форме стручка и применении, а не в остроте.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Сколько Jixin нужно для смеси средней остроты?</h3>
+      <p>Чтобы получить смесь 10 000 SHU, Jixin составляет примерно 14–20% рецептуры по весу — около 1 части Jixin на 4–6 частей базы. Дозируйте по весу, потому что острота нелинейна.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

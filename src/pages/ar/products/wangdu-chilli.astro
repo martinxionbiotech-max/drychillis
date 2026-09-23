@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "شكل المنتج", value: "تأكيد المواصفات" },
+  { param: "الصنف", value: "فلفل وانغدو" },
+  { param: "مستوى الحرارة (SHU)", value: "<10,000" },
+  { param: "قيمة اللون ASTA", value: "تأكيد المواصفات" },
+  { param: "حجم الشبكة (Mesh)", value: "تأكيد المواصفات" },
+  { param: "الرطوبة", value: "<13%" },
+  { param: "المعالجة", value: "تأكيد المواصفات" },
+  { param: "الشهادات", value: "ISO 9001 وHACCP قياسيًا — BRC وحلال وكوشر عند الطلب" },
+];
+
+const glanceFacts = [
+  { label: "مستوى الحرارة", value: "<10,000 SHU" },
+  { label: "المنطقة", value: "شاندونغ، خبي" },
+  { label: "الأنسب لـ", value: "بابريكا منخفضة الحرارة، اللون" },
+  { label: "الشهادات", value: "ISO 9001 وHACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/wangdu-chilli/#product",
+  "name": "فلفل وانغدو",
+  "description": "فلفل وانغدو — فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون. مصنع صيني، ISO 9001 وHACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/wangdu-chilli/",
+  "sku": "TENDA-WANGDU-CHILLI",
+  "category": "البهارات والتوابل",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "<10,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "المنطقة", "value": "شاندونغ، خبي" },
+    { "@type": "PropertyValue", "name": "الأنسب لـ", "value": "بابريكا منخفضة الحرارة، اللون" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هو فلفل وانغدو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "وانغدو فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الأحمر الطبيعي."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما مدى حرارة فلفل وانغدو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "وانغدو منخفض الحرارة — تحت 10,000 SHU، أخف بخمس مرات على الأقل من النطاق المتوسط (شيان وجينتا) وأدنى بكثير من الأصناف فائقة الحرارة. إنه صنف يركّز على اللون."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فيمَ يُستخدم فلفل وانغدو؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يُستخدم وانغدو مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الطبيعي. حدد الصنف وهدف اللون ASTA — اللون والحرارة رقمان مستقلان."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="فلفل وانغدو — فلفل اللون منخفض الحرارة | Tenda Peppers"
+  description="فلفل وانغدو — فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/dried-chillies/">الفلفل المجفف</a> &rsaquo; وانغدو
+    </nav>
+    <h1>فلفل وانغدو</h1>
+    <p class="lead">
+      فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي — يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الطبيعي.
+    </p>
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> وانغدو فلفل منخفض الحرارة (تحت 10,000 SHU) من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون. إنه صنف يركّز على اللون — يُشترى وفق ASTA وليس وفق الحرارة.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="فلفل مجفف كامل" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">يُؤكَّد السعر عند طلب العرض — يُتفق على الحد الأدنى للطلب والتعبئة والمواصفات قبل الطلب.</p>
+
+    <h2 style="margin-top:32px;">ما هو فلفل وانغدو؟</h2>
+    <p>
+      وانغدو فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي. يظهر في <a href="/ar/guides/chinese-chilli-varieties-grades/">دليل الأصناف</a> في نطاق الحرارة المنخفضة مع ييدو الأحمر — النطاق الذي يُطحن إلى بابريكا منخفضة الحرارة حيث يقوم اللون بالعمل وتبقى الحرارة في الخلفية.
+    </p>
+    <table>
+      <thead>
+        <tr><th>الخاصية</th><th>التفاصيل</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>الحرارة (SHU)</strong></td><td><10,000</td></tr>
+        <tr><td><strong>المنطقة</strong></td><td>شاندونغ، خبي</td></tr>
+        <tr><td><strong>الأنسب لـ</strong></td><td>بابريكا منخفضة الحرارة، اللون</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">فيمَ يُستخدم فلفل وانغدو؟</h2>
+    <ul>
+      <li>بابريكا منخفضة الحرارة</li>
+      <li>اللون الأحمر الطبيعي</li>
+      <li>خلطات تركز على اللون</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">وانغدو مقابل ييدو الأحمر</h2>
+    <p>
+      ييدو الأحمر ووانغدو هما ثنائي الحرارة المنخفضة تحت 10,000 SHU. كلاهما يغذي درجة البابريكا منخفضة الحرارة — مسحوق يركّز على اللون حيث يبقى SHU تحت 10,000. حدد الصنف وهدف ASTA: اللون والحرارة رقمان مستقلان.
+    </p>
+
+    <h2 style="margin-top:32px;">وانغدو بالأرقام</h2>
+    <p>
+      يقع وانغدو تحت 10,000 SHU — أخف بخمس مرات على الأقل من النطاق المتوسط (شيان، جينتا عند 10,000–20,000) وأخف بأكثر من 100 مرة من تشيلي كينغ (فوق 50,000). يُشترى للون وليس للحرارة.
+    </p>
+    <p class="data-note">
+      قيم الحرارة تمثيلية لكل صنف. أكّد نافذة SHU والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="ar" confirmText="تأكيد المواصفات" />
+
+    <h2 style="margin-top:32px;">في نفس نطاق تحت 10,000 SHU</h2>
+    <p>
+      خيارات أخرى في هذا النطاق: ييدو الأحمر، <a href="/ar/products/paprika-powder/">مسحوق البابريكا</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هو فلفل وانغدو؟</h3>
+      <p>وانغدو فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الأحمر الطبيعي.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة فلفل وانغدو؟</h3>
+      <p>وانغدو منخفض الحرارة — تحت 10,000 SHU، أخف بخمس مرات على الأقل من النطاق المتوسط (شيان وجينتا) وأدنى بكثير من الأصناف فائقة الحرارة. إنه صنف يركّز على اللون.</p>
+    </div>
+    <div class="faq-item">
+      <h3>فيمَ يُستخدم فلفل وانغدو؟</h3>
+      <p>يُستخدم وانغدو مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الطبيعي. حدد الصنف وهدف اللون ASTA — اللون والحرارة رقمان مستقلان.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر وانغدو</a>
+      <a class="cta cta-outline" href="/ar/products/dried-chillies/" style="margin-left:8px;">الفلفل المجفف ←</a>
+    </div>
+  </div>
+</BaseLayout>

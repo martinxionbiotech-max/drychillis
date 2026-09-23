@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой перец лучше всего для хого?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erjingtiao для ароматной базы, обычно с Xiaomi или Chilli King для экстремальной остроты, плюс Seven-Star для тела. Каждый сорт выполняет свою роль."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым является перец для хого?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Типичные базы хого покрывают 15 000–50 000+ SHU, смешивая ароматный Erjingtiao с сортами экстремальной остроты, такими как Xiaomi или Chilli King."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какая форма перца для хого?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Хлопья и сегменты для жидких баз — настаиваются равномерно и сохраняют ароматическую поверхность. Готовая паста чили — вариант промышленной переработки."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Базовый сорт", value: "Erjingtiao" },
+  { label: "Острота", value: "15,000–50,000+ SHU" },
+  { label: "Форма", value: "Хлопья, сегменты" },
+  { label: "Оценивается по", value: "Аромату и волне остроты" }
+];
+---
+
+<BaseLayout
+  title="Перец для Хого | Tenda Peppers"
+  description="Перец для хого — ароматный Erjingtiao, Xiaomi или Chilli King для экстремальной остроты, Seven-Star для тела. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Хого
+    </nav>
+    <h1>Перец для Хого</h1>
+    <p class="lead">
+      Хого сочетает три роли перца: ароматный Erjingtiao для базы, Xiaomi или Chilli King для экстремальной остроты и Seven-Star для тела. Каждый сорт выполняет свою роль.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Базы хого используют Erjingtiao для аромата, Xiaomi или Chilli King для экстремальной остроты и Seven-Star для тела, смешивая полосу 15 000–50 000+ SHU. Хлопья и сегменты настаиваются равномерно; готовая паста чили — промышленный вариант.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Что делает перец хорошим для хого?</h2>
+    <p>
+      Хого сочетает три роли перца: Erjingtiao для ароматной базы, Xiaomi или Chilli King для экстремальной остроты и Seven-Star для тела. См. <a href="/ru/heat-levels/extra-hot/">сверхострый диапазон</a> для вариантов.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Сорт / диапазон</th><th>Острота (SHU)</th><th>Роль</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Ароматная база, паста чили</td><td><a href="https://drychillis.com/products/erjingtiao-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Xiaomi (просо)</strong></td><td>50,000 – 70,000</td><td>Экстремальная острота</td><td><a href="/ru/products/xiaomi-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Chilli King</strong></td><td>>50,000</td><td>Экстремальная острота</td><td><a href="/ru/products/chilli-king/">См. →</a></td></tr>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Тело</td><td><a href="/ru/products/seven-star-chilli/">См. →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Как указать перец для хого</h2>
+    <p>
+      Используйте хлопья и сегменты для жидких баз — они настаиваются равномерно и сохраняют ароматическую поверхность. Готовая паста чили — вариант промышленной переработки. Назовите каждый сорт и его роль в рецептуре.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какой перец лучше всего для хого?</h3>
+      <p>Erjingtiao для ароматной базы, обычно с Xiaomi или Chilli King для экстремальной остроты, плюс Seven-Star для тела. Каждый сорт выполняет свою роль.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым является перец для хого?</h3>
+      <p>Типичные базы хого покрывают 15 000–50 000+ SHU, смешивая ароматный Erjingtiao с сортами экстремальной остроты, такими как Xiaomi или Chilli King.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какая форма перца для хого?</h3>
+      <p>Хлопья и сегменты для жидких баз — настаиваются равномерно и сохраняют ароматическую поверхность. Готовая паста чили — вариант промышленной переработки.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

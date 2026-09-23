@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué chile es mejor para copos de pizza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta es la variedad preferida para copos — color rojo intenso y piel gruesa brillante — con el pimiento Xian como alternativa versátil en la misma banda de 10.000–20.000 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picantes son los copos de chile para pizza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El picor medio es el estándar: 10.000–20.000 SHU. El rango más amplio de copos va de 10.000 a 50.000 SHU, así que especifique la ventana SHU que quiera."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué malla tienen los copos para pizza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Malla 20–40 — lo bastante gruesa para leerse como textura visible en la porción, lo bastante fina para espolvorearse uniformemente."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Picor", value: "10,000–20,000 SHU" },
+  { label: "Variedad preferida", value: "Jinta (Xian)" },
+  { label: "Malla", value: "20–40" },
+  { label: "Se evalúa por", value: "Color y textura visible" }
+];
+---
+
+<BaseLayout
+  title="Copos de Chile para Pizza | Tenda Peppers"
+  description="Copos de chile para pizza — picor medio (10.000–20.000 SHU), Jinta para color rojo intenso, malla 20–40. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Copos para Pizza
+    </nav>
+    <h1>Copos de Chile para Pizza</h1>
+    <p class="lead">
+      Los copos para pizza son un topping visible, no un ingrediente oculto. El picor medio es la banda por defecto — 10.000–20.000 SHU — y Jinta es la variedad preferida para copos por su color rojo intenso y su piel gruesa y brillante.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> El topping de pizza quiere copos de picor medio (10.000–20.000 SHU) a malla 20–40. Jinta es la variedad preferida para copos — color rojo intenso y piel gruesa y brillante.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué hace un buen copo para pizza?</h2>
+    <p>
+      El topping de pizza muestra el chile, así que el color y la textura importan tanto como el picor. El picor medio (10.000–20.000 SHU) es la banda por defecto para topping de pizza y pasta. Jinta es la variedad preferida para copos por su color rojo intenso y su piel gruesa y brillante — vea <a href="/es/products/jinta-chilli/">chile Jinta</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Jinta</strong></td><td>10,000 – 20,000</td><td>Variedad preferida para copos, rojo intenso, brillante</td><td><a href="/es/products/jinta-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Pimiento Xian</strong></td><td>10,000 – 20,000</td><td>Término medio versátil, rojo oscuro y aceitoso</td><td><a href="/es/products/xian-pepper/">Ver →</a></td></tr>
+        <tr><td><strong>Rango de copos</strong></td><td>10,000 – 50,000</td><td>Textura visible, pizza, mezclas</td><td><a href="/es/products/dried-chillies/chilli-flakes/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar copos de chile para pizza</h2>
+    <p>
+      Especifique copos de malla 20–40 con textura visible, y nombre la variedad (Jinta para color). Los copos retienen fragancia — elíjalos cuando el producto final muestra el chile.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué chile es mejor para copos de pizza?</h3>
+      <p>Jinta es la variedad preferida para copos — color rojo intenso y piel gruesa brillante — con el pimiento Xian como alternativa versátil en la misma banda de 10.000–20.000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picantes son los copos de chile para pizza?</h3>
+      <p>El picor medio es el estándar: 10.000–20.000 SHU. El rango más amplio de copos va de 10.000 a 50.000 SHU, así que especifique la ventana SHU que quiera.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué malla tienen los copos para pizza?</h3>
+      <p>Malla 20–40 — lo bastante gruesa para leerse como textura visible en la porción, lo bastante fina para espolvorearse uniformemente.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/chilli-flakes/">Ver Copos de Chile</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

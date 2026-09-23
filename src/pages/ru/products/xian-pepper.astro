@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Форма продукта", value: "Уточнить спецификацию" },
+  { param: "Сорт", value: "Перец Xian" },
+  { param: "Уровень остроты (SHU)", value: "10,000–20,000" },
+  { param: "Цветность ASTA", value: "Уточнить спецификацию" },
+  { param: "Размер частиц (mesh)", value: "Уточнить спецификацию" },
+  { param: "Влажность", value: "<13%" },
+  { param: "Обработка", value: "Уточнить спецификацию" },
+  { param: "Сертификаты", value: "ISO 9001 и HACCP стандартно — BRC, Halal, Kosher по запросу" },
+];
+
+const glanceFacts = [
+  { label: "Уровень остроты", value: "10 000–20 000 SHU" },
+  { label: "Регион", value: "Внутренняя Монголия, Синьцзян" },
+  { label: "Лучше всего для", value: "Порошок чили, хлопья, приправы" },
+  { label: "Сертификаты", value: "ISO 9001 и HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/xian-pepper/#product",
+  "name": "Перец Xian",
+  "description": "Перец Xian — среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна, для порошка чили, хлопьев и приправ. Китайский производитель, ISO 9001 и HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/xian-pepper/",
+  "sku": "TENDA-XIAN-PEPPER",
+  "category": "Специи и приправы",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Уровень остроты (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Регион", "value": "Внутренняя Монголия, Синьцзян" },
+    { "@type": "PropertyValue", "name": "Лучше всего для", "value": "Порошок чили, хлопья, приправы" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое перец Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Перец Xian — среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна — тёмно-красный и маслянистый, используется для порошка чили, хлопьев и соуса. Это основной средний сорт наряду с Jinta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым является перец Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Перец Xian — средняя острота при 10 000–20 000 SHU — заметно тёплый без интенсивной жгучести сортов высокой остроты, и примерно в 20–40 раз острее сладкой паприки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Для чего используется перец Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Перец Xian используется для среднеострого порошка чили, хлопьев (помол вместе с Jinta) и смесей приправ. Указывайте сорт и окно SHU в спецификации — острота и аромат меняются независимо."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Перец Xian — 10 000–20 000 SHU Средний Перец | Tenda Peppers"
+  description="Перец Xian — среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна, для порошка чили, хлопьев и приправ. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/products/dried-chillies/">Сушёный чили</a> &rsaquo; Перец Xian
+    </nav>
+    <h1>Перец Xian</h1>
+    <p class="lead">
+      Среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна — универсальная середина для порошка чили, хлопьев и приправ.
+    </p>
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Перец Xian — среднеострый перец (10 000–20 000 SHU) из Внутренней Монголии и Синьцзяна. Это универсальная середина — тёмно-красный и маслянистый, используется для порошка чили, хлопьев и соуса, и перемалывается вместе с Jinta для хлопьев.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Целый сушёный чили" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Цена подтверждается при запросе котировки — MOQ, упаковка и спецификация согласовываются до заказа.</p>
+
+    <h2 style="margin-top:32px;">Что такое перец Xian?</h2>
+    <p>
+      Перец Xian — среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна. На странице <a href="/ru/heat-levels/medium-heat/">средней остроты</a> это основной средний сорт наряду с Jinta — заметно тёплый без интенсивной жгучести сортов высокой остроты, и самая объёмная полоса, потому что подходит самому широкому кругу продуктов.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Свойство</th><th>Значение</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Острота (SHU)</strong></td><td>10,000–20,000</td></tr>
+        <tr><td><strong>Регион</strong></td><td>Внутренняя Монголия, Синьцзян</td></tr>
+        <tr><td><strong>Лучше всего для</strong></td><td>Порошок чили, хлопья, приправы</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Для чего используется перец Xian?</h2>
+    <ul>
+      <li>Порошок чили (средний)</li>
+      <li>Хлопья чили (помол с Jinta)</li>
+      <li>Приправы и соус</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Xian против Jinta против Erjingtiao</h2>
+    <p>
+      Перец Xian и Jinta — основные сорта при 10 000–20 000 SHU; Erjingtiao находится при 15 000–30 000 SHU. Jinta подходит для хлопьев и порошка с ярким цветом; Erjingtiao добавляет аромат и используется для пасты чили. Xian — универсальная середина — тёмно-красный и маслянистый, используется для порошка чили и соуса.
+    </p>
+
+    <h2 style="margin-top:32px;">Xian в цифрах</h2>
+    <p>
+      Перец Xian находится при 10 000–20 000 SHU — примерно в 20–40 раз острее сладкой паприки (менее 500 SHU) и в 2,5–5 раз мягче полосы высокой остроты (20 000–50 000). Это полоса, которая подходит самому широкому кругу продуктов.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="ru" confirmText="Уточнить спецификацию" />
+
+    <h2 style="margin-top:32px;">В той же полосе 10 000–20 000 SHU</h2>
+    <p>
+      Другие сорта этой полосы: <a href="/ru/products/jinta-chilli/">Jinta</a>, <a href="/ru/products/lantern-chilli/">Фонарик</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Что такое перец Xian?</h3>
+      <p>Перец Xian — среднеострый перец при 10 000–20 000 SHU из Внутренней Монголии и Синьцзяна — тёмно-красный и маслянистый, используется для порошка чили, хлопьев и соуса. Это основной средний сорт наряду с Jinta.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым является перец Xian?</h3>
+      <p>Перец Xian — средняя острота при 10 000–20 000 SHU — заметно тёплый без интенсивной жгучести сортов высокой остроты, и примерно в 20–40 раз острее сладкой паприки.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Для чего используется перец Xian?</h3>
+      <p>Перец Xian используется для среднеострого порошка чили, хлопьев (помол вместе с Jinta) и смесей приправ. Указывайте сорт и окно SHU в спецификации — острота и аромат меняются независимо.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/contact/">Запросить Котировку Xian</a>
+      <a class="cta cta-outline" href="/ru/products/dried-chillies/" style="margin-left:8px;">Сушёный чили →</a>
+    </div>
+  </div>
+</BaseLayout>

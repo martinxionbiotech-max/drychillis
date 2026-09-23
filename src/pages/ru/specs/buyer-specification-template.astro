@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Шаблон Спецификации Покупателя: Порошок Чили, Хлопья и Паприка", "description": "Шаблоны спецификации для копирования: порошок чили, хлопья чили и порошок паприки — сорт, происхождение, SHU, ASTA, помол, влажность, активность воды, безопасность и упаковка.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/specs/buyer-specification-template/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что входит в полную спецификацию чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Назовите сорт (или окно SHU), происхождение, форму (целый/хлопья/порошок), помол, влажность, активность воды, SHU, цвет ASTA и параметры безопасности для вашего рынка. Полная спецификация фиксирует остроту, цвет, текстуру, безопасность и срок хранения."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как использовать этот шаблон?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Скопируйте блок для вашей формы продукта, замените каждую скобку вашим целевым значением и отправьте с запросом. Заполненные строки используют репрезентативные значения из нашего гайда — подтвердите ваши точные SHU, ASTA, влажность и рыночные лимиты до заключения договора."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие документы COA требовать вместе со спецификацией?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "COA конкретной партии (SHU, ASTA, влажность, микробиология, пестициды, микотоксины), сертификаты безопасности и прослеживаемость до базы выращивания. Общий каталожный сертификат — не COA партии."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой помол писать для порошка и хлопьев?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh — стандартный мелкий помол для порошка чили и паприки; 20–40 mesh — для хлопьев и дроблёного чили; 100+ mesh — для гладких соусов. Помол регулируется под ваше требование — назовите mesh или целевой размер частиц."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Формы покрыты", value: "Порошок, хлопья, паприка" },
+  { label: "Ключевые поля", value: "Сорт, SHU, ASTA, mesh, влажность, a<sub>w</sub>" },
+  { label: "Влажность по умолчанию", value: "≤13% · a<sub>w</sub> ≤0.65" },
+  { label: "Правило COA", value: "Конкретная партия, никогда общий" }
+];
+---
+
+<BaseLayout
+  title="Шаблон Спецификации Покупателя: Порошок Чили, Хлопья и Паприка | Tenda Peppers"
+  description="Шаблоны спецификации для копирования: порошок чили, хлопья чили и порошок паприки — сорт, происхождение, SHU, ASTA, помол, влажность, безопасность и упаковка. Китайский производитель."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/products/dried-chillies/">Сушёный чили</a> &rsaquo; Шаблон спецификации
+    </nav>
+
+    <h1>Шаблон Спецификации Покупателя: Порошок Чили, Хлопья &amp; Паприка</h1>
+    <p class="lead">
+      Три шаблона спецификации для копирования — один для порошка чили, один для хлопьев чили,
+      один для порошка паприки. Заполните скобки, отправьте с запросом — и каждое число,
+      от которого зависит ваш продукт, зафиксировано с первой котировки.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Полная спецификация называет сорт (или окно SHU),
+      происхождение, форму, помол, влажность, активность воды, SHU, цвет ASTA и параметры
+      безопасности для вашего рынка. Скопируйте блок вашей формы продукта ниже, замените
+      каждую скобку целевым значением и требуйте COA конкретной партии.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Шаблон 1 — Порошок чили</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Chilli powder
+Variety:        [Sanying / Zidantou / Jixin — or state SHU window only]
+Origin:         [Shandong]
+SHU window:     [20,000–50,000]
+ASTA:           [≥100]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [EU aflatoxin limits · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · food-safety certificates · traceability]</code></pre>
+    <p class="data-note" style="margin-top:10px;">Значения в скобках — репрезентативные примеры из нашего <a href="/ru/guides/paprika-chilli-buying-guide/">гайда по покупке</a> — подтвердите точные лимиты с нами до заключения договора.</p>
+
+    <h2 style="margin-top:32px;">Шаблон 2 — Хлопья чили / дроблёный</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Chilli flakes / crushed chilli
+Variety:        [Jinta / Xian — visible flakes, bright colour]
+Origin:         [Gansu]
+SHU window:     [10,000–20,000]
+ASTA:           [target value]
+Mesh:           [20–40 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [kraft bags / cartons, moisture-barrier]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Шаблон 3 — Порошок паприки</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        Paprika powder (sweet / low-heat)
+Variety:        [Xinjiang sweet pepper / Yidu red, Wangdu]
+Origin:         [Xinjiang / Shandong]
+ASTA:           [60–240 — confirm target]
+SHU:            [&lt;500 sweet · &lt;10,000 low-heat]
+Mesh:           [60–80 mesh]
+Moisture:       [≤13%]
+Food safety:    [aflatoxin · pesticide · microbial per market]
+Packaging:      [25 kg kraft bags, export cartons]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Пустой шаблон — любая форма</h2>
+    <pre style="background:#faf6f3;border:1px solid #d8c9c0;border-radius:8px;padding:16px;font-size:0.95rem;overflow-x:auto;"><code>Product:        [whole / flakes / powder / segments]
+Variety:        [name or SHU window]
+Origin:         [province]
+SHU window:     [–]
+ASTA:           [–]
+Mesh:           [20–40 flakes · 60–80 powder · 100+ sauces]
+Moisture:       [≤13%]
+Water activity: [≤0.65]
+Food safety:    [market limits]
+Packaging:      [bag type, weight]
+Documents:      [lot-specific COA · certificates · traceability]</code></pre>
+
+    <h2 style="margin-top:32px;">Почему письменная спецификация окупает себя</h2>
+    <p>
+      Острота, цвет, текстура, безопасность и срок хранения дрейфуют сами по себе, когда не заданы.
+      Спецификация в одну строку ничего не стоит написать и спасает от провальной партии — покупатели,
+      которые получают стабильный продукт, это те, кто задаёт всё и затем проверяет COA партии.
+      Как работает каждый параметр — см. <a href="https://drychillis.com/guides/asta-colour-value/">цветность ASTA</a>,
+      <a href="/ru/guides/asta-colour-and-shu-heat-explained/">объяснение SHU</a> и
+      <a href="/ru/specs/mesh-size/">размер mesh</a>.
+    </p>
+    <p class="data-note">
+      Эти шаблоны суммируют параметры нашего гайда по покупке. Примеры значений репрезентативны,
+      а не договорные — подтвердите ваши точные SHU, ASTA, влажность и рыночные лимиты
+      с нами до заказа.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Что входит в полную спецификацию чили?</h3>
+      <p>Назовите сорт (или окно SHU), происхождение, форму (целый/хлопья/порошок), помол, влажность, активность воды, SHU, цвет ASTA и параметры безопасности для вашего рынка. Полная спецификация фиксирует остроту, цвет, текстуру, безопасность и срок хранения.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Как использовать этот шаблон?</h3>
+      <p>Скопируйте блок для вашей формы продукта, замените каждую скобку вашим целевым значением и отправьте с запросом. Заполненные строки используют репрезентативные значения из нашего гайда — подтвердите ваши точные SHU, ASTA, влажность и рыночные лимиты до заключения договора.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какие документы COA требовать вместе со спецификацией?</h3>
+      <p>COA конкретной партии (SHU, ASTA, влажность, микробиология, пестициды, микотоксины), сертификаты безопасности и прослеживаемость до базы выращивания. Общий каталожный сертификат — не COA партии.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какой помол писать для порошка и хлопьев?</h3>
+      <p>60–80 mesh — стандартный мелкий помол для порошка чили и паприки; 20–40 mesh — для хлопьев и дроблёного чили; 100+ mesh — для гладких соусов. Помол регулируется под ваше требование — назовите mesh или целевой размер частиц.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/contact/">Запросить Котировку</a>
+      <a class="cta cta-outline" href="/ru/guides/paprika-chilli-buying-guide/" style="margin-left:8px;">Читать Гайд по Покупке</a>
+    </div>
+  </div>
+</BaseLayout>

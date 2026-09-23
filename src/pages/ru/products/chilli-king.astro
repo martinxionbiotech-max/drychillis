@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Форма продукта", value: "Уточнить спецификацию" },
+  { param: "Сорт", value: "Chilli King" },
+  { param: "Уровень остроты (SHU)", value: ">50,000" },
+  { param: "Цветность ASTA", value: "Уточнить спецификацию" },
+  { param: "Размер частиц (mesh)", value: "Уточнить спецификацию" },
+  { param: "Влажность", value: "<13%" },
+  { param: "Обработка", value: "Уточнить спецификацию" },
+  { param: "Сертификаты", value: "ISO 9001 и HACCP стандартно — BRC, Halal, Kosher по запросу" },
+];
+
+const glanceFacts = [
+  { label: "Уровень остроты", value: ">50 000 SHU" },
+  { label: "Регион", value: "Фуцзянь, Хайнань" },
+  { label: "Лучше всего для", value: "Продукты экстремальной остроты, масло чили" },
+  { label: "Сертификаты", value: "ISO 9001 и HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/chilli-king/#product",
+  "name": "Chilli King",
+  "description": "Chilli King — сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня, для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле. Китайский производитель, ISO 9001 и HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/chilli-king/",
+  "sku": "TENDA-CHILLI-KING",
+  "category": "Специи и приправы",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Уровень остроты (SHU)", "value": ">50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Регион", "value": "Фуцзянь, Хайнань" },
+    { "@type": "PropertyValue", "name": "Лучше всего для", "value": "Продукты экстремальной остроты, масло чили" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King — сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня, один из самых острых распространённых китайских сортов наряду с Jixin и Xiaomi. Используется для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым является перец Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King — свыше 50 000 SHU — интенсивная жгучесть во всей полости рта, в той же полосе, что и Jixin (50 000–70 000 SHU) и Xiaomi. Острота и вкус независимы, поэтому самый острый не всегда лучший выбор для вашего блюда."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Для чего используется Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King — стандарт для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле. Указывайте сорт и точное окно SHU — у сверхострых перцев небольшая разница в SHU меняет продукт."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli King — Сверхострый Перец 50 000+ SHU | Tenda Peppers"
+  description="Chilli King — сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня, для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/products/dried-chillies/">Сушёный чили</a> &rsaquo; Chilli King
+    </nav>
+    <h1>Chilli King</h1>
+    <p class="lead">
+      Сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня — для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле.
+    </p>
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Chilli King — сверхострый перец (свыше 50 000 SHU) из Фуцзяни и Хайнаня, один из самых острых распространённых китайских сортов наряду с Jixin и Xiaomi. Это стандарт для продуктов экстремальной остроты и масла чили — но острота и вкус независимы, поэтому самый острый не всегда лучший выбор.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Целый сушёный чили" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Цена подтверждается при запросе котировки — MOQ, упаковка и спецификация согласовываются до заказа.</p>
+
+    <h2 style="margin-top:32px;">Что такое Chilli King?</h2>
+    <p>
+      Chilli King — сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня. На странице <a href="/ru/heat-levels/extra-hot/">сверхвысокой остроты</a> он указан рядом с Jixin (50 000–70 000 SHU) и Xiaomi как один из самых острых распространённых китайских сортов — интенсивная жгучесть во всей полости рта для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Свойство</th><th>Значение</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Острота (SHU)</strong></td><td>>50,000</td></tr>
+        <tr><td><strong>Регион</strong></td><td>Фуцзянь, Хайнань</td></tr>
+        <tr><td><strong>Лучше всего для</strong></td><td>Продукты экстремальной остроты, масло чили</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Для чего используется Chilli King?</h2>
+    <ul>
+      <li>Продукты экстремальной остроты</li>
+      <li>Масло чили</li>
+      <li>Блюда в сычуаньском стиле</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Chilli King против Jixin против Xiaomi</h2>
+    <p>
+      Перец Jixin («куриное сердце») — один из самых острых распространённых китайских перцев при 50 000–70 000 SHU, наряду с Xiaomi и Chilli King. Это стандарт для продуктов экстремальной остроты и масла чили — но острота и вкус независимы, поэтому самый острый не всегда лучший выбор для вашего блюда.
+    </p>
+
+    <h2 style="margin-top:32px;">Chilli King в цифрах</h2>
+    <p>
+      Chilli King превышает 50 000 SHU — в 100+ раз острее сладкой паприки (менее 500 SHU) и на полосу выше сортов высокой остроты 20 000–50 000 SHU. Уточняйте точное окно SHU при заказе, потому что у сверхострой полосы нет верхнего предела.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="ru" confirmText="Уточнить спецификацию" />
+
+    <h2 style="margin-top:32px;">В той же полосе свыше 50 000 SHU</h2>
+    <p>
+      Другие сорта этой полосы: <a href="/ru/products/jixin-chilli/">Jixin</a>, <a href="/ru/products/xiaomi-chilli/">Xiaomi</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Что такое Chilli King?</h3>
+      <p>Chilli King — сверхострый перец свыше 50 000 SHU из Фуцзяни и Хайнаня, один из самых острых распространённых китайских сортов наряду с Jixin и Xiaomi. Используется для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым является перец Chilli King?</h3>
+      <p>Chilli King — свыше 50 000 SHU — интенсивная жгучесть во всей полости рта, в той же полосе, что и Jixin (50 000–70 000 SHU) и Xiaomi. Острота и вкус независимы, поэтому самый острый не всегда лучший выбор для вашего блюда.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Для чего используется Chilli King?</h3>
+      <p>Chilli King — стандарт для продуктов экстремальной остроты, масла чили и блюд в сычуаньском стиле. Указывайте сорт и точное окно SHU — у сверхострых перцев небольшая разница в SHU меняет продукт.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/contact/">Запросить Котировку Chilli King</a>
+      <a class="cta cta-outline" href="/ru/products/dried-chillies/" style="margin-left:8px;">Сушёный чили →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying vs Zidantou: ¿Qué Chile de Calor Alto Elegir?", "description": "Sanying (Tianying) y Zidantou (bala) son las dos variedades clásicas de salsa picante a 20.000–50.000 SHU. Comparación para compradores: forma de vaina, origen y comportamiento en polvo.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/sanying-vs-zidantou/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Sanying y Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying) es un chile de racimo orientado al cielo de Henan y Hebei; Zidantou es un chile cónico en forma de bala de Shandong y Anhui con pulpa más gruesa. Ambos son variedades de salsa picante a 20.000–50.000 SHU, pero la mayor proporción pulpa-piel de Zidantou se muele en un polvo más uniforme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es mejor para salsa picante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ambas son variedades clásicas de salsa picante en la misma banda de 20.000–50.000 SHU. Sanying es la base fiable de calor alto; Zidantou se prefiere cuando la receta es a base de polvo y la uniformidad del molido importa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Son intercambiables Sanying y Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para el picor, sí — están en la misma banda SHU. Para la forma y el comportamiento en polvo, no: las formas de vaina y las proporciones de pulpa difieren. Confirme la variedad y una ventana SHU precisa en su especificación."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "Racimo al cielo, Henan &amp; Hebei" },
+  { label: "Zidantou", value: "Bala cónica, Shandong &amp; Anhui" },
+  { label: "Ambos", value: "20,000–50,000 SHU" },
+  { label: "Diferencia clave", value: "Proporción de pulpa → uniformidad del polvo" }
+];
+---
+
+<BaseLayout
+  title="Sanying vs Zidantou: ¿Qué Chile de Calor Alto Elegir? | Tenda Peppers"
+  description="Sanying (Tianying) y Zidantou (bala) son las dos variedades clásicas de salsa picante a 20.000–50.000 SHU. Comparación para compradores: forma de vaina, origen y comportamiento en polvo."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Sanying vs Zidantou
+    </nav>
+
+    <h1>Sanying vs Zidantou: ¿Qué Chile de Calor Alto Elegir?</h1>
+    <p class="lead">
+      Sanying y Zidantou son las dos variedades clásicas de salsa picante a 20.000–50.000 SHU — la misma banda de picor, pero vainas diferentes, orígenes diferentes y comportamiento en polvo diferente. Esta comparación las separa para que pida la correcta.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Sanying (Tianying) es un chile de racimo orientado al cielo de Henan y Hebei; Zidantou es un chile cónico en forma de bala de Shandong y Anhui con pulpa más gruesa. Ambos son variedades de salsa picante a 20.000–50.000 SHU, pero la mayor proporción pulpa-piel de Zidantou se muele en un polvo más uniforme.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Zidantou (bala)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Forma</strong></td>
+          <td style="padding:8px;">Racimo orientado al cielo</td>
+          <td style="padding:8px;">Bala cónica</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Región</strong></td>
+          <td style="padding:8px;">Henan, Hebei</td>
+          <td style="padding:8px;">Shandong, Anhui</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Picor (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">20,000–50,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Pulpa</strong></td>
+          <td style="padding:8px;">Racimo de pared fina</td>
+          <td style="padding:8px;">Pulpa gruesa, mayor proporción pulpa-piel</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Molido</strong></td>
+          <td style="padding:8px;">Forma clásica de chile seco</td>
+          <td style="padding:8px;">Polvo más uniforme, menos variación de semilla y piel</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ideal para</strong></td>
+          <td style="padding:8px;">Salsa picante, aceite de chile, condimentos de snacks</td>
+          <td style="padding:8px;">Salsa picante, alimentación industrial, chile en polvo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      Ambas son las variedades clásicas de salsa picante a 20.000–50.000 SHU — vea la página de <a href="/es/heat-levels/high-heat/">calor alto</a>. La diferencia es la vaina. <a href="/es/products/sanying-chilli/">Sanying</a> es un chile de racimo orientado al cielo de Henan y Hebei, la base fiable de calor alto para salsa picante, aceite de chile y condimentos de snacks. <a href="/es/products/zidantou-chilli/">Zidantou</a> es una bala cónica de Shandong y Anhui cuya pulpa gruesa se muele en un polvo robusto y consistente — la razón por la que es la base fiable de polvo de calor alto para salsa picante y alimentación industrial.
+    </p>
+    <h2 style="margin-top:32px;">Cuándo elegir cada una</h2>
+    <p>
+      Elija Sanying cuando la receta se construye sobre la forma clásica orientada al cielo y vainas enteras secas; elija Zidantou cuando la receta es a base de polvo y la uniformidad del molido importa. Se sustituyen en picor dentro de la misma banda SHU, pero no en forma ni proporción de pulpa.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Nombre la variedad y una ventana SHU precisa. Picor, color y sabor varían independientemente, así que el nombre de la variedad es lo que fija la consistencia entre lotes.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre Sanying y Zidantou?</h3>
+      <p>Sanying (Tianying) es un chile de racimo orientado al cielo de Henan y Hebei; Zidantou es un chile cónico en forma de bala de Shandong y Anhui con pulpa más gruesa. Ambos son variedades de salsa picante a 20.000–50.000 SHU, pero la mayor proporción pulpa-piel de Zidantou se muele en un polvo más uniforme.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál es mejor para salsa picante?</h3>
+      <p>Ambas son variedades clásicas de salsa picante en la misma banda de 20.000–50.000 SHU. Sanying es la base fiable de calor alto; Zidantou se prefiere cuando la receta es a base de polvo y la uniformidad del molido importa.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Son intercambiables Sanying y Zidantou?</h3>
+      <p>Para el picor, sí — están en la misma banda SHU. Para la forma y el comportamiento en polvo, no: las formas de vaina y las proporciones de pulpa difieren. Confirme la variedad y una ventana SHU precisa en su especificación.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

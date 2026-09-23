@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué chile es mejor para condimentos de snacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star es el estándar — 20.000–50.000 SHU de picor alto que define el producto — normalmente en polvo para snacks. Sanying es una alternativa en la misma banda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante debe ser el chile para snacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El picor alto es el estándar: 20.000–50.000 SHU. Fije la variedad y una ventana SHU precisa — la ola de picor y el retrogusto dependen de ambos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Polvo o copos para condimentos de snacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Polvo (malla 60–80) para una cobertura uniforme del snack. Los copos son un acento cuando quiera puntos de picor visibles."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Picor", value: "20,000–50,000 SHU" },
+  { label: "Variedad estándar", value: "Seven-Star" },
+  { label: "Forma", value: "Polvo, copos" },
+  { label: "Se evalúa por", value: "Picor que define el producto" }
+];
+---
+
+<BaseLayout
+  title="Chile para Condimentos de Snacks | Tenda Peppers"
+  description="Chile para condimentos de snacks — Seven-Star a 20.000–50.000 SHU, picor alto que define el producto, en polvo para cobertura uniforme. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Condimentos para Snacks
+    </nav>
+    <h1>Chile para Condimentos de Snacks</h1>
+    <p class="lead">
+      Los snacks necesitan un picor que defina el producto — la banda alta de 20.000–50.000 SHU. Seven-Star es el estándar, en polvo para cobertura uniforme; los copos son un acento cuando quiera puntos de picor visibles.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Los condimentos de snacks usan la banda alta — Seven-Star a 20.000–50.000 SHU — porque el picor define el producto. Use polvo (malla 60–80) para cobertura uniforme; el retrogusto depende de la variedad y la ventana SHU que fije.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué hace un buen chile para snacks?</h2>
+    <p>
+      Los snacks necesitan un picor que defina el producto — la banda alta de 20.000–50.000 SHU. Seven-Star es el estándar de snacks, y el polvo (malla 60–80) da una cobertura uniforme. Vea <a href="/es/products/seven-star-chilli/">chile Seven-Star</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Estándar de condimentos de snacks</td><td><a href="/es/products/seven-star-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Alternativa en la misma banda</td><td><a href="/es/products/sanying-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Banda media</strong></td><td>10,000 – 20,000</td><td>Snacks suaves</td><td><a href="/es/heat-levels/medium-heat/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile para snacks</h2>
+    <p>
+      Fije la variedad y una ventana SHU precisa — la ola de picor y el retrogusto dependen de ambos. El polvo (malla 60–80) da cobertura uniforme del snack; los copos son un acento cuando quiera puntos de picor visibles.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué chile es mejor para condimentos de snacks?</h3>
+      <p>Seven-Star es el estándar — 20.000–50.000 SHU de picor alto que define el producto — normalmente en polvo para snacks. Sanying es una alternativa en la misma banda.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante debe ser el chile para snacks?</h3>
+      <p>El picor alto es el estándar: 20.000–50.000 SHU. Fije la variedad y una ventana SHU precisa — la ola de picor y el retrogusto dependen de ambos.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Polvo o copos para condimentos de snacks?</h3>
+      <p>Polvo (malla 60–80) para una cobertura uniforme del snack. Los copos son un acento cuando quiera puntos de picor visibles.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

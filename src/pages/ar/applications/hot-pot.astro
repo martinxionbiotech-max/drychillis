@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفلفل الأفضل للهوت بوت؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "إرجينغتياو للقاعدة العطرية، وعادة مع شياومي أو تشيلي كينغ للحرارة القصوى، إضافة إلى سفن ستار للجسم. كل صنف يؤدي دورًا مختلفًا."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما مدى حرارة الفلفل للهوت بوت؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "قواعد الهوت بوت النموذجية تغطي 15,000–50,000+ SHU بخلط إرجينغتياو العطري مع أصناف حرارة قصوى مثل شياومي أو تشيلي كينغ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما شكل الفلفل للهوت بوت؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "رقائق وقطع للقواعد السائلة — تنقع بالتساوي وتحافظ على سطح الرائحة. معجون الفلفل المخلوط مسبقًا هو خيار المعالجة الصناعية."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "الصنف الأساسي", value: "إرجينغتياو" },
+  { label: "الحرارة", value: "15,000–50,000+ SHU" },
+  { label: "الشكل", value: "رقائق، قطع" },
+  { label: "يُقيَّم بـ", value: "الرائحة وموجة الحرارة" }
+];
+---
+
+<BaseLayout
+  title="فلفل للهوت بوت | Tenda Peppers"
+  description="فلفل للهوت بوت — إرجينغتياو عطري، شياومي أو تشيلي كينغ للحرارة القصوى، سفن ستار للجسم. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; الهوت بوت
+    </nav>
+    <h1>فلفل للهوت بوت</h1>
+    <p class="lead">
+      الهوت بوت يجمع ثلاثة أدوار للفلفل: إرجينغتياو العطري للقاعدة، شياومي أو تشيلي كينغ للحرارة القصوى، وسفن ستار للجسم. كل صنف يؤدي دورًا مختلفًا.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> قواعد الهوت بوت تستخدم إرجينغتياو للرائحة، شياومي أو تشيلي كينغ للحرارة القصوى وسفن ستار للجسم، بخلط نطاق 15,000–50,000+ SHU. الرقائق والقطع تنقع بالتساوي؛ معجون الفلفل المخلوط مسبقًا هو الخيار الصناعي.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">ما الذي يجعل الفلفل جيدًا للهوت بوت؟</h2>
+    <p>
+      الهوت بوت يجمع ثلاثة أدوار للفلفل: إرجينغتياو للقاعدة العطرية، شياومي أو تشيلي كينغ للحرارة القصوى وسفن ستار للجسم. اطلع على <a href="/ar/heat-levels/extra-hot/">النطاق شديد الحرارة</a> للخيارات.
+    </p>
+    <table>
+      <thead>
+        <tr><th>الصنف / النطاق</th><th>الحرارة (SHU)</th><th>الدور</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>إرجينغتياو</strong></td><td>15,000 – 30,000</td><td>قاعدة عطرية، معجون الفلفل</td><td><a href="https://drychillis.com/products/erjingtiao-chilli/">عرض ←</a></td></tr>
+        <tr><td><strong>شياومي (الدخن)</strong></td><td>50,000 – 70,000</td><td>حرارة قصوى</td><td><a href="/ar/products/xiaomi-chilli/">عرض ←</a></td></tr>
+        <tr><td><strong>تشيلي كينغ</strong></td><td>>50,000</td><td>حرارة قصوى</td><td><a href="/ar/products/chilli-king/">عرض ←</a></td></tr>
+        <tr><td><strong>سفن ستار</strong></td><td>20,000 – 50,000</td><td>الجسم</td><td><a href="/ar/products/seven-star-chilli/">عرض ←</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">كيف تحدد الفلفل للهوت بوت</h2>
+    <p>
+      استخدم رقائق وقطعًا للقواعد السائلة — تنقع بالتساوي وتحافظ على سطح الرائحة. معجون الفلفل المخلوط مسبقًا هو خيار المعالجة الصناعية. اذكر كل صنف ودوره في الوصفة.
+    </p>
+    <p class="data-note">
+      قيم الحرارة تمثيلية لكل صنف. أكّد نافذة SHU والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفلفل الأفضل للهوت بوت؟</h3>
+      <p>إرجينغتياو للقاعدة العطرية، وعادة مع شياومي أو تشيلي كينغ للحرارة القصوى، إضافة إلى سفن ستار للجسم. كل صنف يؤدي دورًا مختلفًا.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة الفلفل للهوت بوت؟</h3>
+      <p>قواعد الهوت بوت النموذجية تغطي 15,000–50,000+ SHU بخلط إرجينغتياو العطري مع أصناف حرارة قصوى مثل شياومي أو تشيلي كينغ.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما شكل الفلفل للهوت بوت؟</h3>
+      <p>رقائق وقطع للقواعد السائلة — تنقع بالتساوي وتحافظ على سطح الرائحة. معجون الفلفل المخلوط مسبقًا هو خيار المعالجة الصناعية.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/">الفلفل المجفف ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

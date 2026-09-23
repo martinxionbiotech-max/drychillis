@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué chile debo usar para salsa picante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variedades de picor alto en la banda de 20.000–50.000+ SHU — Sanying, Zidantou o Jixin — normalmente en polvo o copos. Especifique la variedad y una ventana SHU precisa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo especifico el picor para salsa picante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nombre la variedad y una ventana SHU precisa. El picor no es lineal, así que «picante» no es una especificación — el nombre de la variedad es lo que fija la consistencia entre lotes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito una variedad de color en la salsa picante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, para la mayoría de recetas: una salsa picante combina una variedad de picor con una de color/aroma, porque picor, color y aroma rara vez alcanzan su punto máximo en una sola variedad."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Banda de picor", value: "20,000–50,000+ SHU" },
+  { label: "Variedades clave", value: "Sanying, Zidantou, Jixin" },
+  { label: "Forma", value: "Polvo, copos" },
+  { label: "Se evalúa por", value: "Picor y color" }
+];
+---
+
+<BaseLayout
+  title="Chile para Salsa Picante | Tenda Peppers"
+  description="Qué chile usar para salsa picante — Sanying, Zidantou y Jixin a 20.000–50.000+ SHU en polvo o copos. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Salsa Picante
+    </nav>
+    <h1>Chile para Salsa Picante</h1>
+    <p class="lead">
+      La salsa picante se evalúa por picor y color. Las variedades de trabajo son Sanying, Zidantou y Jixin en la banda de 20.000–50.000+ SHU, normalmente en polvo o copos.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> La salsa picante quiere picor alto — Sanying, Zidantou o Jixin a 20.000–50.000+ SHU, en polvo o copos. Especifique la variedad y una ventana SHU precisa; el picor no es lineal, así que «picante» no es una especificación.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">¿Qué hace un buen chile para salsa picante?</h2>
+    <p>
+      La salsa picante se evalúa por picor y color. Use variedades de picor alto — Sanying, Zidantou o Jixin en la banda de 20.000–50.000+ SHU — normalmente en polvo o copos. Vea <a href="/es/guides/asta-colour-and-shu-heat-explained/">SHU explicado</a> para saber cómo se mide el picor.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Variedad / banda</th><th>Picor (SHU)</th><th>Papel</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Variedad clásica de salsa picante</td><td><a href="/es/products/sanying-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Zidantou</strong></td><td>20,000 – 50,000</td><td>Variedad clásica de salsa picante</td><td><a href="/es/products/zidantou-chilli/">Ver →</a></td></tr>
+        <tr><td><strong>Jixin (corazón de gallina)</strong></td><td>50,000 – 70,000</td><td>Picor extremo, normalmente mezclado</td><td><a href="/es/products/jixin-chilli/">Ver →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Cómo especificar chile para salsa picante</h2>
+    <p>
+      Especifique la variedad y una ventana SHU precisa; el picor no es lineal, así que «picante» no es una especificación. Una salsa picante combina una variedad de picor con una de color/aroma. El polvo da salsas suaves y color uniforme; los copos dan textura visible.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué chile debo usar para salsa picante?</h3>
+      <p>Variedades de picor alto en la banda de 20.000–50.000+ SHU — Sanying, Zidantou o Jixin — normalmente en polvo o copos. Especifique la variedad y una ventana SHU precisa.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo especifico el picor para salsa picante?</h3>
+      <p>Nombre la variedad y una ventana SHU precisa. El picor no es lineal, así que «picante» no es una especificación — el nombre de la variedad es lo que fija la consistencia entre lotes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Necesito una variedad de color en la salsa picante?</h3>
+      <p>Sí, para la mayoría de recetas: una salsa picante combina una variedad de picor con una de color/aroma, porque picor, color y aroma rara vez alcanzan su punto máximo en una sola variedad.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

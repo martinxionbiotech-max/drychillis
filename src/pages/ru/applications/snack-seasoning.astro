@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой перец лучше всего для приправ к снекам?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star — стандарт: 20 000–50 000 SHU высокая острота, определяющая продукт, — обычно в порошке для снеков. Sanying — альтернатива в той же полосе."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым должен быть перец для снеков?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Высокая острота — стандарт: 20 000–50 000 SHU. Зафиксируйте сорт и точное окно SHU — волна остроты и послевкусие зависят от обоих."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Порошок или хлопья для приправ к снекам?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Порошок (mesh 60–80) для равномерного покрытия снека. Хлопья — акцент, когда нужны видимые точки остроты."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Острота", value: "20,000–50,000 SHU" },
+  { label: "Стандартный сорт", value: "Seven-Star" },
+  { label: "Форма", value: "Порошок, хлопья" },
+  { label: "Оценивается по", value: "Остроте, определяющей продукт" }
+];
+---
+
+<BaseLayout
+  title="Перец для Приправ к Снекам | Tenda Peppers"
+  description="Перец для приправ к снекам — Seven-Star при 20 000–50 000 SHU, высокая острота, определяющая продукт, в порошке для равномерного покрытия. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Приправы к снекам
+    </nav>
+    <h1>Перец для Приправ к Снекам</h1>
+    <p class="lead">
+      Снекам нужна острота, определяющая продукт, — высокая полоса 20 000–50 000 SHU. Seven-Star — стандарт, в порошке для равномерного покрытия; хлопья — акцент, когда нужны видимые точки остроты.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Приправы к снекам используют высокую полосу — Seven-Star при 20 000–50 000 SHU — потому что острота определяет продукт. Используйте порошок (mesh 60–80) для равномерного покрытия; послевкусие зависит от сорта и окна SHU, которое вы зафиксируете.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Что делает перец хорошим для снеков?</h2>
+    <p>
+      Снекам нужна острота, определяющая продукт, — высокая полоса 20 000–50 000 SHU. Seven-Star — стандарт для снеков, а порошок (mesh 60–80) даёт равномерное покрытие. См. <a href="/ru/products/seven-star-chilli/">перец Seven-Star</a>.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Сорт / диапазон</th><th>Острота (SHU)</th><th>Роль</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Seven-Star</strong></td><td>20,000 – 50,000</td><td>Стандарт приправ к снекам</td><td><a href="/ru/products/seven-star-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Альтернатива в той же полосе</td><td><a href="/ru/products/sanying-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Средний диапазон</strong></td><td>10,000 – 20,000</td><td>Мягкие снеки</td><td><a href="/ru/heat-levels/medium-heat/">См. →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Как указать перец для снеков</h2>
+    <p>
+      Зафиксируйте сорт и точное окно SHU — волна остроты и послевкусие зависят от обоих. Порошок (mesh 60–80) даёт равномерное покрытие снека; хлопья — акцент, когда нужны видимые точки остроты.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какой перец лучше всего для приправ к снекам?</h3>
+      <p>Seven-Star — стандарт: 20 000–50 000 SHU высокая острота, определяющая продукт, — обычно в порошке для снеков. Sanying — альтернатива в той же полосе.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым должен быть перец для снеков?</h3>
+      <p>Высокая острота — стандарт: 20 000–50 000 SHU. Зафиксируйте сорт и точное окно SHU — волна остроты и послевкусие зависят от обоих.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Порошок или хлопья для приправ к снекам?</h3>
+      <p>Порошок (mesh 60–80) для равномерного покрытия снека. Хлопья — акцент, когда нужны видимые точки остроты.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

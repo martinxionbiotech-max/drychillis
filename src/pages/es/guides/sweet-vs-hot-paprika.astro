@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Pimentón Dulce vs Pimentón Picante (Calor Bajo): Cuál es la Diferencia", "description": "Pimentón dulce (menos de 500 SHU) vs pimentón de calor bajo (menos de 10.000 SHU) — variedades, color ASTA y cuándo se usa cada grado. Fabricante chino, ISO 9001 y HACCP.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/sweet-vs-hot-paprika/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre pimentón dulce y pimentón de calor bajo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimentón dulce (menos de 500 SHU) se hace de variedades de pimiento dulce de alto color como el pimiento dulce de Xinjiang y Red Dragon 23, con un valor de color ASTA de 80–180. El pimentón de calor bajo (menos de 10.000 SHU) viene de variedades como Yidu red y Wangdu, añadiendo calor suave y aroma claro a chile sobre el color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede el pimentón de calor bajo reemplazar al dulce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo si el calor añadido y el aroma a chile son aceptables en su producto. El pimentón dulce está por debajo de 500 SHU; el de calor bajo por debajo de 10.000 SHU. Confirme su valor de color objetivo y nivel de picor al consultar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pimentón es mejor para colorante alimentario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las variedades de pimiento dulce de alto color de Xinjiang — como Red Dragon 23 y US Red — dan el color más fuerte por unidad y son el estándar para la extracción de oleorresina de pimentón y el colorante alimentario."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Pimentón dulce", value: "&lt;500 SHU, ASTA 80–180" },
+  { label: "Pimentón calor bajo", value: "&lt;10,000 SHU" },
+  { label: "Variedades", value: "Red Dragon 23 vs Yidu red, Wangdu" },
+  { label: "Rango ASTA de suministro", value: "60–240, según variedad" }
+];
+---
+
+<BaseLayout
+  title="Pimentón Dulce vs Pimentón Picante (Calor Bajo): Cuál es la Diferencia | Tenda Peppers"
+  description="Pimentón dulce (menos de 500 SHU) vs pimentón de calor bajo (menos de 10.000 SHU) — variedades, color ASTA y cuándo se usa cada grado. Fabricante chino, ISO 9001 y HACCP."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Pimentón Dulce vs Picante
+    </nav>
+
+    <h1>Pimentón Dulce vs Pimentón Picante (Calor Bajo): Cuál es la Diferencia</h1>
+    <p class="lead">
+      El pimentón viene en dos grados: dulce, para color sin quemar, y de calor bajo, para color más calor suave y aroma a chile. Esta comparación explica la división SHU, las variedades detrás de cada uno y cómo especificar el grado que necesita.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> El pimentón dulce (menos de 500 SHU) se hace de variedades de pimiento dulce de alto color como el pimiento dulce de Xinjiang y Red Dragon 23, con un valor de color ASTA de 80–180. El pimentón de calor bajo (menos de 10.000 SHU) viene de variedades como Yidu red y Wangdu, añadiendo calor suave y aroma claro a chile sobre el color.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Pimentón dulce</th>
+          <th style="padding:8px;">Pimentón de calor bajo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Picor (SHU)</strong></td>
+          <td style="padding:8px;">Menos de 500</td>
+          <td style="padding:8px;">Menos de 10,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Variedades</strong></td>
+          <td style="padding:8px;">Pimiento dulce de Xinjiang, Red Dragon 23</td>
+          <td style="padding:8px;">Yidu red, Wangdu</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Color (ASTA)</strong></td>
+          <td style="padding:8px;">80–180 (grado dulce)</td>
+          <td style="padding:8px;">Rango 60–240, según variedad</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Carácter</strong></td>
+          <td style="padding:8px;">Color, sin quemar</td>
+          <td style="padding:8px;">Color + calor suave + aroma a chile</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      Ambos grados vienen de pimientos dulces de calor bajo y alto color — la página de <a href="/es/products/paprika-powder/">pimentón en polvo</a> detalla los grados. El pimentón dulce (menos de 500 SHU) se compra por color y sabor suave, esencialmente sin quemar. El pimentón de calor bajo (menos de 10.000 SHU) añade calor suave y un aroma claro a chile sobre el color. Ninguno es intercambiable con el chile en polvo, que se hace de variedades más picantes (20.000–70.000+ SHU) para aportar calor.
+    </p>
+    <h2 style="margin-top:32px;">Cuándo elegir cada uno</h2>
+    <p>
+      Elija pimentón dulce para colorear donde el picor no es deseado — colorante rojo natural, mezcla de color, snacks suaves. Elija pimentón de calor bajo cuando el producto necesita color más un calor suave y aroma a chile encima.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Confirme su valor de color ASTA objetivo y nivel de picor al consultar — el rango de suministro es aproximadamente ASTA 60–240 según variedad y grado. El color y el picor son independientes.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre pimentón dulce y pimentón de calor bajo?</h3>
+      <p>El pimentón dulce (menos de 500 SHU) se hace de variedades de pimiento dulce de alto color como el pimiento dulce de Xinjiang y Red Dragon 23, con un valor de color ASTA de 80–180. El pimentón de calor bajo (menos de 10.000 SHU) viene de variedades como Yidu red y Wangdu, añadiendo calor suave y aroma claro a chile sobre el color.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puede el pimentón de calor bajo reemplazar al dulce?</h3>
+      <p>Solo si el calor añadido y el aroma a chile son aceptables en su producto. El pimentón dulce está por debajo de 500 SHU; el de calor bajo por debajo de 10.000 SHU. Confirme su valor de color objetivo y nivel de picor al consultar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué pimentón es mejor para colorante alimentario?</h3>
+      <p>Las variedades de pimiento dulce de alto color de Xinjiang — como Red Dragon 23 y US Red — dan el color más fuerte por unidad y son el estándar para la extracción de oleorresina de pimentón y el colorante alimentario.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/paprika-powder/">Ver Pimentón en Polvo</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

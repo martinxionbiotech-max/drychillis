@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Forma del producto", value: "Confirmar especificación" },
+  { param: "Variedad", value: "Chile Seven-Star" },
+  { param: "Nivel de picor (SHU)", value: "20,000–50,000" },
+  { param: "Valor de color ASTA", value: "Confirmar especificación" },
+  { param: "Tamaño de malla", value: "Confirmar especificación" },
+  { param: "Humedad", value: "<13%" },
+  { param: "Procesamiento", value: "Confirmar especificación" },
+  { param: "Certificaciones", value: "ISO 9001 y HACCP de serie — BRC, Halal y Kosher a pedido" },
+];
+
+const glanceFacts = [
+  { label: "Nivel de picor", value: "20,000–50,000 SHU" },
+  { label: "Región", value: "Shandong, Shanxi" },
+  { label: "Ideal para", value: "Condimentos de snacks, bases de olla caliente" },
+  { label: "Certificaciones", value: "ISO 9001 y HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+  "name": "Chile Seven-Star",
+  "description": "Pimiento Seven-Star — chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi, para condimentos de snacks y bases de olla caliente. Fabricante chino, ISO 9001 y HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/seven-star-chilli/",
+  "sku": "TENDA-SEVEN-STAR-CHILLI",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Shandong, Shanxi" },
+    { "@type": "PropertyValue", "name": "Ideal Para", "value": "Condimentos de snacks, bases de olla caliente" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star es un chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi, usado sobre todo para condimentos de snacks y bases de olla caliente. Es una de las variedades de trabajo del picor alto junto con Sanying y Zidantou."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star se sitúa en la banda de picor alto, 20.000–50.000 SHU — fuerte y persistente, por encima de variedades medias como Xian y Jinta (10.000–20.000) y por debajo de las extra-picantes Jixin, Xiaomi y Chilli King (más de 50.000). Especifique una ventana SHU precisa, no solo «picor alto»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Seven-Star?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star es un estándar para condimentos de snacks y bases de olla caliente, y se muele junto con Sanying y Zidantou para chile en polvo. Nombre la variedad y la ventana SHU para fijar la consistencia entre lotes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Seven-Star — 20.000–50.000 SHU | Tenda Peppers"
+  description="Pimiento Seven-Star — chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi, para condimentos de snacks y bases de olla caliente. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Seven-Star
+    </nav>
+    <h1>Chile Seven-Star</h1>
+    <p class="lead">
+      Un chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi — un caballo de batalla para condimentos de snacks y bases de olla caliente.
+    </p>
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Seven-Star es un chile de alto picor (20.000–50.000 SHU) de Shandong y Shanxi, que suele molerse para condimentos de snacks y bases de olla caliente. Está en la misma banda que Sanying y Zidantou — la banda donde el picor define el producto sin ahogar los demás sabores.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Chiles secos enteros" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Precio confirmado en la cotización — MOQ, envasado y especificación acordados antes del pedido.</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Seven-Star?</h2>
+    <p>
+      Seven-Star es un chile de alto picor a 20.000–50.000 SHU, cultivado en Shandong y Shanxi. En la página de <a href="/es/heat-levels/high-heat/">picor alto</a> aparece junto a Sanying y Zidantou como una de las variedades de trabajo de la banda 20.000–50.000 SHU — lo bastante picante para definir un producto, y lo bastante suave para mantener en juego los demás sabores.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>20,000–50,000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Shandong, Shanxi</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Condimentos de snacks, bases de olla caliente</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Seven-Star?</h2>
+    <ul>
+      <li>Condimentos de snacks</li>
+      <li>Bases de olla caliente</li>
+      <li>Chile en polvo (molido con Sanying y Zidantou)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Seven-Star vs Sanying vs Zidantou</h2>
+    <p>
+      Sanying (Tianying) y Zidantou son las variedades clásicas de salsa picante a 20.000–50.000 SHU; Seven-Star es común en condimentos de snacks y bases de olla caliente. El picor, el color y el sabor varían de forma independiente, así que nombre la variedad y una ventana SHU precisa — el nombre de la variedad es lo que fija la consistencia entre lotes.
+    </p>
+
+    <h2 style="margin-top:32px;">Seven-Star en números</h2>
+    <p>
+      Seven-Star ronda los 20.000–50.000 SHU — unas 40–100 veces más picante que el pimentón dulce (menos de 500 SHU) y una banda por debajo de las extra-picantes Jixin, Xiaomi y Chilli King (más de 50.000 SHU).
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="es" confirmText="Confirmar especificación" />
+
+    <h2 style="margin-top:32px;">En la misma banda de 20.000–50.000 SHU</h2>
+    <p>
+      Otras variedades de esta banda: <a href="/es/products/sanying-chilli/">Sanying</a>, <a href="/es/products/zidantou-chilli/">Zidantou</a>, <a href="/es/products/new-generation-chilli/">New Generation</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Seven-Star?</h3>
+      <p>Seven-Star es un chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi, usado sobre todo para condimentos de snacks y bases de olla caliente. Es una de las variedades de trabajo del picor alto junto con Sanying y Zidantou.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Seven-Star?</h3>
+      <p>Seven-Star se sitúa en la banda de picor alto, 20.000–50.000 SHU — fuerte y persistente, por encima de variedades medias como Xian y Jinta (10.000–20.000) y por debajo de las extra-picantes Jixin, Xiaomi y Chilli King (más de 50.000). Especifique una ventana SHU precisa, no solo «picor alto».</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Seven-Star?</h3>
+      <p>Seven-Star es un estándar para condimentos de snacks y bases de olla caliente, y se muele junto con Sanying y Zidantou para chile en polvo. Nombre la variedad y la ventana SHU para fijar la consistencia entre lotes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Seven-Star</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>

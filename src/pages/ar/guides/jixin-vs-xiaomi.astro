@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "جيشين ضد شياومي: أي فلفل شديد الحرارة تختار", "description": "جيشين (قلب الدجاجة) وشياومي (الدخن) كلاهما فلفل شديد الحرارة عند 50,000–70,000 SHU. مقارنة للمشتري: شكل القرن، المنشأ وكيفية الجرعات.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/jixin-vs-xiaomi/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين جيشين وشياومي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "كلاهما شديد الحرارة عند 50,000–70,000 SHU. جيشين قرن صغير على شكل قلب من قويتشو وهونان، معيار منتجات الحرارة القصوى وأطباق أسلوب سيتشوان؛ شياومي قرن صغير نحيل من يوننان وقويتشو يبقيه حجمه المدمج مرئيًا كاملًا في الأطباق أو كقطع."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "أيهما أحر، جيشين أم شياومي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يقعان في نفس نطاق 50,000–70,000 SHU — الفرق هو شكل القرن والاستخدام، لا الحرارة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كم أحتاج من جيشين لخلطة متوسطة الحرارة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لتحقيق خلطة 10,000 SHU، يشكل جيشين نحو 14–20% من الوصفة وزنًا — أي جزء واحد من جيشين لكل 4–6 أجزاء قاعدة. جرّع بالوزن لأن الحرارة غير خطية."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "جيشين", value: "شكل قلب، قويتشو وهونان" },
+  { label: "شياومي", value: "صغير نحيل، يوننان وقويتشو" },
+  { label: "كلاهما", value: "50,000–70,000 SHU" },
+  { label: "جرعة الخلطة", value: "≈14–20% لخلطة 10,000 SHU" }
+];
+---
+
+<BaseLayout
+  title="جيشين ضد شياومي: أي فلفل شديد الحرارة تختار | Tenda Peppers"
+  description="جيشين (قلب الدجاجة) وشياومي (الدخن) كلاهما فلفل شديد الحرارة عند 50,000–70,000 SHU. مقارنة للمشتري: شكل القرن، المنشأ وكيفية الجرعات."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; جيشين ضد شياومي
+    </nav>
+
+    <h1>جيشين ضد شياومي: أي فلفل شديد الحرارة تختار</h1>
+    <p class="lead">
+      جيشين وشياومي هما صنفا العمل شديدا الحرارة عند 50,000–70,000 SHU. نطاق الحرارة متطابق — الفرق هو شكل القرن والمنشأ وكيف يتصرف كل منهما في طبق أو خلطة.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> جيشين (قلب الدجاجة) قرن صغير على شكل قلب من قويتشو وهونان، معيار منتجات الحرارة القصوى وأطباق أسلوب سيتشوان، يُجرَّع كلمسة بالوزن. شياومي (الدخن) قرن صغير نحيل من يوننان وقويتشو يركّز حجمه المدمج الحرارة — يبقى مرئيًا كاملًا في الأطباق أو كقطع.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">جيشين (قلب الدجاجة)</th>
+          <th style="padding:8px;">شياومي (الدخن)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الشكل</strong></td>
+          <td style="padding:8px;">صغير على شكل قلب</td>
+          <td style="padding:8px;">صغير، نحيل</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>المنطقة</strong></td>
+          <td style="padding:8px;">قويتشو، هونان</td>
+          <td style="padding:8px;">يوننان، قويتشو</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الحرارة (SHU)</strong></td>
+          <td style="padding:8px;">50,000–70,000</td>
+          <td style="padding:8px;">50,000–70,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الأنسب لـ</strong></td>
+          <td style="padding:8px;">منتجات الحرارة القصوى، زيت الفلفل، أطباق أسلوب سيتشوان، قواعد الهوت بوت</td>
+          <td style="padding:8px;">فلفل كامل عالي الحرارة، قطع، زيت الفلفل</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>في الأطباق</strong></td>
+          <td style="padding:8px;">يُجرَّع كلمسة بالوزن</td>
+          <td style="padding:8px;">القرن المدمج يبقى مرئيًا</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      كلاهما شديد الحرارة عند 50,000–70,000 SHU — انظر صفحة <a href="/ar/heat-levels/extra-hot/">شديد الحرارة</a>. <a href="/ar/products/jixin-chilli/">جيشين</a> هو مرجع الحرارة القصوى: قرون صغيرة على شكل قلب من قويتشو وهونان، معيار منتجات الحرارة القصوى وزيت الفلفل وأطباق أسلوب سيتشوان. <a href="/ar/products/xiaomi-chilli/">شياومي</a> قرن صغير نحيل من يوننان وقويتشو يركّز حجمه المدمج الحرارة، فيقدم حرارة قوية من قرن صغير مرئي — يُستخدم كاملًا أو كقطع أو في زيت الفلفل.
+    </p>
+    <h2 style="margin-top:32px;">حساب الجرعة: لماذا يُخلط شديد الحرارة ولا يُستخدم صافيًا</h2>
+    <p>
+      لتحقيق خلطة 10,000 SHU، يشكل جيشين (50,000–70,000 SHU) نحو 14–20% من الوصفة وزنًا — أي جزء واحد من جيشين لكل 4–6 أجزاء قاعدة. جرّع بالوزن، لأن الحرارة غير خطية وجرعة زائدة صغيرة تحرك الخلطة أكثر بكثير مما يفعل فلفل متوسط.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      اذكر الصنف ونافذة SHU دقيقة، وأكّد الشكل — القطع والمسحوق هما الأكثر شيوعًا عند هذا المستوى من الحرارة. أصناف الحرارة القصوى تُخلط عادة، ولا تُستخدم صافية.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين جيشين وشياومي؟</h3>
+      <p>كلاهما شديد الحرارة عند 50,000–70,000 SHU. جيشين قرن صغير على شكل قلب من قويتشو وهونان، معيار منتجات الحرارة القصوى وأطباق أسلوب سيتشوان؛ شياومي قرن صغير نحيل من يوننان وقويتشو يبقيه حجمه المدمج مرئيًا كاملًا في الأطباق أو كقطع.</p>
+    </div>
+    <div class="faq-item">
+      <h3>أيهما أحر، جيشين أم شياومي؟</h3>
+      <p>يقعان في نفس نطاق 50,000–70,000 SHU — الفرق هو شكل القرن والاستخدام، لا الحرارة.</p>
+    </div>
+    <div class="faq-item">
+      <h3>كم أحتاج من جيشين لخلطة متوسطة الحرارة؟</h3>
+      <p>لتحقيق خلطة 10,000 SHU، يشكل جيشين نحو 14–20% من الوصفة وزنًا — أي جزء واحد من جيشين لكل 4–6 أجزاء قاعدة. جرّع بالوزن لأن الحرارة غير خطية.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/products/dried-chillies/">الفلفل المجفف ←</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

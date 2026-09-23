@@ -584,6 +584,176 @@
           "value": "Chile entero, segmentos, aceite de chile"
         }
       ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+      "name": "Chile Seven-Star",
+      "description": "Chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi para condimentos de snacks y bases de hotpot. ISO 9001 y HACCP.",
+      "url": "https://drychillis.com/products/seven-star-chilli/",
+      "sku": "TENDA-SEVEN-STAR-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong, Shanxi"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Condimentos de snacks, bases de hotpot"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/new-generation-chilli/#product",
+      "name": "Chile New Generation",
+      "description": "Chile de alto picor a 20.000–50.000 SHU de Shandong para mezclas de condimentos y chile en polvo. ISO 9001 y HACCP.",
+      "url": "https://drychillis.com/products/new-generation-chilli/",
+      "sku": "TENDA-NEW-GENERATION-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "20,000–50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Mezclas de condimentos, chile en polvo"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/chilli-king/#product",
+      "name": "Chilli King",
+      "description": "Chile extra picante por encima de 50.000 SHU de Fujian y Hainan para productos de picor extremo y aceite de chile. ISO 9001 y HACCP.",
+      "url": "https://drychillis.com/products/chilli-king/",
+      "sku": "TENDA-CHILLI-KING",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": ">50,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Fujian, Hainan"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Productos de picor extremo, aceite de chile"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/wangdu-chilli/#product",
+      "name": "Chile Wangdu",
+      "description": "Chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei, usado con Yidu red para pimentón de bajo picor y color. ISO 9001 y HACCP.",
+      "url": "https://drychillis.com/products/wangdu-chilli/",
+      "sku": "TENDA-WANGDU-CHILLI",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "<10,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Shandong, Hebei"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Pimentón de bajo picor, color"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://drychillis.com/products/xian-pepper/#product",
+      "name": "Pimiento Xian",
+      "description": "Chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang para chile en polvo, copos y condimentos. ISO 9001 y HACCP.",
+      "url": "https://drychillis.com/products/xian-pepper/",
+      "sku": "TENDA-XIAN-PEPPER",
+      "category": "Spices and Seasonings",
+      "brand": {
+        "@type": "Brand",
+        "name": "Tenda Peppers"
+      },
+      "manufacturer": {
+        "@id": "https://drychillis.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Nivel de Picor (SHU)",
+          "value": "10,000–20,000",
+          "unitText": "SHU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Región",
+          "value": "Mongolia Interior, Xinjiang"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ideal Para",
+          "value": "Chile en polvo, copos, condimentos"
+        }
+      ]
     }
   ]
 }

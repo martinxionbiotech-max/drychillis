@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Forma del producto", value: "Confirmar especificación" },
+  { param: "Variedad", value: "Pimiento Xian" },
+  { param: "Nivel de picor (SHU)", value: "10,000–20,000" },
+  { param: "Valor de color ASTA", value: "Confirmar especificación" },
+  { param: "Tamaño de malla", value: "Confirmar especificación" },
+  { param: "Humedad", value: "<13%" },
+  { param: "Procesamiento", value: "Confirmar especificación" },
+  { param: "Certificaciones", value: "ISO 9001 y HACCP de serie — BRC, Halal y Kosher a pedido" },
+];
+
+const glanceFacts = [
+  { label: "Nivel de picor", value: "10,000–20,000 SHU" },
+  { label: "Región", value: "Mongolia Interior, Xinjiang" },
+  { label: "Ideal para", value: "Chile en polvo, copos, condimentos" },
+  { label: "Certificaciones", value: "ISO 9001 y HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/xian-pepper/#product",
+  "name": "Pimiento Xian",
+  "description": "Pimiento Xian — chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang, para chile en polvo, copos y condimentos. Fabricante chino, ISO 9001 y HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/xian-pepper/",
+  "sku": "TENDA-XIAN-PEPPER",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Mongolia Interior, Xinjiang" },
+    { "@type": "PropertyValue", "name": "Ideal Para", "value": "Chile en polvo, copos, condimentos" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el pimiento Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento Xian es un chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang — rojo oscuro y aceitoso, usado para chile en polvo, copos y salsa. Es la principal variedad media junto con Jinta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento Xian es de picor medio a 10.000–20.000 SHU — notablemente cálido sin el ardor intenso de las variedades de picor alto, y unas 20–40 veces más picante que el pimentón dulce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Xian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pimiento Xian se usa para chile en polvo medio, copos (molido con Jinta) y mezclas de condimentos. Nombre la variedad y la ventana SHU en su especificación — picor y aroma varían de forma independiente."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Pimiento Xian — 10.000–20.000 SHU Chile Medio | Tenda Peppers"
+  description="Pimiento Xian — chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang, para chile en polvo, copos y condimentos. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Pimiento Xian
+    </nav>
+    <h1>Pimiento Xian</h1>
+    <p class="lead">
+      Un chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang — el término medio versátil para chile en polvo, copos y condimentos.
+    </p>
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> El pimiento Xian es un chile de picor medio (10.000–20.000 SHU) de Mongolia Interior y Xinjiang. Es el término medio versátil — rojo oscuro y aceitoso, usado para chile en polvo, copos y salsa, y molido con Jinta para copos.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Chiles secos enteros" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Precio confirmado en la cotización — MOQ, envasado y especificación acordados antes del pedido.</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el pimiento Xian?</h2>
+    <p>
+      El pimiento Xian es un chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang. En la página de <a href="/es/heat-levels/medium-heat/">picor medio</a> es la principal variedad media junto a Jinta — notablemente cálido sin el ardor intenso de las variedades de picor alto, y la banda de mayor volumen porque se adapta a la gama más amplia de productos.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>10,000–20,000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Mongolia Interior, Xinjiang</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Chile en polvo, copos, condimentos</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Xian?</h2>
+    <ul>
+      <li>Chile en polvo (medio)</li>
+      <li>Copos de chile (molido con Jinta)</li>
+      <li>Condimentos y salsa</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Xian vs Jinta vs Erjingtiao</h2>
+    <p>
+      El pimiento Xian y Jinta son las principales variedades de 10.000–20.000 SHU; Erjingtiao está en 15.000–30.000 SHU. Jinta conviene para copos y polvo de color vivo; Erjingtiao aporta aroma y se usa para pasta de chile. Xian es el término medio versátil — rojo oscuro y aceitoso, usado para chile en polvo y salsa.
+    </p>
+
+    <h2 style="margin-top:32px;">Xian en números</h2>
+    <p>
+      El pimiento Xian ronda los 10.000–20.000 SHU — unas 20–40 veces más picante que el pimentón dulce (menos de 500 SHU) y 2,5–5 veces más suave que la banda de picor alto (20.000–50.000). Es la banda que se adapta a la gama más amplia de productos.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="es" confirmText="Confirmar especificación" />
+
+    <h2 style="margin-top:32px;">En la misma banda de 10.000–20.000 SHU</h2>
+    <p>
+      Otras variedades de esta banda: <a href="/es/products/jinta-chilli/">Jinta</a>, <a href="/es/products/lantern-chilli/">Linterna</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el pimiento Xian?</h3>
+      <p>El pimiento Xian es un chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang — rojo oscuro y aceitoso, usado para chile en polvo, copos y salsa. Es la principal variedad media junto con Jinta.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Xian?</h3>
+      <p>El pimiento Xian es de picor medio a 10.000–20.000 SHU — notablemente cálido sin el ardor intenso de las variedades de picor alto, y unas 20–40 veces más picante que el pimentón dulce.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Xian?</h3>
+      <p>El pimiento Xian se usa para chile en polvo medio, copos (molido con Jinta) y mezclas de condimentos. Nombre la variedad y la ventana SHU en su especificación — picor y aroma varían de forma independiente.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Xian</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>

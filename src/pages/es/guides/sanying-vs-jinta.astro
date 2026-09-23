@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying vs Jinta: Picor contra Color", "description": "Sanying es la base de calor alto (20.000–50.000 SHU); Jinta es la variedad de calor medio (10.000–20.000 SHU) para copos visibles. Comparación para compradores.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/sanying-vs-jinta/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Sanying y Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying es un chile de calor alto a 20.000–50.000 SHU de Henan y Hebei, la base para salsa picante y aceite de chile. Jinta es un chile de calor medio a 10.000–20.000 SHU de Gansu con vainas largas de rojo profundo brillante, elegido para copos visibles y color vivo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál pica más, Sanying o Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying, a 20.000–50.000 SHU, pica más que Jinta, a 10.000–20.000 SHU — la diferencia es una banda completa de picor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál debo usar para copos visibles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta — sus vainas largas con piel gruesa, brillante y de rojo azufaifa profundo la convierten en la variedad preferida para copos. Color y picor son independientes, y Jinta se inclina por el color."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "20,000–50,000 SHU, Henan &amp; Hebei" },
+  { label: "Jinta", value: "10,000–20,000 SHU, Gansu" },
+  { label: "Sanying se inclina por", value: "Picor" },
+  { label: "Jinta se inclina por", value: "Color" }
+];
+---
+
+<BaseLayout
+  title="Sanying vs Jinta: Picor contra Color | Tenda Peppers"
+  description="Sanying es la base de calor alto (20.000–50.000 SHU); Jinta es la variedad de calor medio (10.000–20.000 SHU) para copos visibles. Comparación para compradores."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; Sanying vs Jinta
+    </nav>
+
+    <h1>Sanying vs Jinta: Picor contra Color</h1>
+    <p class="lead">
+      Sanying y Jinta están a una banda de picor de distancia y construidas para trabajos distintos: Sanying aporta calor alto fiable, Jinta aporta vainas largas de rojo profundo para copos visibles y color vivo. Esta comparación las distingue.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Sanying es un chile de calor alto (20.000–50.000 SHU) de Henan y Hebei, la base para salsa picante, aceite de chile y condimentos de snacks. Jinta es un chile de calor medio (10.000–20.000 SHU) de Gansu con vainas largas de 11–14 cm, gruesas, brillantes y de rojo azufaifa — elegido para copos visibles y color. Color y picor son independientes, y Jinta se inclina por el color.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Jinta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Picor (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">10,000–20,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Región</strong></td>
+          <td style="padding:8px;">Henan, Hebei</td>
+          <td style="padding:8px;">Gansu</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Vaina</strong></td>
+          <td style="padding:8px;">Racimo orientado al cielo</td>
+          <td style="padding:8px;">Larga 11–14 cm, piel gruesa brillante rojo azufaifa</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Se inclina por</strong></td>
+          <td style="padding:8px;">Picor</td>
+          <td style="padding:8px;">Color</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ideal para</strong></td>
+          <td style="padding:8px;">Salsa picante, aceite de chile, condimentos de snacks</td>
+          <td style="padding:8px;">Copos visibles, topping de pizza, mezclas de condimentos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      Es una decisión de picor contra color. <a href="/es/products/sanying-chilli/">Sanying</a> aporta 20.000–50.000 SHU — la base fiable de calor alto para salsa picante, aceite de chile y condimentos de snacks. <a href="/es/products/jinta-chilli/">Jinta</a> es calor medio a 10.000–20.000 SHU, con vainas largas de rojo azufaifa profundo y piel gruesa brillante — un estándar para copos visibles y color vivo. Vea las páginas de <a href="/es/heat-levels/medium-heat/">calor medio</a> y <a href="/es/heat-levels/high-heat/">calor alto</a> para las bandas.
+    </p>
+    <h2 style="margin-top:32px;">Cuándo elegir cada una</h2>
+    <p>
+      Elija Sanying cuando el picor es el titular y el producto final se puntúa por picante; elija Jinta cuando el producto final muestra el chile — topping de pizza, copos visibles y mezclas de condimentos — porque su vaina se lee claramente como copo y mantiene el color vivo.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Nombre la variedad y una ventana SHU precisa — picor, color y sabor varían independientemente, así que el nombre de la variedad fija la consistencia entre lotes. Para Jinta, confirme también la malla (20–40 para copos visibles).
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre Sanying y Jinta?</h3>
+      <p>Sanying es un chile de calor alto a 20.000–50.000 SHU de Henan y Hebei, la base para salsa picante y aceite de chile. Jinta es un chile de calor medio a 10.000–20.000 SHU de Gansu con vainas largas de rojo profundo brillante, elegido para copos visibles y color vivo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál pica más, Sanying o Jinta?</h3>
+      <p>Sanying, a 20.000–50.000 SHU, pica más que Jinta, a 10.000–20.000 SHU — la diferencia es una banda completa de picor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál debo usar para copos visibles?</h3>
+      <p>Jinta — sus vainas largas con piel gruesa, brillante y de rojo azufaifa profundo la convierten en la variedad preferida para copos. Color y picor son independientes, y Jinta se inclina por el color.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/products/dried-chillies/">Ver Chiles Secos</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

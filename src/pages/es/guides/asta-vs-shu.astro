@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Color ASTA vs Picor SHU: Cuál es la Diferencia", "description": "ASTA mide el color (carotenoides capsantina); SHU mide el picor (capsaicinoides). Dos especificaciones independientes — un pimentón puede ser alto en ASTA y cero en picor.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/asta-vs-shu/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre ASTA y SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA mide el color — los pigmentos carotenoides extraíbles como la capsantina que dan al pimentón su color rojo. SHU mide el picor — los capsaicinoides que provocan el ardor. Son propiedades separadas, controladas independientemente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede un chile ser alto en ASTA y cero en picor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. ASTA y SHU son independientes — un pimentón puede ser alto en ASTA y cero en picor, que es exactamente lo que es el pimentón dulce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál debo especificar primero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ambos, en líneas separadas: ASTA para el color, ventana SHU para el picor. Ninguno predice el otro, así que una especificación con un solo número deja el otro sin controlar."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "ASTA", value: "Color (capsantina), 460 nm" },
+  { label: "SHU", value: "Picor (capsaicinoides), HPLC" },
+  { label: "Relación", value: "Independiente" },
+  { label: "Prueba", value: "Un pimentón puede ser alto en ASTA y cero en picor" }
+];
+---
+
+<BaseLayout
+  title="Color ASTA vs Picor SHU: Cuál es la Diferencia | Tenda Peppers"
+  description="ASTA mide el color (carotenoides capsantina); SHU mide el picor (capsaicinoides). Dos especificaciones independientes — un pimentón puede ser alto en ASTA y cero en picor."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; ASTA vs SHU
+    </nav>
+
+    <h1>Color ASTA vs Picor SHU: Cuál es la Diferencia</h1>
+    <p class="lead">
+      ASTA y SHU son los dos números de toda especificación de chile — y miden cosas completamente distintas. ASTA es color, SHU es picor, y ninguno predice el otro. Esta comparación explica ambos.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> ASTA mide el color — los pigmentos carotenoides extraíbles, principalmente capsantina, cuantificados por espectrofotometría a 460 nm (Método ASTA 20.1). SHU mide el picor — la concentración de capsaicinoides, cuantificada por HPLC y convertida a SHU (aproximadamente 1 ppm de capsaicina ≈ 16 SHU). Son propiedades separadas, controladas independientemente.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Valor de color ASTA</th>
+          <th style="padding:8px;">Picor SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Mide</strong></td>
+          <td style="padding:8px;">Color — carotenoides extraíbles, principalmente capsantina</td>
+          <td style="padding:8px;">Picor — concentración de capsaicinoides</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Método</strong></td>
+          <td style="padding:8px;">Espectrofotometría a 460 nm (Método ASTA 20.1)</td>
+          <td style="padding:8px;">HPLC, convertido a SHU (≈1 ppm capsaicina ≈ 16 SHU)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Controlado</strong></td>
+          <td style="padding:8px;">Independientemente</td>
+          <td style="padding:8px;">Independientemente</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Estabilidad</strong></td>
+          <td style="padding:8px;">Se degrada con oxígeno, luz y calor</td>
+          <td style="padding:8px;">Varía ±40% según condiciones de cultivo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      Mucho chile mal comprado viene de tratar los dos números como una sola propiedad. No lo son: ASTA es color, SHU es picor, y se controlan independientemente — un pimentón puede ser alto en ASTA y cero en picor. El trasfondo técnico completo está en las páginas de <a href="/es/guides/asta-colour-and-shu-heat-explained/">SHU explicado</a>.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar ambos</h2>
+    <p>
+      Especifique el objetivo ASTA para el color y la ventana SHU para el picor como líneas separadas en la especificación — más la variedad y la malla. Los carotenoides se degradan con oxígeno, luz y calor, así que el color se desvanece con el tiempo; la rotación de lote fresco protege el ASTA que compró.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre ASTA y SHU?</h3>
+      <p>ASTA mide el color — los pigmentos carotenoides extraíbles como la capsantina que dan al pimentón su color rojo. SHU mide el picor — los capsaicinoides que provocan el ardor. Son propiedades separadas, controladas independientemente.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puede un chile ser alto en ASTA y cero en picor?</h3>
+      <p>Sí. ASTA y SHU son independientes — un pimentón puede ser alto en ASTA y cero en picor, que es exactamente lo que es el pimentón dulce.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuál debo especificar primero?</h3>
+      <p>Ambos, en líneas separadas: ASTA para el color, ventana SHU para el picor. Ninguno predice el otro, así que una especificación con un solo número deja el otro sin controlar.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/guides/asta-colour-and-shu-heat-explained/">Leer la Guía SHU</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "SHU ضد محتوى الكابسايسين: ما الفرق", "description": "الكابسايسين هو المركب الكيميائي الذي يحرق؛ SHU هو المقياس الذي يقيس تركيز الكابسايسينويدات — نحو 1 جزء في المليون كابسايسين ≈ 16 SHU. ما يعنيه كل منهما في المواصفة.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ar/guides/shu-vs-capsaicin/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين SHU والكابسايسين؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الكابسايسين هو المركب الكيميائي — الكابسايسينويد المهيمن الذي يثير الحرق. SHU هو المقياس الذي يقيس تركيز الكابسايسينويدات: نحو 1 جزء في المليون كابسايسين ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كم يساوي الكابسايسين النقي بوحدات SHU؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يسجل الكابسايسين النقي نحو 16 مليون SHU — تحويل نحو 1 جزء في المليون كابسايسين ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يحرق نفس SHU بنفس الطريقة دائمًا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا. يمكن أن يتشارك فلفلان في SHU متطابق ومع ذلك يحرقان بسرعة مختلفة ويبقيان لوقت مختلف، لأن الرقم يوسّط عدة كابسايسينويدات تختلف في طابعها الحسي."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "الكابسايسين", value: "كابسايسينويد قلوي مهيمن" },
+  { label: "SHU", value: "مقياس تركيز" },
+  { label: "التحويل", value: "1 جزء في المليون كابسايسين ≈ 16 SHU" },
+  { label: "الكابسايسين النقي", value: "≈16 مليون SHU" }
+];
+---
+
+<BaseLayout
+  title="SHU ضد محتوى الكابسايسين: ما الفرق | Tenda Peppers"
+  description="الكابسايسين هو المركب الكيميائي الذي يحرق؛ SHU هو المقياس الذي يقيس تركيز الكابسايسينويدات — نحو 1 جزء في المليون كابسايسين ≈ 16 SHU. ما يعنيه كل منهما في المواصفة."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ar"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/guides/">الأدلة</a> &rsaquo; SHU ضد الكابسايسين
+    </nav>
+
+    <h1>SHU ضد محتوى الكابسايسين: ما الفرق</h1>
+    <p class="lead">
+      الكابسايسين هو المركب الكيميائي الذي يسبب الحرق؛ SHU هو المقياس الذي يكمّمه. تشرح هذه المقارنة العلاقة — وما يخبرك به SHU وما لا يخبرك به عن كيفية حرق الفلفل.
+    </p>
+
+    <div class="takeaways">
+      <strong>الإجابة المختصرة:</strong> الكابسايسين هو العضو المهيمن في عائلة الكابسايسينويدات — القلويدات التي تثير الإحساس بالحرق. يكمّم SHU تركيزها: تُحوَّل نتائج HPLC إلى SHU، بنحو 1 جزء في المليون كابسايسين ≈ 16 SHU — ولهذا يسجل الكابسايسين النقي نحو 16 مليون SHU.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ar" />
+
+    <h2 style="margin-top:32px;">الفرق الجوهري</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">البُعد</th>
+          <th style="padding:8px;">الكابسايسين</th>
+          <th style="padding:8px;">SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>ما هو</strong></td>
+          <td style="padding:8px;">العضو المهيمن في عائلة الكابسايسينويدات القلوية</td>
+          <td style="padding:8px;">مقياس تركيز للكابسايسينويدات، أساسًا الكابسايسين</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الدور</strong></td>
+          <td style="padding:8px;">يثير الإحساس بالحرق</td>
+          <td style="padding:8px;">يكمّمه — تركيز كيميائي، لا قوة طعم</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>التحويل</strong></td>
+          <td style="padding:8px;">نحو 1 جزء في المليون كابسايسين ≈ 16 SHU</td>
+          <td style="padding:8px;">الكابسايسين النقي ≈ 16 مليون SHU</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>الحد</strong></td>
+          <td style="padding:8px;">مركب واحد بين عدة مركبات</td>
+          <td style="padding:8px;">يوسّط عدة كابسايسينويدات — نفس SHU قد يحرق بشكل مختلف</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">لماذا يهم الاختيار</h2>
+    <p>
+      تُستخدم «الكابسايسين» غالبًا بشكل فضفاض بمعنى «الحرارة»، لكنها في الحقيقة العضو المهيمن في عائلة صغيرة من القلويدات. الخلفية الكاملة في صفحة <a href="/ar/guides/asta-colour-and-shu-heat-explained/">شرح SHU</a>. يمكن أن يتشارك فلفلان في SHU متطابق ومع ذلك يحرقان بسرعة مختلفة ويبقيان لوقت مختلف ويختلف طعمهما كليًا — لأن الرقم يوسّط عدة كابسايسينويدات تختلف في طابعها الحسي.
+    </p>
+    <h2 style="margin-top:32px;">ما لا يخبرك به SHU</h2>
+    <p>
+      SHU تركيز كيميائي، لا قوة طعم. الحرارة المدركة استجابة حسية تعتمد على مزيج الكابسايسينويدات ومصفوفة الطعام والمتذوق الفردي — SHU المقيس والحرارة المدركة يترابطان لكنهما غير قابلين للتبادل.
+    </p>
+    <h2 style="margin-top:32px;">كيف تحدد</h2>
+    <p>
+      حدد الحرارة كنافذة SHU، لا رقمًا واحدًا — يمكن أن يتغير محتوى الكابسايسينويدات ±40% داخل الصنف الواحد حسب ظروف الزراعة.
+    </p>
+    <p class="data-note">
+      قيم الحرارة واللون تمثيلية. أكّد نافذة SHU وASTA والشكل والشبكة بدقة عند الاستفسار.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما الفرق بين SHU والكابسايسين؟</h3>
+      <p>الكابسايسين هو المركب الكيميائي — الكابسايسينويد المهيمن الذي يثير الحرق. SHU هو المقياس الذي يقيس تركيز الكابسايسينويدات: نحو 1 جزء في المليون كابسايسين ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>كم يساوي الكابسايسين النقي بوحدات SHU؟</h3>
+      <p>يسجل الكابسايسين النقي نحو 16 مليون SHU — تحويل نحو 1 جزء في المليون كابسايسين ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل يحرق نفس SHU بنفس الطريقة دائمًا؟</h3>
+      <p>لا. يمكن أن يتشارك فلفلان في SHU متطابق ومع ذلك يحرقان بسرعة مختلفة ويبقيان لوقت مختلف، لأن الرقم يوسّط عدة كابسايسينويدات تختلف في طابعها الحسي.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/guides/asta-colour-and-shu-heat-explained/">اقرأ دليل SHU</a>
+      <a class="cta cta-outline" href="/ar/contact/" style="margin-left:8px;">اطلب عرض سعر</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "SHU vs Contenido de Capsaicina: Cuál es la Diferencia", "description": "La capsaicina es la sustancia química que arde; SHU es la escala que mide la concentración de capsaicinoides — aproximadamente 1 ppm de capsaicina ≈ 16 SHU. Qué significa cada uno en una especificación.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/es/guides/shu-vs-capsaicin/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre SHU y capsaicina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La capsaicina es el compuesto químico — el capsaicinoide dominante que provoca el ardor. SHU es la escala que mide la concentración de capsaicinoides: aproximadamente 1 ppm de capsaicina ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto es la capsaicina pura en SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La capsaicina pura registra alrededor de 16 millones de SHU — la conversión de aproximadamente 1 ppm de capsaicina ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El mismo SHU siempre arde igual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Dos chiles pueden compartir un SHU idéntico y aun así arder a distinta velocidad y permanecer por distinto tiempo, porque el número promedia varios capsaicinoides cuyo carácter sensorial difiere."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Capsaicina", value: "Alcaloide capsaicinoide dominante" },
+  { label: "SHU", value: "Escala de concentración" },
+  { label: "Conversión", value: "1 ppm capsaicina ≈ 16 SHU" },
+  { label: "Capsaicina pura", value: "≈16 millones de SHU" }
+];
+---
+
+<BaseLayout
+  title="SHU vs Contenido de Capsaicina: Cuál es la Diferencia | Tenda Peppers"
+  description="La capsaicina es la sustancia química que arde; SHU es la escala que mide la concentración de capsaicinoides — aproximadamente 1 ppm de capsaicina ≈ 16 SHU. Qué significa cada uno en una especificación."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="es"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/guides/">Guías</a> &rsaquo; SHU vs Capsaicina
+    </nav>
+
+    <h1>SHU vs Contenido de Capsaicina: Cuál es la Diferencia</h1>
+    <p class="lead">
+      La capsaicina es el compuesto químico que causa el ardor; SHU es la escala que lo cuantifica. Esta comparación explica la relación — y lo que SHU le dice y no le dice sobre cómo arderá un chile.
+    </p>
+
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> La capsaicina es el miembro dominante de la familia de los capsaicinoides — los alcaloides que desencadenan la sensación de ardor. SHU cuantifica su concentración: los resultados de HPLC se convierten a SHU, con aproximadamente 1 ppm de capsaicina ≈ 16 SHU — por eso la capsaicina pura registra alrededor de 16 millones de SHU.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+
+    <h2 style="margin-top:32px;">La diferencia central</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimensión</th>
+          <th style="padding:8px;">Capsaicina</th>
+          <th style="padding:8px;">SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Qué es</strong></td>
+          <td style="padding:8px;">El miembro dominante de la familia de alcaloides capsaicinoides</td>
+          <td style="padding:8px;">Una escala de concentración para capsaicinoides, principalmente capsaicina</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Rol</strong></td>
+          <td style="padding:8px;">Desencadena la sensación de ardor</td>
+          <td style="padding:8px;">La cuantifica — una concentración química, no una intensidad de sabor</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Conversión</strong></td>
+          <td style="padding:8px;">Aproximadamente 1 ppm capsaicina ≈ 16 SHU</td>
+          <td style="padding:8px;">Capsaicina pura ≈ 16 millones de SHU</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Límite</strong></td>
+          <td style="padding:8px;">Un compuesto entre varios</td>
+          <td style="padding:8px;">Promedia varios capsaicinoides — el mismo SHU puede arder distinto</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Por qué importa la elección</h2>
+    <p>
+      «Capsaicina» se usa a menudo vagamente para decir «picor», pero en realidad es el miembro dominante de una pequeña familia de alcaloides. El trasfondo completo está en la página de <a href="/es/guides/asta-colour-and-shu-heat-explained/">SHU explicado</a>. Dos chiles pueden compartir un SHU idéntico y aun así arder a distinta velocidad, permanecer por distinto tiempo y saber completamente distinto — porque el número promedia varios capsaicinoides cuyo carácter sensorial difiere.
+    </p>
+    <h2 style="margin-top:32px;">Lo que SHU no le dice</h2>
+    <p>
+      SHU es una concentración química, no una intensidad de sabor. El picor percibido es una respuesta sensorial que depende de la mezcla de capsaicinoides, la matriz alimentaria y el catador individual — el SHU medido y el picor percibido se correlacionan pero no son intercambiables.
+    </p>
+    <h2 style="margin-top:32px;">Cómo especificar</h2>
+    <p>
+      Especifique el picor como una ventana SHU, no un número único — el contenido de capsaicinoides puede variar ±40% dentro de una misma variedad según las condiciones de cultivo.
+    </p>
+    <p class="data-note">
+      Los valores de picor y color son representativos. Confirme su ventana SHU, ASTA, forma y malla
+      exactas al consultar.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Cuál es la diferencia entre SHU y capsaicina?</h3>
+      <p>La capsaicina es el compuesto químico — el capsaicinoide dominante que provoca el ardor. SHU es la escala que mide la concentración de capsaicinoides: aproximadamente 1 ppm de capsaicina ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuánto es la capsaicina pura en SHU?</h3>
+      <p>La capsaicina pura registra alrededor de 16 millones de SHU — la conversión de aproximadamente 1 ppm de capsaicina ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿El mismo SHU siempre arde igual?</h3>
+      <p>No. Dos chiles pueden compartir un SHU idéntico y aun así arder a distinta velocidad y permanecer por distinto tiempo, porque el número promedia varios capsaicinoides cuyo carácter sensorial difiere.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/guides/asta-colour-and-shu-heat-explained/">Leer la Guía SHU</a>
+      <a class="cta cta-outline" href="/es/contact/" style="margin-left:8px;">Solicitar Cotización</a>
+    </div>
+  </div>
+</BaseLayout>

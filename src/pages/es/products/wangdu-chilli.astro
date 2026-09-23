@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Forma del producto", value: "Confirmar especificación" },
+  { param: "Variedad", value: "Chile Wangdu" },
+  { param: "Nivel de picor (SHU)", value: "<10,000" },
+  { param: "Valor de color ASTA", value: "Confirmar especificación" },
+  { param: "Tamaño de malla", value: "Confirmar especificación" },
+  { param: "Humedad", value: "<13%" },
+  { param: "Procesamiento", value: "Confirmar especificación" },
+  { param: "Certificaciones", value: "ISO 9001 y HACCP de serie — BRC, Halal y Kosher a pedido" },
+];
+
+const glanceFacts = [
+  { label: "Nivel de picor", value: "<10,000 SHU" },
+  { label: "Región", value: "Shandong, Hebei" },
+  { label: "Ideal para", value: "Pimentón de bajo picor, color" },
+  { label: "Certificaciones", value: "ISO 9001 y HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/wangdu-chilli/#product",
+  "name": "Chile Wangdu",
+  "description": "Pimiento Wangdu — chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei, usado con el rojo Yidu para pimentón de bajo picor y color. Fabricante chino, ISO 9001 y HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/wangdu-chilli/",
+  "sku": "TENDA-WANGDU-CHILLI",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "<10,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Shandong, Hebei" },
+    { "@type": "PropertyValue", "name": "Ideal Para", "value": "Pimentón de bajo picor, color" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el chile Wangdu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wangdu es un chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei, usado con el rojo Yidu para pimentón de bajo picor y color rojo natural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Wangdu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wangdu es de bajo picor — por debajo de 10.000 SHU, al menos 5 veces más suave que la banda media (Xian y Jinta) y muy por debajo de las variedades extra-picantes. Es una variedad orientada al color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa el pimiento Wangdu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wangdu se usa con el rojo Yidu para pimentón de bajo picor y color natural. Especifique la variedad y su objetivo de color ASTA — color y picor son números independientes."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Wangdu — Chile de Bajo Picor para Color | Tenda Peppers"
+  description="Pimiento Wangdu — chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei, usado con el rojo Yidu para pimentón de bajo picor y color. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Wangdu
+    </nav>
+    <h1>Chile Wangdu</h1>
+    <p class="lead">
+      Un chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei — usado con el rojo Yidu para pimentón de bajo picor y color natural.
+    </p>
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Wangdu es un chile de bajo picor (por debajo de 10.000 SHU) de Shandong y Hebei, usado con el rojo Yidu para pimentón de bajo picor y color. Es una variedad orientada al color — se compra por ASTA, no por picor.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Chiles secos enteros" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Precio confirmado en la cotización — MOQ, envasado y especificación acordados antes del pedido.</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Wangdu?</h2>
+    <p>
+      Wangdu es un chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei. En la <a href="/es/guides/chinese-chilli-varieties-grades/">guía de variedades</a> aparece en la banda de bajo picor junto al rojo Yidu — la banda que se muele para pimentón de bajo picor, donde el color hace el trabajo y el picor queda en segundo plano.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td><10,000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Shandong, Hebei</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Pimentón de bajo picor, color</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el pimiento Wangdu?</h2>
+    <ul>
+      <li>Pimentón de bajo picor</li>
+      <li>Color rojo natural</li>
+      <li>Mezclas orientadas al color</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Wangdu vs rojo Yidu</h2>
+    <p>
+      El rojo Yidu y Wangdu son la pareja de bajo picor por debajo de 10.000 SHU. Ambos alimentan el grado de pimentón de bajo picor — polvo orientado al color donde el SHU se mantiene por debajo de 10.000. Especifique la variedad y su objetivo ASTA: color y picor son números independientes.
+    </p>
+
+    <h2 style="margin-top:32px;">Wangdu en números</h2>
+    <p>
+      Wangdu está por debajo de 10.000 SHU — al menos 5 veces más suave que la banda media (Xian, Jinta a 10.000–20.000) y más de 100 veces más suave que Chilli King (más de 50.000). Se compra por color, no por picor.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="es" confirmText="Confirmar especificación" />
+
+    <h2 style="margin-top:32px;">En la misma banda de menos de 10.000 SHU</h2>
+    <p>
+      Otras opciones de esta banda: rojo Yidu, <a href="/es/products/paprika-powder/">Pimentón en Polvo</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Wangdu?</h3>
+      <p>Wangdu es un chile de bajo picor por debajo de 10.000 SHU de Shandong y Hebei, usado con el rojo Yidu para pimentón de bajo picor y color rojo natural.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Wangdu?</h3>
+      <p>Wangdu es de bajo picor — por debajo de 10.000 SHU, al menos 5 veces más suave que la banda media (Xian y Jinta) y muy por debajo de las variedades extra-picantes. Es una variedad orientada al color.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el pimiento Wangdu?</h3>
+      <p>Wangdu se usa con el rojo Yidu para pimentón de bajo picor y color natural. Especifique la variedad y su objetivo de color ASTA — color y picor son números independientes.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Wangdu</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying против Zidantou: Какой Острый Перец Выбрать", "description": "Sanying (Tianying) и Zidantou (пуля) — два классических сорта острого соуса при 20 000–50 000 SHU. Сравнение для покупателей: форма стручка, происхождение и поведение порошка.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/ru/guides/sanying-vs-zidantou/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "В чем разница между Sanying и Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying) — кластерный перец, растущий вверх, из Хэнани и Хэбэя; Zidantou — конический пулевидный перец из Шаньдуна и Аньхоя с более толстой мякотью. Оба — сорта острого соуса при 20 000–50 000 SHU, но более высокое соотношение мякоти к кожице у Zidantou даёт более однородный порошок."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой лучше для острого соуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Оба — классические сорта острого соуса в одной полосе 20 000–50 000 SHU. Sanying — надёжная база высокой остроты; Zidantou предпочтителен, когда рецептура на основе порошка и важна однородность помола."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Взаимозаменяемы ли Sanying и Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "По остроте — да, они в одной полосе SHU. По форме и поведению порошка — нет: формы стручков и соотношения мякоти различаются. Подтвердите сорт и точное окно SHU в своей спецификации."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "Кластер вверх, Хэнань и Хэбэй" },
+  { label: "Zidantou", value: "Коническая пуля, Шаньдун и Аньхой" },
+  { label: "Оба", value: "20,000–50,000 SHU" },
+  { label: "Ключевое различие", value: "Соотношение мякоти → однородность порошка" }
+];
+---
+
+<BaseLayout
+  title="Sanying против Zidantou: Какой Острый Перец Выбрать | Tenda Peppers"
+  description="Sanying (Tianying) и Zidantou (пуля) — два классических сорта острого соуса при 20 000–50 000 SHU. Сравнение для покупателей: форма стручка, происхождение и поведение порошка."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  lang="ru"
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Sanying против Zidantou
+    </nav>
+
+    <h1>Sanying против Zidantou: Какой Острый Перец Выбрать</h1>
+    <p class="lead">
+      Sanying и Zidantou — два классических сорта острого соуса при 20 000–50 000 SHU — одна полоса остроты, но разные стручки, разное происхождение и разное поведение порошка. Это сравнение разделяет их, чтобы вы заказали нужный.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Sanying (Tianying) — кластерный перец, растущий вверх, из Хэнани и Хэбэя; Zidantou — конический пулевидный перец из Шаньдуна и Аньхоя с более толстой мякотью. Оба — сорта острого соуса при 20 000–50 000 SHU, но более высокое соотношение мякоти к кожице у Zidantou даёт более однородный порошок.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Основное различие</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Параметр</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Zidantou (пуля)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Форма</strong></td>
+          <td style="padding:8px;">Кластер, растёт вверх</td>
+          <td style="padding:8px;">Коническая пуля</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Регион</strong></td>
+          <td style="padding:8px;">Хэнань, Хэбэй</td>
+          <td style="padding:8px;">Шаньдун, Аньхой</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Острота (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">20,000–50,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Мякоть</strong></td>
+          <td style="padding:8px;">Тонкостенный кластер</td>
+          <td style="padding:8px;">Толстая мякоть, выше соотношение мякоть-кожица</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Помол</strong></td>
+          <td style="padding:8px;">Классическая форма сухого чили</td>
+          <td style="padding:8px;">Более однородный порошок, меньше вариаций семян и кожицы</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Лучше всего для</strong></td>
+          <td style="padding:8px;">Острый соус, масло чили, приправы к снекам</td>
+          <td style="padding:8px;">Острый соус, промышленная пища, порошок чили</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Почему выбор важен</h2>
+    <p>
+      Оба — классические сорта острого соуса при 20 000–50 000 SHU — см. страницу <a href="/ru/heat-levels/high-heat/">высокой остроты</a>. Разница в стручке. <a href="/ru/products/sanying-chilli/">Sanying</a> — кластерный перец, растущий вверх, из Хэнани и Хэбэя, надёжная база высокой остроты для острого соуса, масла чили и приправ к снекам. <a href="/ru/products/zidantou-chilli/">Zidantou</a> — коническая пуля из Шаньдуна и Аньхоя, чья толстая мякоть даёт крепкий, стабильный порошок — поэтому это надёжная порошковая база высокой остроты для острого соуса и промышленной пищи.
+    </p>
+    <h2 style="margin-top:32px;">Когда выбирать каждый</h2>
+    <p>
+      Выбирайте Sanying, когда рецептура строится на классической форме, растущей вверх, и сушёных целых стручках; выбирайте Zidantou, когда рецептура на основе порошка и важна однородность помола. Они взаимозаменяемы по остроте внутри одной полосы SHU, но не по форме и соотношению мякоти.
+    </p>
+    <h2 style="margin-top:32px;">Как указать в спецификации</h2>
+    <p>
+      Назовите сорт и точное окно SHU. Острота, цвет и вкус меняются независимо, поэтому название сорта — то, что фиксирует постоянство между партиями.
+    </p>
+    <p class="data-note">
+      Значения остроты и цвета репрезентативны. Уточняйте точное окно SHU, ASTA, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>В чем разница между Sanying и Zidantou?</h3>
+      <p>Sanying (Tianying) — кластерный перец, растущий вверх, из Хэнани и Хэбэя; Zidantou — конический пулевидный перец из Шаньдуна и Аньхоя с более толстой мякотью. Оба — сорта острого соуса при 20 000–50 000 SHU, но более высокое соотношение мякоти к кожице у Zidantou даёт более однородный порошок.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Какой лучше для острого соуса?</h3>
+      <p>Оба — классические сорта острого соуса в одной полосе 20 000–50 000 SHU. Sanying — надёжная база высокой остроты; Zidantou предпочтителен, когда рецептура на основе порошка и важна однородность помола.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Взаимозаменяемы ли Sanying и Zidantou?</h3>
+      <p>По остроте — да, они в одной полосе SHU. По форме и поведению порошка — нет: формы стручков и соотношения мякоти различаются. Подтвердите сорт и точное окно SHU в своей спецификации.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

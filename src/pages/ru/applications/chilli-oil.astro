@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой перец лучше всего для масла чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ароматный Erjingtiao даёт аромат, обычно в смеси с сортом остроты, таким как Sanying или Jixin, в хлопьях или сегментах для равномерного настаивания."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Хлопья или порошок для масла чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Хлопья или сегменты — мелкий порошок мутнит масло и быстрее теряет аромат. Хлопья и сегменты настаиваются равномерно и сохраняют ароматическую поверхность."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько острым должен быть перец для масла чили?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ароматная база (Erjingtiao) находится на уровне 15 000–30 000 SHU; смеси с сортом остроты достигают 50 000 SHU и выше. Укажите окно SHU каждого сорта в смеси."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Базовый сорт", value: "Erjingtiao" },
+  { label: "Острота", value: "15,000–50,000 SHU" },
+  { label: "Форма", value: "Хлопья, сегменты" },
+  { label: "Оценивается по", value: "Аромату и остроте" }
+];
+---
+
+<BaseLayout
+  title="Перец для Масла Чили | Tenda Peppers"
+  description="Какой перец использовать для масла чили — ароматный Erjingtiao в смеси с Sanying или Jixin, в хлопьях или сегментах. Китайский производитель, ISO 9001 и HACCP."
+  lang="ru"
+  jsonLd={[faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ru/">Главная</a> &rsaquo; <a href="/ru/guides/">Гайды</a> &rsaquo; Масло чили
+    </nav>
+    <h1>Перец для Масла Чили</h1>
+    <p class="lead">
+      Масло чили оценивается по аромату не меньше, чем по остроте. Классическая база — ароматный Erjingtiao, смешанный с сортом остроты, таким как Sanying или Jixin, — в хлопьях или сегментах, а не в мелком порошке.
+    </p>
+
+    <div class="takeaways">
+      <strong>Короткий ответ:</strong> Маслу чили нужен аромат (Erjingtiao, 15 000–30 000 SHU) в смеси с остротой (Sanying или Jixin). Используйте хлопья или сегменты для равномерного настаивания — мелкий порошок мутнит масло и быстрее теряет аромат.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="ru" />
+
+    <h2 style="margin-top:32px;">Что делает перец хорошим для масла чили?</h2>
+    <p>
+      Масло чили оценивается по аромату не меньше, чем по остроте. Классическая база — ароматный Erjingtiao (15 000–30 000 SHU), часто смешанный с сортом остроты, таким как Sanying или Jixin. Хлопья или сегменты настаиваются равномерно и сохраняют ароматическую поверхность.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Сорт / диапазон</th><th>Острота (SHU)</th><th>Роль</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15,000 – 30,000</td><td>Ароматная база, паста чили, хого</td><td><a href="https://drychillis.com/products/erjingtiao-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20,000 – 50,000</td><td>Партнёр остроты в смеси</td><td><a href="/ru/products/sanying-chilli/">См. →</a></td></tr>
+        <tr><td><strong>Xiaomi (просо)</strong></td><td>50,000 – 70,000</td><td>Масло чили, экстремальная острота</td><td><a href="/ru/products/xiaomi-chilli/">См. →</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Как указать перец для масла чили</h2>
+    <p>
+      Используйте хлопья или сегменты для равномерного настаивания и сохранения ароматической поверхности — мелкий порошок мутнит масло и быстрее теряет аромат. Назовите базовый сорт (Erjingtiao) и партнёра остроты, плюс окно SHU каждого.
+    </p>
+    <p class="data-note">
+      Значения остроты репрезентативны для каждого сорта. Уточняйте точное окно SHU, форму и
+      помол при запросе.
+    </p>
+
+    <h2 style="margin-top:32px;">Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какой перец лучше всего для масла чили?</h3>
+      <p>Ароматный Erjingtiao даёт аромат, обычно в смеси с сортом остроты, таким как Sanying или Jixin, в хлопьях или сегментах для равномерного настаивания.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Хлопья или порошок для масла чили?</h3>
+      <p>Хлопья или сегменты — мелкий порошок мутнит масло и быстрее теряет аромат. Хлопья и сегменты настаиваются равномерно и сохраняют ароматическую поверхность.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Насколько острым должен быть перец для масла чили?</h3>
+      <p>Ароматная база (Erjingtiao) находится на уровне 15 000–30 000 SHU; смеси с сортом остроты достигают 50 000 SHU и выше. Укажите окно SHU каждого сорта в смеси.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ru/products/dried-chillies/">Сушёный чили →</a>
+      <a class="cta cta-outline" href="/ru/contact/" style="margin-left:8px;">Запросить Котировку</a>
+    </div>
+  </div>
+</BaseLayout>

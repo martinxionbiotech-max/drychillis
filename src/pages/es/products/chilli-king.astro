@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+
+const buyerSpec = [
+  { param: "Forma del producto", value: "Confirmar especificación" },
+  { param: "Variedad", value: "Chilli King" },
+  { param: "Nivel de picor (SHU)", value: ">50,000" },
+  { param: "Valor de color ASTA", value: "Confirmar especificación" },
+  { param: "Tamaño de malla", value: "Confirmar especificación" },
+  { param: "Humedad", value: "<13%" },
+  { param: "Procesamiento", value: "Confirmar especificación" },
+  { param: "Certificaciones", value: "ISO 9001 y HACCP de serie — BRC, Halal y Kosher a pedido" },
+];
+
+const glanceFacts = [
+  { label: "Nivel de picor", value: ">50,000 SHU" },
+  { label: "Región", value: "Fujian, Hainan" },
+  { label: "Ideal para", value: "Productos de picor extremo, aceite de chile" },
+  { label: "Certificaciones", value: "ISO 9001 y HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/chilli-king/#product",
+  "name": "Chilli King",
+  "description": "Chilli King — chile extra-picante de más de 50.000 SHU de Fujian y Hainan, para productos de picor extremo, aceite de chile y platos estilo Sichuan. Fabricante chino, ISO 9001 y HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/chilli-king/",
+  "sku": "TENDA-CHILLI-KING",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": ">50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Fujian, Hainan" },
+    { "@type": "PropertyValue", "name": "Ideal Para", "value": "Productos de picor extremo, aceite de chile" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King es un chile extra-picante de más de 50.000 SHU de Fujian y Hainan, entre las variedades chinas comunes más picantes junto con Jixin y Xiaomi. Se usa para productos de picor extremo, aceite de chile y platos estilo Sichuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tan picante es el pimiento Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King supera los 50.000 SHU — picor intenso en toda la boca, en la misma banda que Jixin (50.000–70.000 SHU) y Xiaomi. Picor y sabor son independientes, así que el más picante no es automáticamente la mejor opción para su plato."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King es un estándar para productos de picor extremo, aceite de chile y platos estilo Sichuan. Especifique la variedad y una ventana SHU precisa — con chiles extra-picantes una pequeña diferencia de SHU cambia el producto."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli King — Chiles Extra-Picantes de 50.000+ SHU | Tenda Peppers"
+  description="Chilli King — chile extra-picante de más de 50.000 SHU de Fujian y Hainan, para productos de picor extremo, aceite de chile y platos estilo Sichuan. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Chilli King
+    </nav>
+    <h1>Chilli King</h1>
+    <p class="lead">
+      Un chile extra-picante de más de 50.000 SHU de Fujian y Hainan — para productos de picor extremo, aceite de chile y platos estilo Sichuan.
+    </p>
+    <div class="takeaways">
+      <strong>Respuesta breve:</strong> Chilli King es un chile extra-picante (más de 50.000 SHU) de Fujian y Hainan, una de las variedades chinas comunes más picantes junto con Jixin y Xiaomi. Es el estándar para productos de picor extremo y aceite de chile — pero picor y sabor son independientes, así que el más picante no es automáticamente la mejor opción.
+    </div>
+    <AtAGlance facts={glanceFacts} lang="es" />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Chiles secos enteros" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Precio confirmado en la cotización — MOQ, envasado y especificación acordados antes del pedido.</p>
+
+    <h2 style="margin-top:32px;">¿Qué es Chilli King?</h2>
+    <p>
+      Chilli King es un chile extra-picante de más de 50.000 SHU de Fujian y Hainan. En la página de <a href="/es/heat-levels/extra-hot/">picor extremo</a> aparece junto a Jixin (50.000–70.000 SHU) y Xiaomi como una de las variedades chinas comunes más picantes — picor intenso en toda la boca para productos de picor extremo, aceite de chile y platos estilo Sichuan.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>>50,000</td></tr>
+        <tr><td><strong>Región</strong></td><td>Fujian, Hainan</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Productos de picor extremo, aceite de chile</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa Chilli King?</h2>
+    <ul>
+      <li>Productos de picor extremo</li>
+      <li>Aceite de chile</li>
+      <li>Platos estilo Sichuan</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Chilli King vs Jixin vs Xiaomi</h2>
+    <p>
+      El pimiento Jixin (corazón de gallina) está entre los chiles chinos comunes más picantes a 50.000–70.000 SHU, junto con Xiaomi y Chilli King. Son el estándar para productos de picor extremo y aceite de chile — pero picor y sabor son independientes, así que el más picante no es automáticamente la mejor opción para su plato.
+    </p>
+
+    <h2 style="margin-top:32px;">Chilli King en números</h2>
+    <p>
+      Chilli King supera los 50.000 SHU — más de 100 veces más picante que el pimentón dulce (menos de 500 SHU) y una banda por encima de las variedades de picor alto de 20.000–50.000 SHU. Confirme la ventana SHU exacta al pedir, porque la banda extra-picante no tiene techo.
+    </p>
+    <p class="data-note">
+      Los valores de picor son representativos por variedad. Confirme su ventana SHU, forma y malla
+      exactas al consultar.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} lang="es" confirmText="Confirmar especificación" />
+
+    <h2 style="margin-top:32px;">En la misma banda de más de 50.000 SHU</h2>
+    <p>
+      Otras variedades de esta banda: <a href="/es/products/jixin-chilli/">Jixin</a>, <a href="/es/products/xiaomi-chilli/">Xiaomi</a>.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es Chilli King?</h3>
+      <p>Chilli King es un chile extra-picante de más de 50.000 SHU de Fujian y Hainan, entre las variedades chinas comunes más picantes junto con Jixin y Xiaomi. Se usa para productos de picor extremo, aceite de chile y platos estilo Sichuan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el pimiento Chilli King?</h3>
+      <p>Chilli King supera los 50.000 SHU — picor intenso en toda la boca, en la misma banda que Jixin (50.000–70.000 SHU) y Xiaomi. Picor y sabor son independientes, así que el más picante no es automáticamente la mejor opción para su plato.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa Chilli King?</h3>
+      <p>Chilli King es un estándar para productos de picor extremo, aceite de chile y platos estilo Sichuan. Especifique la variedad y una ventana SHU precisa — con chiles extra-picantes una pequeña diferencia de SHU cambia el producto.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Chilli King</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>
