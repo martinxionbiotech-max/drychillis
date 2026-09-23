@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/seven-star-chilli/";
+const productOffers = buildOffers("seven-star-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Seven-Star Chilli" },
+  { param: "Heat level (SHU)", value: "20,000–50,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
+
+const glanceFacts = [
+  { label: "Heat level", value: "20,000–50,000 SHU" },
+  { label: "Region", value: "Shandong, Shanxi" },
+  { label: "Best for", value: "Snack seasoning, hot-pot bases" },
+  { label: "Certifications", value: "ISO 9001 & HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/seven-star-chilli/#product",
+  "name": "Seven-Star Chilli",
+  "description": "Seven-Star pepper — high-heat chilli at 20,000–50,000 SHU from Shandong and Shanxi, for snack seasoning and hot-pot bases. China manufacturer, ISO 9001 & HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/seven-star-chilli/",
+  "sku": "TENDA-SEVEN-STAR-CHILLI",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "20,000–50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Shandong, Shanxi" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Snack seasoning, hot-pot bases" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Seven-Star chilli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star is a high-heat chilli at 20,000–50,000 SHU from Shandong and Shanxi, used mainly for snack seasoning and hot-pot bases. It is one of the workhorse high-heat varieties alongside Sanying and Zidantou."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Seven-Star pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star sits in the high-heat band at 20,000–50,000 SHU — strong and lingering, above medium varieties like Xian and Jinta (10,000–20,000) and below the extra-hot Jixin, Xiaomi and Chilli King (over 50,000). Specify a precise SHU window, not just \"high heat\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Seven-Star pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven-Star is a standard for snack seasoning and hot-pot bases, and it is milled with Sanying and Zidantou into chilli powder. Name the variety and the SHU window to lock batch-to-batch consistency."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Seven-Star Chilli — 20,000–50,000 SHU | Tenda Peppers"
+  description="Seven-Star pepper — high-heat chilli at 20,000–50,000 SHU from Shandong and Shanxi, for snack seasoning and hot-pot bases. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Seven-Star
+    </nav>
+    <h1>Seven-Star Chilli</h1>
+    <p class="lead">
+      A high-heat chilli at 20,000–50,000 SHU from Shandong and Shanxi — a workhorse for snack seasoning and hot-pot bases.
+    </p>
+    <div class="takeaways">
+      <strong>Short answer:</strong> Seven-Star is a high-heat chilli (20,000–50,000 SHU) from Shandong and Shanxi, commonly milled for snack seasoning and hot-pot bases. It sits in the same band as Sanying and Zidantou — the band where heat defines the product but does not drown the other flavours.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Price confirmed on quotation — MOQ, packing and specification agreed before order.</p>
+
+    <h2 style="margin-top:32px;">What is Seven-Star chilli?</h2>
+    <p>
+      Seven-Star is a high-heat chilli at 20,000–50,000 SHU, grown in Shandong and Shanxi. On the <a href="/heat-levels/high-heat/">high heat</a> page it sits alongside Sanying and Zidantou as one of the workhorse varieties in the 20,000–50,000 SHU band — hot enough to define a product, mild enough to keep other flavours in play.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>20,000–50,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Shandong, Shanxi</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Snack seasoning, hot-pot bases</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Seven-Star pepper used for?</h2>
+    <ul>
+      <li>Snack seasoning</li>
+      <li>Hot-pot bases</li>
+      <li>Chilli powder (milled with Sanying and Zidantou)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Seven-Star vs Sanying vs Zidantou</h2>
+    <p>
+      Sanying (Tianying) and Zidantou are the classic hot-sauce varieties at 20,000–50,000 SHU; Seven-Star is common in snack seasoning and hot-pot bases. Heat, colour and flavour vary independently, so name the variety and a precise SHU window — the variety name is what locks batch-to-batch consistency.
+    </p>
+
+    <h2 style="margin-top:32px;">Seven-Star Chilli by the numbers</h2>
+    <p>
+      Seven-Star runs 20,000–50,000 SHU — roughly 40–100 times hotter than sweet paprika (under 500 SHU) and one band below the extra-hot Jixin, Xiaomi and Chilli King (over 50,000 SHU).
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Seven-Star chilli?</h3>
+      <p>Seven-Star is a high-heat chilli at 20,000–50,000 SHU from Shandong and Shanxi, used mainly for snack seasoning and hot-pot bases. It is one of the workhorse high-heat varieties alongside Sanying and Zidantou.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Seven-Star pepper?</h3>
+      <p>Seven-Star sits in the high-heat band at 20,000–50,000 SHU — strong and lingering, above medium varieties like Xian and Jinta (10,000–20,000) and below the extra-hot Jixin, Xiaomi and Chilli King (over 50,000). Specify a precise SHU window, not just "high heat".</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Seven-Star pepper used for?</h3>
+      <p>Seven-Star is a standard for snack seasoning and hot-pot bases, and it is milled with Sanying and Zidantou into chilli powder. Name the variety and the SHU window to lock batch-to-batch consistency.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Seven-Star Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/chilli-king/";
+const productOffers = buildOffers("chilli-king", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Chilli King" },
+  { param: "Heat level (SHU)", value: ">50,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
+
+const glanceFacts = [
+  { label: "Heat level", value: ">50,000 SHU" },
+  { label: "Region", value: "Fujian, Hainan" },
+  { label: "Best for", value: "Extreme-heat products, chilli oil" },
+  { label: "Certifications", value: "ISO 9001 & HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/chilli-king/#product",
+  "name": "Chilli King",
+  "description": "Chilli King — extra-hot chilli over 50,000 SHU from Fujian and Hainan, for extreme-heat products, chilli oil and Sichuan-style dishes. China manufacturer, ISO 9001 & HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/chilli-king/",
+  "sku": "TENDA-CHILLI-KING",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": ">50,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Fujian, Hainan" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Extreme-heat products, chilli oil" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Chilli King?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King is an extra-hot chilli over 50,000 SHU from Fujian and Hainan, among the hottest common Chinese varieties alongside Jixin and Xiaomi. It is used for extreme-heat products, chilli oil and Sichuan-style dishes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Chilli King pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King is over 50,000 SHU — intense, whole-mouth heat, in the same band as Jixin (50,000–70,000 SHU) and Xiaomi. Heat and flavour are separate, so the hottest is not automatically the best choice for your dish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Chilli King used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chilli King is a standard for extreme-heat products, chilli oil and Sichuan-style dishes. Specify the variety and a precise SHU window — with extra-hot chillies a small SHU difference changes the product."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chilli King — 50,000+ SHU Extra-Hot Chilli | Tenda Peppers"
+  description="Chilli King — extra-hot chilli over 50,000 SHU from Fujian and Hainan, for extreme-heat products, chilli oil and Sichuan-style dishes. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Chilli King
+    </nav>
+    <h1>Chilli King</h1>
+    <p class="lead">
+      An extra-hot chilli over 50,000 SHU from Fujian and Hainan — for extreme-heat products, chilli oil and Sichuan-style dishes.
+    </p>
+    <div class="takeaways">
+      <strong>Short answer:</strong> Chilli King is an extra-hot chilli (over 50,000 SHU) from Fujian and Hainan, one of the hottest common Chinese varieties alongside Jixin and Xiaomi. It is the standard for extreme-heat products and chilli oil — but heat and flavour are separate, so the hottest is not automatically the best choice.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Price confirmed on quotation — MOQ, packing and specification agreed before order.</p>
+
+    <h2 style="margin-top:32px;">What is Chilli King?</h2>
+    <p>
+      Chilli King is an extra-hot chilli over 50,000 SHU from Fujian and Hainan. On the <a href="/heat-levels/extra-hot/">extra hot</a> page it sits alongside Jixin (50,000–70,000 SHU) and Xiaomi as one of the hottest common Chinese varieties — intense, whole-mouth heat for extreme-heat products, chilli oil and Sichuan-style dishes.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>>50,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Fujian, Hainan</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Extreme-heat products, chilli oil</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Chilli King used for?</h2>
+    <ul>
+      <li>Extreme-heat products</li>
+      <li>Chilli oil</li>
+      <li>Sichuan-style dishes</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Chilli King vs Jixin vs Xiaomi</h2>
+    <p>
+      Jixin (chicken-heart) pepper is among the hottest common Chinese chillies at 50,000–70,000 SHU, alongside Xiaomi and Chilli King. These are the standard for extreme-heat products and chilli oil — but heat and flavour are separate, so the hottest is not automatically the best choice for your dish.
+    </p>
+
+    <h2 style="margin-top:32px;">Chilli King by the numbers</h2>
+    <p>
+      Chilli King runs over 50,000 SHU — 100+ times hotter than sweet paprika (under 500 SHU) and one band above the 20,000–50,000 SHU high-heat varieties. Confirm the exact SHU window when you order, because the extra-hot band has no upper floor.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Chilli King?</h3>
+      <p>Chilli King is an extra-hot chilli over 50,000 SHU from Fujian and Hainan, among the hottest common Chinese varieties alongside Jixin and Xiaomi. It is used for extreme-heat products, chilli oil and Sichuan-style dishes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Chilli King pepper?</h3>
+      <p>Chilli King is over 50,000 SHU — intense, whole-mouth heat, in the same band as Jixin (50,000–70,000 SHU) and Xiaomi. Heat and flavour are separate, so the hottest is not automatically the best choice for your dish.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Chilli King used for?</h3>
+      <p>Chilli King is a standard for extreme-heat products, chilli oil and Sichuan-style dishes. Specify the variety and a precise SHU window — with extra-hot chillies a small SHU difference changes the product.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Chilli King Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>

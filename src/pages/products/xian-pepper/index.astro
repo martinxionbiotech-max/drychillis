@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/products/xian-pepper/";
+const productOffers = buildOffers("xian-pepper", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Xian Pepper" },
+  { param: "Heat level (SHU)", value: "10,000–20,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
+
+const glanceFacts = [
+  { label: "Heat level", value: "10,000–20,000 SHU" },
+  { label: "Region", value: "Inner Mongolia, Xinjiang" },
+  { label: "Best for", value: "Chilli powder, flakes, seasoning" },
+  { label: "Certifications", value: "ISO 9001 & HACCP" },
+];
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/products/xian-pepper/#product",
+  "name": "Xian Pepper",
+  "description": "Xian pepper — medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang, for chilli powder, flakes and seasoning. China manufacturer, ISO 9001 & HACCP.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/products/xian-pepper/",
+  "sku": "TENDA-XIAN-PEPPER",
+  "category": "Spices and Seasonings",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Heat Level (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
+    { "@type": "PropertyValue", "name": "Region", "value": "Inner Mongolia, Xinjiang" },
+    { "@type": "PropertyValue", "name": "Best For", "value": "Chilli powder, flakes, seasoning" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Xian pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xian pepper is a medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang — dark red and oily, used for chilli powder, flakes and sauce. It is the main medium variety alongside Jinta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How hot is Xian pepper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xian pepper is medium heat at 10,000–20,000 SHU — noticeably warm without the intense burn of high-heat varieties, and roughly 20–40 times hotter than sweet paprika."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Xian pepper used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xian pepper is used for medium chilli powder, flakes (milled with Jinta) and seasoning blends. Name the variety and the SHU window in your specification — heat and aroma vary independently."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Xian Pepper — 10,000–20,000 SHU Medium Chilli | Tenda Peppers"
+  description="Xian pepper — medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang, for chilli powder, flakes and seasoning. China manufacturer, ISO 9001 & HACCP."
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/products/dried-chillies/">Dried Chillies</a> &rsaquo; Xian Pepper
+    </nav>
+    <h1>Xian Pepper</h1>
+    <p class="lead">
+      A medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang — the versatile middle for chilli powder, flakes and seasoning.
+    </p>
+    <div class="takeaways">
+      <strong>Short answer:</strong> Xian pepper is a medium-heat chilli (10,000–20,000 SHU) from Inner Mongolia and Xinjiang. It is the versatile middle — dark red and oily, used for chilli powder, flakes and sauce, and milled with Jinta for flakes.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+    <div class="product-media">
+      <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />
+    </div>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">Price confirmed on quotation — MOQ, packing and specification agreed before order.</p>
+
+    <h2 style="margin-top:32px;">What is Xian pepper?</h2>
+    <p>
+      Xian pepper is a medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang. On the <a href="/heat-levels/medium-heat/">medium heat</a> page it is the main medium variety alongside Jinta — noticeably warm without the intense burn of high-heat varieties, and the largest-volume band because it suits the broadest range of products.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Property</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Heat (SHU)</strong></td><td>10,000–20,000</td></tr>
+        <tr><td><strong>Region</strong></td><td>Inner Mongolia, Xinjiang</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Chilli powder, flakes, seasoning</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">What is Xian pepper used for?</h2>
+    <ul>
+      <li>Chilli powder (medium)</li>
+      <li>Chilli flakes (milled with Jinta)</li>
+      <li>Seasoning and sauce</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Xian vs Jinta vs Erjingtiao</h2>
+    <p>
+      Xian pepper and Jinta are the main 10,000–20,000 SHU varieties; Erjingtiao sits at 15,000–30,000 SHU. Jinta suits flakes and powder for bright colour; Erjingtiao adds aroma and is used for chilli paste. Xian is the versatile middle — dark red and oily, used for chilli powder and sauce.
+    </p>
+
+    <h2 style="margin-top:32px;">Xian Pepper by the numbers</h2>
+    <p>
+      Xian pepper runs 10,000–20,000 SHU — roughly 20–40 times hotter than sweet paprika (under 500 SHU) and 2.5–5 times milder than the high-heat band (20,000–50,000). It is the band that suits the broadest range of products.
+    </p>
+    <p class="data-note">
+      Heat values are representative per variety. Confirm your exact SHU window, form and mesh when
+      you inquire.
+    </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Xian pepper?</h3>
+      <p>Xian pepper is a medium-heat chilli at 10,000–20,000 SHU from Inner Mongolia and Xinjiang — dark red and oily, used for chilli powder, flakes and sauce. It is the main medium variety alongside Jinta.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How hot is Xian pepper?</h3>
+      <p>Xian pepper is medium heat at 10,000–20,000 SHU — noticeably warm without the intense burn of high-heat varieties, and roughly 20–40 times hotter than sweet paprika.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is Xian pepper used for?</h3>
+      <p>Xian pepper is used for medium chilli powder, flakes (milled with Jinta) and seasoning blends. Name the variety and the SHU window in your specification — heat and aroma vary independently.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/">Request Xian Pepper Quotation</a>
+      <a class="cta cta-outline" href="/products/dried-chillies/" style="margin-left:8px;">Dried Chillies →</a>
+    </div>
+  </div>
+</BaseLayout>
