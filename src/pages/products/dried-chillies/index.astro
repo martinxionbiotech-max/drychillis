@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
@@ -106,6 +107,15 @@ const faqJsonLd = {
     }
   ]
 };
+const glanceFacts = [
+    { label: "Product forms", value: "Whole, flakes, powder, segments" },
+    { label: "Heat level", value: "10,000–70,000+ SHU" },
+    { label: "Moisture", value: "<13%" },
+    { label: "Mesh (powder)", value: "60–80 mesh" },
+    { label: "Processing", value: "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" },
+    { label: "Certifications", value: "ISO 9001 & HACCP" },
+];
+
 ---
 
 <BaseLayout
@@ -122,13 +132,15 @@ const faqJsonLd = {
     <p class="lead">
       Whole dried chillies, flakes, powder and segments — heat-focused chilli products milled from
       Chinese chilli varieties across the full heat spectrum (about 10,000 to 70,000+ SHU). We grow,
-      dry, grade and mill under ISO 9001 &amp; HACCP, and supply food manufacturers across Europe, the
+      dry, grade and mill under ISO 9001 & HACCP, and supply food manufacturers across Europe, the
       Middle East and North America.
     </p>
 
     <div class="takeaways">
       <strong>Short answer:</strong> Dried chillies are one crop delivered in four forms — whole, flakes, powder and segments — spanning roughly 10,000 to 70,000+ SHU. The form you choose is driven by how the chilli must read in your finished product: visible pieces (whole/flakes), texture, or a uniform heat release (powder/segments).
     </div>
+
+    <AtAGlance facts={glanceFacts} />
 
     <div class="product-media">
       <img src="/images/products/chilli-whole.jpg" alt="Whole dried chillies" width="1400" height="1050" loading="eager" />

@@ -1,0 +1,25 @@
+---
+interface GlanceFact {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  facts: GlanceFact[];
+}
+
+const { facts = [] } = Astro.props;
+---
+<div class="at-a-glance" aria-label="At a glance — key facts">
+  <h2 style="margin:0 0 10px;">At a Glance</h2>
+  <dl>
+    {
+      facts.map((f) => (
+        <div class="glance-row">
+          <dt>{f.label}</dt>
+          <dd>{f.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</div>

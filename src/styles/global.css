@@ -209,3 +209,12 @@ tbody tr:nth-child(even) td { background: var(--bg-soft); }
   .footer-inner { grid-template-columns: 1fr; }
   .hero p { font-size: 1rem; }
 }
+
+/* At a Glance (AIO direct-answer block) */
+.at-a-glance { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--amber); border-radius: 8px; padding: 16px 18px; margin: 16px 0 24px; }
+.at-a-glance h2 { margin: 0 0 10px; font-size: 1.05rem; color: var(--red-deep); }
+.at-a-glance dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+.at-a-glance .glance-row { display: contents; }
+.at-a-glance dt { font-weight: 600; color: #5a4a44; }
+.at-a-glance dd { margin: 0; }
+@media (max-width: 560px) { .at-a-glance dl { grid-template-columns: 1fr; gap: 2px 0; } }

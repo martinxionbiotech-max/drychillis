@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
 import BuyerSpec from "../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../data/product-offers";
 
@@ -76,6 +77,15 @@ const faqJsonLd = {
     }
   ]
 };
+const glanceFacts = [
+    { label: "Type", value: "Cluster-type facing-heaven chilli" },
+    { label: "Heat level", value: "20,000–50,000 SHU" },
+    { label: "Origin", value: "Henan & Hebei, China" },
+    { label: "Moisture", value: "<13%" },
+    { label: "Mesh", value: "60–80 mesh" },
+    { label: "Certifications", value: "ISO 9001 & HACCP (BRC, Halal, Kosher on request)" },
+];
+
 ---
 
 <BaseLayout
@@ -101,6 +111,8 @@ const faqJsonLd = {
     <div class="takeaways">
       <strong>Short answer:</strong> Sanying (Tianying) is a facing-heaven cluster chilli at 20,000–50,000 SHU from Henan and Hebei — the dependable high-heat base for hot sauce, chilli oil and snack seasoning. It is the variety most buyers default to when they need high heat without the extreme burn of Jixin.
     </div>
+
+    <AtAGlance facts={glanceFacts} />
 
     <h2 style="margin-top:32px;">What is Sanying chilli?</h2>
     <p>

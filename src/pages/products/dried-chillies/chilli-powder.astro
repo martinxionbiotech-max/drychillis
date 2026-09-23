@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AtAGlance from "../../../components/AtAGlance.astro";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
@@ -76,6 +77,14 @@ const faqJsonLd = {
     }
   ]
 };
+const glanceFacts = [
+    { label: "Form", value: "Powder, 60–80 mesh" },
+    { label: "Heat level", value: "20,000–50,000 SHU" },
+    { label: "Moisture", value: "<13%" },
+    { label: "Varieties", value: "Sanying, Zidantou, Seven-Star" },
+    { label: "Certifications", value: "ISO 9001 & HACCP" },
+];
+
 ---
 
 <BaseLayout
@@ -101,6 +110,8 @@ const faqJsonLd = {
     <div class="takeaways">
       <strong>Short answer:</strong> Chilli powder is dried chilli ground to 60–80 mesh for uniform, blendable heat — the default form for hot sauces and industrial food. It is specified by variety (or a precise SHU window), because heat, colour and flavour vary independently; ordering generic &ldquo;chilli powder&rdquo; is how batch-to-batch inconsistency happens.
     </div>
+
+    <AtAGlance facts={glanceFacts} />
 
     <h2 style="margin-top:32px;">What is chilli powder?</h2>
     <p>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -73,6 +74,13 @@ const itemListJsonLd = {
     { "@type": "ListItem", "position": 10, "name": "Tianjin Red (Facing-Heaven) Chilli", "item": "https://drychillis.com/products/tianjin-red-chilli/" }
   ]
 };
+const glanceFacts = [
+    { label: "Two families", value: "Paprika powder (ASTA 60–240, under 10,000 SHU) + dried chillies (10,000–70,000+ SHU)" },
+    { label: "Dried chilli forms", value: "Whole, flakes, powder, segments" },
+    { label: "Sweet paprika", value: "Under 500 SHU, for pure colour" },
+    { label: "Specified by", value: "Numbers, not words — ASTA for colour, SHU for heat, mesh for texture" },
+];
+
 ---
 
 <BaseLayout
@@ -94,6 +102,8 @@ const itemListJsonLd = {
     <div class="takeaways">
       <strong>Short answer:</strong> Tenda Peppers makes two families from one crop. Paprika powder is specified by ASTA colour value (60–240) at low heat (under 10,000 SHU). Dried chillies are specified by SHU (10,000–70,000+) across four forms — whole, flakes, powder and segments. Heat and texture are independent: the same 20,000-SHU chilli can ship as a flake, a powder or a whole pod.
     </div>
+
+    <AtAGlance facts={glanceFacts} />
 
     <h2 style="margin-top:32px;">Two Product Families</h2>
     <div class="grid grid-2">
