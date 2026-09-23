@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying vs Jinta: Heat vs Colour", "description": "Sanying is the high-heat base (20,000–50,000 SHU); Jinta is the medium-heat colour variety (10,000–20,000 SHU) for visible flakes. A buyer's comparison.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/sanying-vs-jinta/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Sanying and Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying is a high-heat chilli at 20,000–50,000 SHU from Henan and Hebei, the base for hot sauce and chilli oil. Jinta is a medium-heat chilli at 10,000–20,000 SHU from Gansu with long deep-red glossy pods, chosen for visible flakes and bright colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is hotter, Sanying or Jinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying, at 20,000–50,000 SHU, is hotter than Jinta, at 10,000–20,000 SHU — the difference is one full heat band."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which should I use for visible flakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jinta — its long pods with thick, glossy, deep jujube-red skin make it the preferred flake variety. Colour and heat are independent, and Jinta leans colour."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "20,000–50,000 SHU, Henan &amp; Hebei" },
+  { label: "Jinta", value: "10,000–20,000 SHU, Gansu" },
+  { label: "Sanying leans", value: "Heat" },
+  { label: "Jinta leans", value: "Colour" }
+];
+---
+
+<BaseLayout
+  title="Sanying vs Jinta: Heat vs Colour | Tenda Peppers"
+  description="Sanying is the high-heat base (20,000–50,000 SHU); Jinta is the medium-heat colour variety (10,000–20,000 SHU) for visible flakes. A buyer's comparison."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Sanying vs Jinta
+    </nav>
+
+    <h1>Sanying vs Jinta: Heat vs Colour</h1>
+    <p class="lead">
+      Sanying and Jinta are one heat band apart and built for different jobs: Sanying delivers dependable high heat, Jinta delivers long deep-red pods for visible flakes and bright colour. This comparison tells them apart.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Sanying is a high-heat chilli (20,000–50,000 SHU) from Henan and Hebei, the base for hot sauce, chilli oil and snack seasoning. Jinta is a medium-heat chilli (10,000–20,000 SHU) from Gansu with long 11–14 cm, thick glossy jujube-red pods — chosen for visible flakes and colour. Colour and heat are independent, and Jinta leans colour.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Jinta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">10,000–20,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Region</strong></td>
+          <td style="padding:8px;">Henan, Hebei</td>
+          <td style="padding:8px;">Gansu</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Pod</strong></td>
+          <td style="padding:8px;">Cluster-type facing-heaven</td>
+          <td style="padding:8px;">Long 11–14 cm, thick glossy jujube-red skin</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Leans</strong></td>
+          <td style="padding:8px;">Heat</td>
+          <td style="padding:8px;">Colour</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Best for</strong></td>
+          <td style="padding:8px;">Hot sauce, chilli oil, snack seasoning</td>
+          <td style="padding:8px;">Visible flakes, pizza topping, seasoning blends</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      This is a heat-vs-colour decision. <a href="/products/sanying-chilli/">Sanying</a> delivers 20,000–50,000 SHU — the dependable high-heat base for hot sauce, chilli oil and snack seasoning. <a href="/products/jinta-chilli/">Jinta</a> is medium heat at 10,000–20,000 SHU, with long deep jujube-red pods and thick glossy skin — a standard for visible flakes and bright colour. See the <a href="/heat-levels/medium-heat/">medium heat</a> and <a href="/heat-levels/high-heat/">high heat</a> pages for the bands.
+    </p>
+    <h2 style="margin-top:32px;">When to choose each</h2>
+    <p>
+      Choose Sanying when heat is the headline and the finished product is scored on spiciness; choose Jinta when the finished product shows the chilli — pizza topping, visible flakes and seasoning blends — because its pod reads clearly as a flake and holds bright colour.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Name the variety and a precise SHU window — heat, colour and flavour vary independently, so the variety name locks batch-to-batch consistency. For Jinta, also confirm the mesh (20–40 for visible flakes).
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between Sanying and Jinta?</h3>
+      <p>Sanying is a high-heat chilli at 20,000–50,000 SHU from Henan and Hebei, the base for hot sauce and chilli oil. Jinta is a medium-heat chilli at 10,000–20,000 SHU from Gansu with long deep-red glossy pods, chosen for visible flakes and bright colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which is hotter, Sanying or Jinta?</h3>
+      <p>Sanying, at 20,000–50,000 SHU, is hotter than Jinta, at 10,000–20,000 SHU — the difference is one full heat band.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which should I use for visible flakes?</h3>
+      <p>Jinta — its long pods with thick, glossy, deep jujube-red skin make it the preferred flake variety. Colour and heat are independent, and Jinta leans colour.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

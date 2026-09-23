@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "60 vs 80 Mesh: Which Powder Grind to Choose", "description": "60 mesh is about 250 µm and 80 mesh about 180 µm — both inside the standard 60–80 mesh powder range. What each grind means for dispersion and mouthfeel.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/60-vs-80-mesh/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between 60 and 80 mesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60 mesh is about 250 µm and 80 mesh is about 180 µm — both are inside the standard 60–80 mesh powder range. The 80-mesh grind is finer and smoother."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60–80 mesh is the standard powder range: 60 mesh for general powder and seasoning blends, 80 mesh for a smoother powder. Mesh is adjustable to your requirement — name the mesh or the target particle size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does finer mesh change the heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mesh measures the grind, not the heat or colour of the chilli. Finer mesh changes dispersion, mouthfeel and suspension — not SHU."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "60 mesh", value: "≈250 µm, standard powder" },
+  { label: "80 mesh", value: "≈180 µm, smooth powder" },
+  { label: "Standard range", value: "60–80 mesh for powder" },
+  { label: "Controls", value: "Dispersion, mouthfeel, suspension" }
+];
+---
+
+<BaseLayout
+  title="60 vs 80 Mesh: Which Powder Grind to Choose | Tenda Peppers"
+  description="60 mesh is about 250 µm and 80 mesh about 180 µm — both inside the standard 60–80 mesh powder range. What each grind means for dispersion and mouthfeel."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; 60 vs 80 Mesh
+    </nav>
+
+    <h1>60 vs 80 Mesh: Which Powder Grind to Choose</h1>
+    <p class="lead">
+      60 and 80 mesh are both inside the standard chilli powder range — the difference is particle size: about 250 µm versus about 180 µm. This comparison explains what the finer grind changes and how to choose.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Mesh is the number of openings per linear inch of a sieve — 80 mesh means 80 wires per inch and an opening of about 180 µm; 60 mesh is about 250 µm. Both sit inside the standard 60–80 mesh powder range: 60 is the standard powder grind, 80 is the finer, smoother grind.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">60 mesh</th>
+          <th style="padding:8px;">80 mesh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Opening</strong></td>
+          <td style="padding:8px;">≈250 µm</td>
+          <td style="padding:8px;">≈180 µm</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Wires per inch</strong></td>
+          <td style="padding:8px;">60</td>
+          <td style="padding:8px;">80</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Character</strong></td>
+          <td style="padding:8px;">Fine — standard powder</td>
+          <td style="padding:8px;">Fine — smooth powder</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Best for</strong></td>
+          <td style="padding:8px;">General powder, seasoning blends</td>
+          <td style="padding:8px;">Smoother powder, sauces</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Standard range</strong></td>
+          <td style="padding:8px;">60–80 mesh for chilli &amp; paprika powder</td>
+          <td style="padding:8px;">60–80 mesh for chilli &amp; paprika powder</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      Mesh is the particle-size scale: the number of openings per linear inch of a sieve. Higher mesh means finer particles — it measures the grind, not the heat or colour of the chilli. The full guide is on the <a href="/specs/mesh-size/">mesh size</a> page.
+    </p>
+    <h2 style="margin-top:32px;">What the finer grind changes</h2>
+    <p>
+      Mesh controls three things at once: how evenly heat and colour disperse, how the powder feels on the palate, and how it suspends in a sauce. The 80-mesh grind disperses faster and feels smoother; the 60-mesh grind is the standard all-round powder. Coarser (20–40 mesh) is flakes; finer (100+ mesh) suits smooth sauces and instant mixes.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Name the mesh or the target particle size — it is adjustable to your requirement and documented in the quotation, alongside your SHU window and moisture.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between 60 and 80 mesh?</h3>
+      <p>60 mesh is about 250 µm and 80 mesh is about 180 µm — both are inside the standard 60–80 mesh powder range. The 80-mesh grind is finer and smoother.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which should I choose?</h3>
+      <p>60–80 mesh is the standard powder range: 60 mesh for general powder and seasoning blends, 80 mesh for a smoother powder. Mesh is adjustable to your requirement — name the mesh or the target particle size.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does finer mesh change the heat?</h3>
+      <p>No. Mesh measures the grind, not the heat or colour of the chilli. Finer mesh changes dispersion, mouthfeel and suspension — not SHU.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/specs/mesh-size/">Read the Mesh Guide</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

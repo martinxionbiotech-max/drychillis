@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Jixin vs Xiaomi: Which Extra-Hot Chilli to Choose", "description": "Jixin (chicken-heart) and Xiaomi (millet) are both 50,000–70,000 SHU extra-hot chillies. A buyer's comparison of pod shape, origin and how each is dosed.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/jixin-vs-xiaomi/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Jixin and Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are extra-hot at 50,000–70,000 SHU. Jixin is a small heart-shaped pod from Guizhou and Hunan, the standard for extreme-heat products and Sichuan-style dishes; Xiaomi is a small, slender pod from Yunnan and Guizhou whose compact size keeps it visible whole in dishes or as segments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is hotter, Jixin or Xiaomi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They sit in the same 50,000–70,000 SHU band — the difference is pod shape and use, not heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much Jixin do I need for a medium-heat blend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To land a 10,000-SHU blend, Jixin is roughly 14–20% of the recipe by weight — about 1 part Jixin to 4–6 parts base. Dose by weight because heat is non-linear."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Jixin", value: "Heart-shaped, Guizhou &amp; Hunan" },
+  { label: "Xiaomi", value: "Small slender, Yunnan &amp; Guizhou" },
+  { label: "Both", value: "50,000–70,000 SHU" },
+  { label: "Blend dose", value: "≈14–20% for a 10,000-SHU blend" }
+];
+---
+
+<BaseLayout
+  title="Jixin vs Xiaomi: Which Extra-Hot Chilli to Choose | Tenda Peppers"
+  description="Jixin (chicken-heart) and Xiaomi (millet) are both 50,000–70,000 SHU extra-hot chillies. A buyer's comparison of pod shape, origin and how each is dosed."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Jixin vs Xiaomi
+    </nav>
+
+    <h1>Jixin vs Xiaomi: Which Extra-Hot Chilli to Choose</h1>
+    <p class="lead">
+      Jixin and Xiaomi are the two workhorse extra-hot varieties at 50,000–70,000 SHU. The heat band is identical — the difference is pod shape, origin and how each behaves in a dish or blend.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Jixin (chicken-heart) is a small heart-shaped pod from Guizhou and Hunan, the standard for extreme-heat products and Sichuan-style dishes, dosed as an accent by weight. Xiaomi (millet) is a small, slender pod from Yunnan and Guizhou whose compact size concentrates heat — it stays visible whole in dishes or as segments.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Jixin (chicken-heart)</th>
+          <th style="padding:8px;">Xiaomi (millet)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Shape</strong></td>
+          <td style="padding:8px;">Small heart-shaped</td>
+          <td style="padding:8px;">Small, slender</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Region</strong></td>
+          <td style="padding:8px;">Guizhou, Hunan</td>
+          <td style="padding:8px;">Yunnan, Guizhou</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">50,000–70,000</td>
+          <td style="padding:8px;">50,000–70,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Best for</strong></td>
+          <td style="padding:8px;">Extreme-heat products, chilli oil, Sichuan-style dishes, hot-pot bases</td>
+          <td style="padding:8px;">High-heat whole chillies, segments, chilli oil</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>In dishes</strong></td>
+          <td style="padding:8px;">Dosed as an accent by weight</td>
+          <td style="padding:8px;">Compact pod stays visible</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      Both are extra-hot at 50,000–70,000 SHU — see the <a href="/heat-levels/extra-hot/">extra hot</a> page. <a href="/products/jixin-chilli/">Jixin</a> is the reference for extreme heat: small heart-shaped pods from Guizhou and Hunan, standard for extreme-heat products, chilli oil and Sichuan-style dishes. <a href="/products/xiaomi-chilli/">Xiaomi</a> is a small, slender pod from Yunnan and Guizhou whose compact size concentrates heat, so it delivers strong heat from a small, visible pod — used whole, as segments, or in chilli oil.
+    </p>
+    <h2 style="margin-top:32px;">Dose math: why extra-hot is blended, not used neat</h2>
+    <p>
+      To land a 10,000-SHU blend, Jixin (50,000–70,000 SHU) is roughly 14–20% of the recipe by weight — about 1 part Jixin to 4–6 parts base. Dose by weight, because heat is non-linear and a small over-dose moves the blend far more than a medium chilli would.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Name the variety and a precise SHU window, and confirm the form — segments and powder are most common at this heat level. Extra-hot varieties are usually blended, not used neat.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between Jixin and Xiaomi?</h3>
+      <p>Both are extra-hot at 50,000–70,000 SHU. Jixin is a small heart-shaped pod from Guizhou and Hunan, the standard for extreme-heat products and Sichuan-style dishes; Xiaomi is a small, slender pod from Yunnan and Guizhou whose compact size keeps it visible whole in dishes or as segments.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which is hotter, Jixin or Xiaomi?</h3>
+      <p>They sit in the same 50,000–70,000 SHU band — the difference is pod shape and use, not heat.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much Jixin do I need for a medium-heat blend?</h3>
+      <p>To land a 10,000-SHU blend, Jixin is roughly 14–20% of the recipe by weight — about 1 part Jixin to 4–6 parts base. Dose by weight because heat is non-linear.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

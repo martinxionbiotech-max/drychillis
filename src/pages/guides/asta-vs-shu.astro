@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "ASTA Colour vs SHU Heat: What's the Difference", "description": "ASTA measures colour (capsanthin carotenoids); SHU measures heat (capsaicinoids). Two independent specifications — a paprika can be high-ASTA and zero-heat.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/asta-vs-shu/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between ASTA and SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASTA measures colour — the extractable carotenoid pigments such as capsanthin that give paprika its red colour. SHU measures heat — the capsaicinoids that trigger the burn. They are separate properties, controlled independently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a chilli be high-ASTA and zero-heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ASTA and SHU are independent — a paprika can be high-ASTA and zero-heat, which is exactly what sweet paprika is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which should I specify first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both, as separate lines: ASTA for colour, SHU window for heat. Neither predicts the other, so a specification with only one number leaves the other uncontrolled."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "ASTA", value: "Colour (capsanthin), 460 nm" },
+  { label: "SHU", value: "Heat (capsaicinoids), HPLC" },
+  { label: "Relationship", value: "Independent" },
+  { label: "Proof", value: "A paprika can be high-ASTA and zero-heat" }
+];
+---
+
+<BaseLayout
+  title="ASTA Colour vs SHU Heat: What's the Difference | Tenda Peppers"
+  description="ASTA measures colour (capsanthin carotenoids); SHU measures heat (capsaicinoids). Two independent specifications — a paprika can be high-ASTA and zero-heat."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; ASTA vs SHU
+    </nav>
+
+    <h1>ASTA Colour vs SHU Heat: What's the Difference</h1>
+    <p class="lead">
+      ASTA and SHU are the two numbers on every chilli specification — and they measure completely different things. ASTA is colour, SHU is heat, and neither predicts the other. This comparison explains both.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> ASTA measures colour — the extractable carotenoid pigments, chiefly capsanthin, quantified by spectrophotometry at 460 nm (ASTA Method 20.1). SHU measures heat — the capsaicinoid concentration, quantified by HPLC and converted to SHU (roughly 1 ppm capsaicin ≈ 16 SHU). They are separate properties, controlled independently.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">ASTA colour value</th>
+          <th style="padding:8px;">SHU heat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Measures</strong></td>
+          <td style="padding:8px;">Colour — extractable carotenoids, chiefly capsanthin</td>
+          <td style="padding:8px;">Heat — capsaicinoid concentration</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Method</strong></td>
+          <td style="padding:8px;">Spectrophotometry at 460 nm (ASTA Method 20.1)</td>
+          <td style="padding:8px;">HPLC, converted to SHU (≈1 ppm capsaicin ≈ 16 SHU)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Controlled</strong></td>
+          <td style="padding:8px;">Independently</td>
+          <td style="padding:8px;">Independently</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Stability</strong></td>
+          <td style="padding:8px;">Degrades under oxygen, light and heat</td>
+          <td style="padding:8px;">Varies ±40% with growing conditions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      A lot of mis-bought chilli comes from treating the two numbers as one property. They are not: ASTA is colour, SHU is heat, and they are controlled independently — a paprika can be high-ASTA and zero-heat. The full technical background is on the <a href="/guides/asta-colour-value/">ASTA colour value</a> and <a href="/guides/asta-colour-and-shu-heat-explained/">SHU explained</a> pages.
+    </p>
+    <h2 style="margin-top:32px;">How to specify both</h2>
+    <p>
+      Specify the ASTA target for colour and the SHU window for heat as separate lines in the specification — plus the variety and mesh. Carotenoids degrade under oxygen, light and heat, so colour fades with age; fresh lot turnover protects the ASTA you bought.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Write both numbers into the specification: ASTA for colour, SHU window for heat, plus variety and mesh. Confirm your exact targets when you inquire.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between ASTA and SHU?</h3>
+      <p>ASTA measures colour — the extractable carotenoid pigments such as capsanthin that give paprika its red colour. SHU measures heat — the capsaicinoids that trigger the burn. They are separate properties, controlled independently.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can a chilli be high-ASTA and zero-heat?</h3>
+      <p>Yes. ASTA and SHU are independent — a paprika can be high-ASTA and zero-heat, which is exactly what sweet paprika is.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which should I specify first?</h3>
+      <p>Both, as separate lines: ASTA for colour, SHU window for heat. Neither predicts the other, so a specification with only one number leaves the other uncontrolled.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/guides/asta-colour-value/">Read the ASTA Guide</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

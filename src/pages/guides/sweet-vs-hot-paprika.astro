@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sweet vs Hot (Low-Heat) Paprika: What's the Difference", "description": "Sweet paprika (under 500 SHU) vs low-heat paprika (under 10,000 SHU) — varieties, ASTA colour and when each grade is used. China manufacturer, ISO 9001 & HACCP.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/sweet-vs-hot-paprika/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between sweet paprika and low-heat paprika?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 80–180. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can low-heat paprika replace sweet paprika?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the added heat and chilli aroma are acceptable in your product. Sweet paprika is under 500 SHU; low-heat paprika is under 10,000 SHU. Confirm your target colour value and heat level when you inquire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which paprika is best for food colouring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-colour sweet pepper varieties from Xinjiang — such as Red Dragon 23 and US Red — give the strongest colour per unit, and are the standard for paprika oleoresin extraction and food colouring."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sweet paprika", value: "&lt;500 SHU, ASTA 80–180" },
+  { label: "Low-heat paprika", value: "&lt;10,000 SHU" },
+  { label: "Varieties", value: "Red Dragon 23 vs Yidu red, Wangdu" },
+  { label: "Supply ASTA range", value: "60–240, variety-dependent" }
+];
+---
+
+<BaseLayout
+  title="Sweet vs Hot (Low-Heat) Paprika: What's the Difference | Tenda Peppers"
+  description="Sweet paprika (under 500 SHU) vs low-heat paprika (under 10,000 SHU) — varieties, ASTA colour and when each grade is used. China manufacturer, ISO 9001 & HACCP."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Sweet vs Hot Paprika
+    </nav>
+
+    <h1>Sweet vs Hot (Low-Heat) Paprika: What's the Difference</h1>
+    <p class="lead">
+      Paprika comes in two grades: sweet, for colour with no burn, and low-heat, for colour plus mild heat and chilli aroma. This comparison explains the SHU split, the varieties behind each, and how to specify the grade you need.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 80–180. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Sweet paprika</th>
+          <th style="padding:8px;">Low-heat paprika</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">Under 500</td>
+          <td style="padding:8px;">Under 10,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Varieties</strong></td>
+          <td style="padding:8px;">Xinjiang sweet pepper, Red Dragon 23</td>
+          <td style="padding:8px;">Yidu red, Wangdu</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Colour (ASTA)</strong></td>
+          <td style="padding:8px;">80–180 (sweet grade)</td>
+          <td style="padding:8px;">60–240 range, variety-dependent</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Character</strong></td>
+          <td style="padding:8px;">Colour, no burn</td>
+          <td style="padding:8px;">Colour + mild heat + chilli aroma</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      Both grades come from low-heat, high-colour sweet peppers — the <a href="/products/paprika-powder/">paprika powder</a> page details the grades. Sweet paprika (under 500 SHU) is bought for colour and mild flavour with essentially no burn. Low-heat paprika (under 10,000 SHU) adds mild heat and a clear chilli aroma on top of the colour. Neither is interchangeable with <a href="/guides/paprika-vs-chilli-powder/">chilli powder</a>, which is made from hotter varieties (20,000–70,000+ SHU) to add heat.
+    </p>
+    <h2 style="margin-top:32px;">When to choose each</h2>
+    <p>
+      Choose sweet paprika for colouring where heat is unwanted — natural red colouring, colour blending, mild snacks. Choose low-heat paprika where the product needs colour plus a mild warmth and chilli aroma on top.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Confirm your target ASTA colour value and heat level when you inquire — the supply range is roughly ASTA 60–240 depending on variety and grade. See <a href="/guides/asta-colour-value/">ASTA colour value</a> for how colour is measured.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between sweet paprika and low-heat paprika?</h3>
+      <p>Sweet paprika (under 500 SHU) is made from high-colour sweet pepper varieties like Xinjiang sweet pepper and Red Dragon 23, with an ASTA colour value of 80–180. Low-heat paprika (under 10,000 SHU) comes from varieties like Yidu red and Wangdu, adding mild heat and clear chilli aroma on top of colour.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can low-heat paprika replace sweet paprika?</h3>
+      <p>Only if the added heat and chilli aroma are acceptable in your product. Sweet paprika is under 500 SHU; low-heat paprika is under 10,000 SHU. Confirm your target colour value and heat level when you inquire.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which paprika is best for food colouring?</h3>
+      <p>High-colour sweet pepper varieties from Xinjiang — such as Red Dragon 23 and US Red — give the strongest colour per unit, and are the standard for paprika oleoresin extraction and food colouring.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/paprika-powder/">Browse Paprika Powder</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

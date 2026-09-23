@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "SHU vs Capsaicin Content: What's the Difference", "description": "Capsaicin is the chemical that burns; SHU is the scale that measures capsaicinoid concentration — roughly 1 ppm capsaicin ≈ 16 SHU. What each means on a specification.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/shu-vs-capsaicin/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between SHU and capsaicin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Capsaicin is the chemical compound — the dominant capsaicinoid that triggers the burn. SHU is the scale that measures capsaicinoid concentration: roughly 1 ppm capsaicin ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is pure capsaicin in SHU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pure capsaicin registers around 16 million SHU — the conversion of roughly 1 ppm capsaicin ≈ 16 SHU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the same SHU always burn the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Two chillies can share an identical SHU yet burn at a different speed and linger for a different time, because the number averages several capsaicinoids whose sensory character differs."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Capsaicin", value: "Dominant capsaicinoid alkaloid" },
+  { label: "SHU", value: "Concentration scale" },
+  { label: "Conversion", value: "1 ppm capsaicin ≈ 16 SHU" },
+  { label: "Pure capsaicin", value: "≈16 million SHU" }
+];
+---
+
+<BaseLayout
+  title="SHU vs Capsaicin Content: What's the Difference | Tenda Peppers"
+  description="Capsaicin is the chemical that burns; SHU is the scale that measures capsaicinoid concentration — roughly 1 ppm capsaicin ≈ 16 SHU. What each means on a specification."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; SHU vs Capsaicin
+    </nav>
+
+    <h1>SHU vs Capsaicin Content: What's the Difference</h1>
+    <p class="lead">
+      Capsaicin is the chemical compound that causes the burn; SHU is the scale that quantifies it. This comparison explains the relationship — and what SHU does and does not tell you about how a chilli will burn.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Capsaicin is the dominant member of the capsaicinoid family — the alkaloids that trigger the burning sensation. SHU quantifies their concentration: HPLC results are converted to SHU, with roughly 1 ppm capsaicin ≈ 16 SHU — which is why pure capsaicin registers around 16 million SHU.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Capsaicin</th>
+          <th style="padding:8px;">SHU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>What it is</strong></td>
+          <td style="padding:8px;">The dominant member of the capsaicinoid family of alkaloids</td>
+          <td style="padding:8px;">A concentration scale for capsaicinoids, primarily capsaicin</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Role</strong></td>
+          <td style="padding:8px;">Triggers the burning sensation</td>
+          <td style="padding:8px;">Quantifies it — a chemical concentration, not a taste strength</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Conversion</strong></td>
+          <td style="padding:8px;">Roughly 1 ppm capsaicin ≈ 16 SHU</td>
+          <td style="padding:8px;">Pure capsaicin ≈ 16 million SHU</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Limit</strong></td>
+          <td style="padding:8px;">One compound among several</td>
+          <td style="padding:8px;">Averages several capsaicinoids — same SHU can burn differently</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      "Capsaicin" is often used loosely to mean "heat", but it is really the dominant member of a small family of alkaloids. The full background is on the <a href="/guides/asta-colour-and-shu-heat-explained/">SHU explained</a> page. Two chillies can share an identical SHU yet burn at a different speed, linger for a different time, and taste entirely different — because the number averages several capsaicinoids whose sensory character differs.
+    </p>
+    <h2 style="margin-top:32px;">What SHU does not tell you</h2>
+    <p>
+      SHU is a chemical concentration, not a taste strength. Perceived heat is a sensory response that depends on the capsaicinoid mix, the food matrix and the individual taster — measured SHU and perceived heat correlate but are not interchangeable.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Specify heat as an SHU window, not a single number — capsaicinoid content can shift ±40% within a single variety with growing conditions.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between SHU and capsaicin?</h3>
+      <p>Capsaicin is the chemical compound — the dominant capsaicinoid that triggers the burn. SHU is the scale that measures capsaicinoid concentration: roughly 1 ppm capsaicin ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is pure capsaicin in SHU?</h3>
+      <p>Pure capsaicin registers around 16 million SHU — the conversion of roughly 1 ppm capsaicin ≈ 16 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the same SHU always burn the same?</h3>
+      <p>No. Two chillies can share an identical SHU yet burn at a different speed and linger for a different time, because the number averages several capsaicinoids whose sensory character differs.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/guides/asta-colour-and-shu-heat-explained/">Read the SHU Guide</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AtAGlance from "../../components/AtAGlance.astro";
+
+const articleJsonLd = {"@context": "https://schema.org", "@type": "TechArticle", "headline": "Sanying vs Zidantou: Which High-Heat Chilli to Choose", "description": "Sanying (Tianying) and Zidantou (bullet) are the two classic hot-sauce varieties at 20,000–50,000 SHU. A buyer's comparison of pod shape, origin and powder behaviour.", "image": "https://drychillis.com/images/og-default.jpg", "author": {"@type": "Organization", "name": "Tenda Peppers", "url": "https://drychillis.com"}, "publisher": {"@id": "https://drychillis.com/#organization"}, "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drychillis.com/guides/sanying-vs-zidantou/"}};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Sanying and Zidantou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanying (Tianying) is a cluster-type facing-heaven chilli from Henan and Hebei; Zidantou is a conical bullet-shaped chilli from Shandong and Anhui with thicker flesh. Both are 20,000–50,000 SHU hot-sauce varieties, but Zidantou's higher flesh-to-skin ratio grinds into more uniform powder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better for hot sauce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are classic hot-sauce varieties in the same 20,000–50,000 SHU band. Sanying is the dependable high-heat base; Zidantou is preferred where the recipe is powder-based and grind uniformity matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Sanying and Zidantou interchangeable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For heat, yes — they sit in the same SHU band. For shape and powder behaviour, no: the pod shapes and flesh ratios differ. Confirm the variety and a precise SHU window in your specification."
+      }
+    }
+  ]
+};
+
+const glanceFacts = [
+  { label: "Sanying", value: "Cluster facing-heaven, Henan &amp; Hebei" },
+  { label: "Zidantou", value: "Conical bullet, Shandong &amp; Anhui" },
+  { label: "Both", value: "20,000–50,000 SHU" },
+  { label: "Key difference", value: "Flesh ratio → powder uniformity" }
+];
+---
+
+<BaseLayout
+  title="Sanying vs Zidantou: Which High-Heat Chilli to Choose | Tenda Peppers"
+  description="Sanying (Tianying) and Zidantou (bullet) are the two classic hot-sauce varieties at 20,000–50,000 SHU. A buyer's comparison of pod shape, origin and powder behaviour."
+  ogType="article"
+  author="Tenda Peppers Technical Team"
+  datePublished="2026-09-23"
+  dateModified="2026-09-23"
+  jsonLd={[articleJsonLd, faqJsonLd]}
+  multilingual={false}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Sanying vs Zidantou
+    </nav>
+
+    <h1>Sanying vs Zidantou: Which High-Heat Chilli to Choose</h1>
+    <p class="lead">
+      Sanying and Zidantou are the two classic hot-sauce varieties at 20,000–50,000 SHU — the same heat band, but different pods, different origins, and different powder behaviour. This comparison separates them so you order the right one.
+    </p>
+
+    <div class="takeaways">
+      <strong>Short answer:</strong> Sanying (Tianying) is a cluster-type facing-heaven chilli from Henan and Hebei; Zidantou is a conical bullet-shaped chilli from Shandong and Anhui with thicker flesh. Both are 20,000–50,000 SHU hot-sauce varieties, but Zidantou's higher flesh-to-skin ratio grinds into more uniform powder.
+    </div>
+    <AtAGlance facts={glanceFacts} />
+
+    <h2 style="margin-top:32px;">The core difference</h2>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Dimension</th>
+          <th style="padding:8px;">Sanying (Tianying)</th>
+          <th style="padding:8px;">Zidantou (bullet)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Shape</strong></td>
+          <td style="padding:8px;">Cluster-type facing-heaven</td>
+          <td style="padding:8px;">Conical bullet</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Region</strong></td>
+          <td style="padding:8px;">Henan, Hebei</td>
+          <td style="padding:8px;">Shandong, Anhui</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Heat (SHU)</strong></td>
+          <td style="padding:8px;">20,000–50,000</td>
+          <td style="padding:8px;">20,000–50,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Flesh</strong></td>
+          <td style="padding:8px;">Thin-walled cluster</td>
+          <td style="padding:8px;">Thick flesh, higher flesh-to-skin ratio</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Grind</strong></td>
+          <td style="padding:8px;">Classic dry-chilli shape</td>
+          <td style="padding:8px;">More uniform powder, less seed &amp; skin variation</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Best for</strong></td>
+          <td style="padding:8px;">Hot sauce, chilli oil, snack seasoning</td>
+          <td style="padding:8px;">Hot sauce, industrial food, chilli powder</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the choice matters</h2>
+    <p>
+      Both are the classic hot-sauce varieties at 20,000–50,000 SHU — see the <a href="/heat-levels/high-heat/">high heat</a> page. The difference is the pod. <a href="/products/sanying-chilli/">Sanying</a> is a cluster-type facing-heaven chilli from Henan and Hebei, the dependable high-heat base for hot sauce, chilli oil and snack seasoning. <a href="/products/zidantou-chilli/">Zidantou</a> is a conical bullet from Shandong and Anhui whose thick flesh grinds into a robust, consistent powder — the reason it is the dependable high-heat powder base for hot sauce and industrial food.
+    </p>
+    <h2 style="margin-top:32px;">When to choose each</h2>
+    <p>
+      Choose Sanying when the recipe is built on the classic facing-heaven shape and dried whole pods; choose Zidantou when the recipe is powder-based and grind uniformity matters. They substitute for heat inside the same SHU band, but not for shape and flesh ratio.
+    </p>
+    <h2 style="margin-top:32px;">How to specify</h2>
+    <p>
+      Name the variety and a precise SHU window. Heat, colour and flavour vary independently, so the variety name is what locks batch-to-batch consistency.
+    </p>
+    <p class="data-note">
+      Heat and colour values are representative. Confirm your exact SHU window, ASTA, form and mesh
+      when you inquire.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between Sanying and Zidantou?</h3>
+      <p>Sanying (Tianying) is a cluster-type facing-heaven chilli from Henan and Hebei; Zidantou is a conical bullet-shaped chilli from Shandong and Anhui with thicker flesh. Both are 20,000–50,000 SHU hot-sauce varieties, but Zidantou's higher flesh-to-skin ratio grinds into more uniform powder.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which is better for hot sauce?</h3>
+      <p>Both are classic hot-sauce varieties in the same 20,000–50,000 SHU band. Sanying is the dependable high-heat base; Zidantou is preferred where the recipe is powder-based and grind uniformity matters.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are Sanying and Zidantou interchangeable?</h3>
+      <p>For heat, yes — they sit in the same SHU band. For shape and powder behaviour, no: the pod shapes and flesh ratios differ. Confirm the variety and a precise SHU window in your specification.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/dried-chillies/">Browse Dried Chillies</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
