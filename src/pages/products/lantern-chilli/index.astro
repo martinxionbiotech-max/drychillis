@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/lantern-chilli/";
 const productOffers = buildOffers("lantern-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Lantern" },
+  { param: "Heat level (SHU)", value: "10,000–20,000 (medium)" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -139,6 +151,9 @@ const faqJsonLd = {
       pod must stay intact and fragrant until service. Grind it and you trade shelf-life for
       convenience.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

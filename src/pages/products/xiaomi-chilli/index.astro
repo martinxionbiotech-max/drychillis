@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/xiaomi-chilli/";
 const productOffers = buildOffers("xiaomi-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Xiaomi" },
+  { param: "Heat level (SHU)", value: "50,000–70,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -145,6 +157,9 @@ const faqJsonLd = {
       heat. If you dose by pod count rather than weight, expect far more variance — dose by weight
       for consistency.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

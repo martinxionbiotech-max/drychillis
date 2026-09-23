@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/yidu-chilli/";
 const productOffers = buildOffers("yidu-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Yidu Red" },
+  { param: "Heat level (SHU)", value: "<1,000 sweet (under 10,000 ceiling)" },
+  { param: "ASTA colour value", value: "High (thick flesh) — confirm ASTA with us" },
+  { param: "Mesh size", value: "60–80 mesh" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -169,6 +181,9 @@ const faqJsonLd = {
       value, mesh (60–80 standard) and moisture (under 13%). Heat is a non-issue at this end of the
       scale, so put your spec effort into colour and particle size instead.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

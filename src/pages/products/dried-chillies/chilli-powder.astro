@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/dried-chillies/chilli-powder/";
 const productOffers = buildOffers("chilli-powder", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Chilli powder" },
+  { param: "Variety", value: "Sanying, Zidantou, Seven-Star" },
+  { param: "Heat level (SHU)", value: "20,000–50,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "60–80 mesh" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -161,6 +173,9 @@ const faqJsonLd = {
       <li><a href="/guides/chilli-form-whole-flakes-powder/">Whole vs flakes vs powder</a></li>
       <li><a href="/guides/food-safety-quality/">Food safety &amp; quality</a></li>
     </ul>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

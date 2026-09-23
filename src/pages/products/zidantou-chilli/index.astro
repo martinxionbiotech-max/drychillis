@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/zidantou-chilli/";
 const productOffers = buildOffers("zidantou-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Zidantou" },
+  { param: "Heat level (SHU)", value: "20,000–50,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "Confirm specification" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -143,6 +155,9 @@ const faqJsonLd = {
       powder per kilo of raw pod. At 20,000–50,000 SHU it shares Sanying's high-heat band but is
       preferred where a <strong>heat-forward powder</strong> is the end product rather than a sauce.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

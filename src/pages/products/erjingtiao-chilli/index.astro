@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/erjingtiao-chilli/";
 const productOffers = buildOffers("erjingtiao-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Erjingtiao" },
+  { param: "Heat level (SHU)", value: "15,000–30,000 (upper medium)" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "20–40 mesh (coarse crush)" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -177,6 +189,9 @@ const faqJsonLd = {
       13%. If the product is a fine powder, tell us — we will advise on blending to hold both heat
       and fragrance.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

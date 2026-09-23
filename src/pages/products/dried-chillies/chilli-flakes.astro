@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/dried-chillies/chilli-flakes/";
 const productOffers = buildOffers("chilli-flakes", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Crushed flakes" },
+  { param: "Variety", value: "Xian, Jinta, Erjingtiao" },
+  { param: "Heat level (SHU)", value: "10,000–20,000 (Erjingtiao 15,000–30,000)" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "20–40 mesh" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -148,6 +160,9 @@ const faqJsonLd = {
       <li><a href="/guides/asta-colour-and-shu-heat-explained/">Scoville Heat Units (SHU) explained</a></li>
       <li><a href="/guides/food-safety-quality/">Food safety & quality</a></li>
     </ul>
+
+<BuyerSpec rows={buyerSpec} />
+
 
 <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

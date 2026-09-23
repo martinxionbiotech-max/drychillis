@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/tianjin-red-chilli/";
 const productOffers = buildOffers("tianjin-red-chilli", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Confirm specification" },
+  { param: "Variety", value: "Tianjin Red" },
+  { param: "Heat level (SHU)", value: "30,000–50,000" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "60–80 mesh (powder)" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "Confirm specification" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -177,6 +189,9 @@ const faqJsonLd = {
       (for powder, 60–80 standard) and moisture (under 13%). Because the label is broad, the SHU
       window is what actually pins the product down.
     </p>
+
+    <BuyerSpec rows={buyerSpec} />
+
 
     <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
     <div class="faq-item">

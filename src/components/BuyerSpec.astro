@@ -1,0 +1,36 @@
+---
+interface SpecRow {
+  param: string;
+  value: string;
+}
+
+interface Props {
+  rows: SpecRow[];
+}
+
+const { rows = [] } = Astro.props;
+---
+<h2 style="margin-top:32px;">Buyer Specification</h2>
+<p>
+  The matrix below is confirmed together before quotation — our typical range against your target.
+  Where a value reads <em>Confirm specification</em>, we set it to your requirement and document it
+  in the quotation.
+</p>
+<table>
+  <thead>
+    <tr><th>Specification</th><th>Typical / available</th></tr>
+  </thead>
+  <tbody>
+    {rows.map((row) => (
+      <tr>
+        <td>{row.param}</td>
+        <td>{row.value.startsWith("Confirm specification") ? <em>{row.value}</em> : row.value}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+<p class="data-note">
+  Values are representative ranges. Packaging (bulk, retail or OEM), MOQ and the document set (COA,
+  batch traceability, phytosanitary) are confirmed on inquiry — always confirm your exact target
+  specification before a final order.
+</p>

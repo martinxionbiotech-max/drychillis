@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuyerSpec from "../../../components/BuyerSpec.astro";
 import { buildOffers, priceLine } from "../../../data/product-offers";
 
 const productUrl = "https://drychillis.com/products/dried-chillies/";
 const productOffers = buildOffers("dried-chillies", productUrl);
+
+const buyerSpec = [
+  { param: "Product form", value: "Whole, flakes, powder, segments" },
+  { param: "Variety", value: "Lantern, Jinta, facing-heaven, Xiaomi, Zidantou, Sanying, Seven-Star, Jixin, Chilli King" },
+  { param: "Heat level (SHU)", value: "10,000 – 70,000+" },
+  { param: "ASTA colour value", value: "Confirm specification" },
+  { param: "Mesh size", value: "60–80 mesh (powder); 20–40 mesh (flakes)" },
+  { param: "Moisture", value: "<13%" },
+  { param: "Processing", value: "De-seeded, magnet-filtered, X-ray inspected, colour-sorted" },
+  { param: "Certifications", value: "ISO 9001 & HACCP standard — BRC, Halal, Kosher on request" },
+];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -211,22 +223,7 @@ const faqJsonLd = {
       <a href="https://docs.drychillis.com/chilli-varieties/" target="_blank" rel="noopener">chilli varieties guide</a>.
     </p>
 
-    <h2 style="margin-top:32px;">Specifications</h2>
-    <table>
-      <thead>
-        <tr><th>Parameter</th><th>Typical range</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Heat level (SHU)</td><td>10,000 – 70,000+ (variety-dependent)</td></tr>
-        <tr><td>Moisture</td><td>&lt;13%</td></tr>
-        <tr><td>Mesh (powder)</td><td>60–80 mesh, adjustable to requirement</td></tr>
-        <tr><td>Processing</td><td>De-seeded, magnet-filtered, X-ray inspected, colour-sorted</td></tr>
-      </tbody>
-    </table>
-    <p class="data-note">
-      Values are representative ranges. Exact heat, mesh and moisture are confirmed against your
-      target specification and documented in the quotation — always confirm before a final order.
-    </p>
+    <BuyerSpec rows={buyerSpec} />
 
     <h2 style="margin-top:32px;">Where do China's dried chillies come from?</h2>
     <p>
