@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("jixin-chilli", "https://drychillis.com/ar/products/jixin-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/jixin-chilli/#product",
+  "name": "فلفل جيشين (قلب الدجاجة)",
+  "description": "فلفل قلب الدجاجة — قرن صغير على شكل قلب فائق الحرارة عند 50,000–70,000 SHU من قويتشو وهونان. المعيار للحرارة الفائقة والأطباق بأسلوب سيتشوان.",
+  "url": "https://drychillis.com/ar/products/jixin-chilli/",
+  "sku": "TENDA-JIXIN-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "الحرارة (SHU)",
+    "value": "50,000 – 70,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "المنطقة",
+    "value": "قويتشو، هونان"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "نوع الثمرة",
+    "value": "قرن صغير على شكل قلب"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "الأفضل لـ",
+    "value": "حرارة فائقة، زيت الفلفل، سيتشوان"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="فلفل جيشين (قلب الدجاجة) — 50,000–70,000 SHU | Tenda Peppers"
   description="فلفل جيشين (قلب الدجاجة) — قرن صغير فائق الحرارة من قويتشو وهونان عند 50,000–70,000 SHU لزيت الفلفل وأطباق سيتشوان. مصنع صيني."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       فلفل قلب الدجاجة — قرن صغير على شكل قلب فائق الحرارة عند 50,000–70,000 SHU من قويتشو وهونان.
       المعيار للحرارة الفائقة والأطباق بأسلوب سيتشوان.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("jixin-chilli", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو فلفل جيشين؟</h2>
     <p>

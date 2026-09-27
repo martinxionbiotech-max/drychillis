@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("xiaomi-chilli", "https://drychillis.com/es/products/xiaomi-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/xiaomi-chilli/#product",
+  "name": "Chile Xiaomi",
+  "description": "Un chile pequeño y delgado, extra-picante, de 50.000–70.000 SHU de Yunnan y Guizhou — usado para chiles enteros de alto picor, segmentos y aceite de chile donde una vaina compacta aporta picor fuerte.",
+  "url": "https://drychillis.com/es/products/xiaomi-chilli/",
+  "sku": "TENDA-XIAOMI-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Picor (SHU)",
+    "value": "50.000 – 70.000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Región",
+    "value": "Yunnan, Guizhou"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Tipo de fruto",
+    "value": "Vaina pequeña y delgada"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Ideal para",
+    "value": "Chile entero, segmentos, aceite de chile"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Chile Xiaomi — 50.000–70.000 SHU | Tenda Peppers"
   description="Pimiento Xiaomi — chile pequeño y delgado extra-picante de Yunnan y Guizhou, 50.000–70.000 SHU para chiles enteros y aceite de chile."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -49,6 +88,7 @@ const faqJsonLd = {
       chiles enteros de alto picor, segmentos y aceite de chile donde una vaina compacta aporta picor
       fuerte.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("xiaomi-chilli", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el chile Xiaomi?</h2>
     <p>

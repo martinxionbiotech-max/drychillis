@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-segments", "https://drychillis.com/ru/products/dried-chillies/chilli-segments/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/dried-chillies/chilli-segments/#product",
+  "name": "Кусочки чили (50 000+ SHU)",
+  "description": "Экстра-острые кусочки сушёного чили — более 50 000 SHU — нарезанные из Jixin, Xiaomi и Chilli King, для блюд сычуаньского стиля, масла чили и основ хот-пота, где видимая острота — цель.",
+  "url": "https://drychillis.com/ru/products/dried-chillies/chilli-segments/",
+  "sku": "TENDA-CHILLI-SEGMENTS",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-segments.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Jixin",
+    "value": "50,000 – 70,000 Гуйчжоу, Хунань Экстремальная острота, масло чили"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Xiaomi",
+    "value": "50,000 – 70,000 Юньнань, Гуйчжоу Высокоострые кусочки"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Chilli King",
+    "value": "50,000 — Приправы экстремальной остроты"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Кусочки чили (50 000+ SHU) | Tenda Peppers"
   description="Китайский производитель кусочков чили — экстра-острые кусочки свыше 50 000 SHU из Jixin, Xiaomi и Chilli King для блюд сычуаньской кухни и масла чили. ISO 9001 и HACCP."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       Экстра-острые кусочки сушёного чили — более 50 000 SHU — нарезанные из Jixin, Xiaomi и Chilli
       King, для блюд сычуаньского стиля, масла чили и основ хот-пота, где видимая острота — цель.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-segments", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое кусочки чили?</h2>
     <p>

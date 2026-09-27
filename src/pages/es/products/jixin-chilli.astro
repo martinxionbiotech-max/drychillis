@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("jixin-chilli", "https://drychillis.com/es/products/jixin-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/jixin-chilli/#product",
+  "name": "Chile Jixin (Corazón de Gallina)",
+  "description": "El chile corazón-de-gallina — una vaina pequeña en forma de corazón, extra-picante, de 50.000–70.000 SHU de Guizhou y Hunan. El estándar para picor extremo y platos estilo Sichuan.",
+  "url": "https://drychillis.com/es/products/jixin-chilli/",
+  "sku": "TENDA-JIXIN-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Picor (SHU)",
+    "value": "50.000 – 70.000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Región",
+    "value": "Guizhou, Hunan"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Tipo de fruto",
+    "value": "Vaina pequeña en forma de corazón"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Ideal para",
+    "value": "Picor extremo, aceite de chile, Sichuan"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Chile Jixin — 50.000–70.000 SHU | Tenda Peppers"
   description="Pimiento Jixin (corazón de gallina) — vaina extra-picante de Guizhou y Hunan, 50.000–70.000 SHU para aceite de chile y platos Sichuan."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       El chile corazón-de-gallina — una vaina pequeña en forma de corazón, extra-picante, de
       50.000–70.000 SHU de Guizhou y Hunan. El estándar para picor extremo y platos estilo Sichuan.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("jixin-chilli", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el chile Jixin?</h2>
     <p>

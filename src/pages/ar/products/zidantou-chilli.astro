@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("zidantou-chilli", "https://drychillis.com/ar/products/zidantou-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/zidantou-chilli/#product",
+  "name": "فلفل زيدانتو (الرصاصي)",
+  "description": "الفلفل الرصاصي — فلفل مخروطي عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وآنهوي. قاعدة عالية الحرارة موثوقة للصلصة الحارة والأغذية الصناعية ومسحوق الفلفل.",
+  "url": "https://drychillis.com/ar/products/zidantou-chilli/",
+  "sku": "TENDA-ZIDANTOU-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "الحرارة (SHU)",
+    "value": "20,000 – 50,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "المنطقة",
+    "value": "شاندونغ، آنهوي"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "نوع الثمرة",
+    "value": "مخروطي (رصاصي)"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "الأفضل لـ",
+    "value": "الصلصة الحارة، الصناعة، المسحوق"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="فلفل زيدانتو (الرصاصي) — 20,000–50,000 SHU | Tenda Peppers"
   description="زيدانتو (الفلفل الرصاصي) — فلفل مخروطي عالي الحرارة من شاندونغ وآنهوي عند 20,000–50,000 SHU للصلصة الحارة والأغذية الصناعية ومسحوق الفلفل. مصنع صيني."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       الفلفل الرصاصي — فلفل مخروطي عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وآنهوي. قاعدة
       عالية الحرارة موثوقة للصلصة الحارة والأغذية الصناعية ومسحوق الفلفل.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("zidantou-chilli", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو فلفل زيدانتو؟</h2>
     <p>

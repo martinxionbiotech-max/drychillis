@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("jinta-chilli", "https://drychillis.com/es/products/jinta-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/jinta-chilli/#product",
+  "name": "Chile Jinta",
+  "description": "Un chile de picor medio de 10.000–20.000 SHU de Gansu, con vainas largas de rojo azufaifo intenso y piel gruesa y brillante — el estándar para escamas visibles y color brillante.",
+  "url": "https://drychillis.com/es/products/jinta-chilli/",
+  "sku": "TENDA-JINTA-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Picor (SHU)",
+    "value": "10.000 – 20.000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Región",
+    "value": "Gansu"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Tipo de fruto",
+    "value": "Vaina larga (11–14 cm), piel gruesa brillante"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Ideal para",
+    "value": "Escamas visibles, color, condimentos"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Chile Jinta — 10.000–20.000 SHU | Tenda Peppers"
   description="Pimiento Jinta — chile de picor medio de Gansu, 10.000–20.000 SHU, vainas largas rojo intenso para escamas y color."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Un chile de picor medio de 10.000–20.000 SHU de Gansu, con vainas largas de rojo
       azufaifo intenso y piel gruesa y brillante — el estándar para escamas visibles y color brillante.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("jinta-chilli", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el chile Jinta?</h2>
     <p>

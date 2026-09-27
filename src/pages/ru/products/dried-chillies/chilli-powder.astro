@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-powder", "https://drychillis.com/ru/products/dried-chillies/chilli-powder/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/dried-chillies/chilli-powder/#product",
+  "name": "Порошок чили (60–80 mesh)",
+  "description": "Мелко смолотый сушёный чили — 60–80 mesh, 20 000–50 000 SHU — основа острых соусов, приправ и промышленной пищи, смолотый из Sanying, Zidantou и Seven-Star.",
+  "url": "https://drychillis.com/ru/products/dried-chillies/chilli-powder/",
+  "sku": "TENDA-CHILLI-POWDER",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-powder.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Sanying / Tianying",
+    "value": "20,000 – 50,000 Хэнань, Хэбэй Острый соус, масло чили"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Zidantou (bullet)",
+    "value": "20,000 – 50,000 Шаньдун, Аньхой Острый соус, промышленность"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Seven-Star",
+    "value": "20,000 – 50,000 Шаньдун, Шаньси Вкус снеков, хот-пот"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Порошок чили (60–80 mesh) | Tenda Peppers"
   description="Китайский производитель порошка чили — 60–80 mesh, 20 000–50 000 SHU, из Sanying, Zidantou и Seven-Star для острого соуса, приправ и промышленной пищи. ISO 9001 и HACCP."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       Мелко смолотый сушёный чили — 60–80 mesh, 20 000–50 000 SHU — основа острых соусов, приправ и
       промышленной пищи, смолотый из Sanying, Zidantou и Seven-Star.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-powder", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое порошок чили?</h2>
     <p>

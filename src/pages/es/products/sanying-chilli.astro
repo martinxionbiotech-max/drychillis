@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("sanying-chilli", "https://drychillis.com/es/products/sanying-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/sanying-chilli/#product",
+  "name": "Chile Sanying (Tianying)",
+  "description": "El chile seco clásico de alto picor — un mirando-al-cielo de tipo racimo de 20.000–50.000 SHU, cultivado en Henan y Hebei. El caballo de batalla para salsa picante, aceite de chile y snacks.",
+  "url": "https://drychillis.com/es/products/sanying-chilli/",
+  "sku": "TENDA-SANYING-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Picor (SHU)",
+    "value": "20.000 – 50.000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Región",
+    "value": "Henan, Hebei"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Tipo de fruto",
+    "value": "Mirando-al-cielo de tipo racimo"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Ideal para",
+    "value": "Salsa picante, aceite de chile, snacks"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Chile Sanying (Tianying) — 20.000–50.000 SHU | Tenda Peppers"
   description="Pimiento Sanying (Tianying) — chile mirando-al-cielo de Henan y Hebei, 20.000–50.000 SHU para salsa picante, aceite de chile y snacks."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       El chile seco clásico de alto picor — un mirando-al-cielo de tipo racimo de 20.000–50.000 SHU,
       cultivado en Henan y Hebei. El caballo de batalla para salsa picante, aceite de chile y snacks.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("sanying-chilli", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el chile Sanying?</h2>
     <p>

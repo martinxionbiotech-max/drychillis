@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-flakes", "https://drychillis.com/es/products/dried-chillies/chilli-flakes/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/dried-chillies/chilli-flakes/#product",
+  "name": "Escamas de Chile (Chile Triturado)",
+  "description": "Chiles secos triturados en grueso — 20–40 mesh, 10.000–20.000 SHU — la forma estándar para pizza, mezclas de condimentos y snacks, molidos de Xian y Jinta; las escamas de Erjingtiao rondan 15.000–30.000 SHU.",
+  "url": "https://drychillis.com/es/products/dried-chillies/chilli-flakes/",
+  "sku": "TENDA-CHILLI-FLAKES",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-flakes.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Chile Xian",
+    "value": "10.000 – 20.000 Henan Mezclas de condimentos, pizza"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Jinta",
+    "value": "10.000 – 20.000 Gansu Escama visible, color"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Erjingtiao",
+    "value": "15.000 – 30.000 Sichuan Escama aromática, aceite de chile"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Escamas de Chile (Chile Triturado) | Tenda Peppers"
   description="Fabricante chino de escamas de chile — chile triturado a 10.000–20.000 SHU, 20–40 mesh, de Xian y Jinta, más Erjingtiao a 15.000–30.000 SHU. ISO 9001 y HACCP. Tenda Peppers."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       Chiles secos triturados en grueso — 20–40 mesh, 10.000–20.000 SHU — la forma estándar para
       pizza, mezclas de condimentos y snacks, molidos de Xian y Jinta; las escamas de Erjingtiao rondan 15.000–30.000 SHU.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-flakes", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué son las escamas de chile?</h2>
     <p>

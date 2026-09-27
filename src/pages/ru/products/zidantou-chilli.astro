@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("zidantou-chilli", "https://drychillis.com/ru/products/zidantou-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/zidantou-chilli/#product",
+  "name": "Перец Zidantou (пулевидный)",
+  "description": "Пулевидный перец — конический высокоострый перец при 20 000–50 000 SHU из Шаньдуна и Аньхоя. Надёжная высокоострая основа для острого соуса, промышленной пищи и порошка чили.",
+  "url": "https://drychillis.com/ru/products/zidantou-chilli/",
+  "sku": "TENDA-ZIDANTOU-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Острота (SHU)",
+    "value": "20,000 – 50,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Регион",
+    "value": "Шаньдун, Аньхой"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Тип плода",
+    "value": "Конический (пулевидный)"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Лучше всего для",
+    "value": "Острый соус, промышленность, порошок"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Перец Zidantou (пулевидный) — 20 000–50 000 SHU | Tenda Peppers"
   description="Zidantou (пулевидный перец) — конический высокоострый перец из Шаньдуна и Аньхоя при 20 000–50 000 SHU для острого соуса, промышленной пищи и порошка чили. Китайский производитель."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Пулевидный перец — конический высокоострый перец при 20 000–50 000 SHU из Шаньдуна и Аньхоя.
       Надёжная высокоострая основа для острого соуса, промышленной пищи и порошка чили.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("zidantou-chilli", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое перец Zidantou?</h2>
     <p>

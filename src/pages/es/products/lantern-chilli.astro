@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("lantern-chilli", "https://drychillis.com/es/products/lantern-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/lantern-chilli/#product",
+  "name": "Pimiento Linterna (Denglongjiao)",
+  "description": "Un chile entero de picor medio con color, aroma y sabor equilibrados — el estándar para dry-pot, hot-pot y servicio de alimentos donde el chile debe quedar visible.",
+  "url": "https://drychillis.com/es/products/lantern-chilli/",
+  "sku": "TENDA-LANTERN-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Picor (SHU)",
+    "value": "10.000 – 20.000 (medio)"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Región",
+    "value": "Shandong, Hebei"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Tipo de fruto",
+    "value": "Vaina en forma de linterna, planta 1–1,2 m"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Ideal para",
+    "value": "Dry-pot, hot-pot, chile entero visible"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Pimiento Linterna (Denglongjiao) | Tenda Peppers"
   description="Pimiento linterna (denglongjiao) — chile entero de picor medio con color, aroma y sabor equilibrados para dry-pot y hot-pot."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Un chile entero de picor medio con color, aroma y sabor equilibrados — el estándar para dry-pot,
       hot-pot y servicio de alimentos donde el chile debe quedar visible.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("lantern-chilli", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el pimiento linterna?</h2>
     <p>

@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-flakes", "https://drychillis.com/ru/products/dried-chillies/chilli-flakes/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/dried-chillies/chilli-flakes/#product",
+  "name": "Хлопья чили (дроблёный красный перец)",
+  "description": "Крупно размолотый сушёный чили — 20–40 mesh, 10 000–20 000 SHU — стандартная форма для топпинга пиццы, смесей специй и вкусов снеков, смолотая из Xian и Jinta; хлопья Erjingtiao находятся в диапазоне 15 000–30 000 SHU.",
+  "url": "https://drychillis.com/ru/products/dried-chillies/chilli-flakes/",
+  "sku": "TENDA-CHILLI-FLAKES",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-flakes.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Xian pepper",
+    "value": "10,000 – 20,000 Хэнань Смеси специй, пицца"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Jinta",
+    "value": "10,000 – 20,000 Ганьсу Видимые хлопья, цвет"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Erjingtiao",
+    "value": "15,000 – 30,000 Сычуань Ароматные хлопья, масло чили"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Хлопья чили (дроблёный красный перец) | Tenda Peppers"
   description="Китайский производитель хлопьев чили — дроблёный красный перец при 10 000–20 000 SHU и 20–40 mesh из Xian и Jinta, а также Erjingtiao при 15 000–30 000 SHU. ISO 9001 и HACCP."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -49,6 +83,7 @@ const faqJsonLd = {
       пиццы, смесей специй и вкусов снеков, смолотая из Xian и Jinta; хлопья Erjingtiao находятся в
       диапазоне 15 000–30 000 SHU.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-flakes", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое хлопья чили?</h2>
     <p>

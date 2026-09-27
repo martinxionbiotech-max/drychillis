@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-segments", "https://drychillis.com/es/products/dried-chillies/chilli-segments/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/dried-chillies/chilli-segments/#product",
+  "name": "Segmentos de Chile (50.000+ SHU)",
+  "description": "Trozos de chile seco extra-picante — más de 50.000 SHU — cortados de Jixin, Xiaomi y Chilli King, para platos estilo Sichuan, aceite de chile y bases de hot-pot donde el picor visible es el punto.",
+  "url": "https://drychillis.com/es/products/dried-chillies/chilli-segments/",
+  "sku": "TENDA-CHILLI-SEGMENTS",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-segments.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Jixin",
+    "value": "50.000 – 70.000 Guizhou, Hunan Picor extremo, aceite de chile"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Xiaomi",
+    "value": "50.000 – 70.000 Yunnan, Guizhou Trozos de alto picor"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Chilli King",
+    "value": "50.000 — Condimento de picor extremo"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Segmentos de Chile (50.000+ SHU) | Tenda Peppers"
   description="Fabricante chino de segmentos de chile — trozos extra-picantes de más de 50.000 SHU de Jixin, Xiaomi y Chilli King para platos Sichuan y aceite de chile."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -49,6 +83,7 @@ const faqJsonLd = {
       King, para platos estilo Sichuan, aceite de chile y bases de hot-pot donde el picor visible es
       el punto.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-segments", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué son los segmentos de chile?</h2>
     <p>

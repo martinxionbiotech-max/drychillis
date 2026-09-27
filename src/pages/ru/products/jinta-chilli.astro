@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("jinta-chilli", "https://drychillis.com/ru/products/jinta-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/jinta-chilli/#product",
+  "name": "Перец Jinta",
+  "description": "Среднеострый перец при 10 000–20 000 SHU из Ганьсу, с длинными стручками глубокого финиково-красного цвета и толстой глянцевой кожицей — эталон для видимых хлопьев и яркого цвета.",
+  "url": "https://drychillis.com/ru/products/jinta-chilli/",
+  "sku": "TENDA-JINTA-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Острота (SHU)",
+    "value": "10,000 – 20,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Регион",
+    "value": "Ганьсу"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Тип плода",
+    "value": "Длинный стручок (11–14 см), толстая глянцевая кожица"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Лучше всего для",
+    "value": "Видимые хлопья, цвет, приправы"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Перец Jinta — 10 000–20 000 SHU | Tenda Peppers"
   description="Перец Jinta — среднеострый перец из Ганьсу при 10 000–20 000 SHU, с длинными глубоко-красными стручками для видимых хлопьев и яркого цвета. Китайский производитель."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Среднеострый перец при 10 000–20 000 SHU из Ганьсу, с длинными стручками глубокого
       финиково-красного цвета и толстой глянцевой кожицей — эталон для видимых хлопьев и яркого цвета.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("jinta-chilli", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое перец Jinta?</h2>
     <p>

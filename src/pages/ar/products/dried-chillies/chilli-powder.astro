@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-powder", "https://drychillis.com/ar/products/dried-chillies/chilli-powder/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/dried-chillies/chilli-powder/#product",
+  "name": "مسحوق الفلفل الحار (60–80 ميش)",
+  "description": "فلفل مجفف مطحون ناعم — 60–80 ميش، 20,000–50,000 SHU — أساس الصلصات الحارة والتوابل والأغذية الصناعية، مطحون من سانينغ وزيدانتو وسبعة نجوم.",
+  "url": "https://drychillis.com/ar/products/dried-chillies/chilli-powder/",
+  "sku": "TENDA-CHILLI-POWDER",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-powder.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "سانينغ / تيانيينغ",
+    "value": "20,000 – 50,000 خنان، خبي الصلصة الحارة، زيت الفلفل"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "زيدانتو (رصاصي)",
+    "value": "20,000 – 50,000 شاندونغ، آنهوي الصلصة الحارة، الصناعة"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "سبعة نجوم",
+    "value": "20,000 – 50,000 شاندونغ، شانشي نكهة الوجبات الخفيفة، الهوت بوت"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="مسحوق الفلفل الحار (60–80 ميش) | Tenda Peppers"
   description="مصنع صيني لمسحوق الفلفل الحار — 60–80 ميش، 20,000–50,000 SHU، من سانينغ وزيدانتو وسبعة نجوم للصلصة الحارة والتوابل والأغذية الصناعية. ISO 9001 وHACCP."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       فلفل مجفف مطحون ناعم — 60–80 ميش، 20,000–50,000 SHU — أساس الصلصات الحارة والتوابل والأغذية
       الصناعية، مطحون من سانينغ وزيدانتو وسبعة نجوم.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-powder", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو مسحوق الفلفل الحار؟</h2>
     <p>

@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("sanying-chilli", "https://drychillis.com/ar/products/sanying-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/sanying-chilli/#product",
+  "name": "فلفل سانينغ (تيانيينغ)",
+  "description": "الفلفل الجاف الكلاسيكي عالي الحرارة — فلفل موجه للسماء عنقودي عند 20,000–50,000 SHU، يزرع في خنان وخبي. أساس الصلصات الحارة وزيت الفلفل والوجبات الخفيفة.",
+  "url": "https://drychillis.com/ar/products/sanying-chilli/",
+  "sku": "TENDA-SANYING-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "الحرارة (SHU)",
+    "value": "20,000 – 50,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "المنطقة",
+    "value": "خنان، خبي"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "نوع الثمرة",
+    "value": "موجه للسماء عنقودي"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "الأفضل لـ",
+    "value": "الصلصة الحارة، زيت الفلفل، الوجبات الخفيفة"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="فلفل سانينغ (تيانيينغ) — 20,000–50,000 SHU | Tenda Peppers"
   description="فلفل سانينغ (تيانيينغ) — فلفل موجه للسماء عنقودي من خنان وخبي عند 20,000–50,000 SHU للصلصة الحارة وزيت الفلفل والوجبات الخفيفة. مصنع صيني."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       الفلفل الجاف الكلاسيكي عالي الحرارة — فلفل موجه للسماء عنقودي عند 20,000–50,000 SHU، يزرع في
       خنان وخبي. أساس الصلصات الحارة وزيت الفلفل والوجبات الخفيفة.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("sanying-chilli", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو فلفل سانينغ؟</h2>
     <p>

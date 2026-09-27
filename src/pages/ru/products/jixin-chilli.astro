@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("jixin-chilli", "https://drychillis.com/ru/products/jixin-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/jixin-chilli/#product",
+  "name": "Перец Jixin (куриное сердце)",
+  "description": "Перец «куриное сердце» — маленький сердцевидный стручок экстра-острой остроты при 50 000–70 000 SHU из Гуйчжоу и Хунани. Эталон для экстремальной остроты и блюд сычуаньского стиля.",
+  "url": "https://drychillis.com/ru/products/jixin-chilli/",
+  "sku": "TENDA-JIXIN-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Острота (SHU)",
+    "value": "50,000 – 70,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Регион",
+    "value": "Гуйчжоу, Хунань"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Тип плода",
+    "value": "Маленький сердцевидный стручок"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Лучше всего для",
+    "value": "Экстремальная острота, масло чили, сычуаньская кухня"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Перец Jixin (куриное сердце) — 50 000–70 000 SHU | Tenda Peppers"
   description="Перец Jixin (куриное сердце) — маленький экстра-острый стручок из Гуйчжоу и Хунани при 50 000–70 000 SHU для масла чили и блюд сычуаньской кухни. Китайский производитель."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Перец «куриное сердце» — маленький сердцевидный стручок экстра-острой остроты при 50 000–70 000
       SHU из Гуйчжоу и Хунани. Эталон для экстремальной остроты и блюд сычуаньского стиля.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("jixin-chilli", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое перец Jixin?</h2>
     <p>

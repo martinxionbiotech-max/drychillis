@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("whole-dried-chillies", "https://drychillis.com/ru/products/dried-chillies/whole-dried-chillies/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/dried-chillies/whole-dried-chillies/#product",
+  "name": "Целый сушёный чили",
+  "description": "Целые высушенные стручки перца — 10 000–50 000+ SHU — классифицированные по размеру и влажности, для общепита, хот-пота и розничной упаковки, где чили должен оставаться видимым. Lantern, Jinta, facing-heaven и Xiaomi.",
+  "url": "https://drychillis.com/ru/products/dried-chillies/whole-dried-chillies/",
+  "sku": "TENDA-WHOLE-DRIED-CHILLIES",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Lantern pepper",
+    "value": "10,000 – 50,000 Шаньдун, Хэбэй Видимый целый чили"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Jinta",
+    "value": "10,000 – 20,000 Ганьсу Яркий цвет, средняя острота"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Facing-heaven",
+    "value": "20,000 – 50,000 Сычуань, Гуйчжоу Ароматный целый чили"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Xiaomi",
+    "value": "50,000 – 70,000 Юньнань, Гуйчжоу Высокоострый целый чили"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Целый сушёный чили | Tenda Peppers"
   description="Китайский производитель целого сушёного чили — Lantern, Jinta, facing-heaven и Xiaomi при 10 000–50 000+ SHU, классифицированный по размеру и влажности. ISO 9001 и HACCP."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -49,6 +88,7 @@ const faqJsonLd = {
       для общепита, хот-пота и розничной упаковки, где чили должен оставаться видимым. Lantern, Jinta,
       facing-heaven и Xiaomi.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("whole-dried-chillies", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое целый сушёный чили?</h2>
     <p>

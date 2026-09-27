@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("sanying-chilli", "https://drychillis.com/ru/products/sanying-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/sanying-chilli/#product",
+  "name": "Перец Sanying (Tianying)",
+  "description": "Классический высокоострый сушёный чили — кластерный перец facing-heaven при 20 000–50 000 SHU, выращиваемый в Хэнани и Хэбэе. Основа острых соусов, масла чили и снеков.",
+  "url": "https://drychillis.com/ru/products/sanying-chilli/",
+  "sku": "TENDA-SANYING-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Острота (SHU)",
+    "value": "20,000 – 50,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Регион",
+    "value": "Хэнань, Хэбэй"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Тип плода",
+    "value": "Кластерный facing-heaven"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Лучше всего для",
+    "value": "Острый соус, масло чили, снеки"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Перец Sanying (Tianying) — 20 000–50 000 SHU | Tenda Peppers"
   description="Перец Sanying (Tianying) — кластерный перец facing-heaven из Хэнани и Хэбэя при 20 000–50 000 SHU для острого соуса, масла чили и снеков. Китайский производитель."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Классический высокоострый сушёный чили — кластерный перец facing-heaven при 20 000–50 000 SHU,
       выращиваемый в Хэнани и Хэбэе. Основа острых соусов, масла чили и снеков.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("sanying-chilli", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое перец Sanying?</h2>
     <p>

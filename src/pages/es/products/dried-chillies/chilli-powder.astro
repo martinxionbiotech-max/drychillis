@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-powder", "https://drychillis.com/es/products/dried-chillies/chilli-powder/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/dried-chillies/chilli-powder/#product",
+  "name": "Chile en Polvo (60–80 Mesh)",
+  "description": "Chile seco molido fino — 60–80 mesh, 20.000–50.000 SHU — el caballo de batalla para salsas picantes, condimentos y alimentación industrial, molido de Sanying, Zidantou y Seven-Star.",
+  "url": "https://drychillis.com/es/products/dried-chillies/chilli-powder/",
+  "sku": "TENDA-CHILLI-POWDER",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-powder.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Sanying / Tianying",
+    "value": "20.000 – 50.000 Henan, Hebei Salsa picante, aceite de chile"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Zidantou (bala)",
+    "value": "20.000 – 50.000 Shandong, Anhui Salsa picante, industria"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Seven-Star",
+    "value": "20.000 – 50.000 Shandong, Shanxi Condimento de snacks, hot-pot"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Chile en Polvo (60–80 Mesh) | Tenda Peppers"
   description="Fabricante chino de chile en polvo — 60–80 mesh, 20.000–50.000 SHU, de Sanying, Zidantou y Seven-Star para salsa picante y condimentos."
   lang="es"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       Chile seco molido fino — 60–80 mesh, 20.000–50.000 SHU — el caballo de batalla para salsas
       picantes, condimentos y alimentación industrial, molido de Sanying, Zidantou y Seven-Star.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-powder", "es")}</p>
 
     <h2 style="margin-top:32px;">¿Qué es el chile en polvo?</h2>
     <p>

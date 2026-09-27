@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../../data/product-offers";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("chilli-segments", "https://drychillis.com/ar/products/dried-chillies/chilli-segments/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,44 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/dried-chillies/chilli-segments/#product",
+  "name": "شرائح الفلفل الحار (50,000+ SHU)",
+  "description": "قطع فلفل مجفف فائقة الحرارة — أكثر من 50,000 SHU — مقطوعة من جيشين وشياومي وتشيلي كينغ، لأطباق بأسلوب سيتشوان وزيت الفلفل وقواعد الهوت بوت حيث الحرارة المرئية هي الهدف.",
+  "url": "https://drychillis.com/ar/products/dried-chillies/chilli-segments/",
+  "sku": "TENDA-CHILLI-SEGMENTS",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-segments.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "جيشين",
+    "value": "50,000 – 70,000 قويتشو، هونان حرارة فائقة، زيت الفلفل"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "شياومي",
+    "value": "50,000 – 70,000 يونان، قويتشو قطع عالية الحرارة"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "تشيلي كينغ",
+    "value": "50,000 — توابل فائقة الحرارة"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="شرائح الفلفل الحار (50,000+ SHU) | Tenda Peppers"
   description="مصنع صيني لشرائح الفلفل الحار — قطع فائقة الحرارة تتجاوز 50,000 SHU من جيشين وشياومي وتشيلي كينغ لأطباق سيتشوان وزيت الفلفل. ISO 9001 وHACCP."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +82,7 @@ const faqJsonLd = {
       قطع فلفل مجفف فائقة الحرارة — أكثر من 50,000 SHU — مقطوعة من جيشين وشياومي وتشيلي كينغ،
       لأطباق بأسلوب سيتشوان وزيت الفلفل وقواعد الهوت بوت حيث الحرارة المرئية هي الهدف.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("chilli-segments", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هي شرائح الفلفل الحار؟</h2>
     <p>

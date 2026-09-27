@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("xiaomi-chilli", "https://drychillis.com/ar/products/xiaomi-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/xiaomi-chilli/#product",
+  "name": "فلفل شياومي",
+  "description": "فلفل صغير نحيل فائق الحرارة عند 50,000–70,000 SHU من يونان وقويتشو — يُستخدم للفلفل الكامل عالي الحرارة والشرائح وزيت الفلفل حيث يمنح قرن مدمج حرارة قوية.",
+  "url": "https://drychillis.com/ar/products/xiaomi-chilli/",
+  "sku": "TENDA-XIAOMI-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "الحرارة (SHU)",
+    "value": "50,000 – 70,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "المنطقة",
+    "value": "يونان، قويتشو"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "نوع الثمرة",
+    "value": "قرن صغير نحيل"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "الأفضل لـ",
+    "value": "فلفل كامل، شرائح، زيت الفلفل"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="فلفل شياومي — 50,000–70,000 SHU | Tenda Peppers"
   description="فلفل شياومي — فلفل صغير نحيل فائق الحرارة من يونان وقويتشو عند 50,000–70,000 SHU للفلفل الكامل والشرائح وزيت الفلفل. مصنع صيني."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       فلفل صغير نحيل فائق الحرارة عند 50,000–70,000 SHU من يونان وقويتشو — يُستخدم للفلفل الكامل
       عالي الحرارة والشرائح وزيت الفلفل حيث يمنح قرن مدمج حرارة قوية.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("xiaomi-chilli", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو فلفل شياومي؟</h2>
     <p>

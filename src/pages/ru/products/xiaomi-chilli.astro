@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("xiaomi-chilli", "https://drychillis.com/ru/products/xiaomi-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ru/products/xiaomi-chilli/#product",
+  "name": "Перец Xiaomi",
+  "description": "Маленький тонкий экстра-острый перец при 50 000–70 000 SHU из Юньнани и Гуйчжоу — используется для высокоострого целого чили, кусочков и масла чили, где компактный стручок даёт сильную остроту.",
+  "url": "https://drychillis.com/ru/products/xiaomi-chilli/",
+  "sku": "TENDA-XIAOMI-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "Острота (SHU)",
+    "value": "50,000 – 70,000"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Регион",
+    "value": "Юньнань, Гуйчжоу"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Тип плода",
+    "value": "Маленький тонкий стручок"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "Лучше всего для",
+    "value": "Целый чили, кусочки, масло чили"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="Перец Xiaomi — 50 000–70 000 SHU | Tenda Peppers"
   description="Перец Xiaomi — маленький тонкий экстра-острый перец из Юньнани и Гуйчжоу при 50 000–70 000 SHU для целого чили, кусочков и масла чили. Китайский производитель."
   lang="ru"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       Маленький тонкий экстра-острый перец при 50 000–70 000 SHU из Юньнани и Гуйчжоу — используется
       для высокоострого целого чили, кусочков и масла чили, где компактный стручок даёт сильную остроту.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("xiaomi-chilli", "ru")}</p>
 
     <h2 style="margin-top:32px;">Что такое перец Xiaomi?</h2>
     <p>

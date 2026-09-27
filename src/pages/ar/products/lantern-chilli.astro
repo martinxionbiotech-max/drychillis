@@ -1,5 +1,8 @@
 ---
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const productOffers = buildOffers("lantern-chilli", "https://drychillis.com/ar/products/lantern-chilli/");
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +34,49 @@ const faqJsonLd = {
     }
   ]
 };
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/lantern-chilli/#product",
+  "name": "فلفل الفانوس (دينغلونغجياو)",
+  "description": "فلفل كامل متوسط الحرارة بلون وعطر ونكهة متوازنة — المعيار للقدر الجاف والهوت بوت وخدمات الطعام حيث يجب أن يبقى الفلفل مرئيًا.",
+  "url": "https://drychillis.com/ar/products/lantern-chilli/",
+  "sku": "TENDA-LANTERN-CHILLI",
+  "category": "Spices and Seasonings",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+  {
+    "@type": "PropertyValue",
+    "name": "الحرارة (SHU)",
+    "value": "10,000 – 20,000 (متوسط)"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "المنطقة",
+    "value": "شاندونغ، خبي"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "نوع الثمرة",
+    "value": "قرن على شكل فانوس، نبات 1–1,2 م"
+  },
+  {
+    "@type": "PropertyValue",
+    "name": "الأفضل لـ",
+    "value": "القدر الجاف، الهوت بوت، فلفل كامل مرئي"
+  }
+]
+};
 ---
 
 <BaseLayout
   title="فلفل الفانوس (دينغلونغجياو) | Tenda Peppers"
   description="فلفل الفانوس (دينغلونغجياو) — فلفل كامل متوسط الحرارة بلون وعطر ونكهة متوازنة للقدر الجاف والهوت بوت وخدمات الطعام. مصنع صيني."
   lang="ar"
-  jsonLd={[faqJsonLd]}
+  jsonLd={[productJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
@@ -48,6 +87,7 @@ const faqJsonLd = {
       فلفل كامل متوسط الحرارة بلون وعطر ونكهة متوازنة — المعيار للقدر الجاف والهوت بوت وخدمات
       الطعام حيث يجب أن يبقى الفلفل مرئيًا.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("lantern-chilli", "ar")}</p>
 
     <h2 style="margin-top:32px;">ما هو فلفل الفانوس؟</h2>
     <p>
