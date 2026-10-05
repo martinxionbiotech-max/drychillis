@@ -4,12 +4,15 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/enrich-sitemap.mjs",
+    "build": "astro build && node scripts/enrich-sitemap.mjs && node scripts/generate-markdown.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "node-html-markdown": "^2.0.0"
   }
 }

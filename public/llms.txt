@@ -18,6 +18,14 @@
 - **Machine-readable data**:
   - [Products dataset](https://drychillis.com/data/products.json) · [ES](https://drychillis.com/data/products.es.json) · [AR](https://drychillis.com/data/products.ar.json) · [RU](https://drychillis.com/data/products.ru.json)
 
+## Markdown mirrors (for AI crawlers)
+
+Every page is also available as clean Markdown (no navigation, no boilerplate):
+
+- Full corpus (all pages, all languages): [llms-full.txt](https://drychillis.com/llms-full.txt)
+- Pattern: [https://drychillis.com/md/{path}.md](https://drychillis.com/md/products/paprika-powder.md) — e.g. /md/products/paprika-powder.md mirrors /products/paprika-powder/
+- Product dataset (JSON-LD): [products.json](https://drychillis.com/data/products.json)
+
 ## Pages
 
 ### Home & Company
