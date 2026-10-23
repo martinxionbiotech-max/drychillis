@@ -26,11 +26,42 @@ export const PRICE_RANGES: Record<string, OfferRange> = {
 
 export const PRICE_UNIT = "per metric ton (MT), FOB Qingdao";
 
+// 尚未取得业主定价的品种（xian-pepper / new-generation / seven-star / chilli-king / wangdu）。
+// 这些品种不能编价格：GSC 的「应指定 offers/review/aggregateRating」用**询单型 Offer**
+// 满足（有 offers 节点、无任何数字），页面也不输出可见价格行，保证 schema 与页面一致。
+export const INQUIRY_SLUGS = [
+  "xian-pepper",
+  "new-generation-chilli",
+  "seven-star-chilli",
+  "chilli-king",
+  "wangdu-chilli",
+];
+
 const SELLER = "https://drychillis.com/#organization";
 
 export function buildOffers(slug: string, url: string) {
   const r = PRICE_RANGES[slug];
-  if (!r) return null;
+  if (!r) {
+    // 无定价 → 询单型 Offer（无 lowPrice/highPrice/price/priceCurrency），
+    // 仅声明可询价与可售状态，绝不虚构价格。
+    if (INQUIRY_SLUGS.includes(slug)) {
+      return {
+        "@type": "Offer",
+        "@id": `${url}#offer`,
+        url,
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        businessFunction: "http://purl.org/goodrelations/v1#Sell",
+        seller: { "@id": SELLER },
+        potentialAction: {
+          "@type": "ContactAction",
+          name: "Request a quotation",
+          target: "https://drychillis.com/contact/",
+        },
+      };
+    }
+    return null;
+  }
   return {
     "@type": "AggregateOffer",
     "@id": `${url}#offer`,

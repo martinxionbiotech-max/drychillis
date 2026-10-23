@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers } from "../../../data/product-offers";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import AtAGlance from "../../../components/AtAGlance.astro";
 
@@ -21,18 +22,22 @@ const glanceFacts = [
   { label: "Certificaciones", value: "ISO 9001 y HACCP" },
 ];
 
+const productUrl = "https://drychillis.com/es/products/xian-pepper/";
+const productOffers = buildOffers("xian-pepper", productUrl);
+
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "@id": "https://drychillis.com/products/xian-pepper/#product",
+  "@id": "https://drychillis.com/es/products/xian-pepper/#product",
   "name": "Pimiento Xian",
   "description": "Pimiento Xian — chile de picor medio a 10.000–20.000 SHU de Mongolia Interior y Xinjiang, para chile en polvo, copos y condimentos. Fabricante chino, ISO 9001 y HACCP.",
   "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
-  "url": "https://drychillis.com/products/xian-pepper/",
+  "url": "https://drychillis.com/es/products/xian-pepper/",
   "sku": "TENDA-XIAN-PEPPER",
   "category": "Especias y Condimentos",
   "brand": { "@type": "Brand", "name": "Tenda Peppers" },
   "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Nivel de Picor (SHU)", "value": "10,000–20,000", "unitText": "SHU" },
     { "@type": "PropertyValue", "name": "Región", "value": "Mongolia Interior, Xinjiang" },
