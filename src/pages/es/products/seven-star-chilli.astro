@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { buildOffers } from "../../../data/product-offers";
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import AtAGlance from "../../../components/AtAGlance.astro";
 
@@ -91,6 +91,7 @@ const faqJsonLd = {
     <p class="lead">
       Un chile de alto picor a 20.000–50.000 SHU de Shandong y Shanxi — un caballo de batalla para condimentos de snacks y bases de olla caliente.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("seven-star-chilli", "es")}</p>
     <div class="takeaways">
       <strong>Respuesta breve:</strong> Seven-Star es un chile de alto picor (20.000–50.000 SHU) de Shandong y Shanxi, que suele molerse para condimentos de snacks y bases de olla caliente. Está en la misma banda que Sanying y Zidantou — la banda donde el picor define el producto sin ahogar los demás sabores.
     </div>

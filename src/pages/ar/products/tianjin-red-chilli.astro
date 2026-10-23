@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/ar/products/tianjin-red-chilli/";
+const productOffers = buildOffers("tianjin-red-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/tianjin-red-chilli/#product",
+  "name": "فلفل تيانجين الأحمر (朝天椒)",
+  "description": "فلفل «الناظر إلى السماء» (朝天椒) العنقودي، 30,000–50,000 وحدة سكوفيل — الفلفل الكامل والمسحوق عالي الحرارة للتصدير، يُشحن عبر ميناء تيانجين.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/ar/products/tianjin-red-chilli/",
+  "sku": "TENDA-TIANJIN-RED-CHILLI",
+  "category": "التوابل والبهارات",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "30,000 – 50,000" },
+    { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "قرن صغير عنقودي متجه إلى الأعلى" },
+    { "@type": "PropertyValue", "name": "المنطقة", "value": "شمال الصين؛ التجارة عبر تيانجين" },
+    { "@type": "PropertyValue", "name": "الأنسب لـ", "value": "الفلفل الكامل، المسحوق، الرقائق، القطع" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "ما هو فلفل تيانجين الأحمر / 朝天椒؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تيانجين الأحمر هو اسم التصدير لفلفل «الناظر إلى السماء» (朝天椒) العنقودي الذي يُشحن عبر تيانجين: أقرن صغيرة متجهة إلى الأعلى بنحو 30,000–50,000 SHU، وهو الفلفل الكامل والمسحوق عالي الحرارة الأكثر شيوعًا في التصدير." } },
+    { "@type": "Question", "name": "ما مدى حرارته؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "نحو 30,000–50,000 SHU — أعلى من النطاق المتوسط وأقل قليلًا من جيشين وشياومي (50,000–70,000). ولأن «الناظر إلى السماء» شكل لا صنف، تعتمد الحرارة الدقيقة على المنشأ." } },
+    { "@type": "Question", "name": "هل هو صنف أم شكل؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "شكل. «الناظر إلى السماء» (朝天椒) يصف أقرنًا عنقودية متجهة إلى الأعلى، لا صنفًا واحدًا. تتراوح الحرارة بين 30,000 و50,000+ SHU حسب المنشأ، لذا فطلب بلا منشأ ونطاق SHU غير مكتمل." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="فلفل تيانجين الأحمر (朝天椒) — 30,000–50,000 وحدة سكوفيل | Tenda Peppers"
+  description="تيانجين الأحمر / 朝天椒 — فلفل عنقودي 30,000–50,000 SHU للفلفل الكامل والمسحوق للتصدير. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/dried-chillies/">الفلفل المجفف</a> &rsaquo; تيانجين الأحمر
+    </nav>
+    <h1>فلفل تيانجين الأحمر (朝天椒)</h1>
+    <p class="lead">
+      فلفل «الناظر إلى السماء» (朝天椒) العنقودي بنحو 30,000–50,000 وحدة سكوفيل — الفلفل الكامل
+      والمسحوق عالي الحرارة الأكثر شيوعًا في التصدير، يُشحن عبر مركز تيانجين التجاري.
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("tianjin-red-chilli", "ar")}</p>
+
+    <h2 style="margin-top:32px;">ما هو فلفل تيانجين الأحمر؟</h2>
+    <p>
+      تيانجين الأحمر هو الاسم الذي يستخدمه المصدرون لفلفل «الناظر إلى السماء» (朝天椒) المتداول عبر
+      تيانجين، أحد أكبر موانئ تجميع وتصدير الفلفل في الصين. الأقرن صغيرة وعنقودية وتنمو متجهة إلى
+      الأعلى — وهي السمة التي أعطت المجموعة اسمها. الحرارة عند نحو 30,000–50,000 SHU: أعلى من النطاق
+      المتوسط وأقل قليلًا من جيشين وشياومي.
+    </p>
+    <table>
+      <thead><tr><th>الخاصية</th><th>التفصيل</th></tr></thead>
+      <tbody>
+        <tr><td><strong>الحرارة (SHU)</strong></td><td>30,000 – 50,000</td></tr>
+        <tr><td><strong>نوع الثمرة</strong></td><td>قرن صغير عنقودي متجه إلى الأعلى</td></tr>
+        <tr><td><strong>المنطقة</strong></td><td>شمال الصين؛ التجارة عبر تيانجين</td></tr>
+        <tr><td><strong>الأنسب لـ</strong></td><td>الفلفل الكامل، المسحوق، الرقائق، القطع</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      قيمة SHU نطاق تمثيلي؛ ولأن «الناظر إلى السماء» شكل لا صنف، تعتمد القيمة الدقيقة على المنشأ.
+      أكِّد النطاق المستهدف معنا.
+    </p>
+
+    <h2 style="margin-top:32px;">فيمَ يُستخدم تيانجين الأحمر؟</h2>
+    <ul>
+      <li>الفلفل المجفف الكامل للمطاعم والتجزئة</li>
+      <li>مسحوق ورقائق الفلفل للبهارات</li>
+      <li>قطع الفلفل للحساء واليخنات</li>
+      <li>قواعد الصلصة الحارة وزيت الفلفل</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">«الناظر إلى السماء» شكل لا مستوى حرارة</h2>
+    <p>
+      هذه هي النقطة التي يفوّتها معظم المشترين. «الناظر إلى السماء» (朝天椒) يصف <strong>شكل
+      القرن</strong> — أقرنًا عنقودية تتجه إلى الأعلى عند النضج — لا صنفًا نباتيًا بحرارة ثابتة. وبحسب
+      المنشأ يمتد من نحو 30,000 إلى أكثر من 50,000 SHU. لذا فطلب «فلفل ناظر إلى السماء» بلا منشأ
+      ونطاق SHU طلب ناقص المواصفات.
+    </p>
+
+    <h2 style="margin-top:32px;">تيانجين الأحمر مقابل سانيينغ مقابل زِدانتو</h2>
+    <table>
+      <thead><tr><th>المنتج</th><th>SHU</th><th>ماذا يثبّت</th></tr></thead>
+      <tbody>
+        <tr><td><strong>تيانجين الأحمر / الناظر إلى السماء</strong></td><td>30,000 – 50,000</td><td>الشكل + نطاق الحرارة (تسمية تجارية)</td></tr>
+        <tr><td><strong>سانيينغ (تيانيينغ)</strong></td><td>20,000 – 50,000</td><td>صنف مسمّى (خنان/خبي)</td></tr>
+        <tr><td><strong>زِدانتو</strong></td><td>20,000 – 50,000</td><td>صنف مسمّى، لحم سميك للمسحوق</td></tr>
+      </tbody>
+    </table>
+    <p>
+      استخدم صنفًا مسمّى (سانيينغ أو زِدانتو) عندما تحتاج إلى ملف قابل للتكرار من دفعة إلى دفعة.
+      واستخدم «تيانجين الأحمر / الناظر إلى السماء» عندما تريد فئة عامة عالية الحرارة تضبطها بعد ذلك
+      بالمنشأ ونطاق SHU.
+    </p>
+
+    <h2 style="margin-top:32px;">كيف تحدد مواصفات تيانجين الأحمر</h2>
+    <p>
+      حدِّد الشكل (كامل أو مسحوق أو رقائق أو قطع)، ونطاق SHU المستهدف، والمنشأ إن عُرف، وحجم الشبكة
+      (للمسحوق 60–80 قياسيًا)، والرطوبة (أقل من 13%). ولأن التسمية واسعة، فنطاق SHU هو ما يثبّت
+      المنتج فعليًا.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هو فلفل تيانجين الأحمر / 朝天椒؟</h3>
+      <p>اسم تصدير لفلفل «الناظر إلى السماء» العنقودي الذي يُشحن عبر تيانجين: أقرن صغيرة متجهة إلى الأعلى بنحو 30,000–50,000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارته؟</h3>
+      <p>نحو 30,000–50,000 SHU — أعلى من النطاق المتوسط وأقل قليلًا من جيشين وشياومي (50,000–70,000).</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل هو صنف أم شكل؟</h3>
+      <p>شكل: «الناظر إلى السماء» يصف أقرنًا عنقودية متجهة إلى الأعلى، لا صنفًا واحدًا. طلب بلا منشأ ونطاق SHU غير مكتمل.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر تيانجين الأحمر</a>
+      <a class="cta cta-outline" href="/ar/products/dried-chillies/" style="margin-left:8px;">الفلفل المجفف →</a>
+    </div>
+  </div>
+</BaseLayout>

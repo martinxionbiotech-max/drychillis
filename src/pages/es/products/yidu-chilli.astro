@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/es/products/yidu-chilli/";
+const productOffers = buildOffers("yidu-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/yidu-chilli/#product",
+  "name": "Chile Yidu Red (益都红)",
+  "description": "Yidu red (益都红) — pimiento dulce de pulpa gruesa y picor bajo de Shandong y Xinjiang, para pimentón y colorante rojo natural.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/es/products/yidu-chilli/",
+  "sku": "TENDA-YIDU-RED-CHILLI",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de picor (SHU)", "value": "<1.000 (dulce) – <10.000" },
+    { "@type": "PropertyValue", "name": "Tipo de fruto", "value": "Pulpa gruesa, alta producción de color" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Shandong (Yidu/Qingzhou) y Xinjiang" },
+    { "@type": "PropertyValue", "name": "Ideal para", "value": "Pimentón, colorante natural, oleorresina (E160c)" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es el chile Yidu Red?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yidu red (益都红) es un pimiento de picor bajo y pulpa gruesa de Shandong y Xinjiang, cultivado como materia prima de pimentón por su rendimiento de color (ASTA): el picor está por debajo de 10.000 SHU y suele ser casi dulce." } },
+    { "@type": "Question", "name": "¿Qué tan picante es el Yidu Red?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prácticamente no pica: por debajo de 1.000 SHU en el rango dulce y nunca cerca del techo de 10.000 SHU, incluso en selecciones más picantes. Se compra por color, no por picor." } },
+    { "@type": "Question", "name": "¿Para qué se usa el Yidu Red?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se muele para pimentón de picor bajo, colorante rojo natural, mezclas de especias y extracción de oleorresina de pimentón (E160c). Su pulpa gruesa da un alto rendimiento de color por kilo." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Yidu Red (益都红) — Pimiento de Color de Picor Bajo | Tenda Peppers"
+  description="Yidu red (益都红) — pimiento dulce de pulpa gruesa y picor bajo de Shandong y Xinjiang para pimentón y colorante rojo natural. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/paprika-powder/">Pimentón</a> &rsaquo; Yidu Red
+    </nav>
+    <h1>Chile Yidu Red (益都红)</h1>
+    <p class="lead">
+      Un pimiento dulce de pulpa gruesa cultivado por su color — molido en pimentón de picor bajo para
+      colorante rojo natural, mezclas de especias y extracción de oleorresina de pimentón (E160c).
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("yidu-chilli", "es")}</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Yidu Red?</h2>
+    <p>
+      Yidu red es un pimiento de picor bajo y pulpa gruesa tradicionalmente asociado a la zona de Yidu
+      (Qingzhou), en Shandong, y hoy también cultivado en la franja de pimientos de color de Xinjiang.
+      Es una materia prima de pimentón: se cultiva y se muele por su color rojo, no por su picor. En la
+      escala de picor está en el extremo inferior — por debajo de 10.000 SHU y, en el rango dulce, por
+      debajo de 1.000 SHU.
+    </p>
+    <table>
+      <thead><tr><th>Propiedad</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>&lt;1.000 (dulce) – &lt;10.000</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Pulpa gruesa, alta producción de color</td></tr>
+        <tr><td><strong>Región</strong></td><td>Shandong (Yidu/Qingzhou) y Xinjiang</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Pimentón, colorante natural, oleorresina (E160c)</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Un valor ASTA único para el pimiento fresco no es fijo: el del polvo terminado depende de la
+      selección, el despepitado y la molienda. Confirme su ventana ASTA objetivo con nosotros.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el Yidu Red?</h2>
+    <ul>
+      <li>Pimentón de picor bajo</li>
+      <li>Colorante rojo natural en condimentos y alimentos procesados</li>
+      <li>Mezclas de especias y adobos donde importa el color y el picor debe ser bajo</li>
+      <li>Extracción de oleorresina de pimentón (colorante E160c)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Yidu Red vs pimiento dulce de Xinjiang vs Wangdu</h2>
+    <table>
+      <thead><tr><th>Variedad</th><th>Picor</th><th>Papel de color</th><th>Ideal para</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Pimiento dulce de Xinjiang</strong></td><td>&lt;500 SHU</td><td>Color de referencia, picor casi nulo</td><td>Color puro, pimentón dulce</td></tr>
+        <tr><td><strong>Yidu Red</strong></td><td>&lt;1.000 (hasta &lt;10.000)</td><td>Color alto, pulpa gruesa, cuerpo lleno</td><td>Pimentón de picor bajo con aroma</td></tr>
+        <tr><td><strong>Wangdu</strong></td><td>&lt;10.000</td><td>Color con calidez suave</td><td>Mezclas de pimentón de picor bajo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Lo que la mayoría de guías omite</h2>
+    <p>
+      La mayoría de guías llaman al Yidu red «un pimiento dulce» y se detienen ahí. Lo que omiten es la
+      economía: el Yidu red se compra por su <strong>rendimiento de color por kilo</strong> y, al ser de
+      pulpa gruesa, ese rendimiento puede variar hasta el doble entre calidades y selecciones. Dos lotes
+      de «Yidu red» pueden verse igual de rojos y diferir mucho en cuánto colorean un peso dado. Por eso
+      el pedido correcto fija un valor ASTA objetivo y una malla.
+    </p>
+
+    <h2 style="margin-top:32px;">Cómo especificar el Yidu Red</h2>
+    <p>
+      Indique la variedad y después la forma final (el pimentón es el estándar), el valor de color ASTA
+      objetivo, la malla (60–80 estándar) y la humedad (por debajo del 13%). El picor no es un problema
+      en este extremo de la escala: concentre el esfuerzo de la especificación en color y tamaño de
+      partícula.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Yidu Red?</h3>
+      <p>Yidu red (益都红) es un pimiento de picor bajo y pulpa gruesa de Shandong y Xinjiang, cultivado como materia prima de pimentón por su rendimiento de color (ASTA).</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el Yidu Red?</h3>
+      <p>Prácticamente no pica: por debajo de 1.000 SHU en el rango dulce y nunca cerca del techo de 10.000 SHU. Se compra por color, no por picor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el Yidu Red?</h3>
+      <p>Se muele para pimentón de picor bajo, colorante rojo natural, mezclas de especias y extracción de oleorresina de pimentón (E160c).</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Yidu Red</a>
+      <a class="cta cta-outline" href="/es/products/paprika-powder/" style="margin-left:8px;">Pimentón →</a>
+    </div>
+  </div>
+</BaseLayout>

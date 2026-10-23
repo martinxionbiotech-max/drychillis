@@ -22,6 +22,12 @@ export const PRICE_RANGES: Record<string, OfferRange> = {
   "lantern-chilli": { low: 1500, high: 1700 },
   "xiaomi-chilli": { low: 1500, high: 1700 },
   "zidantou-chilli": { low: 1500, high: 1700 },
+  // 2026-10-21 业主给定：以下 5 个品种统一 USD 1200–1800 / 公吨 FOB 青岛
+  "xian-pepper": { low: 1200, high: 1800 },
+  "new-generation-chilli": { low: 1200, high: 1800 },
+  "seven-star-chilli": { low: 1200, high: 1800 },
+  "chilli-king": { low: 1200, high: 1800 },
+  "wangdu-chilli": { low: 1200, high: 1800 },
 };
 
 export const PRICE_UNIT = "per metric ton (MT), FOB Qingdao";

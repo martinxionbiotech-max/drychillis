@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { buildOffers } from "../../../data/product-offers";
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import AtAGlance from "../../../components/AtAGlance.astro";
 
@@ -91,6 +91,7 @@ const faqJsonLd = {
     <p class="lead">
       فلفل منخفض الحرارة تحت 10,000 SHU من شاندونغ وخبي — يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون الطبيعي.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("wangdu-chilli", "ar")}</p>
     <div class="takeaways">
       <strong>الإجابة المختصرة:</strong> وانغدو فلفل منخفض الحرارة (تحت 10,000 SHU) من شاندونغ وخبي، يُستخدم مع ييدو الأحمر لبابريكا منخفضة الحرارة واللون. إنه صنف يركّز على اللون — يُشترى وفق ASTA وليس وفق الحرارة.
     </div>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/ar/products/erjingtiao-chilli/";
+const productOffers = buildOffers("erjingtiao-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/erjingtiao-chilli/#product",
+  "name": "فلفل إرجينغتياو (إر جينغ تياو)",
+  "description": "فلفل سيتشواني رفيع وعطري، 15,000–30,000 وحدة سكوفيل — العمود الفقري لنكهة الهوت بوت وزيت الفلفل والدوبانجيانغ.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/ar/products/erjingtiao-chilli/",
+  "sku": "TENDA-ERJINGTIAO-CHILLI",
+  "category": "التوابل والبهارات",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "15,000 – 30,000 (متوسط إلى مرتفع)" },
+    { "@type": "PropertyValue", "name": "المنطقة", "value": "سيتشوان (سهل تشنغدو)" },
+    { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "قرن رفيع مجعّد رقيق اللحم" },
+    { "@type": "PropertyValue", "name": "الأنسب لـ", "value": "الهوت بوت، الدوبانجيانغ، زيت الفلفل، المعجون" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "ما هو فلفل إرجينغتياو؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "إرجينغتياو (二荆条) فلفل سيتشواني رفيع وعطري بنحو 15,000–30,000 وحدة سكوفيل — العمود الفقري لنكهة الهوت بوت وزيت الفلفل والدوبانجيانغ. يُشترى من أجل عطره أكثر من حرارته." } },
+    { "@type": "Question", "name": "ما مدى حرارة إرجينغتياو؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يقع في أعلى النطاق المتوسط، نحو 15,000–30,000 SHU — أي أكثر حرارة من البابريكا الحلوة بنحو 15–30 مرة، وأقل من سانيينغ وزِدانتو. تتفاوت الحرارة حسب منطقة الزراعة، لذا يُستحسن تأكيد النطاق." } },
+    { "@type": "Question", "name": "فيمَ يُستخدم إرجينغتياو؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "هو الكلاسيكي في المطبخ السيتشواني: قاعدة الهوت بوت، والدوبانجيانغ (معجون الفول المخمر)، وزيت الفلفل، ومعجون الفلفل المخمر. العبرة بعطره لا بحرارته، ولهذا يُستخدم كاملًا أو مسحوقًا خشنًا." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="فلفل إرجينغتياو — 15,000–30,000 وحدة سكوفيل | Tenda Peppers"
+  description="إرجينغتياو (二荆条) — فلفل سيتشواني عطري، 15,000–30,000 SHU، للهوت بوت والدوبانجيانغ وزيت الفلفل. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/dried-chillies/">الفلفل المجفف</a> &rsaquo; إرجينغتياو
+    </nav>
+    <h1>فلفل إرجينغتياو</h1>
+    <p class="lead">
+      فلفل سيتشواني رفيع وعطري بنحو 15,000–30,000 وحدة سكوفيل — العمود الفقري لنكهة الهوت بوت
+      وزيت الفلفل والدوبانجيانغ. يُشترى من أجل عطره أكثر من حرارته.
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("erjingtiao-chilli", "ar")}</p>
+
+    <h2 style="margin-top:32px;">ما هو فلفل إرجينغتياو؟</h2>
+    <p>
+      إرجينغتياو فلفل سيتشواني رفيع ومجعّد، ويُترجَم اسمه تقريبًا إلى «شريط الشوكتين» بسبب شكل القرن
+      المدبب. يقع عند نحو 15,000–30,000 SHU — أعلى النطاق المتوسط — ويُزرع في حوض سيتشوان كله.
+      وخلافًا لأصناف اللون (جينتا) أو أصناف الحرارة (سانيينغ، جيشين)، يُختار إرجينغتياو من أجل
+      <strong>العطر</strong>.
+    </p>
+    <table>
+      <thead><tr><th>الخاصية</th><th>التفصيل</th></tr></thead>
+      <tbody>
+        <tr><td><strong>الحرارة (SHU)</strong></td><td>15,000 – 30,000 (متوسط إلى مرتفع)</td></tr>
+        <tr><td><strong>المنطقة</strong></td><td>سيتشوان (سهل تشنغدو)</td></tr>
+        <tr><td><strong>نوع الثمرة</strong></td><td>قرن رفيع مجعّد رقيق اللحم</td></tr>
+        <tr><td><strong>الأنسب لـ</strong></td><td>الهوت بوت، الدوبانجيانغ، زيت الفلفل، المعجون</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      قيمة SHU نطاق تمثيلي (ثقة متوسطة) وتتفاوت حسب منطقة الزراعة في سيتشوان. أكِّد النطاق المستهدف معنا.
+    </p>
+
+    <h2 style="margin-top:32px;">فيمَ يُستخدم إرجينغتياو؟</h2>
+    <ul>
+      <li>قاعدة الهوت بوت وحساء المالا</li>
+      <li>الدوبانجيانغ (معجون الفول المخمر)</li>
+      <li>زيت الفلفل والزيوت المنقوعة</li>
+      <li>معجون الفلفل المخمر والبهارات</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">لماذا يذهب العطر في المسحوق الناعم</h2>
+    <p>
+      عطر إرجينغتياو يأتي من لحم رفيع ونسبة سطح إلى حجم عالية: الهندسة نفسها التي تجعله عطريًا تجعله
+      هشًا. الطحن إلى مسحوق ناعم يعرّض سطحًا عطريًا أكبر للهواء، فيتلاشى العطر المتطاير أسرع من صنف
+      سميك اللحم. لهذا يُستخدم إرجينغتياو تقليديًا <strong>كاملًا أو مسحوقًا خشنًا</strong>: سحق
+      20–40 شبكة يحفظ العطر أطول بكثير من مسحوق 80 شبكة.
+    </p>
+
+    <h2 style="margin-top:32px;">إرجينغتياو مقابل جينتا مقابل شيان</h2>
+    <table>
+      <thead><tr><th>الصنف</th><th>SHU</th><th>يُشترى من أجل</th><th>أفضل شكل</th></tr></thead>
+      <tbody>
+        <tr><td><strong>إرجينغتياو</strong></td><td>15,000 – 30,000</td><td>العطر والرائحة</td><td>كامل، سحق خشن، معجون</td></tr>
+        <tr><td><strong>جينتا</strong></td><td>10,000 – 20,000</td><td>اللون والمظهر اللامع</td><td>رقائق ظاهرة</td></tr>
+        <tr><td><strong>شيان</strong></td><td>10,000 – 20,000</td><td>أحمر داكن متعدد الاستخدام</td><td>مسحوق، صلصة</td></tr>
+      </tbody>
+    </table>
+    <p>
+      قاعدة القرار: احكم بما يُقيَّم به المنتج النهائي. إن كان التقييم على الرائحة — قاعدة هوت بوت أو
+      دوبانجيانغ — يفوز إرجينغتياو. وإن كان على شكل الرقيقة، يفوز جينتا. وإن احتجت مسحوقًا أحمر
+      متعدد الاستخدامات، فشيان هو الوسط.
+    </p>
+
+    <h2 style="margin-top:32px;">كيف تحدد مواصفات إرجينغتياو</h2>
+    <p>
+      حدِّد الصنف، والشكل (كامل أو سحق خشن أو درجة المعجون)، ونطاق SHU المستهدف، وحجم الشبكة. في
+      التطبيقات الحساسة للعطر، فضِّل الكامل أو سحق 20–40 شبكة، وأكِّد رطوبة أقل من 13%. وإن كان المنتج
+      مسحوقًا ناعمًا فأخبرنا — سنشير عليك بخلطات تحفظ الحرارة والعطر معًا.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هو فلفل إرجينغتياو؟</h3>
+      <p>إرجينغتياو (二荆条) فلفل سيتشواني رفيع وعطري بنحو 15,000–30,000 SHU — العمود الفقري لنكهة الهوت بوت وزيت الفلفل والدوبانجيانغ.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة إرجينغتياو؟</h3>
+      <p>نحو 15,000–30,000 SHU — أعلى النطاق المتوسط، وأكثر حرارة من البابريكا الحلوة بنحو 15–30 مرة، وأقل من سانيينغ وزِدانتو.</p>
+    </div>
+    <div class="faq-item">
+      <h3>فيمَ يُستخدم إرجينغتياو؟</h3>
+      <p>في المطبخ السيتشواني: قاعدة الهوت بوت، والدوبانجيانغ، وزيت الفلفل، ومعجون الفلفل المخمر. العبرة بعطره لا بحرارته.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر إرجينغتياو</a>
+      <a class="cta cta-outline" href="/ar/products/dried-chillies/" style="margin-left:8px;">الفلفل المجفف →</a>
+    </div>
+  </div>
+</BaseLayout>

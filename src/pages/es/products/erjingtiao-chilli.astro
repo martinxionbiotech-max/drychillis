@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/es/products/erjingtiao-chilli/";
+const productOffers = buildOffers("erjingtiao-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/erjingtiao-chilli/#product",
+  "name": "Chile Erjingtiao",
+  "description": "Chile de Sichuan delgado y aromático, 15.000–30.000 SHU — la base de sabor del hotpot, el aceite de chile y el doubanjiang.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/es/products/erjingtiao-chilli/",
+  "sku": "TENDA-ERJINGTIAO-CHILLI",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de picor (SHU)", "value": "15.000 – 30.000 (medio-alto)" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Sichuan (llanura de Chengdu)" },
+    { "@type": "PropertyValue", "name": "Tipo de fruto", "value": "Vaina delgada, arrugada y de pulpa fina" },
+    { "@type": "PropertyValue", "name": "Ideal para", "value": "Hotpot, doubanjiang, aceite de chile, pasta" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es el chile Erjingtiao?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El Erjingtiao (二荆条) es un chile de Sichuan delgado y aromático, de unos 15.000–30.000 SHU — la base de sabor del hotpot, el aceite de chile y el doubanjiang. Se compra por su aroma más que por su picor." } },
+    { "@type": "Question", "name": "¿Qué tan picante es el Erjingtiao?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Está en la parte alta del rango medio, unos 15.000–30.000 SHU: unas 15–30 veces más picante que el pimentón dulce y por debajo de Sanying y Zidantou. El picor varía según la zona de cultivo, así que conviene confirmar el rango." } },
+    { "@type": "Question", "name": "¿Para qué se usa el Erjingtiao?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es el clásico de la cocina de Sichuan: base de hotpot, doubanjiang (pasta de habas fermentadas), aceite de chile y pasta de chile fermentada. Lo que importa es su aroma, no su picor, por eso se usa entero o triturado grueso." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Erjingtiao — 15.000–30.000 SHU | Tenda Peppers"
+  description="Erjingtiao (二荆条) — chile aromático de Sichuan, 15.000–30.000 SHU, para hotpot, doubanjiang y aceite de chile. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Erjingtiao
+    </nav>
+    <h1>Chile Erjingtiao</h1>
+    <p class="lead">
+      Un chile de Sichuan delgado y aromático, de unos 15.000–30.000 SHU — la base de sabor del
+      hotpot, el aceite de chile y el doubanjiang. Se compra por su fragancia más que por su picor.
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("erjingtiao-chilli", "es")}</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Erjingtiao?</h2>
+    <p>
+      El Erjingtiao es un chile de Sichuan delgado y arrugado — su nombre se traduce aproximadamente
+      como «tira de dos espinas», por la forma afilada de la vaina. Se sitúa en unos 15.000–30.000 SHU,
+      en la parte alta del rango medio, y se cultiva en toda la cuenca de Sichuan. A diferencia de las
+      variedades de color (Jinta) o de picor (Sanying, Jixin), el Erjingtiao se elige por su
+      <strong>aroma</strong>.
+    </p>
+    <table>
+      <thead><tr><th>Propiedad</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>15.000 – 30.000 (medio-alto)</td></tr>
+        <tr><td><strong>Región</strong></td><td>Sichuan (llanura de Chengdu)</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina delgada, arrugada y de pulpa fina</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Hotpot, doubanjiang, aceite de chile, pasta</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      El SHU es un rango representativo (confianza MEDIA) y varía según la zona de cultivo de Sichuan.
+      Confirme su rango objetivo con nosotros.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el Erjingtiao?</h2>
+    <ul>
+      <li>Base de hotpot y de sopa mala</li>
+      <li>Doubanjiang (pasta de habas fermentadas)</li>
+      <li>Aceite de chile y aceites infusionados</li>
+      <li>Pasta de chile fermentada y condimentos</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Por qué el aroma se pierde en el polvo fino</h2>
+    <p>
+      La fragancia del Erjingtiao viene de una pulpa fina y de una alta relación superficie/volumen:
+      la misma geometría que lo hace aromático lo hace frágil. Molerlo a polvo fino expone más
+      superficie aromática al aire, así que la fragancia volátil se pierde antes que en una variedad
+      de pulpa gruesa. Por eso el Erjingtiao se usa tradicionalmente <strong>entero o triturado
+      grueso</strong>: un triturado de 20–40 mesh conserva el aroma mucho más que un polvo de 80 mesh.
+    </p>
+
+    <h2 style="margin-top:32px;">Erjingtiao vs Jinta vs Xian</h2>
+    <table>
+      <thead><tr><th>Variedad</th><th>SHU</th><th>Se compra por</th><th>Mejor forma</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Erjingtiao</strong></td><td>15.000 – 30.000</td><td>Aroma, fragancia</td><td>Entero, triturado grueso, pasta</td></tr>
+        <tr><td><strong>Jinta</strong></td><td>10.000 – 20.000</td><td>Color, aspecto brillante</td><td>Escamas visibles</td></tr>
+        <tr><td><strong>Xian</strong></td><td>10.000 – 20.000</td><td>Rojo oscuro versátil</td><td>Polvo, salsa</td></tr>
+      </tbody>
+    </table>
+    <p>
+      La regla de decisión: juzgue aquello con lo que se evalúa el producto final. Si se evalúa por la
+      fragancia — una base de hotpot o un doubanjiang — gana el Erjingtiao. Si se evalúa por el aspecto
+      de la escama, gana el Jinta. Si necesita un polvo rojo polivalente, el Xian es el término medio.
+    </p>
+
+    <h2 style="margin-top:32px;">Cómo especificar el Erjingtiao</h2>
+    <p>
+      Indique la variedad, la forma (entero, triturado grueso o para pasta), el rango SHU objetivo y la
+      malla. Para aplicaciones sensibles al aroma, prefiera entero o triturado de 20–40 mesh y confirme
+      una humedad inferior al 13%. Si el producto es un polvo fino, díganoslo: le asesoraremos sobre
+      mezclas que mantengan picor y fragancia.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Erjingtiao?</h3>
+      <p>El Erjingtiao (二荆条) es un chile de Sichuan delgado y aromático, de unos 15.000–30.000 SHU — la base de sabor del hotpot, el aceite de chile y el doubanjiang. Se compra por su aroma más que por su picor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es el Erjingtiao?</h3>
+      <p>Está en la parte alta del rango medio, unos 15.000–30.000 SHU — unas 15–30 veces más picante que el pimentón dulce y por debajo de Sanying y Zidantou.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Para qué se usa el Erjingtiao?</h3>
+      <p>Es el clásico de la cocina de Sichuan: base de hotpot, doubanjiang, aceite de chile y pasta de chile fermentada. Lo que importa es su aroma, no su picor, por eso se usa entero o triturado grueso.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Erjingtiao</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>

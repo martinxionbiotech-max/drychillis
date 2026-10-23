@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/ar/products/yidu-chilli/";
+const productOffers = buildOffers("yidu-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/ar/products/yidu-chilli/#product",
+  "name": "فلفل يدو الأحمر (益都红)",
+  "description": "يدو الأحمر (益都红) — فلفل حلو سميك اللحم منخفض الحرارة من شاندونغ وشينجيانغ، للبابريكا واللون الأحمر الطبيعي.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/ar/products/yidu-chilli/",
+  "sku": "TENDA-YIDU-RED-CHILLI",
+  "category": "التوابل والبهارات",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "مستوى الحرارة (SHU)", "value": "أقل من 1,000 (حلو) – أقل من 10,000" },
+    { "@type": "PropertyValue", "name": "نوع الثمرة", "value": "لحم سميك، إنتاجية لون عالية" },
+    { "@type": "PropertyValue", "name": "المنطقة", "value": "شاندونغ (يدو/تشينغتشو) وشينجيانغ" },
+    { "@type": "PropertyValue", "name": "الأنسب لـ", "value": "البابريكا، اللون الطبيعي، الأوليوريزين (E160c)" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "ما هو فلفل يدو الأحمر؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يدو الأحمر (益都红) فلفل منخفض الحرارة سميك اللحم من شاندونغ وشينجيانغ، يُزرع كمادة خام للبابريكا من أجل إنتاجية اللون (ASTA): الحرارة أقل من 10,000 SHU وغالبًا قريبة من الحلوة." } },
+    { "@type": "Question", "name": "ما مدى حرارة يدو الأحمر؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "لا يكاد يكون حارًا: أقل من 1,000 SHU في النطاق الحلو، ولا يقترب من سقف 10,000 SHU حتى في الاختيارات الأكثر حرارة. يُشترى من أجل اللون لا الحرارة." } },
+    { "@type": "Question", "name": "فيمَ يُستخدم يدو الأحمر؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يُطحن إلى بابريكا منخفضة الحرارة، وملون أحمر طبيعي، وخلطات بهارات، واستخلاص الأوليوريزين (E160c). لحمه السميك يعطي إنتاجية لون عالية لكل كيلوغرام." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="فلفل يدو الأحمر (益都红) — فلفل لون منخفض الحرارة | Tenda Peppers"
+  description="يدو الأحمر (益都红) — فلفل حلو سميك اللحم منخفض الحرارة من شاندونغ وشينجيانغ للبابريكا واللون الأحمر الطبيعي. مصنع صيني، ISO 9001 وHACCP."
+  lang="ar"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/ar/">الرئيسية</a> &rsaquo; <a href="/ar/products/paprika-powder/">البابريكا</a> &rsaquo; يدو الأحمر
+    </nav>
+    <h1>فلفل يدو الأحمر (益都红)</h1>
+    <p class="lead">
+      فلفل حلو سميك اللحم يُزرع من أجل لونه — يُطحن إلى بابريكا منخفضة الحرارة للون الأحمر الطبيعي
+      وخلطات البهارات واستخلاص الأوليوريزين (E160c).
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("yidu-chilli", "ar")}</p>
+
+    <h2 style="margin-top:32px;">ما هو فلفل يدو الأحمر؟</h2>
+    <p>
+      يدو الأحمر فلفل منخفض الحرارة سميك اللحم يُنسب تقليديًا إلى منطقة يدو (تشينغتشو) في شاندونغ،
+      ويُزرع اليوم أيضًا في حزام فلفل اللون في شينجيانغ. إنه مادة خام للبابريكا: يُزرع ويُطحن من أجل
+      لونه الأحمر لا من أجل حرارته. على مقياس الحرارة يقع في الأسفل — أقل من 10,000 SHU، وفي النطاق
+      الحلو أقل من 1,000 SHU.
+    </p>
+    <table>
+      <thead><tr><th>الخاصية</th><th>التفصيل</th></tr></thead>
+      <tbody>
+        <tr><td><strong>الحرارة (SHU)</strong></td><td>أقل من 1,000 (حلو) – أقل من 10,000</td></tr>
+        <tr><td><strong>نوع الثمرة</strong></td><td>لحم سميك، إنتاجية لون عالية</td></tr>
+        <tr><td><strong>المنطقة</strong></td><td>شاندونغ (يدو/تشينغتشو) وشينجيانغ</td></tr>
+        <tr><td><strong>الأنسب لـ</strong></td><td>البابريكا، اللون الطبيعي، الأوليوريزين (E160c)</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      قيمة ASTA الواحدة للفلفل الطازج غير ثابتة: قيمة المسحوق النهائي تعتمد على الاختيار ونزع البذور
+      والطحن. أكِّد نطاق ASTA المستهدف معنا بدلًا من افتراض رقم.
+    </p>
+
+    <h2 style="margin-top:32px;">فيمَ يُستخدم يدو الأحمر؟</h2>
+    <ul>
+      <li>بابريكا منخفضة الحرارة</li>
+      <li>ملون أحمر طبيعي في البهارات والأغذية المصنّعة</li>
+      <li>خلطات بهارات وتتبيلات يهم فيها اللون ويجب أن تبقى الحرارة منخفضة</li>
+      <li>استخلاص أوليوريزين البابريكا (الملون E160c)</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">يدو الأحمر مقابل الفلفل الحلو الشينجيانغي مقابل وانغدو</h2>
+    <table>
+      <thead><tr><th>الصنف</th><th>الحرارة</th><th>دور اللون</th><th>الأنسب لـ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>الفلفل الحلو الشينجيانغي</strong></td><td>أقل من 500 SHU</td><td>مرجع اللون، حرارة شبه معدومة</td><td>لون نقي، بابريكا حلوة</td></tr>
+        <tr><td><strong>يدو الأحمر</strong></td><td>أقل من 1,000 (حتى أقل من 10,000)</td><td>لون عالٍ، لحم سميك، جسم ممتلئ</td><td>بابريكا منخفضة الحرارة بعطر</td></tr>
+        <tr><td><strong>وانغدو</strong></td><td>أقل من 10,000</td><td>لون مع دفء خفيف</td><td>خلطات بابريكا منخفضة الحرارة</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">ما تغفله معظم الأدلة</h2>
+    <p>
+      معظم الأدلة تسمي يدو الأحمر «فلفلًا حلوًا» وتتوقف. ما تغفله هو الاقتصاد: يدو الأحمر يُشترى من
+      أجل <strong>إنتاجية اللون لكل كيلوغرام</strong>، ولأن لحمه سميك فقد تختلف هذه الإنتاجية إلى
+      الضعف بين الدرجات والاختيارات. دفعتان من «يدو الأحمر» قد تبدوان حمراوين بالدرجة نفسها وتختلفان
+      اختلافًا حادًا في مقدار ما تلوّنه كمية معينة من منتجك. ولهذا يحدد الطلب الصحيح قيمة ASTA
+      مستهدفة وحجم شبكة.
+    </p>
+
+    <h2 style="margin-top:32px;">كيف تحدد مواصفات يدو الأحمر</h2>
+    <p>
+      حدِّد الصنف، ثم الشكل النهائي (البابريكا هو المعيار)، وقيمة اللون ASTA المستهدفة، وحجم الشبكة
+      (60–80 قياسيًا)، والرطوبة (أقل من 13%). الحرارة غير ذات موضوع في هذا الطرف من المقياس، فوجّه
+      جهد المواصفات إلى اللون وحجم الجزيئات.
+    </p>
+
+    <h2 style="margin-top:32px;">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هو فلفل يدو الأحمر؟</h3>
+      <p>يدو الأحمر (益都红) فلفل منخفض الحرارة سميك اللحم من شاندونغ وشينجيانغ، يُزرع كمادة خام للبابريكا من أجل إنتاجية اللون (ASTA).</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما مدى حرارة يدو الأحمر؟</h3>
+      <p>لا يكاد يكون حارًا: أقل من 1,000 SHU في النطاق الحلو، ولا يقترب من سقف 10,000 SHU. يُشترى من أجل اللون.</p>
+    </div>
+    <div class="faq-item">
+      <h3>فيمَ يُستخدم يدو الأحمر؟</h3>
+      <p>يُطحن إلى بابريكا منخفضة الحرارة، وملون أحمر طبيعي، وخلطات بهارات، واستخلاص الأوليوريزين (E160c).</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/ar/contact/">اطلب عرض سعر يدو الأحمر</a>
+      <a class="cta cta-outline" href="/ar/products/paprika-powder/" style="margin-left:8px;">البابريكا →</a>
+    </div>
+  </div>
+</BaseLayout>

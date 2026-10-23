@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { buildOffers } from "../../../data/product-offers";
+import { buildOffers, priceLine } from "../../../data/product-offers";
 import BuyerSpec from "../../../components/BuyerSpec.astro";
 import AtAGlance from "../../../components/AtAGlance.astro";
 
@@ -91,6 +91,7 @@ const faqJsonLd = {
     <p class="lead">
       فلفل عالي الحرارة عند 20,000–50,000 SHU من شاندونغ وشانشي — حصان عمل لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت.
     </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("seven-star-chilli", "ar")}</p>
     <div class="takeaways">
       <strong>الإجابة المختصرة:</strong> سفن ستار فلفل عالي الحرارة (20,000–50,000 SHU) من شاندونغ وشانشي، يُطحن عادة لتتبيلة الوجبات الخفيفة وقواعد الهوت بوت. يقع في نفس نطاق سانينغ وزيدانتو — النطاق الذي تُحدد فيه الحرارة المنتج دون أن تطغى على بقية النكهات.
     </div>

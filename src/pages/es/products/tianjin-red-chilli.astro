@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { buildOffers, priceLine } from "../../../data/product-offers";
+
+const productUrl = "https://drychillis.com/es/products/tianjin-red-chilli/";
+const productOffers = buildOffers("tianjin-red-chilli", productUrl);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://drychillis.com/es/products/tianjin-red-chilli/#product",
+  "name": "Chile Tianjin Red (朝天椒)",
+  "description": "Chile tipo «mirando al cielo» (朝天椒) en racimos, 30.000–50.000 SHU — el chile entero y en polvo de picor alto para exportación, despachado por el puerto de Tianjin.",
+  "image": ["https://drychillis.com/images/products/chilli-whole.jpg"],
+  "url": "https://drychillis.com/es/products/tianjin-red-chilli/",
+  "sku": "TENDA-TIANJIN-RED-CHILLI",
+  "category": "Especias y Condimentos",
+  "brand": { "@type": "Brand", "name": "Tenda Peppers" },
+  "manufacturer": { "@id": "https://drychillis.com/#organization" },
+  ...(productOffers ? { "offers": productOffers } : {}),
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Nivel de picor (SHU)", "value": "30.000 – 50.000" },
+    { "@type": "PropertyValue", "name": "Tipo de fruto", "value": "Vaina pequeña en racimo, orientada hacia arriba" },
+    { "@type": "PropertyValue", "name": "Región", "value": "Norte de China; comercio por Tianjin" },
+    { "@type": "PropertyValue", "name": "Ideal para", "value": "Chile entero, polvo, escamas, segmentos" }
+  ]
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es el chile Tianjin Red / 朝天椒?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tianjin Red es el nombre de exportación de los chiles tipo «mirando al cielo» (朝天椒) en racimos que salen por Tianjin: vainas pequeñas orientadas hacia arriba, de unos 30.000–50.000 SHU, el chile entero y en polvo de picor alto más habitual en exportación." } },
+    { "@type": "Question", "name": "¿Qué tan picante es?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aproximadamente 30.000–50.000 SHU — por encima del rango medio y justo por debajo de Jixin y Xiaomi (50.000–70.000). Como «mirando al cielo» es una forma, el SHU exacto depende del origen." } },
+    { "@type": "Question", "name": "¿Es una variedad o una forma?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una forma. «Mirando al cielo» (朝天椒) describe vainas en racimo orientadas hacia arriba, no una variedad única. El picor abarca 30.000–50.000+ SHU según el origen, así que un pedido sin origen ni rango SHU está incompleto." } }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chile Tianjin Red (朝天椒) — 30.000–50.000 SHU | Tenda Peppers"
+  description="Tianjin Red / 朝天椒 — chile en racimo de 30.000–50.000 SHU para chile entero y en polvo de exportación. Fabricante chino, ISO 9001 y HACCP."
+  lang="es"
+  jsonLd={[productJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/es/">Inicio</a> &rsaquo; <a href="/es/products/dried-chillies/">Chiles Secos</a> &rsaquo; Tianjin Red
+    </nav>
+    <h1>Chile Tianjin Red (朝天椒)</h1>
+    <p class="lead">
+      Chiles tipo «mirando al cielo» (朝天椒) en racimos, de unos 30.000–50.000 SHU — el chile entero
+      y en polvo de picor alto más habitual en exportación, despachado por el centro comercial de Tianjin.
+    </p>
+    <p class="product-price" style="font-weight:600;color:#8a1c1c;margin:10px 0 0;">{priceLine("tianjin-red-chilli", "es")}</p>
+
+    <h2 style="margin-top:32px;">¿Qué es el chile Tianjin Red?</h2>
+    <p>
+      Tianjin Red es el nombre que usan los exportadores para los chiles «mirando al cielo» (朝天椒)
+      que se comercializan por Tianjin, uno de los mayores puertos de recolección y exportación de chile
+      de China. Las vainas son pequeñas, en racimo y crecen apuntando hacia arriba — el rasgo que da
+      nombre al grupo. El picor se sitúa en unos 30.000–50.000 SHU: por encima del rango medio y justo
+      por debajo de Jixin y Xiaomi.
+    </p>
+    <table>
+      <thead><tr><th>Propiedad</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Picor (SHU)</strong></td><td>30.000 – 50.000</td></tr>
+        <tr><td><strong>Tipo de fruto</strong></td><td>Vaina pequeña en racimo, orientada hacia arriba</td></tr>
+        <tr><td><strong>Región</strong></td><td>Norte de China; comercio por Tianjin</td></tr>
+        <tr><td><strong>Ideal para</strong></td><td>Chile entero, polvo, escamas, segmentos</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      El SHU es un rango representativo; como «mirando al cielo» es una forma y no una variedad, el
+      valor exacto depende del origen. Confirme su ventana objetivo con nosotros.
+    </p>
+
+    <h2 style="margin-top:32px;">¿Para qué se usa el Tianjin Red?</h2>
+    <ul>
+      <li>Chile seco entero para restauración y venta minorista</li>
+      <li>Polvo y escamas de chile para condimentos</li>
+      <li>Segmentos de chile para sopas y guisos</li>
+      <li>Bases de salsa picante y aceite de chile</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">«Mirando al cielo» es una forma, no un nivel de picor</h2>
+    <p>
+      Este es el punto que más se pasa por alto. «Mirando al cielo» (朝天椒) describe una
+      <strong>forma de vaina</strong> — racimos que apuntan hacia arriba al madurar — y no una variedad
+      botánica con un picor fijo. Según el origen, abarca desde unos 30.000 hasta más de 50.000 SHU. Un
+      pedido de «chile mirando al cielo» sin origen ni ventana SHU está, por tanto, incompleto.
+    </p>
+
+    <h2 style="margin-top:32px;">Tianjin Red vs Sanying vs Zidantou</h2>
+    <table>
+      <thead><tr><th>Producto</th><th>SHU</th><th>Qué fija</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Tianjin Red / mirando al cielo</strong></td><td>30.000 – 50.000</td><td>Forma + banda de picor (designación comercial)</td></tr>
+        <tr><td><strong>Sanying (Tianying)</strong></td><td>20.000 – 50.000</td><td>Variedad nombrada (Henan/Hebei)</td></tr>
+        <tr><td><strong>Zidantou</strong></td><td>20.000 – 50.000</td><td>Variedad nombrada, pulpa gruesa para polvo</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Use una variedad nombrada (Sanying o Zidantou) cuando necesite un perfil reproducible lote a lote.
+      Use «Tianjin red / mirando al cielo» cuando quiera una categoría general de picor alto y la cierre
+      después con origen y rango SHU.
+    </p>
+
+    <h2 style="margin-top:32px;">Cómo especificar el Tianjin Red</h2>
+    <p>
+      Indique la forma (entero, polvo, escamas o segmentos), el rango SHU objetivo, el origen si lo
+      conoce, la malla (para polvo, 60–80 estándar) y la humedad (por debajo del 13%). Como la
+      denominación es amplia, la ventana SHU es lo que realmente define el producto.
+    </p>
+
+    <h2 style="margin-top:32px;">Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Qué es el chile Tianjin Red / 朝天椒?</h3>
+      <p>Tianjin Red es el nombre de exportación de los chiles «mirando al cielo» en racimos que salen por Tianjin: vainas pequeñas orientadas hacia arriba, de unos 30.000–50.000 SHU.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué tan picante es?</h3>
+      <p>Aproximadamente 30.000–50.000 SHU — por encima del rango medio y justo por debajo de Jixin y Xiaomi (50.000–70.000). El valor exacto depende del origen.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Es una variedad o una forma?</h3>
+      <p>Una forma: «mirando al cielo» describe vainas en racimo orientadas hacia arriba, no una variedad única. Un pedido sin origen ni rango SHU está incompleto.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/es/contact/">Solicitar Cotización Tianjin Red</a>
+      <a class="cta cta-outline" href="/es/products/dried-chillies/" style="margin-left:8px;">Chiles Secos →</a>
+    </div>
+  </div>
+</BaseLayout>
